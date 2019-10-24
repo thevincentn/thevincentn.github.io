@@ -1,0 +1,23 @@
+#wrapper {
+    width: 90vw;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#HeartsCounter {
+    width: 400px;
+    height: 100px;
+    float:left; /* add this */
+}
+#Hearts{
+	float:left;
+}
+#Lives{
+	font-size: 54px;
+	float:left;
+}
+#Health {
+    height: 100px;
+    float: right; /* add this */
+}
+#Reaction {
+    float: center; /* add this */
+}
