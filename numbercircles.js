@@ -62,9 +62,9 @@ class NumberCircle{
 				if(conditionsArray.indexOf(factors[i]) == -1){
 					context.beginPath()
 					context.font = "8px Verdana";
-					context.fillStyle = "black";
+					context.fillStyle = "white";
 					context.textAlign = "center";
-					var text = context.fillText(""+factors[i], this.x + (radius/2) * cos((current+next)/2), this.y + (radius/2) * sin((current+next)/2));
+					var text = context.fillText(""+factors[i], this.x + (radius/2) * Math.cos((current+next)/2), this.y + (radius/2) * Math.sin((current+next)/2));
 				}
 				current = next;
 				next = (next + shift);
