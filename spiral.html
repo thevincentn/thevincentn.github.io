@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Prime Climb Spiral</title>
+    <link href="spiralstyle.css" rel="stylesheet" type="text/css" />
+
+
+
+  </head>
+  <body>
+  <canvas id="display" width="100%" height="100%" margin="0"></canvas>
+    <script src="primes.js"></script>
+    <script src="numbercircles.js"></script>
+    
+    <form id="contactForm" action="/button-type">
+      <h1 style="color:white">Enter a number:</h1>
+      <input class="myInput" type="text" id="whatprime" name="whatprime" required
+       minlength="1" maxlength="5" size="30" onsubmit="return false">
+      <button type="button" onclick="getPrime();">Generate Spiral</button>
+    </form>
+    <div id="myDownload">
+    <a d="download" download="myImage.jpg" href="" class="myButton" onclick="download_img(this);">Download Image</a> 
+    </div>
+    <script src="spiral.js"></script>
+
+
+  </body>
+</html>
