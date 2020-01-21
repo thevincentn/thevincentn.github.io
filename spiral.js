@@ -27,6 +27,11 @@ var scale = 9;
 var radius = 20;
 var lastTheta;
 
+function enterKey(e){
+	if(e.keyCode == 13){
+		getPrime();
+	}
+}
 
 function getPrime(){
 	
