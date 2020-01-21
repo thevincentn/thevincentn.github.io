@@ -58,7 +58,8 @@ class NumberCircle{
 				context.lineWidth = 2;
 				context.stroke();
 
-				if(context.fillStyle == "red"){
+				let conditionsArray = [1,2,3,5,7];
+				if(conditionsArray.indexOf(factors[i]) == -1){
 					context.beginPath()
 					context.font = "8px Verdana";
 					context.fillStyle = "black";
