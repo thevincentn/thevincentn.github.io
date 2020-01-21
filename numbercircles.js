@@ -61,10 +61,10 @@ class NumberCircle{
 				let conditionsArray = [1,2,3,5,7];
 				if(conditionsArray.indexOf(factors[i]) == -1){
 					context.beginPath()
-					context.font = "8px Verdana";
+					context.font = "bold 6px Verdana";
 					context.fillStyle = "white";
 					context.textAlign = "center";
-					var text = context.fillText(""+factors[i], this.x + (radius/2) * Math.cos((current+next)/2), this.y + (radius/2) * Math.sin((current+next)/2));
+					var text = context.fillText(""+factors[i], this.x + (radius/2) * Math.cos(((current+next)/2) - Math.PI/36), this.y + (radius/2) * Math.sin(((current+next)/2) - Math.PI/36);
 				}
 				current = next;
 				next = (next + shift);
@@ -107,7 +107,7 @@ class NumberCircle{
 		context.fill(); // or context.fill()
 
 		context.beginPath()
-		context.font = "8px Verdana";
+		context.font = "bold 8px Verdana";
 		context.fillStyle = "black";
 		context.textAlign = "center";
 		var text = 
