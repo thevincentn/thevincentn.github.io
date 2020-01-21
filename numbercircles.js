@@ -57,6 +57,14 @@ class NumberCircle{
 				context.strokeStyle = "white";
 				context.lineWidth = 2;
 				context.stroke();
+
+				if(context.fillStyle == "red"){
+					context.beginPath()
+					context.font = "8px Verdana";
+					context.fillStyle = "black";
+					context.textAlign = "center";
+					var text = context.fillText(""+factors[i], this.x + (radius/2) * cos((current+next)/2), this.y + (radius/2) * sin((current+next)/2));
+				}
 				current = next;
 				next = (next + shift);
 			}
