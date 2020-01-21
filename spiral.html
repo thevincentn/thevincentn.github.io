@@ -17,8 +17,9 @@
     <form id="contactForm" action="/button-type">
       <h1 style="color:white">Enter a number:</h1>
       <input class="myInput" type="text" id="whatprime" name="whatprime" required
-       minlength="1" maxlength="5" size="30" onsubmit="return false" onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('generate').click()" >
+       minlength="1" maxlength="5" size="30" onsubmit="return false" onkeydown = "if (event.keyCode == 13){
+                            event.preventDefault();
+							document.getElementById('generate').click();}" >
       <button id="generate" type="button" onclick="getPrime();">Generate Spiral</button>
     </form>
     <div id="myDownload">
