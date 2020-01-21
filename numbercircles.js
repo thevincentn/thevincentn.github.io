@@ -64,7 +64,7 @@ class NumberCircle{
 					context.font = "bold 6px Verdana";
 					context.fillStyle = "white";
 					context.textAlign = "center";
-					var text = context.fillText(""+factors[i], this.x + (radius/2) * Math.cos(((current+next)/2) - Math.PI/36), this.y + (radius/2) * Math.sin(((current+next)/2) - Math.PI/36));
+					var text = context.fillText(""+factors[i], this.x + (3*radius/2) * Math.cos(((current+next)/2) - Math.PI/36), this.y + (3*radius/2) * Math.sin(((current+next)/2) - Math.PI/36));
 				}
 				current = next;
 				next = (next + shift);
