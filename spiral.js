@@ -65,20 +65,21 @@ function preDraw(){
 		}
 	}
 	lastTheta = Math.sqrt((num-1)*num/6);
-	canvas.height = bot - upper + radius * 4;
-	canvas.width = right - left + radius * 4;
+	canvas.height = (bot - upper + radius * 4)*2;
+	canvas.width = (right - left + radius * 4)*2;
 
 	draw();
 }
 
 function draw(){
 	context.fillStyle = "#4e4d52";
+	context.scale(2,2);
 	context.fillRect(0, 0, canvas.width, canvas.height);
 	var primes = new Prime(num);
 	var circles = []
 
-	var centerX = canvas.width/2;
-	var centerY = canvas.height/2;
+	var centerX = canvas.width/4;
+	var centerY = canvas.height/4;
 	context.moveTo(centerX, centerY);
 
 	var STEPS_PER_ROTATION = num;

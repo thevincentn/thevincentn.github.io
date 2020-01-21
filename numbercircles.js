@@ -55,7 +55,7 @@ class NumberCircle{
 				}
 				context.fill(); // or context.fill()
 				context.strokeStyle = "white";
-				context.lineWidth = 2;
+				context.lineWidth = 1;
 				context.stroke();
 
 				let conditionsArray = [1,2,3,5,7];
@@ -64,7 +64,7 @@ class NumberCircle{
 					context.font = "bold 6px Verdana";
 					context.fillStyle = "white";
 					context.textAlign = "center";
-					var text = context.fillText(""+factors[i], this.x + (3*radius/4) * Math.cos(((current+next)/2) - Math.PI/36), this.y + (3*radius/4) * Math.sin(((current+next)/2) - Math.PI/36));
+					var text = context.fillText(""+factors[i], this.x + (11*radius/16) * Math.cos(((current+next)/2) - Math.PI/36), this.y + (11*radius/16) * Math.sin(((current+next)/2) - Math.PI/36));
 				}
 				current = next;
 				next = (next + shift);
