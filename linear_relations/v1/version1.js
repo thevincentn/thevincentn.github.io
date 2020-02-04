@@ -51,7 +51,7 @@ function draw(){
   context.fillRect(0, 0, canvas.width, sideLength*2);
 
   context.beginPath();
-  context.font = "bold 16em Raleway";
+  context.font = "bold 3.2vmax Raleway";
   context.fillStyle = "black";
   context.textAlign = "center";
   context.fillText(("Figure " + x + ":"), centerX, sideLength);
@@ -61,7 +61,7 @@ function draw(){
   context.fillRect(0, canvas.height - sideLength*2, canvas.width, sideLength*2);
 
   context.beginPath();
-  context.font = "bold 16em Raleway";
+  context.font = "bold 3.2vmax Raleway";
   context.fillStyle = "black";
   context.textAlign = "center";
   context.fillText(("Number of Squares = " + numSquares), centerX, canvas.height - sideLength);
