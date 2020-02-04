@@ -13,6 +13,12 @@ var numSquares = 1;
 
 var sideLength = Math.min(canvas.width,canvas.height)/(2*maxIteration);
 
+context.beginPath();
+context.font = "bold 3.2vmax Raleway";
+context.fillStyle = "black";
+context.textAlign = "center";
+context.fillText(("Hit Spacebar or Touch Screen."), centerX, centerY);
+
 document.addEventListener('keyup', event => {
   if (event.code === 'Space') {
     draw();
@@ -46,6 +52,9 @@ function clear(){
 
 
 function draw(){
+  if(x == 1){
+    clear();
+  }
   context.beginPath();
   context.fillStyle = "white";
   context.fillRect(0, 0, canvas.width, sideLength*2);
