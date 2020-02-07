@@ -12,7 +12,7 @@ var xoffset = 0;
 var sideLength = Math.min(canvas.width,canvas.height)/(2*maxIteration);
 
 var centerX = canvas.width/2;
-var leftMost = canvas.width/2 - maxIteration*sideLength/2;
+var leftMost = canvas.width/2 - maxIteration*sideLength*5/6;
 var centerY = canvas.height/2;  
 
 context.beginPath();
