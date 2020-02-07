@@ -86,7 +86,7 @@ function draw(){
     context.strokeRect(centerX - sideLength/2, centerY - sideLength/2, sideLength, sideLength);
     x++;
     xoffset += sideLength;
-    numSquares = numSquares + 2;
+    numSquares = numSquares + 4;
   }
   else if (x < maxIteration){
     context.beginPath();
