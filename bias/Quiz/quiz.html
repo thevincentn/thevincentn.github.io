@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Collatz</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+
+
+  </head>
+  <body>
+    <h1>Gapminder Test</h1>
+    <h2>Taken from <a href="https://www.gapminder.org/">gapminder.org</a></h2>
+    <div id="quiz"></div>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+    <script>
+        (function(){
+        function buildQuiz(){
+          // variable to store the HTML output
+          const output = [];
+
+          // for each question...
+          myQuestions.forEach(
+            (currentQuestion, questionNumber) => {
+
+              // variable to store the list of possible answers
+              const answers = [];
+
+              // and for each available answer...
+              for(letter in currentQuestion.answers){
+
+                // ...add an HTML radio button
+                answers.push(
+                  `<label>
+                    <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                  </label>`
+                );
+              }
+
+              // add this question and its answers to the output
+              output.push(
+                `<div class="question"> ${currentQuestion.question} </div>
+                <div class="answers"> ${answers.join('')} </div>`
+              );
+            }
+          );
+
+          // finally combine our output list into one string of HTML and put it on the page
+          quizContainer.innerHTML = output.join('');
+        }
+
+        function showResults(){
+
+          // gather answer containers from our quiz
+          const answerContainers = quizContainer.querySelectorAll('.answers');
+
+          // keep track of user's answers
+          let numCorrect = 0;
+
+          // for each question...
+          myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+            // find selected answer
+            const answerContainer = answerContainers[questionNumber];
+            const selector = `input[name=question${questionNumber}]:checked`;
+            const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+            // if answer is correct
+            if(userAnswer === currentQuestion.correctAnswer){
+              // add to the number of correct answers
+              numCorrect++;
+
+              // color the answers green
+              answerContainers[questionNumber].style.color = 'lightgreen';
+            }
+            // if answer is wrong or blank
+            else{
+              // color the answers red
+              answerContainers[questionNumber].style.color = 'red';
+            }
+          });
+
+          // show number of correct answers out of total
+          resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        }
+
+        const quizContainer = document.getElementById('quiz');
+        const resultsContainer = document.getElementById('results');
+        const submitButton = document.getElementById('submit');
+        const myQuestions = [
+          {
+            question: "1. In the last 20 years the proportion of people living in extreme poverty worldwide, has...?",
+            answers: {
+              a: "Almost doubled",
+              b: "Remained more or less the same",
+              c: "Almost halved"
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "2. How many of the world’s 1-year-old children today have been vaccinated against some disease?",
+            answers: {
+              a: "80%",
+              b: "50%",
+              c: "20%"
+            },
+            correctAnswer: "a"
+          },
+          {
+            question: "3. How did the number of deaths per year from natural disasters change over the last hundred years?",
+            answers: {
+              a: "More than doubled",
+              b: "Remained more or less the same",
+              c: "Decreased to less than half",
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "4. Where does the majority of the world population live?",
+            answers: {
+              a: "Low income countries",
+              b: "Middle income countries",
+              c: "High income countries",
+            },
+            correctAnswer: "b"
+          },
+          {
+            question: "5. Worldwide, 30 year old men have spent 10 years in school, on average. How many years have women of the same age spent in school?",
+            answers: {
+              a: "9 years",
+              b: "6 years",
+              c: "3 years",
+            },
+            correctAnswer: "a"
+          },
+          {
+            question: "6. The United Nations predicts that by 2100 the world population will have increased by another 4 billion people. What is the main reason? ",
+            answers: {
+              a: "There will be more children (under age 15).",
+              b: "There will be more adults (15-75).",
+              c: "There will be more very old people (above age 75).",
+            },
+            correctAnswer: "b"
+          },
+          {
+            question: "7. In low income countries across the world, how many girls complete fifth grade?",
+            answers: {
+              a: "20%",
+              b: "40%",
+              c: "60%",
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "8. There are two billion children in the world today, aged 0 to 15 years old. How many children will there be in the year 2100 according to the United Nations?",
+            answers: {
+              a: "4 billion",
+              b: "3 billion",
+              c: "2 billion",
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "9. How many people in the world have some access to electricity?",
+            answers: {
+              a: "20%",
+              b: "50%",
+              c: "80%",
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "10. What is the life expectancy of the world population?",
+            answers: {
+              a: "50 years",
+              b: "60 years",
+              c: "70 years",
+            },
+            correctAnswer: "c"
+          },
+          {
+            question: "11. Tigers, Giant Pandas and Black Rhinos were listed as threatened species in 1996. Since then, have any of these species become more critically endangered?",
+            answers: {
+              a: "None of them",
+              b: "One of them",
+              c: "Two of them",
+            },
+            correctAnswer: "a"
+          },
+          {
+            question: "12. The global climate experts believe that, over the next 100 years, the average temperature will:",
+            answers: {
+              a: "Get warmer",
+              b: "Remain stable",
+              c: "Get colder",
+            },
+            correctAnswer: "a"
+          }
+        ];
+
+        // Kick things off
+        buildQuiz();
+
+        // Event listeners
+        submitButton.addEventListener('click', showResults);
+      })();
+    </script>
+  </body>
+</html>
