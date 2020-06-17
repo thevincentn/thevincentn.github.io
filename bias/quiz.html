@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Collatz</title>
+    <title>Implicit Bias</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
@@ -16,7 +16,7 @@
     <div id="quiz"></div>
     <button id="submit">Submit Quiz</button>
     <div id="results"></div>
-    <a href="society.html"><button id="next">Next Page</button></a>
+    <a href="quiz.html" id="outcome"><button id="next">Next Page</button></a>
 
     <script>
         (function(){
@@ -89,6 +89,13 @@
 
           // show number of correct answers out of total
           resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+          var link = document.getElementById("outcome");
+          if((numCorrect/myQuestions.length) <= 0.5){
+            link.setAttribute('href', "pessimistic.html");  
+          }else{
+            link.setAttribute('href', "optimistic.html");
+          }
+          
         }
 
         const quizContainer = document.getElementById('quiz');
