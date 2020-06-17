@@ -21,6 +21,11 @@
     <script>
         (function(){
         function buildQuiz(){
+          var outcome = document.getElementById("outcome");
+          var next = document.getElementById("next");
+          outcome.style.display = "none";
+          next.style.display = "none";
+
           // variable to store the HTML output
           const output = [];
 
@@ -95,6 +100,9 @@
           }else{
             link.setAttribute('href', "optimistic.html");
           }
+
+          outcome.style.display = "block";
+          next.style.display = "block";
           
         }
 
