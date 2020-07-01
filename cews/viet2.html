@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Canada Emergency Wage Subsidy (CEWS) Calculator</title>
+    <title>Máy Tính cho Tiền Lương Khẩn Cấp của Canada (CEWS)</title>
     <link href="calc.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <script language="JavaScript">
@@ -22,27 +22,27 @@
           var percent = (x - y)/x * 100;
 
           if(isNaN(percent)){
-            document.getElementById('results').innerHTML = "Please fill out the form.";
+            document.getElementById('results').innerHTML = "Xin điền vào mẫu đơn.";
           }else{
-            document.getElementById('display').innerHTML = "Your revenue reduction percentage is " + percent + "%";
+            document.getElementById('display').innerHTML = "% Sụt Giảm Doanh Thu của quý vị là " + percent + "%";
             console.log(percent);
             var resultstring = "";
               if(percent >=30){
-              resultstring = resultstring + "You are eligible for CEWS "
+              resultstring = resultstring + "Quý vị đủ điều kiện để đăng ký cho CEWS "
 
             }else if(percent >= 15 & document.getElementById("month").value == "March"){
-              resultstring = resultstring + "You are eligible for CEWS ";
+              resultstring = resultstring + "Quý vị đủ điều kiện để đăng ký cho CEWS ";
             }else{
-              resultstring = resultstring + "You are not eligible for CEWS ";
+              resultstring = resultstring + "Quý vị không đủ điều kiện để đăng ký cho CEWS ";
             }
             if(document.getElementById("month").value == "March"){
-              resultstring = resultstring + "for the claim period 1:(March 15 to April 11, 2020).";
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 1: (15 tháng 03/2020 đến 11 tháng 04/2020).";
             }else if(document.getElementById("month").value == "April"){
-              resultstring = resultstring + "for the claim period 2:(April 12 to May 9, 2020).";
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 2: (12 tháng 04/2020 đến 09 tháng 05/2020).";
             }else if(document.getElementById("month").value == "May"){
-              resultstring = resultstring + "for the claim period 3:(May 10 to June 6, 2020).";
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 3: (10 tháng 05/2020 đến 06 tháng 06/2020).";
             }else{
-              resultstring = resultstring + "for the claim period 4:(June 7 to July 4, 2020).";
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 4: (07 tháng 06/2020 đến 04 tháng 07/2020).";
             }
 
             document.getElementById('results').innerHTML = resultstring;
@@ -58,26 +58,26 @@
 
   </head>
   <body>
-    <h1>Canada Emergency Wage Subsidy (CEWS) Reduction in Revenue Calculator</h1>
+    <h1>Máy Tính cho Tiền Lương Khẩn Cấp của Canada (CEWS)</h1>
     <h2>Method 2</h2>
     <form name="myForm" onsubmit="return calculateRevenue()">
       <div>
-        <label for="month">What month would you like to calculate your revenue reduction percentage for?</label>
+        <label for="month">Quý vị muốn tính % Sụt Giảm Doanh Thu cho tháng nào?</label>
         <select name="month" id="month" required>
-          <option value="March">March</option>
-          <option value="April">April</option>
-          <option value="May">May</option>
-          <option value="June">June</option>
+          <option value="March">Tháng 03</option>
+          <option value="April">Tháng 04</option>
+          <option value="May">Tháng 05</option>
+          <option value="June">Tháng 06</option>
         </select>
         <br>
-        <label for="jan">Please enter your revenue from January 2020:</label>
+        <label for="jan">Xin nhập doanh thu của 01/2020:</label>
         <input id="jan" type="number" required>
         <br>
-        <label for="feb">Please enter your revenue from February 2020:</label>
+        <label for="feb">Xin nhập doanh thu của 02/2020:</label>
         <input id="feb" type="number" required>
         <br>
         <br>
-        <label for="cur">Please enter the revenue of the month you would like to calculate (e.g. March 2020, April 2020, May 2020, etc.):</label>
+        <label for="cur">Xin nhập doanh thu của tháng nào quý vị muốn tính…(ví dụ: tháng 03/2020, 04/2020, 05/2020, v.v.):</label>
         <input id="cur" type="number" required>
 
         <br>
@@ -85,7 +85,7 @@
         <span class="validity"></span>
       </div>
     <div>
-      <button name="data" type="button" onclick="calculateRevenue();">Calculate.</button>
+      <button name="data" type="button" onclick="calculateRevenue();">Tính.</button>
       <p><span id='display'></span></p>
       <p><span id='results'></span></p>
     </div>

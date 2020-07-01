@@ -28,13 +28,13 @@
               resultstring = resultstring + "You are not eligible for CEWS ";
             }
             if(document.getElementById("month").value == "March"){
-              resultstring = resultstring + "for the claim period March 15 to April 11, 2020.";
+              resultstring = resultstring + "for the claim period 1:(March 15 to April 11, 2020).";
             }else if(document.getElementById("month").value == "April"){
-              resultstring = resultstring + "for the claim period April 12 to May 9, 2020.";
+              resultstring = resultstring + "for the claim period 2:(April 12 to May 9, 2020).";
             }else if(document.getElementById("month").value == "May"){
-              resultstring = resultstring + "for the claim period May 10 to June 6, 2020.";
+              resultstring = resultstring + "for the claim period 3:(May 10 to June 6, 2020).";
             }else{
-              resultstring = resultstring + "for the claim period   June 7 to July 4, 2020.";
+              resultstring = resultstring + "for the claim period 4:(June 7 to July 4, 2020).";
             }
 
             document.getElementById('results').innerHTML = resultstring;
@@ -50,7 +50,7 @@
 
   </head>
   <body>
-    <h1>Canada Emergency Wage Subsidy (CEWS) Calculator</h1>
+    <h1>Canada Emergency Wage Subsidy (CEWS) Reduction in Revenue Calculator</h1>
     <h2>Method 1</h2>
     <form name="myForm" onsubmit="return calculateRevenue()">
       <div>
@@ -62,10 +62,11 @@
           <option value="June">June</option>
         </select>
         <br>
-        <label for="last">Please enter your revenue from last year:</label>
+        <label for="last">Please enter your revenue from 2019 (e.g. If you are calculating for March 2020, enter the revenue from March 2019)
+:</label>
         <input id="last" type="number" required>
         <br>
-        <label for="cur">Please enter your revenue for this year:</label>
+        <label for="cur">Please enter your revenue for 2020 (e.g. If you are calculating for March 2020, enter the revenue from March 2020):</label>
         <input id="cur" type="number" required>
         <br>
         <br>

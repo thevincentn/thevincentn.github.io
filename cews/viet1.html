@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Máy Tính cho Tiền Lương Khẩn Cấp của Canada (CEWS)</title>
+    <link href="calc.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <script language="JavaScript">
+ 
+      function calculateRevenue(){
+          var x = document.getElementById("last").value;
+          var y = document.getElementById("cur").value;
+          var percent = (x - y)/x * 100;
+
+          if(isNaN(percent)){
+            document.getElementById('results').innerHTML = "Xin điền vào mẫu đơn.";
+          }else{
+            document.getElementById('display').innerHTML = "% Sụt Giảm Doanh Thu của quý vị là " + percent + "%";
+            console.log(percent);
+            var resultstring = "";
+              if(percent >=30){
+              resultstring = resultstring + "Quý vị đủ điều kiện để đăng ký cho CEWS "
+
+            }else if(percent >= 15 & document.getElementById("month").value == "March"){
+              resultstring = resultstring + "Quý vị đủ điều kiện để đăng ký cho CEWS ";
+            }else{
+              resultstring = resultstring + "Quý vị không đủ điều kiện để đăng ký cho CEWS ";
+            }
+            if(document.getElementById("month").value == "March"){
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 1: (15 tháng 03/2020 đến 11 tháng 04/2020).";
+            }else if(document.getElementById("month").value == "April"){
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 2: (12 tháng 04/2020 đến 09 tháng 05/2020).";
+            }else if(document.getElementById("month").value == "May"){
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 3: (10 tháng 05/2020 đến 06 tháng 06/2020).";
+            }else{
+              resultstring = resultstring + "Cho Trợ Cắp Kỳ 4: (07 tháng 06/2020 đến 04 tháng 07/2020).";
+            }
+
+            document.getElementById('results').innerHTML = resultstring;
+          }
+          
+
+
+          return false;
+      }
+
+  </script>
+
+
+  </head>
+  <body>
+    <h1>Máy Tính cho Tiền Lương Khẩn Cấp của Canada (CEWS)</h1>
+    <h2>Method 1</h2>
+    <form name="myForm" onsubmit="return calculateRevenue()">
+      <div>
+        <label for="month">Quý vị muốn tính % Sụt Giảm Doanh Thu cho tháng nào?</label>
+        <select name="month" id="month" required>
+          <option value="March">Tháng 03</option>
+          <option value="April">Tháng 04</option>
+          <option value="May">Tháng 05</option>
+          <option value="June">Tháng 06</option>
+        </select>
+        <br>
+        <label for="last">Xin nhập doanh thu của 2019. (ví dụ: nếu quý vị muốn tính cho tháng 3/2020, nhập vào doanh thu của 03/2019):</label>
+        <input id="last" type="number" required>
+        <br>
+        <label for="cur">Xin nhập doanh thu của 2020. (ví dụ: nếu quý vị muốn tính cho tháng 3/2020, nhập vào doanh thu của 03/2020):</label>
+        <input id="cur" type="number" required>
+        <br>
+        <br>
+        <span class="validity"></span>
+      </div>
+    <div>
+      <button name="data" type="button" onclick="calculateRevenue();">Tính.</button>
+      <p><span id='display'></span></p>
+      <p><span id='results'></span></p>
+    </div>
+    <br>
+    <br>
+    </form>
+    <!-- <button id="results">Please fill in all fields.</button> -->
+
+
+  </body>
+</html>
