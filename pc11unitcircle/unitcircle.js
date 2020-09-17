@@ -113,15 +113,11 @@ function create_axis(ctx, centerX, centerY, mindim){
 
 	ctx.font = "16px Arial";
 	ctx.fillStyle = 'black';
-	ctx.fillText("Quadrant 1", centerX + 0.3*mindim, centerY - 0.3*mindim);
-	ctx.fillText("Quadrant 2", centerX - 0.3*mindim, centerY - 0.3*mindim);
-	ctx.fillText("Quadrant 3", centerX - 0.3*mindim, centerY + 0.3*mindim);
-	ctx.fillText("Quadrant 4", centerX + 0.3*mindim, centerY + 0.3*mindim);
+	ctx.fillText("A - Q1", centerX + 0.3*mindim, centerY - 0.3*mindim);
+	ctx.fillText("S - Q2", centerX - 0.3*mindim, centerY - 0.3*mindim);
+	ctx.fillText("T - Q3", centerX - 0.3*mindim, centerY + 0.3*mindim);
+	ctx.fillText("C - Q4", centerX + 0.3*mindim, centerY + 0.3*mindim);
 
-	ctx.fillText("A", centerX + 0.3*mindim, centerY - 0.28*mindim);
-	ctx.fillText("S", centerX - 0.3*mindim, centerY - 0.28*mindim);
-	ctx.fillText("T", centerX - 0.3*mindim, centerY + 0.28*mindim);
-	ctx.fillText("C", centerX + 0.3*mindim, centerY + 0.28*mindim);
 }
 
 function canvas_arrow(context, fromx, fromy, tox, toy) {
