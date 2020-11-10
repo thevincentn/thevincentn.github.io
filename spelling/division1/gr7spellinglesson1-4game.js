@@ -6,7 +6,7 @@ input.focus();
 input.select();
 
 
-var words = ["Abate","Acknowledge","Agent","Authority","Devastate","Epidemic","Estimate","Evict","Impartial","Industrious","Infuriate","Irrelevant","Precise","Sham","Trek","Astute","Authentic","Delicacy","Derogatory","Devour","Figment","Mythical","Plumage","Predatory","Prior","Scavenge","Slaughter","Solitude","Ungainly","Vulnerable","Admonish","Aghast","Annihilate","Benefactor","Bestow","Devious","Devoid","Heed","Mortal","Muse","Pioneer","Plague","Subside","Unwitting","Wrath","Acquire","Antagonize","Competent","Comprise","Correspond","Dilapidated","Illustrious","Incident","Inherit","Latitude","Loath","Maintain","Renovate","Reprimand","Supervise"];
+var words = ["abate","acknowledge","agent","authority","devastate","epidemic","estimate","evict","impartial","industrious","infuriate","irrelevant","precise","sham","trek","astute","authentic","delicacy","derogatory","devour","figment","mythical","plumage","predatory","prior","scavenge","slaughter","solitude","ungainly","vulnerable","admonish","aghast","annihilate","benefactor","bestow","devious","devoid","heed","mortal","muse","pioneer","plague","subside","unwitting","wrath","acquire","antagonize","competent","comprise","correspond","dilapidated","illustrious","incident","inherit","latitude","loath","maintain","renovate","reprimand","supervise"];
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
 
