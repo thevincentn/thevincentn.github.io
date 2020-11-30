@@ -3,7 +3,7 @@ input.focus();
 input.select();
 
 
-var words = ["adequate","administer","agitate","capitulate","citrus","disrupt","hovel","illiterate","indifferent","menial","permanent","respite","strenuous","toil","urgent"];
+var words = ["addict","aspire","bias","blatant","candid","confront","debut","enroll","fluster","impunity","intensify","intimidate","obnoxious","retort","stint"];
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
 
