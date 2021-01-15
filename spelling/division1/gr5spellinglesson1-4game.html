@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Spelling Lesson 1 - 4</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+
+  </head>
+  <body>
+  <h3>Click button to listen. Hit enter to submit. You will hear a new word if you submit a correct word.</h3>
+  <button onclick="speak();">Listen.</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <input type='search' id='search-input' />
+  <div id='search-results'></div>
+  
+
+  <h1><div id="Level">Level 1</div></h1>
+    <div id="wrapper">
+      <div id="HeartsCounter">
+        <div id="Hearts"><img src="images/heart.PNG" alt="heart" height="54" width="54"></div>
+        <div id="Lives">5</div>
+      </div>
+      <div id="Health"><canvas id="display" width="640" height="100"></canvas></div>
+      <div id="Reaction"><canvas id="emote" width="400" height="400"></div>
+    </div>
+  <script src="gr5spellinglesson1-4game.js"></script>
+  </body>
+</html>
