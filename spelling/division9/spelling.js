@@ -18,6 +18,8 @@ if ('speechSynthesis' in window) {
   alert("Sorry, your browser doesn't support text to speech!");
 }
 
+var audio = new Audio('hahakill.mp3');
+
 
 
 
@@ -29,6 +31,7 @@ function react(source){
       document.getElementById("kill").style.display = "table";
       document.getElementById("gamediv").style.display = "none";
       console.log('got here');
+      audio.play();
     }, 100);
 
     setTimeout(function(){
