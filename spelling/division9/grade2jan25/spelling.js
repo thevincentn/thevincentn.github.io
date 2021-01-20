@@ -5,7 +5,7 @@ input.select();
 
 
 // var words = ["amaze","energy","amusing","enormous","noticed","analyze","escape","observed", "annoy","estimate","opinion", "arranged","exercise","peeking", "avoid","expect","plan", "cause","famous","poke", "classify","flock","predict", "community","friendly","prefer", "conclusion","frighten","process", "connection","frown","publish", "continue","gasp","records", "cooperation","gather","revise", "curious","gust","separate","cycle","helpful","steaming data","include","shivered", "describe","insist","similar detail","investigate","diagram","label","suppose","difference","leaned","sway", "different","living","stormy", "discover","march","swoop", "drowsy","matter","treasure", "edit","moist","vanish","effect","necessary","volunteer"];
-var words = ["too","good","soon","took","what","when","shook","who","school","took"];
+var words = ["now","down","how","out","shout","about","our","house","slow","show"];
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
 
