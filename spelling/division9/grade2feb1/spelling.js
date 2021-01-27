@@ -9,6 +9,8 @@ var words = ["her","girl","turn","hurt","first","were","card","part","start","ar
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
 
+var sounds = ["hahakill.mp3","PXL_20210122_212514127.mp3","PXL_20210122_212507118.mp3","Snapchat-1284439271.mp3"];
+
 document.getElementById("Level").innerHTML = "Spell " + currentword;
 
 
@@ -19,7 +21,7 @@ if ('speechSynthesis' in window) {
   alert("Sorry, your browser doesn't support text to speech!");
 }
 
-var audio = new Audio('hahakill.mp3');
+var audio = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
 
 
 
@@ -32,6 +34,7 @@ function react(source){
       document.getElementById("kill").style.display = "table";
       document.getElementById("gamediv").style.display = "none";
       console.log('got here');
+      audio = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
       audio.play();
     }, 100);
 
