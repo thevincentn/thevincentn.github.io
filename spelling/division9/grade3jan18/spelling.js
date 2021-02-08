@@ -8,7 +8,7 @@ var words = ["pointing","oily","boy","voice","oyster","voyage","loyal","joined",
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
 
-var sounds = ["hahakill.mp3","PXL_20210122_212514127.mp3","PXL_20210122_212507118.mp3","Snapchat-1284439271.mp3"];
+var sounds = ["PXL_20210208_172838106.mp3","hahakill.mp3","PXL_20210122_212514127.mp3","PXL_20210122_212507118.mp3","Snapchat-1284439271.mp3"];
 
 document.getElementById("Level").innerHTML = "Spell " + currentword;
 
