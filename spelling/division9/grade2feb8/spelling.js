@@ -4,11 +4,12 @@ input.focus();
 input.select();
 
 
-var words = ["pointing","oily","boy","voice","oyster","voyage","loyal","joined","coin","choice","poison","destroy","enjoy","choose","chocolate"];
+// var words = ["amaze","energy","amusing","enormous","noticed","analyze","escape","observed", "annoy","estimate","opinion", "arranged","exercise","peeking", "avoid","expect","plan", "cause","famous","poke", "classify","flock","predict", "community","friendly","prefer", "conclusion","frighten","process", "connection","frown","publish", "continue","gasp","records", "cooperation","gather","revise", "curious","gust","separate","cycle","helpful","steaming data","include","shivered", "describe","insist","similar detail","investigate","diagram","label","suppose","difference","leaned","sway", "different","living","stormy", "discover","march","swoop", "drowsy","matter","treasure", "edit","moist","vanish","effect","necessary","volunteer"];
+var words = ["more","store","stand","star","blew","flew","new","stone","sting","ring"];
 var currentword = words[Math.floor(Math.random() * words.length)];
 var correct = false;
-// ,"PXL_20210122_212514127.mp3","PXL_20210122_212507118.mp3","Snapchat-1284439271.mp3"
-var sounds = ["PXL_20210208_172838106.mp3","hahakill.mp3"];
+
+var sounds = ["hahakill.mp3","PXL_20210122_212514127.mp3","PXL_20210122_212507118.mp3","Snapchat-1284439271.mp3"];
 
 document.getElementById("Level").innerHTML = "Spell " + currentword;
 
