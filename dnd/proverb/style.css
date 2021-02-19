@@ -1,0 +1,79 @@
+<div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div style="width: 600px; display: table-cell;"> Left </div>
+        <div style="display: table-cell;"> Right </div>
+    </div>
+</div>
+
+#gamediv{
+    width: 50%; 
+    display: table;
+    float:center;
+    margin: auto;
+    border-width: 1px;
+    border-color:#000000;
+}
+
+#both{
+    width: 100%;
+    /*float:left; */
+    display: block;
+    margin: auto;
+    border-width: 1px;
+    border-color:#000000;
+}
+
+#kill{
+    width: 100%;
+    height:100%;
+    /*float:left; */
+    display: none;
+    margin: auto;
+    border-width: 1px;
+    border-color:#000000;
+
+}
+
+#bluesprite{
+    width: 20%;
+    /*float:right;*/
+    display: table-cell;
+    margin: auto;
+    border-width: 1px;
+    border-color:#000000;
+}
+
+#spellingbox{
+    width: 100%;
+    height: 500px;
+    float: center;
+    margin: auto;
+    border-width: 1px;
+    border-color:#000000;
+}
+
+
+#wrapper {
+    width: 90vw;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#HeartsCounter {
+    width: 400px;
+    height: 100px;
+    float:left; /* add this */
+}
+#Hearts{
+	float:left;
+}
+#Lives{
+	font-size: 54px;
+	float:left;
+}
+#Health {
+    height: 100px;
+    float: right; /* add this */
+}
+#Reaction {
+    float: center; /* add this */
+}
+
