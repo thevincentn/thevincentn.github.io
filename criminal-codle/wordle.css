@@ -21,6 +21,7 @@ hr {
     border: 1px solid;
     display: block;
     text-align: left;
+    justify-content: center;
 }
 
 #board {
