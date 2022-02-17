@@ -19,8 +19,7 @@ hr {
     margin-bottom:1em;
     padding: 1em;
     border: 1px solid;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     text-align: left;
 }
 
