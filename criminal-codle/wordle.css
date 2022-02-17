@@ -5,6 +5,7 @@ body {
 
 hr {
     width: 400px;
+    margin: auto;
 }
 
 #title {
@@ -15,7 +16,7 @@ hr {
 
 #section-of-code {
     width: 350px;
-    margin: 0 auto;
+    margin: auto;
     margin-bottom:1em;
     padding: 1em;
     border: 1px solid;
