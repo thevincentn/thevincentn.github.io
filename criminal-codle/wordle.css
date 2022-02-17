@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    width: 500px;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#section-of-code {
+    width: 480px;
+    margin: 0 auto;
+    margin-bottom:1em;
+    padding: 1em;
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+#board {
+    width: 210px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    /* Box */
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color:white;
+}
+
+
+.keyboard-row {
+    width: 170px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-tile {
+    width: 30px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-key-tile {
+    width: 81px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-key-tile {
+    width: 81px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Paragraph {
+    margin-left     : 1.5em;
+    margin-top      : 0.7em;
+    margin-bottom   : 0.5em;
+}
+.Section {
+margin-top      : 0.7em;
+margin-bottom   : 0.5em;
+}
+
+.Subsection {
+margin-top      : 0.7em;
+margin-bottom   : 0.5em;
+}
+
+.ContinuedSectionSubsection {
+margin-top      : 0.7em;
+margin-bottom   : 0.5em;
+}
+
+.ContinuedParagraph {
+margin-left : 1.5em;
+}
+
+.ContinuedSubparagraph {
+margin-left : 3em;
+}
+
+.ContinuedClause {
+margin-left : 4.5em;
+}
+
+.ContinuedSubclause {
+margin-left : 6em;
+}
+
+span.sectionLabel {
+    font-weight : bold;
+    color       : black;
+}
+
+a.lawLabel, a.sectionLabel {
+    text-decoration : none;
+}
+
+.ProvisionList .listItemBlock0 .Leader-dot,
+.table p.Provision .Leader-dot {
+border-bottom   : 1px dotted black;
+width           : 2pc;
+margin          : 0;
+height          : 1em;
+}
+
+ul.ProvisionList span.lawlabel {
+    font-weight : bold;
+    color       : black;
+}
