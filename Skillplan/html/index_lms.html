@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 1: Six Steps to Mentoring</title>
+  <style>
+  html, body, iframe { margin:0; padding:0; height:100%; }
+</style>
+  <script src="./assets/js/jknscormadapter.js"></script>
+</head>
+
+<body>
+  <iframe src="./pages/t01.html" class="content-frame" style="display: block; height: 100%; width: 100%; border:none; overflow: hidden;"></iframe>
+  <script>
+    window.addEventListener('load', function() {
+      'use strict';
+
+      if (typeof JKNSCORMAdapter !== 'undefined') {
+        JKNSCORMAdapter.initialize();
+      }
+
+    });
+
+    window.addEventListener('unload', function() {
+      'use strict';
+
+      if (typeof JKNSCORMAdapter !== 'undefined') {
+        JKNSCORMAdapter.terminate();
+      }
+
+    });
+  </script>
+</body>
+
+</html>
