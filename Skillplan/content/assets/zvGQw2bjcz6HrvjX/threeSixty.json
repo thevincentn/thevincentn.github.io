@@ -1,0 +1,67 @@
+{
+  "version": "3.63.27628.0",
+  "course_id": "5yfGy9HdUd6_course_id",
+  "title": "Financial Health Network’s FinHealth Score®",
+  "thumbnail": "story_content/thumbnail.jpg",
+  "scenes": [
+    {
+      "title": "Interactions"
+    }
+  ],
+  "slides": [
+    {
+      "id": "6EFBxg52U5J",
+      "title": "Question 1",
+      "scene_index": "1.1"
+    },
+    {
+      "id": "67pNjth3MbN",
+      "title": "Question 2",
+      "scene_index": "1.2"
+    },
+    {
+      "id": "5nmXjOiyW8v",
+      "title": "Question 1",
+      "scene_index": "1.3"
+    },
+    {
+      "id": "5m740Ubp3eH",
+      "title": "Question 1",
+      "scene_index": "1.4"
+    },
+    {
+      "id": "6FlsS13JzRL",
+      "title": "Question 1",
+      "scene_index": "1.5"
+    },
+    {
+      "id": "5tmUoEJCICJ",
+      "title": "Question 1",
+      "scene_index": "1.6"
+    },
+    {
+      "id": "5s4CRcLiC1y",
+      "title": "Question 1",
+      "scene_index": "1.7"
+    },
+    {
+      "id": "6eK0eC8C6df",
+      "title": "Question 1",
+      "scene_index": "1.8"
+    },
+    {
+      "id": "643vM1Wp1sh",
+      "title": "Untitled Slide",
+      "scene_index": "1.9"
+    }
+  ],
+  "player": {
+    "name": "unified",
+    "width": 980,
+    "height": 611
+  },
+  "stage": {
+    "width": 960,
+    "height": 540
+  }
+}
