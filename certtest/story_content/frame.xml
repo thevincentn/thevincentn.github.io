@@ -28,13 +28,6 @@
           <optionlist name="tabs">
             <listitems>
               <listitem name="resources" value="false" group="linkright" />
-              <listitem name="customlink" value="true" group="linkright">
-                <properties>
-                  <property name="title" value="Instructional Design by Tracy Carroll" />
-                  <property name="data" value="6X0kPcgjGBV" />
-                  <property name="ignoreSlideLock" value="true" />
-                </properties>
-              </listitem>
               <listitem name="outline" value="false" group="sidebar" />
               <listitem name="glossary" value="false" group="sidebar" />
               <listitem name="transcript" value="false" group="sidebar" />
@@ -109,6 +102,8 @@
       <control name="next" enabled="false" />
       <control name="swipeleft" enabled="false" />
       <control name="swiperight" enabled="false" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
       <control name="submit" enabled="true" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
@@ -132,6 +127,8 @@
       <control name="next" enabled="true" />
       <control name="swipeleft" enabled="true" />
       <control name="swiperight" enabled="true" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
       <control name="submit" enabled="false" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
@@ -155,6 +152,8 @@
       <control name="next" enabled="true" />
       <control name="swipeleft" enabled="false" />
       <control name="swiperight" enabled="true" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
       <control name="submit" enabled="false" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
@@ -178,6 +177,8 @@
       <control name="next" enabled="false" />
       <control name="swipeleft" enabled="false" />
       <control name="swiperight" enabled="false" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
       <control name="submit" enabled="false" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
@@ -201,6 +202,8 @@
       <control name="next" enabled="true" />
       <control name="swipeleft" enabled="true" />
       <control name="swiperight" enabled="true" />
+      <control name="fullScreenToggle" enabled="false" />
+      <control name="playbackSpeedControl" enabled="false" />
       <control name="submit" enabled="false" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
@@ -1398,6 +1401,8 @@
       <string id="acc_active">active</string>
       <string id="acc_closed_captions">Closed captions.</string>
       <string id="acc_definition">definition</string>
+      <string id="acc_enter_fullscreen">Enter full-screen mode</string>
+      <string id="acc_exit_fullscreen">Exit full-screen mode</string>
       <string id="acc_finish">finish</string>
       <string id="acc_locked">locked</string>
       <string id="acc_modern_video_captions">video captions</string>
@@ -1412,6 +1417,7 @@
       <string id="acc_next">next</string>
       <string id="acc_pause">pause</string>
       <string id="acc_play">play</string>
+      <string id="acc_playback_speed">playback speed</string>
       <string id="acc_previous">previous</string>
       <string id="acc_replay">replay</string>
       <string id="acc_resources">resources</string>
@@ -1447,6 +1453,7 @@
       <string id="exit">Exit</string>
       <string id="filter">Filter</string>
       <string id="finish">FINISH</string>
+      <string id="fullscreen_shortcut">Toggle full-screen mode</string>
       <string id="glossary">Glossary</string>
       <string id="keyboardshortcuts">Keyboard Shortcuts</string>
       <string id="keyboardshortcuts_lower">Keyboard shortcuts</string>
@@ -1467,6 +1474,8 @@
       <string id="outline">Menu</string>
       <string id="pause_tip">Pause</string>
       <string id="play_tip">Play</string>
+      <string id="playback_speed_normal">Normal</string>
+      <string id="playback_speed_title">Playback Speed</string>
       <string id="playpause_shortcut">Play / pause</string>
       <string id="prev">PREV</string>
       <string id="previous_shortcut">Previous slide</string>
@@ -1495,6 +1504,9 @@
       <string id="sidebar_toggle">Sidebar Toggle</string>
       <string id="slide_text_chk">Slide Text</string>
       <string id="spacebar_key">Space</string>
+      <string id="streaming_video_local_playback_learn_more">Learn more...</string>
+      <string id="streaming_video_local_playback_republish">To preview this video, use the Preview functionality in Storyline, republish your course using standard MP4 video, or publish to Review 360.</string>
+      <string id="streaming_video_local_playback_title">Streaming video is unavailable for local playback.</string>
       <string id="submit">SUBMIT</string>
       <string id="submit_shortcut">Submit slide</string>
       <string id="submit_tip">Submit</string>
