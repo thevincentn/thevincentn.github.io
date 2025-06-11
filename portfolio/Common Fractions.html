@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css" />
+    <link rel="stylesheet" href=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css" />
+    <title>Blank with Header</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+    <script src=".../Skillplan/shared/utils/inpage-link.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <style>
+        .lottieclass {
+            width: 100%;
+            height: auto;
+        }
+
+        .ruler-slider {
+            -webkit-appearance: none;
+            bottom: -10px;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            /*  background: transparent;*/
+            background: #d6d9e2;
+        }
+
+        .ruler-slider:focus {
+            outline: 0;
+        }
+
+        .ruler-slider::-moz-focus-outer {
+            border: 0;
+        }
+
+        .ruler-slider::-webkit-slider-thumb {
+            box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+            border: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -7.5px;
+        }
+
+        .ruler-slider::-moz-range-thumb {
+            box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+            border: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+
+        .ruler-slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+            background: #bebcc7;
+            border-radius: 20px;
+            border: 0;
+        }
+
+        .ruler-slider::-moz-range-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+            background: #bebcc7;
+            border-radius: 20px;
+            border: 0;
+        }
+
+        .ruler-slider::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        .ruler-slider::-ms-thumb {
+            box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+            border: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            height: 5px;
+        }
+
+        .ruler-slider::-ms-fill-lower,
+        .ruler-slider::-ms-fill-upper {
+            background: #bebcc7;
+            border: 0;
+            border-radius: 40px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        }
+
+        .range__tick {
+            fill: #000;
+        }
+
+        .range__tick:first-child {
+            -webkit-transform: translateX(2px);
+            -moz-transform: translateX(2px);
+            -ms-transform: translateX(2px);
+            -o-transform: translateX(2px);
+            transform: translateX(2px);
+        }
+
+        .range__tick:last-child {
+            -webkit-transform: translateX(-3px);
+            -moz-transform: translateX(-3px);
+            -ms-transform: translateX(-3px);
+            -o-transform: translateX(-3px);
+            transform: translateX(-3px);
+        }
+
+        .range__field {
+            border: 0;
+        }
+
+        #game-container {
+            /*            max-width: 500px;*/
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .options button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p>
+                <img src=".../Skillplan/content/enforced/10447-SDF1/assets/images/banners/insulator_lesson_3.png" alt="" title="Let's Get Started" style="max-width: 100%" data-d2l-editor-default-img-style="true" width="1360" height="200" role="presentation" />
+            </p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Common Fractions / Decimals</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="offset-sm-1 col-sm-10">
+                <p>
+                    There are a lot of common fractions and decimals you'll see out in the field. Memorizing them can help you be more
+                    efficient with measurements, conversions and other operations. In this lesson you will:
+                </p>
+                <ul>
+                    <li>Test your knowledge.</li>
+                    <li>Practice identifying and converting common fractions.</li>
+                </ul>
+                <p>
+                    Importance of this topic to your trade:&nbsp; &nbsp;&nbsp;
+                    <span class="mr-3">
+                        <span class="fa fa-hard-hat mr-2 med-priority" aria-hidden="true"></span>
+                        <strong>Medium&nbsp;</strong>
+                    </span>
+                </p>
+                <p>Let’s get started!</p>
+                <hr />
+                <h3>Test your Knowledge</h3>
+                <p class="small"></p>
+                <p class="instruction">
+                    Try to solve each problem on your own. When you’re ready, select each card to reveal the correct answer on the
+                    backside.
+                </p>
+                <div class="flip-card-set row">
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content">
+                            <div class="flip-card-front">
+                                <h4 style="text-align: center">Question 1</h4>
+                                <p style="text-align: center">Which is this fraction in decimal form?</p>
+                                <p style="text-align: center">
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>3</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}
+                                            </annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">Answer:</h4>
+                                <p style="text-align: center">
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mn>0.375</mn>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}
+                                            </annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content">
+                            <div class="flip-card-front">
+                                <h4 style="text-align: center">Question 2</h4>
+                                <p style="text-align: center">What is this decimal in fraction form?</p>
+                                <p style="text-align: center">
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mn>0.6875</mn>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}
+                                            </annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                            </div>
+                            <div class="flip-card-back" style="text-align: center">
+                                <h4 style="text-align: center">Answer:</h4>
+                                <p style="text-align: center">
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>11</mn>
+                                                    <mn>16</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}
+                                            </annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content">
+                            <div class="flip-card-front">
+                                <h4 style="text-align: center">Question 3</h4>
+                                <p style="text-align: center">How many decimal places are in the decimal form of this fraction?</p>
+                                <p style="text-align: center">
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>5</mn>
+                                                    <mn>16</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}
+                                            </annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">Answer:</h4>
+                                <p style="text-align: center">4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5></h5>
+                <h5>How did you do?</h5>
+                <p>
+                    If you feel confident about quickly recognizing these fractions, you can skip ahead to <a data-inpage-link="#game"><b>the game at the bottom</b></a> or to the
+                    <a href="#" target="_top">Multiplying Fractions </a> lesson. Otherwise continue
+                    down the page to learn some tips to identify these numbers more easily.
+                </p>
+                <hr />
+                <h1>Fractions on the Field</h1>
+                <p>
+                    The most common fractions used in the trades are halves, 4ths, 8ths and 16ths. The reason these are common is because they
+                    appear on standard tape measures.
+                </p>
+                <div class="col-12">
+                    <div style="max-width: 75%" class="lottieclass m-auto" id="threePointTwoFiveInches"></div>
+                </div>
+                <!--
+                <div class="card card-graphic">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p><strong>Other Common Fractions</strong></p>
+                            <p>32nds of an inch are also important in precision work.</p>
+                        </div>
+                    </div>
+                </div>
+-->
+                <br>
+                <div class="jumbotron">
+
+                    <p><strong>Other Common Fractions</strong></p>
+                    <p>32nds of an inch are also important in precision work.</p>
+                </div>
+                <!--                <hr>-->
+                <!--                <h2>Learn</h2>-->
+                <p></p>
+                <hr>
+                <h3>Try it Yourself</h3>
+                <p>Here are the most common fractions you'll see on the job.</p>
+                <p class="instruction">Move the slider to learn more.</p>
+                <h5>Fraction: <span id="fractionText">1/2</span></h5>
+                <h5>Decimal: <span id="decimalText">0.5</span></h5>
+                <!-- Range Slider HTML -->
+                <fieldset class="range__field p-0">
+                    <input id="rulerSlider" class="range ruler-slider p-0" type="range" min="0" max="16" onchange="updateTextInput(this.value);" oninput="updateTextInput(this.value);">
+                    <svg role="presentation" width="100%" height="100" style="background-color: #d6d9e2; padding=0;" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="range__tick" x="0%" y="3" width="3" height="100"></rect>
+                        <rect class="range__tick" x="6.25%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="12.5%" y="3" width="1" height="50"></rect>
+                        <rect class="range__tick" x="18.75%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="25%" y="3" width="3" height="60"></rect>
+                        <rect class="range__tick" x="31.25%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="37.5%" y="3" width="1" height="50"></rect>
+                        <rect class="range__tick" x="43.75%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="50%" y="3" width="3" height="80"></rect>
+                        <rect class="range__tick" x="56.25%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="62.5%" y="3" width="1" height="50"></rect>
+                        <rect class="range__tick" x="68.75%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="75%" y="3" width="3" height="60"></rect>
+                        <rect class="range__tick" x="81.25%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="87.5%" y="3" width="1" height="50"></rect>
+                        <rect class="range__tick" x="93.75%" y="3" width="1" height="30"></rect>
+                        <rect class="range__tick" x="100%" y="3" width="4" height="100"></rect>
+                    </svg>
+                </fieldset>
+                <hr>
+                <h1>Tips &amp; Tricks</h1>
+                <p>
+                    Memorizing them can help you easily convert between the fraction and decimal forms of these numbers. But this can
+                    be challenging, especially without a lot of on the job practice. To help you remember them, consider the
+                    following.
+                </p>
+
+                <p class="instruction">Select each tab to learn more.</p>
+
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center">
+                                <a class="list-group-item list-group-item-action active">Decimal Places</a>
+                                <a class="list-group-item list-group-item-action">Easy References</a>
+                                <a class="list-group-item list-group-item-action">Odds Only</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active pb-4">
+                                    <!--<p>Decimal places are the number of digits after the dot. Thinking about the number of decimal places there are makes it easier to identify if you're converting to halves, 4ths, 8ths or 16ths. </p>-->
+                                    <p>There is a pattern between a fraction&rsquo;s <strong>denominator</strong> and the <strong>number of decimal places</strong>. Knowing it can help you quickly identify if you&rsquo;re converting halves, 4ths, 8ths or 16ths.&nbsp;</p>
+                                    <h5>Examples</h5>
+                                    <ol>
+                                        <li>The decimal for <strong>1/2</strong> has <strong>1</strong> decimal place: 0 . <u>5</u></li>
+                                        <li>The decimal for <strong>3/4</strong> has <strong>2</strong> decimal place: 0 . <u>7</u> <u>5</u></li>
+                                        <li>The decimal for <strong>5/8</strong> has <strong>3</strong> decimal place: 0 . <u>6</u> <u>2</u> <u>5</u></li>
+                                        <li>The decimal for <strong>11/16</strong> has <strong>4</strong> decimal place: 0 . <u>6</u> <u>8</u> <u>7</u> <u>5</u></li>
+                                    </ol>
+                                    <div class="card card-graphic">
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <p><strong>Did You Know?</strong></p>
+                                                <p>The decimal form of all these common fractions end in 5.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade pb-4">
+                                    <h2>Easily Referenced Numbers</h2>
+                                    <p>Using fractions and decimals you already remember will help you easily convert other numbers. For instance, if you remember that:</p>
+                                    <!--
+                                    <ul>
+                                        <li>1 / 2 = 0.5</li>
+                                        <li>1 / 2 = 4 / 8</li>
+                                        <li>1 / 8 = 0.125</li>
+                                        <li>5 / 8 is a little larger than 1 / 2</li>
+                                    </ul>
+                                    <p>Then it'll be easier to remember that 5 / 8 = 0.625 which is a little larger than 1 / 2.</p>
+                                    -->
+                                    <ul>
+                                        <li class="pb-3">An easy reference is <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> = 0.5 as a decimal</li>
+                                        <li class="pb-3"><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> is also equal to <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>4</mn>
+                                                            <mn>8</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math>, an equivalent fraction</li>
+                                        <li class="pb-3">Another easy reference is <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>8</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> = 0.125</li>
+                                        <li class="pb-3">On a measuring tape, <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>5</mn>
+                                                            <mn>8</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> is a little larger than <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math></li>
+                                        <li>Now it&rsquo;s logical that <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>5</mn>
+                                                            <mn>8</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> = 0.625 because it&rsquo;s a little larger than <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math>;.<br /><math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>1</mn>
+                                                            <mn>2</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> = 0.5&nbsp; <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                <semantics>
+                                                    <mstyle>
+                                                        <mfrac>
+                                                            <mn>5</mn>
+                                                            <mn>8</mn>
+                                                        </mfrac>
+                                                    </mstyle>
+                                                    <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                        xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                </semantics>
+                                            </math> = 0.625</li>
+                                    </ul>
+                                    <p>Check it on the slider above!</p>
+                                </div>
+                                <div class="tab-pane fade pb-4">
+                                    <p>In lowest terms, these fractions only have odd numerators like 1, 3, 5, 7, 9, 11, 13 and 15. This can save you from remembering a whole half of the list!</p>
+                                    <div class="row">
+
+
+
+                                        <div class="col-6">
+                                            <h5>Halves</h5>
+                                            <ul>
+                                                <li class="mb-3">
+
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>2</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.5
+                                                </li>
+                                            </ul>
+                                            <h5 class="mt-4">4ths</h5>
+                                            <ul>
+                                                <li class="mb-3">
+
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>4</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.25
+                                                </li>
+                                                <li>
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>3</mn>
+                                                                    <mn>4</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.75
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-6">
+                                            <h5>8ths</h5>
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>8</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.125
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>3</mn>
+                                                                    <mn>8</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.375
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>5</mn>
+                                                                    <mn>8</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.625
+                                                </li>
+                                                <li>
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>7</mn>
+                                                                    <mn>8</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.875
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5>16ths</h5>
+                                        </div>
+                                        <div class="col-6">
+
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.0625
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>3</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.1875
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>5</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.3125
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>7</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.4375
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul>
+
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>9</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.5625
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>11</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.6875
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>13</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.8125
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>15</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.9375
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h2>Memory Aids</h2>
+                <p>Some tradespeople come up with a variety of memory aids, or clues, to help them remember these conversions. Here are few for 8ths and 16ths.</p>
+
+                <p class="instruction">Select each tab to learn more.</p>
+
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center">
+                                <a class="list-group-item list-group-item-action active">8ths</a>
+                                <a class="list-group-item list-group-item-action">16ths</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active pb-4">
+                                    <h5>Aid #1</h5>
+                                    <p>The first digit of the decimal form of
+                                        <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>1</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math> = 0.<u>1</u>25 and
+                                        <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>3</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math>= 0.<u>3</u>75 all start with the number in the numerator.
+                                    </p>
+
+                                    <h5>Aid #2</h5>
+                                    <p>The numbers 7 and 8 are in the fraction and decimal forms of <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>7</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math>
+
+                                        = 0.875</p>
+                                </div>
+                                <div class="tab-pane fade pb-4">
+                                    <h5>Aid #1</h5>
+                                    <p>The denominator has a 6 in it and the decimal form of all the numbers are "close to" 6 &times; the numerator.</p>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.0<u>6</u>25<span class="mx-3"> </span> 6 &times; 1 = 6
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>3</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.<u>18</u>75<span class="mx-3"> </span> 6 &times; 3 = 18
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>5</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.<u>31</u>25<span class="mx-3"> </span> 6 &times; 5 = 30
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>7</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.<u>43</u>75<span class="mx-3"> </span> 6 &times; 7 = 42
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>9</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.<u>56</u>25<span class="mx-3"> </span> 6 &times; 9 = 54
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>11</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.<u>68</u>75<span class="mx-3"> </span> 6 &times; 11 = 66
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <h5>Aid #2</h5>
+                                <p>Another helpful memory aid is that the last 2 digits of each decimal alternates between 25 and 75.</p>
+                                    <div class="row">
+                                        <div class="col-6">
+
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>1</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.06<u>25</u><span class="mx-3"> </span> 6 &times; 1 = 6
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>3</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.18<u>75</u><span class="mx-3"> </span> 6 &times; 3 = 18
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>5</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.31<u>25</u><span class="mx-3"> </span> 6 &times; 5 = 30
+                                                </li>
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>7</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.43<u>75</u><span class="mx-3"> </span> 6 &times; 7 = 42
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>9</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.56<u>25</u><span class="mx-3"> </span> 6 &times; 9 = 54
+                                                </li>
+                                                <li class="mb-3">
+                                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                                        <semantics>
+                                                            <mstyle>
+                                                                <mfrac>
+                                                                    <mn>11</mn>
+                                                                    <mn>16</mn>
+                                                                </mfrac>
+                                                            </mstyle>
+                                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                        </semantics>
+                                                    </math>
+
+                                                    = 0.68<u>75</u><span class="mx-3"> </span> 6 &times; 11 = 66
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- End Range Slider HTML -->
+                <p class="mt-4">Let's take a look at how we can put these tips and tricks into practice to convert common decimals to fractions.</p>
+                <hr />
+                <h3>Review</h3>
+                <p>Review the steps for converting between common decimals to fractions.</p>
+                <div class="jumbotron-secondary">
+                    <h2>Steps for converting between decimals to fractions</h2>
+                    <p>1. Identify the number of decimal places.<br />2. Use reference numbers.<br />3. Convert.</p>
+                </div>
+                <br />
+                <p>Let's look at an example:</p>
+                <p class="lead"><strong>Example 1:</strong> Convert 0.625 to a fraction.</p>
+                <p></p>
+                <br />
+                <p class="instruction">Use the steps to make the conversion.</p>
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify the number of decimal places.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    There are 3 decimal places so the fraction will be look like
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mo>?</mo>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Use reference numbers.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    0.625 is larger than
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>1</mn>
+                                                    <mn>2</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    = 0.5
+                                </p>
+                                <p class="mb-5"><img src=".../Skillplan/content/enforced/10447-SDF1/half.PNG" alt="" title="" data-d2l-editor-default-img-style="true" style="width: 100%; max-width: 800px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                <p>
+                                    This means it is larger than
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>4</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    = 0.5
+                                </p>
+                                <p>You may also remember that <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>1</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    = 0.125 and that 0.625 is 0.125 larger than 0.5</p>
+                                <p class="mt-5"><img src=".../Skillplan/content/enforced/10447-SDF1/8th.PNG" alt="" title="" data-d2l-editor-default-img-style="true" style="width: 100%; max-width: 800px; display: block; margin-left: auto; margin-right: auto;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Convert.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    The numerator is odd and larger than 4 so it must be 5. So, 0.625 =
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>5</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                                <p>
+                                    <strong>Answer:
+                                        <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>5</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <p>Let's look at another example:</p>
+                <p class="lead"><strong>Example 2:</strong> Convert 0.1875 to a fraction.</p>
+                <p></p>
+                <br />
+                <p class="instruction">Use the steps to make the conversion.</p>
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify the number of decimal places.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    There are 4 decimal places so the fraction will be look like
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mo>?</mo>
+                                                    <mn>16</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Use reference numbers.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    0.1875 is smaller than
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>1</mn>
+                                                    <mn>4</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    = 0.25 but not by much.
+                                </p>
+
+                                <p>
+                                    This means it is smaller than
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>4</mn>
+                                                    <mn>16</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    = 0.25
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Convert.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    The numerator is odd and smaller than 4 so it must be 3. So, 0.1875 =
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>3</mn>
+                                                    <mn>16</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+                                <p>
+                                    <strong>Answer:
+                                        <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>3</mn>
+                                                        <mn>16</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math></strong>
+                                </p>
+                                <div class="jumbotron jumbotron-secondary mt-4">
+                                    <p><strong>Trick with the Six</strong></p>
+                                    <p>If you remember that 6 &times; 3 = 18, you can use the pattern with the 16ths discussed above to get this answer as well.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>Here is one more:</p>
+
+                <p class="lead"><strong>Example 3:</strong> Convert <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                        <semantics>
+                            <mstyle>
+                                <mfrac>
+                                    <mo>7</mo>
+                                    <mn>8</mn>
+                                </mfrac>
+                            </mstyle>
+                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                        </semantics>
+                    </math> to a decimal.</p>
+                <p></p>
+                <br />
+                <p class="instruction">Use the steps to make the conversion.</p>
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify the number of decimal places needed.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    The denominator is 8 so it will have three decimal places and look like 0._ _ _
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Use reference numbers.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>7</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+
+                                    is a little smaller than 1 =
+                                    <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>8</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Convert.</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    The decimal will be less than 1. We could subtract by <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                        <semantics>
+                                            <mstyle>
+                                                <mfrac>
+                                                    <mn>1</mn>
+                                                    <mn>8</mn>
+                                                </mfrac>
+                                            </mstyle>
+                                            <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                        </semantics>
+                                    </math> = 0.125
+                                </p>
+                                <p>1 - 0.125 = 0.875</p>
+                                <p>
+                                    <strong>Answer:
+                                        <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>7</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math></strong>
+                                </p>
+                                <div class="jumbotron jumbotron-secondary mt-4">
+                                    <p><strong>Why was 6 afraid of 7?</strong></p>
+                                    <p>Because 7 and 8 are in 0.875 and <math title="" xmlns="http://www.w3.org/1998/Math/MathML" display="inline">
+                                            <semantics>
+                                                <mstyle>
+                                                    <mfrac>
+                                                        <mn>7</mn>
+                                                        <mn>8</mn>
+                                                    </mfrac>
+                                                </mstyle>
+                                                <annotation encoding="wiris">{"version":"1.1","math":"&lt;math
+                                                    xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mn&gt;11&lt;/mn&gt;&lt;mn&gt;16&lt;/mn&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                            </semantics>
+                                        </math> 😉</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+
+
+                <div class="row">
+                    <div class="col-12 col-md-10" id="game-container">
+                        <h3 id="game">Practice</h3>
+                        <p>See how many you can get correct within the time limit.<br>
+                            You’ll have three chances to make mistakes before the timer runs out.<br>
+                        </p>
+                        <p class="instruction">The game will start once you make your first choice.</p>
+                        <p><strong>Time Left:</strong> <span id="timer">15</span> seconds</p>
+                        <p><strong>Lives:</strong> <span id="lives">❤️❤️❤️</span></p>
+                        <h2 id="fraction"></h2>
+                        <div class="options" id="options"></div>
+                        <br>
+                        <p>Current Score: <span id="score">0</span></p>
+                        <p>High Score: <span id="highscore">0</span></p>
+                        <button id="restart-button" style="display: none;" onclick="restartGame()">Play Again</button>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <p>
+                    <a rel="noopener" href="#" target="_top" type="button" class="btn btn-secondary">Proceed to the Next Lesson</a>
+                </p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p>
+                        <img src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo" />
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <p>
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.min.js"></script>
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.js"></script>
+        <script>
+            var sixInchesPointFiveFeet = lottie.loadAnimation({
+                container: document.getElementById("sixInchesPointFiveFeet"),
+                renderer: "svg",
+                loop: true,
+                autoplay: true,
+                path: "/content/enforced/6714-BYSMF2/lotties/sixInchesPointFiveFeet.json"
+            });
+            var threePointTwoFiveInchesanimation = lottie.loadAnimation({
+                container: document.getElementById("threePointTwoFiveInches"),
+                renderer: "svg",
+                loop: true,
+                autoplay: true,
+                path: "/content/lotties/trade-math/decimal-feet/convert-to-decimal-ft/threetwofiveinchesSteel.json"
+            });
+            var quizlottieanimation = lottie.loadAnimation({
+                container: document.getElementById("quizlottie"),
+                renderer: "svg",
+                loop: true,
+                autoplay: true,
+                path: "/content/enforced/6714-BYSMF2/lotties/quiz lottie.json"
+            });
+        </script>
+        <script>
+            function updateTextInput(val) {
+                var fractions = ["0", "1/16", "1/8", "3/16", "1/4", "5/16", "3/8", "7/16", "1/2", "9/16", "5/8", "11/16", "3/4", "13/16", "7/8", "15/16",
+                    "16/16"
+                ];
+                document.getElementById('fractionText').innerHTML = fractions[val];
+                document.getElementById('decimalText').innerHTML = (val / 16);
+            }
+        </script>
+
+        <script>
+            const fractionToDecimal = {
+                "0": 0.00,
+                "1/16": 0.0625,
+                "1/8": 0.125,
+                "3/16": 0.1875,
+                "1/4": 0.25,
+                "5/16": 0.3125,
+                "3/8": 0.375,
+                "7/16": 0.4375,
+                "1/2": 0.5,
+                "9/16": 0.5625,
+                "5/8": 0.625,
+                "11/16": 0.6875,
+                "3/4": 0.75,
+                "13/16": 0.8125,
+                "7/8": 0.875,
+                "15/16": 0.9375,
+                "16/16": 1.00
+            };
+
+            let score = 0;
+            let highscore = localStorage.getItem("highscore") || 0;
+            let lives = 3;
+            let timeLeft = 15;
+            let currentFraction = "";
+            let timerInterval;
+            let gameStarted = false;
+
+            document.getElementById("highscore").textContent = highscore;
+
+            function startGame() {
+                if (!gameStarted) {
+                    gameStarted = true;
+                    timerInterval = setInterval(() => {
+                        timeLeft--;
+                        document.getElementById("timer").textContent = timeLeft;
+                        if (timeLeft <= 0 || lives <= 0) {
+                            endGame();
+                        }
+                    }, 1000);
+                }
+            }
+
+            function generateQuestion() {
+                const keys = Object.keys(fractionToDecimal);
+                currentFraction = keys[Math.floor(Math.random() * keys.length)];
+                document.getElementById("fraction").textContent = `Which decimal corresponds to ${currentFraction}?`;
+                generateOptions();
+            }
+
+            function generateOptions() {
+                let correctAnswer = fractionToDecimal[currentFraction];
+                let optionsContainer = document.getElementById("options");
+                optionsContainer.innerHTML = "";
+
+                let allValues = Object.values(fractionToDecimal);
+                let options = new Set([correctAnswer]);
+                while (options.size < 4) {
+                    let randomOption = allValues[Math.floor(Math.random() * allValues.length)];
+                    options.add(randomOption);
+                }
+
+                Array.from(options).sort(() => Math.random() - 0.5).forEach(value => {
+                    let button = document.createElement("button");
+                    button.textContent = value;
+                    button.onclick = () => {
+                        startGame();
+                        checkAnswer(value);
+                    };
+                    optionsContainer.appendChild(button);
+                });
+            }
+
+            function checkAnswer(value) {
+                if (value === fractionToDecimal[currentFraction]) {
+                    score++;
+                    document.getElementById("score").textContent = score;
+                    if (score > highscore) {
+                        highscore = score;
+                        localStorage.setItem("highscore", highscore);
+                        document.getElementById("highscore").textContent = highscore;
+                    }
+                    generateQuestion();
+                } else {
+                    lives--;
+                    updateLivesDisplay();
+                    if (lives <= 0) {
+                        endGame();
+                    }
+                }
+            }
+
+            function updateLivesDisplay() {
+                let livesDisplay = "❤️".repeat(lives);
+                document.getElementById("lives").textContent = livesDisplay;
+            }
+
+            function endGame() {
+                clearInterval(timerInterval);
+                document.getElementById("fraction").textContent = "Game Over!";
+                document.getElementById("options").innerHTML = "";
+                document.getElementById("restart-button").style.display = "block";
+            }
+
+            function restartGame() {
+                score = 0;
+                lives = 3;
+                timeLeft = 15;
+                gameStarted = false;
+                document.getElementById("score").textContent = score;
+                document.getElementById("lives").textContent = "❤️❤️❤️";
+                document.getElementById("timer").textContent = timeLeft;
+                document.getElementById("restart-button").style.display = "none";
+                generateQuestion();
+            }
+
+            generateQuestion();
+        </script>
+
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </p>
+    <!-- Template JavaScript -->
+    <p>
+        <script src=".../Skillplan/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+    </p>
+</body>
+
+</html>
