@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gear_style.css">
+    <title>Gear Interactive Activity</title>
+</head>
+<body>
+    <div class="interactive-container">
+        <h2>Gear Interaction</h2>
+        <div id="container"></div>
+        <div class="controls">
+            <div class="item">
+                <label for="teeth">Number of Teeth:</label>
+                <input id="teeth" type="range" min="10" max="30" value="10" oninput="setTeeth(this.value)" />
+                <span id="teethValue">10</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/content/enforced/10563-SCI2/simplemachines/gear/gear_script.js"></script>
+</body>
+</html>

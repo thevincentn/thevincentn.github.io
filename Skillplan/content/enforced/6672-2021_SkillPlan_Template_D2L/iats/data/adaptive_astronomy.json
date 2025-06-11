@@ -1,0 +1,214 @@
+{
+	"quizHeading": "<h1>🔭 Astronomy Basics</h1>",
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"colouredFeedback": true,
+	"preQuizHtml": "<h2>Adaptive Quiz</h2><p>Watch this video by National Geographic, then begin the quiz!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/libKVRa01L8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe><p class=\"mt-4\">You'll need to answer three questions correctly in the first phase, and two in the second phase to mvoe on.</p><p class=\"mt-4\"><strong>GOOD LUCK!</strong></p>",
+	"postQuizHtml": "<h2>Well done.</h2><p>If you want to learn more about the galaxy, I recommend you check out this page on National Geographic's website:</p><p><a href=\"https://video.nationalgeographic.com/video/101-videos/00000161-d7ea-dcda-a37f-d7fe96d30000\" target=\"_blank\">Origins of the Universe 101</a></p>",
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {			
+			"enabled": false,
+			"limit": 4,
+			"preQuizText": "You correctly answer any 4 questions.",
+			"useForProgressBar": false
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You incorrectly answer any 5 questions.",
+			"useForStrikes": false
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": false
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "☀️ The Solar System",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 4,
+			"numRightBeforeUpgrade": 3,
+			"upgradePoolId": 2,
+			"downgradePoolId": "END",
+			"feedbackOnUpgradeHtml": "<p>Great work! Now we're going to check out outer space... watch this video on galaxies before continuing to the next section!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+			"feedbackOnDowngradeHtml": "<p class=\"mb-5\">Dang! Review the Solar System 101 Video, then try again! Nice try though.</p>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "How many planets does our solar system have?",
+					"hintHtml": "Pluto was reclassified to \"dwarf planet\" recently...",
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "7",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>"
+						},
+						{
+							"optionText": "8",
+							"feedback": "<p>Yes! There are <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>",
+							"score": 1
+        		},
+						{
+							"optionText": "9",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>"
+        		},
+						{
+							"optionText": "None of the above",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/moon_large.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\"><p>The largest moon in our solar system has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "That's correct!",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "No, it's actually Titan!"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "No, it's actually Titan!"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "No, it's actually Titan!"
+        		}
+					]
+				},
+				{
+					"questionType": "multi-select",
+					"questionHtml": "<p>Place a checkmark beside the <strong>Gas Giant</strong> planets.</p>",
+					"hintHtml": "There are four terrestrial planets.",
+					"randomizeOptions": false,					
+					"feedbackForPerfect": "Correct! The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+					"feedbackForImperfect": "The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+					"options": [
+						{
+							"optionText": "Mercury"
+						},
+						{
+							"optionText": "Venus"
+						},
+						{
+							"optionText": "Earth"
+						},
+						{
+							"optionText": "Mars"
+						},
+						{
+							"optionText": "Jupiter",
+							"score": 1
+						},
+						{
+							"optionText": "Saturn",
+							"score": 1
+						},
+						{
+							"optionText": "Uranus",
+							"score": 1
+						},
+						{
+							"optionText": "Neptune",
+							"score": 1
+						}
+					]
+				},
+				{
+					"questionType": "sorting",
+					"questionHtml": "Rank the below planets in order of their size, starting with the smallest.<br><em>The smallest planet should be number 1.</em>",
+					"hintHtml": "Jupiter is the biggest planet! So it should be number 4.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<h3>Correct!</h3><p>The order, from smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\"  style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"feedbackForImperfect": "<h3>That's the wrong order...</h3><p>The order, from smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\" style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"options": [
+						{
+							"optionText": "Jupiter",
+							"matchingText": 4
+						},
+						{
+							"optionText": "Saturn",
+							"matchingText": 3
+						},
+						{
+							"optionText": "Uranus",
+							"matchingText": 1
+						},
+						{
+							"optionText": "Neptune",
+							"matchingText": 2
+						}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 2,
+			"poolName": "🌌 The Galaxy",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 1,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": null,
+			"downgradePoolId": 1,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": "<p class=\"mb-4\">You are about to be downgraded down to the previous level... Time to review the solar system again!</p><img style='display: block; margin-left: auto; margin-right: auto' src=\"img/milky_way.jpg\" alt=\"An image of the milky way galaxy, showing its spiral arms full of stars.\" class=\"mb-2\">",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum."
+        		}
+					]
+				},
+				{
+					"questionType": "fitb",
+					"questionHtml": "The milky way is a #{blank} galaxy.",
+					"hintHtml": false,
+					"caseSensitive": false,
+					"feedbackForPerfect": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/milky_way.jpg\" alt=\"An image of the milky way galaxy, showing its spiral arms full of stars.\" class=\"mb-2\"><p>Perfect! It is a 'spiral' galaxy, or a 'barred spiral' galaxy to be more precise.</p>",
+					"feedbackForImperfect": "<p>Actually it is a 'spiral' galaxy, or a 'barred spiral' galaxy to be more precise.</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/milky_way.jpg\" alt=\"An image of the milky way galaxy, showing its spiral arms full of stars.\" class=\"mb-2\">",
+					"blankSize": 10,
+					"blankMaxLength": 20,
+					"answers": [
+						"spiral", "barred spiral"
+					]					
+				}
+			]
+		}
+	],
+	"langTerms": {
+		"nextButton": "Next",
+		"previousButton": "Previous",
+		"restartButton": "Restart Quiz",
+		"checkAnswerButton": "Check Answer",
+		"hintButton": "<span class=\"icon hint\" aria-label=\"Toggle Hint\"></span>",
+		"strikeZoneText": "You have #{numRemainingToDowngrade} remaining before going to the lower level.",
+		"progressBarText": "You have #{numRemainingToUpgrade} remaining before progressing to the next level."
+	}
+}

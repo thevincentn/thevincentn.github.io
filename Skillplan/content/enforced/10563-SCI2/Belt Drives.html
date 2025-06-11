@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/flickity.css" media="screen">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/fullscreen.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/content/enforced/10511-SP2025/custom.css">
+    <!-- Playing Cards       -->
+    <style>
+        .lever-container {
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .beltdrive-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            min-width: 300px;
+            min-height: 112.5px;
+            aspect-ratio: 4 / 1.5;
+            height: auto;
+            margin: 0 auto;
+
+        }
+
+        .pulley {
+            position: absolute;
+        }
+
+        .pulley-circle {
+            fill: #d4d4d4;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+
+        .belt {
+            fill: none;
+            stroke: #555;
+            stroke-width: 2px;
+        }
+
+        .slider-container {
+            width: 80%;
+            max-width: 600px;
+            padding-top: 20px;
+        }
+
+        .frac {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            letter-spacing: 0.001em;
+            text-align: center;
+        }
+
+        .frac>span {
+            display: block;
+            padding: 0.1em;
+        }
+
+        .frac span.bottom {
+            border-top: thin solid black;
+        }
+
+        .frac span.symbol {
+            display: none;
+        }
+    </style>
+    <title>Module Introduction Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p><img src="/content/enforced/10563-SCI2/branding/lessonbanners/2.png" alt=""></p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Belt Drives</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="offset-sm-1 col-sm-10">
+                <div class="row pt-3 pb-3 card mb-4 mx-auto">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Key Questions:</h3>
+                            <ul>
+                                <li>What types of mechanical advantage are produced by belt drives?</li>
+                                <li>How do we calculate the mechanical advantage of belt drives?</li>
+                            </ul>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4 p-4"><img src="/content/enforced/10511-SP2025/questions.png" alt="" data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: scale-down; min-width: 175px; min-height: 175px; max-height: 250px;"></div>
+                    </div>
+                </div>
+                <h3>What Do You Think?</h3>
+                <p>Consider the questions below. Click on each card to learn the answers.</p>
+                <div class="flip-card-set row">
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/300x300.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4>True or False</h4>
+                                <p class="text-left">A large driver increases the speed of a smaller driven pulley.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>True</h4>
+                                <p class="text-left">If a large motor rotates a smaller pulley, the rotational speed of the smaller pulley is faster than the larger motor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/300x300.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4>True or False</h4>
+                                <p class="text-left"> The moving components of a belt drive typically rotate in the same direction.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>True</h4>
+                                <p class="text-left"> The rotating parts typically rotate in the same direction in a belt drive system. But, it is possible for belt drives to change the direction of rotation by crossing the belt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p></p>
+                <p class="mt-4">Keep reading to learn more about belt drives.</p>
+                <hr>
+                <h1>Introduction</h1>
+
+                <p><strong>Belt drives</strong> are a special type of pulley and belt system that connect an electric motor to another part of the machine. The pulley connected to the motor is called the <strong>driver pulley</strong> or <strong>motor pulley</strong> and the pulley connected to the machine is called the <strong>driven pulley</strong>. Sometimes these pulleys are called shafts, rotors or wheels.</p>
+
+                <p>The mechanical advantage for belt drives is primarily based on the ratio of the pulley diameters. You can explore this relationship in the activity below.</p>
+
+
+
+                <p class="directive">Move the sliders to learn more.</p>
+
+
+                <div class="container lever-container p-5">
+                    <div class="beltdrive-container mb-4">
+                        <svg id="belt" width="100%" height="100%">
+                            <path id="beltPath" class="belt" />
+                        </svg>
+
+                        <svg id="pulley1" class="pulley" width="150" height="150" style="left: 0;">
+                            <circle id="pulley1Circle" class="pulley-circle" cx="75" cy="75" r="50" />
+                        </svg>
+
+                        <svg id="pulley2" class="pulley" width="150" height="150" style="right: 0;">
+                            <circle id="pulley2Circle" class="pulley-circle" cx="75" cy="75" r="30" />
+                        </svg>
+                    </div>
+
+
+
+
+
+
+                    <div class="slider-container mx-auto">
+                        <h5 class="my-4 mx-auto text-center">Mechanical Advantage: <span id="maDisplay">2</span></h5>
+                        <div class="form-group mx-auto text-center">
+                            <p>Motor Pulley Diameter: <span id="pulley1RadiusVal">50</span> inches</p>
+                            <label for="wheelRadius">
+
+                            </label>
+                            <label for="pulley1Radius"></label>
+                            <input class="form-control-range  mx-auto text-center" type="range" id="pulley1Radius" min="20" max="70" value="50">
+
+                        </div>
+                        <div class="form-group mx-auto text-center">
+                            <p>Driven Pulley Diameter: <span id="pulley2RadiusVal">25</span> inches</p>
+                            <label for="pulley2Radius"></label>
+                            <input class="form-control-range mx-auto text-center" type="range" id="pulley2Radius" min="20" max="70" value="25">
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="quick-assess quick-assess-mc quick-border">
+                    <fieldset class="radio">
+                        <h3>What Do You Think?</h3>
+                        <p>Based on the activity above, which formula is used to determine mechanical advantage (MA)?</p>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> MA = Driven Pulley Diameter &divide; Motor Pulley Diameter</label> </div>
+                            </div>
+                        </div>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[Y]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> MA = Motor Pulley Diameter &divide; Driven Pulley Diameter</label> </div>
+                            </div>
+                        </div>
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                        <div class="collapse feedback">
+                            <p><strong>Correct Answer:</strong> MA = Motor Pulley Diameter &divide; Driven Pulley Diameter</p>
+                            <p>If you want to test if this is true, play around with the sliders above! </p>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <h1>The Moment of Force Equation</h1>
+                <p>With belt drives we aren't interested in the mechanical advantage we gain from force. Instead, we're interested in the speed advantage we get from the motor pulley. But we can still use the moment of force equation to find out things about our belt drive system.</p>
+                <div class="jumbotron">
+                    <p style="text-align: center;"><strong>EF &times; ED = RF &times; RD</strong></p>
+
+                    <p style="text-align: center;"><strong>Mechanical Advantage = Gear Ratio = <span class="frac">
+
+                                ED
+                                <span class="symbol">/</span>
+                                <span class="bottom">
+                                    RD
+                                </span>
+                            </span> = <span class="frac">
+
+                                RF
+                                <span class="symbol">/</span>
+                                <span class="bottom">
+                                    EF
+                                </span>
+                            </span></strong></p>
+
+                    <p style="text-align: center;"><strong>Force = Rotations Per Minute (RPM)</strong></p>
+                    <p style="text-align: center;"><strong>Distance = Diameter or Radius</strong></p>
+                    <p style="text-align: center;">If the belt drive's motor pulley has a diameter of 50 inches and the driven pulley's diameter is 25 inches, then the mechanical advantage is 2.</p>
+                </div>
+                <h3>Learn</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <figure>
+                            <div class="lottieclass" id="QSN"></div>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8">
+                        <p><span style="font-size: 19px;">Let's learn how to use these formulas with the Question Strategy for Numeracy to solve mechanical advantage problems involving belt drives.</span></p>
+                    </div>
+                </div>
+
+
+                <br>
+                <p class="lead"><strong>Problem 1:</strong> A motor with a 225 mm diameter pulley drives a fan with a 75 mm diameter pulley. Calculate the mechanical advantage of the belt drive.</p>
+
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+
+                <div class="accordion">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <ul>
+                                    <li><strong>Need:</strong> mechanical advantage (MA)</li>
+                                    <li><strong>Know:</strong> diameter of the motor pulley (ED) and the diameter of the driven pulley (RD)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Organize</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Find the formula that relates mechanical advantage to the diameter of the motor pulley (ED) and the diameter of the driven pulley (RD).</p>
+                                <p class="pl-4">MA = <span class="frac">
+                                        ED
+                                        <span class="symbol">/</span>
+                                        <span class="bottom">RD</span>
+                                    </span></p>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Set Up &amp; Calculate</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Substitute the values:</p>
+                                <p class="pl-4">MA = <span class="frac">
+                                        225
+                                        <span class="symbol">/</span>
+                                        <span class="bottom">75</span>
+                                    </span> = 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 4: Decide</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Does the answer make sense?</p>
+                                <p>Yes! The mechanical advantage is reasonable ✅.</p>
+                                <p><strong>Final Answer:</strong> The mechanical advantage is <strong>3</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <p>
+                    When a large motor pulley is used to drive a smaller pulley, there's an increase in the system's speed, just like with gears. Let's see how we can use the moment of force equation to find the speed of the driven pulley.
+                </p>
+                <br>
+                <p class="lead"><strong>Problem 2:</strong> A motor operating at 1600 rpm has a pulley diameter of 3.5 inches. It drives a 9 inch pulley. Calculate the rpm of the driven gear.</p>
+
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+
+                <div class="accordion">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p><strong>Know:</strong></p>
+                                <ul>
+                                    <li>diameter of the motor pulley (ED) = 3.5 inches</li>
+                                    <li>the diameter of the driven pulley (RD) = 9 inches</li>
+                                    <li>RPM of the motor pulley (EF) = 1600 RPM</li>
+                                </ul>
+                                <p><strong>Need:</strong></p>
+                                <ul>
+                                    <li>RPM of the driven gear (RF)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Organize</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Find the formula that relates these known values.</p>
+                                <p class="pl-4">EF &times; ED = RF &times; RD</p>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Set Up &amp; Calculate</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Substitute the values.</p>
+                                <p class="pl-4">1600 &times; 3.5 = RF &times; 9</p>
+                                <p>Solve for the missing variable.</p>
+                                <p>Include the units.</p>
+                                <p class="pl-4">RF = <span class="frac">
+                                        1600 RPM &times; 3.5 inch
+                                        <span class="symbol">/</span>
+                                        <span class="bottom">9 inch </span>
+                                    </span></p>
+                                <p>Calculate.</p>
+                                <p class="pl-4"><strong>RF = 622.22 RPM</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 4: Decide</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Does the answer make sense?</p>
+                                <p>Yes! The driven gear is bigger so it would move more slowly ✅.</p>
+                                <p><strong>Final Answer:</strong> The driven pulley rotates at <strong>622.22 RPM</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+
+                <h3>Apply Your Knowledge</h3>
+                <p class="mt-4">Let's review what you've learned so far!</p>
+                <p class="instruction">Answer the following questions. When you’re ready, select "Check Answer" to reveal the solution steps.</p>
+
+                <!-- Problem 1 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 1</strong></p>
+                                <p>A motor with a diameter of 150 mm drives a fan with a diameter of 50 mm. The motor operates at 1200 RPM. Calculate the speed of the fan in RPM.
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 3600 RPM</strong></p>
+                                <hr>
+
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade pb-3 show active">
+                                                    <p>A motor with a diameter of <u>150 mm</u> drives a fan with a diameter of <u>50 mm</u>. The motor operates at <u>1200 RPM</u>. Calculate the <mark>speed of the fan in RPM</mark>.</p>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong></p>
+                                                            <ul>
+                                                                <li>Driven Speed (RF)</li>
+                                                            </ul>
+
+                                                            <p><strong>Identify what you know:</strong></p>
+                                                            <ul>
+                                                                <li>Motor Diameter (ED)&nbsp;=&nbsp;150 mm</li>
+                                                                <li>Driven Diameter (RD)&nbsp;=&nbsp;50 mm</li>
+                                                                <li>Motor Speed (EF)&nbsp;=&nbsp;1200 RPM</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class="pl-4">EF &times; ED = RF &times; RD</p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <p>Write the formula.</p>
+                                                    <p class="pl-4">EF &times; ED = RF &times; RD</p>
+                                                    <p>Enter the known values.</p>
+
+                                                    <p class="pl-4">1200 &times; 150 = RF &times; 50</p>
+                                                    <p>Solve for the missing variable.</p>
+                                                    <p>Include the units.</p>
+                                                    <p class="pl-4">RF = <span class="frac"><span>1200 &times; 150</span><span class="symbol">/</span><span class="bottom">50</span></span></p>
+
+
+
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>RF = 3600 RPM</strong></p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated Driven Speed (RF)</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable Driven Speed (RF)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+                <!-- Problem 2 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 2</strong></p>
+                                <p>A motor pulley with a diameter of 8 inches drives a larger machine pulley with a diameter of 24 inches. What is the mechanical advantage of the system?
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 0.33</strong></p>
+                                <hr>
+
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade pb-3 show active">
+                                                    <p>A motor pulley with a diameter of <u>8 inches</u> drives a larger machine pulley with a diameter of <u>24 inches</u>. What is the <mark>mechanical advantage</mark> of the system?</p>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong></p>
+                                                            <ul>
+                                                                <li>Mechanical Advantage (MA)</li>
+                                                            </ul>
+
+                                                            <p><strong>Identify what you know:</strong></p>
+                                                            <ul>
+                                                                <li>Motor Diameter (ED)&nbsp;=&nbsp;8 inches</li>
+                                                                <li>Driven Diameter (RD) =&nbsp;24 inches</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class="pl-4">MA = <span class="frac"><span>ED</span><span class="symbol">/</span><span class="bottom">RD</span></span></p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <p>Write the formula.</p>
+                                                    <p class="pl-4">MA = <span class="frac"><span>ED</span><span class="symbol">/</span><span class="bottom">RD</span></span></p>
+                                                    <p>Enter the known values.</p>
+                                                    <p>Include the units.</p>
+                                                    <p class="pl-4">MA = <span class="frac"><span>8 inches</span><span class="symbol">/</span><span class="bottom">24 inches</span></span></p>
+
+
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 0.33</strong></p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Problem 3 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 3</strong></p>
+                                <p>A motor with a diameter of 180 mm is driving a fan with a diameter of 60 mm. If the motor rotates at 1400 RPM, what is the speed of the fan in RPM?</p>
+
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 4200 RPM</strong></p>
+                                <hr>
+
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade pb-3 show active">
+                                                    <p>A motor with a <u>diameter of 180 mm</u> is driving a fan with a <u>diameter of 60 mm</u>. If the motor rotates at <u>1400 RPM</u>, what is the <mark>speed of the fan</mark> in RPM?</p>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong></p>
+                                                            <ul>
+                                                                <li>Driven Speed (RF)</li>
+                                                            </ul>
+
+                                                            <p><strong>Identify what you know:</strong></p>
+                                                            <ul>
+                                                                <li>Motor Diameter (ED)&nbsp;= 180 mm</li>
+                                                                <li>Driven Diameter (RD)&nbsp;= 60 mm</li>
+                                                                <li>Motor Speed (EF)&nbsp;=1400 RPM</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class="pl-4">EF &times; ED = RF &times; RD</p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p class="pl-4">1400 &times; 180 = RF &times; 60</p>
+                                                    <p>RF = <span class="frac"><span>1400 &times; 180</span><span class="symbol">/</span><span class="bottom">60</span></span></p>
+                                                    <p>RF = 4200 RPM</p>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p>The fan is smaller, so the speed increases. The calculated speed of 4200 RPM is reasonable. ✅</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+                <h2>How did you do?</h2>
+                <p>If you got 3 out of 3, you're ready to move on. If not, go back and review this section.</p>
+
+
+
+                <hr>
+                <h1>Lesson Complete!</h1>
+                <p><strong>Click an image</strong> to be directed to a lesson.&nbsp;</p>
+                <div class="sdf-container sdf-5col">
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10659">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/1.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Conservation of Energy</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10660">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/2.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Hydraulics</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10658">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/3.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Belt Drives</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10650">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/4.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Gears</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10663">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/5.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Mechanical Efficiency</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <p>Click here for the <a href="/d2l/le/lessons/10563/topics/10662" target="_top" rel="noopener"><strong>Module Quiz</strong></a> or click the blue button for the next lesson.</p>
+                <br>
+                <p><a href="/d2l/le/lessons/10563/topics/10650" type="button" class="btn btn-secondary" target="_top">Next Lesson</a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p><img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo"></p>
+                </footer>
+            </div>
+        </div>
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/flickity.pkgd.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/fullscreen.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        </p>
+        <!-- Template JavaScript -->
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.js"></script>
+            <script>
+                var QSNlottieanimation = lottie.loadAnimation({
+                    container: document.getElementById('QSN'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/QSN.json"
+                });
+
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangle'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageRadius.json"
+                });
+
+
+
+                var linearspeeddistanceexplanationanimation = lottie.loadAnimation({
+                    container: document.getElementById('linearspeeddistanceexplanationanimation'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/linearspeeddistanceexplanationanimation.json"
+                });
+
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangleLeverArm'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageTriangleLeverArm.json"
+                });
+
+                var problemOneStepOneanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemOneStepOne'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemOneStepOne.json"
+                });
+
+                var eEqualsITimesRanimation = lottie.loadAnimation({
+                    container: document.getElementById('eEqualsITimesR'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/eEqualsITimesR.json"
+                });
+
+                var problemOneStepThreeanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemOneStepThree'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemOneStepThree.json"
+                });
+
+                var problemTwoStepOneanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemTwoStepOne'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemTwoStepOne.json"
+                });
+
+                var rEqualsEOverIanimation = lottie.loadAnimation({
+                    container: document.getElementById('rEqualsEOverI'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/rEqualsEOverI.json"
+                });
+
+                var problemTwoStepThreeanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemTwoStepThree'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemTwoStepThree.json"
+                });
+            </script>
+        </p>
+        <p>
+            <script>
+                $(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+            <script>
+                const pulley1 = document.getElementById("pulley1Circle");
+                const pulley2 = document.getElementById("pulley2Circle");
+                const beltPath = document.getElementById("beltPath");
+                const pulley1RadiusSlider = document.getElementById("pulley1Radius");
+                const pulley2RadiusSlider = document.getElementById("pulley2Radius");
+                const container = document.querySelector(".beltdrive-container");
+                const pulley1RadiusValue = document.getElementById("pulley1RadiusVal");
+                const pulley2RadiusValue = document.getElementById("pulley2RadiusVal");
+                const maDisplay = document.getElementById("maDisplay");
+
+                function updateBeltDrive() {
+                    const containerWidth = container.offsetWidth;
+                    const r1 = parseFloat(pulley1RadiusSlider.value);
+                    const r2 = parseFloat(pulley2RadiusSlider.value);
+
+                    pulley1.setAttribute("r", r1);
+                    pulley2.setAttribute("r", r2);
+
+                    const pulley1X = 75;
+                    const pulley2X = containerWidth - 75;
+                    const pulley1TopY = 75 - r1;
+                    const pulley2TopY = 75 - r2;
+                    const pulley1BottomY = 75 + r1;
+                    const pulley2BottomY = 75 + r2;
+
+                    const beltPathData = `M ${pulley1X} ${pulley1BottomY} A ${r1} ${r1} 0 0 1 ${pulley1X} ${pulley1TopY}
+                             L ${pulley2X} ${pulley2TopY}
+                             A ${r2} ${r2} 0 0 1 ${pulley2X} ${pulley2BottomY}
+                             L ${pulley1X} ${pulley1BottomY}`;
+
+                    beltPath.setAttribute("d", beltPathData);
+
+                    maDisplay.textContent = (r1 / r2).toFixed(2);
+
+                    pulley1RadiusValue.textContent = r1;
+                    pulley2RadiusValue.textContent = r2;
+
+
+                }
+
+                window.addEventListener("resize", updateBeltDrive);
+                pulley1RadiusSlider.addEventListener("input", updateBeltDrive);
+                pulley2RadiusSlider.addEventListener("input", updateBeltDrive);
+
+                updateBeltDrive();
+            </script>
+
+
+
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+            <!-- Start of skillplan Zendesk Widget script -->
+            <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28773c90-16a6-4f5b-9d96-a69bfcf7a0c0"></script>
+            <!-- End of skillplan Zendesk Widget script -->
+        </p>
+
+    </div>
+</body>
+
+</html>

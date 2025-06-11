@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Adaptive Quiz Examples</title>
+	<!-- Course Styles -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/adaptive_quiz.css">
+	<style>
+    #selector { 
+      display: flex;
+      margin-top: 12px;
+      padding-bottom: 12px;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #006FBF;
+      color: white;
+      padding: 0px;
+      border: 1px solid #1C5295;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 150px;
+      height: 40px;
+      line-height: 1em;
+    }
+    #quiz_selector{
+      border-radius: 6px;
+      margin: 0 12px;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+    .row.border-top {      
+      border-top: 1px solid lightgray;
+    }    
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center; margin-top: 12px; font-size: 1rem">Adaptive Quiz Examples</h1>
+	<div class="container-fluid">
+		<div class="row">		
+			<div class="col-xs-12" id="selector" style="margin-left: auto; margin-right: auto;">
+				<button id="prev" disabled="disabled">Previous Quiz</button>
+				<select id="quiz_selector">
+				  <option value="adaptive_quiz" selected="selected">Question Types</option>
+					<option value="progression_1">Progression</option>
+					<option value="heading_1">heading_1</option>
+					<option value="heading_2">heading_2</option>
+					<option value="heading_3">heading_3</option>
+					<option value="heading_4">heading_4</option>
+					<option value="heading_5">heading_5</option>
+					<option value="pre_quiz_1">pre_quiz_1</option>
+					<option value="pre_quiz_2">pre_quiz_2</option>
+					<option value="pre_quiz_3">pre_quiz_3</option>
+					<option value="pre_quiz_4">pre_quiz_4</option>
+					<option value="pre_quiz_5">pre_quiz_5</option>
+					<option value="pre_quiz_6">pre_quiz_6</option>
+					<option value="pre_quiz_7">pre_quiz_7</option>
+					<option value="multiple_choice_1">multiple_choice_1</option>
+					<option value="multi_select_1">multi_select_1</option>
+					<option value="matching_1">matching_1</option>
+					<option value="fill_in_the_blank_1">fill_in_the_blank_1</option>
+					<option value="post_quiz_1">post_quiz_1</option>
+					<option value="post_quiz_2">post_quiz_1</option>
+					<option value="progression_1">progression_1</option>
+					<option value="progression_2">progression_2</option>
+					<option value="progression_3">progression_3</option>
+					<option value="progression_4">progression_4</option>
+					<option value="progression_5">progression_5</option>
+					<option value="replace_strings_1">replace_strings_1</option>
+				</select>
+				<button id="next">Next Quiz</button>
+			</div>
+		</div>
+		<div class="row border-top">
+			<div class="col-xs-12 col-sm-6 offset-sm-3 quiz-holder">
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+	<script src="../js/adaptive_quiz.js"></script>
+	<script>
+		$("select").on("change", function(e) {
+			let newQuiz = document.createElement("div");
+			newQuiz.id = e.target.querySelector("[selected]").value + new Date();
+			$(".quiz-holder").empty().append(newQuiz);
+			loadAdaptiveQuiz("data/" + e.target.value + ".json", newQuiz.id);
+		});
+
+		$("#next").on("click", function(e) {
+			$("#quiz_selector option:selected").next().prop("selected", true);
+			let newQuiz = document.createElement("div");
+			newQuiz.id = $("#quiz_selector").val() + new Date();
+			$(".quiz-holder").empty().append(newQuiz);
+			loadAdaptiveQuiz("data/" + $("#quiz_selector").val() + ".json", newQuiz.id);
+
+
+			$("#prev").removeAttr("disabled");
+			if ($("#quiz_selector option:selected").next().length === 0) {
+				$("#next").attr("disabled", "");
+			}
+		});
+
+		$("#prev").on("click", function(e) {
+			$("#quiz_selector option:selected").prev().prop("selected", true);
+			let newQuiz = document.createElement("div");
+			newQuiz.id = $("#quiz_selector").val() + new Date();
+			$(".quiz-holder").empty().append(newQuiz);
+			loadAdaptiveQuiz("data/" + $("#quiz_selector").val() + ".json", newQuiz.id);
+
+			$("#next").removeAttr("disabled");
+			if ($("#quiz_selector option:selected").prev().length === 0) {
+				$("#prev").attr("disabled", "");
+			}
+
+		});
+
+		let firstQuizName = "adaptive_quiz";
+		let firstQuiz = document.createElement("div");
+		firstQuiz.id = firstQuizName + new Date();
+		$(".quiz-holder").empty().append(firstQuiz);
+		loadAdaptiveQuiz("data/" + firstQuizName + ".json", firstQuiz.id);
+
+	</script>
+	<noscript>This activity will only load in an online environment with JavaScript enabled.</noscript>
+
+</body>
+
+</html>

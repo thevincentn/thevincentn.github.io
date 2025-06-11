@@ -1,0 +1,110 @@
+{
+	"ActivityName": "Who's that Pokemon?",
+	"ActivityType" : "sort",
+    "HeadingLevel": 2,
+	"FeedbackType" : "report",
+	"HighlightEffect" : true,
+	"QuestionColumns" : "2",
+	"Randomize": true,
+	"HorizontalAlignment": true,
+    "Instructions": "Are you a Pokemon master? Are you ready to catch (sort) them all?",
+	"PreActivityText" : "none",
+	"PreActivityMedia" : "none",
+	"IncludePostPage" : false,
+	"PostActivityText" : "none",
+	"PostActivityMedia" : "none",
+	"AnswerNodes": [
+		{
+			"key": "GEN1", 
+		 	"title": "Generation 1 Pokemon", 
+		 	"color": "default",
+		 	"src" : "none"
+		},
+		{
+			"key": "GEN2",
+			"title": "Generation 2+ Pokemon", 
+			"color": "default",
+			"src" : "none"
+		}
+	],
+	"QuestionNodes": [
+		{
+			"question" : "Charmander", 
+			"answer" : "GEN1",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+			"wrong" : "Charmander is a first generation Pokemon.",
+            "centerText": true,
+            "img" : {
+				"src" : "img/charmander.png",
+				"alt" : "A cute little Charmander."
+			}
+		},
+		{
+			"question" : "Bulbasaur", 
+			"answer" : "GEN1",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+			"wrong" : "Bulbasaur is a first generation Pokemon.",
+            "centerText": true,
+            "img" : {
+				"src" : "img/bulbasaur.png",
+				"alt" : "A cute little Bulbasaur."
+			}
+		},
+		{
+			"question" : "Squirtle", 
+			"answer" : "GEN1",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+            "centerText": true,
+			"wrong" : "Squirtle is a first generation Pokemon.",            
+            "img" : {
+				"src" : "img/squirtle.png",
+				"alt" : "A cute little Squirtle."
+			}
+		},
+		{
+			"question" : "Trubbish", 
+			"answer" : "GEN2",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+			"wrong" : "Trubbish is a fifth generation Pokemon.",
+            "centerText": true,
+            "img" : {
+				"src" : "img/trubbish.png",
+				"alt" : "A really gross looking Trubbish!"
+			}
+		},
+		{
+			"question" : "Vanillish", 
+			"answer" : "GEN2",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+			"wrong" : "Vanillish is a fifth generation Pokemon.",
+            "centerText": true,
+            "img" : {
+				"src" : "img/vanillish.png",
+				"alt" : "A weird looking ice cream Poke."
+			}
+		},
+		{
+			"question" : "Bidoof", 
+			"answer" : "GEN2",
+			"type" : "both",
+			"color": "default",
+			"correct" : "Good job!",
+			"wrong" : "Bidoof is a fourth generation Pokemon.",
+            "centerText": true,
+            "img" : {
+				"src" : "img/bidoof.png",
+				"alt" : "A cute little Bidoof."
+			}
+		}
+	]
+}

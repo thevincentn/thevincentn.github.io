@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        .gear {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #ff5733;
+            border-radius: 50%;
+            margin: 10px;
+            position: relative;
+        }
+
+        .gear.large {
+            background-color: #33c3ff;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Gear Simulation</h1>
+    <div class="gear small" id="smallGear">Small Gear</div>
+    <div class="gear large" id="largeGear">Large Gear</div>
+
+    <div class="controls">
+        <label for="smallGearTeeth">Small Gear Teeth:</label>
+        <input type="range" id="smallGearTeeth" min="10" max="30" value="14">
+        <span id="smallGearValue">14</span>
+
+        <br><br>
+
+        <label for="largeGearTeeth">Large Gear Teeth:</label>
+        <input type="range" id="largeGearTeeth" min="10" max="90" value="28">
+        <span id="largeGearValue">28</span>
+    </div>
+
+    <h3>Mechanical Advantage: <span id="mechanicalAdvantage">2.00</span></h3>
+</div>
+
+<script>
+    const smallGearSlider = document.getElementById('smallGearTeeth');
+    const largeGearSlider = document.getElementById('largeGearTeeth');
+    const smallGearValue = document.getElementById('smallGearValue');
+    const largeGearValue = document.getElementById('largeGearValue');
+    const mechanicalAdvantageDisplay = document.getElementById('mechanicalAdvantage');
+
+    function updateValues() {
+        const smallTeeth = parseInt(smallGearSlider.value);
+        const largeTeeth = parseInt(largeGearSlider.value);
+
+        smallGearValue.textContent = smallTeeth;
+        largeGearValue.textContent = largeTeeth;
+
+        const mechanicalAdvantage = (largeTeeth / smallTeeth).toFixed(2);
+        mechanicalAdvantageDisplay.textContent = mechanicalAdvantage;
+    }
+
+    smallGearSlider.addEventListener('input', updateValues);
+    largeGearSlider.addEventListener('input', updateValues);
+</script>
+
+</body>
+</html>

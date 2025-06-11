@@ -1,0 +1,67 @@
+{
+   "ActivityName": "Qualities of a Leader"
+   , "ActivityType": "sort"
+   , "HeadingLevel": 2
+   , "FeedbackType": "report"
+   , "HighlightEffect": true
+   , "QuestionColumns": "1"
+   , "Randomize": true
+   , "HorizontalAlignment": true
+   , "Instructions": "<p>Determine whether the various qualities listed below are “Positive Qualities of a Leader” or “Mistaken Qualities of a Leader”.  Categorize them by dragging them under the appropriate headings.  Select “Check Answers” to see how you did.</p>"
+   , "PreActivityText": "<p>Although no two leaders are exactly alike and methods that might work for you may not work for another, there are a few fundamental qualities that every great leader must possess.  Alternatively, there are several qualities that some may think are appropriate qualities of a leader which are actually quite detrimental – these are often called “mistaken qualities of a leader”.</p><p>In this activity, you will categorize a list of leadership qualities as either “Positive Qualities of a Leader” or “Mistaken Qualities of a Leader”.</p>"
+   , "PreActivityMedia": "none"
+   , "IncludePostPage": true
+   , "PostActivityText": "<p>The goal of this activity was to have you identify which qualities of a leader are productive and which are often mistaken as qualities of an effective leader.  Reflect on which of these qualities you possess and which ones you may wish to focus on a you develop in your role as a leader.</p><p>As a final review, watch this short video featuring clips of 40 speeches from leaders in American pop culture.  Consider which qualities are being displayed in what they say.  Are all of them positive?  Perhaps some of them are demonstrating mistaken qualities.</p>"
+   , "PostActivityMedia": [{
+      "type": "YouTubeVideo"
+      , "src": "https://www.youtube.com/watch?v=mQerL6YmxR8"
+      , "width": 680
+      , "height": 420
+      , "altLink": "none"
+    }]
+   , "AnswerNodes": [
+      {
+         "key": "KEY1"
+         , "title": "Mistaken Qualities of a Leader"
+         , "color": "default"
+         , "src": "none"
+    }
+        , {
+         "key": "KEY2"
+         , "title": "Positive Qualities of a Leader"
+         , "color": "default"
+         , "src": "none"
+    }
+  ]
+   , "QuestionNodes": [
+      {
+         "question": "Makes Snap Decisions"
+         , "answer": "KEY1"
+         , "type": "text"
+         , "color": "default"
+         , "correct": "Being decisive is different from being a snap decision maker. All decisions, even time-bound ones, require careful consideration and should be based on relevant and accurate information as well as concern for the team, their well-being, and their goals."
+         , "wrong": "Being decisive is different from being a snap decision maker. All decisions, even time-bound ones, require careful consideration and should be based on relevant and accurate information as well as concern for the team, their well-being, and their goals."
+        }, {
+         "question": "Toughness."
+         , "answer": "KEY1"
+         , "type": "text"
+         , "color": "default"
+         , "correct": "Appearing as someone you would not want to cross does not make an effective leader"
+         , "wrong": "Appearing as someone you would not want to cross does not make an effective leader"
+        }, {
+         "question": "Professional Competence "
+         , "answer": "KEY2"
+         , "type": "text"
+         , "color": "default"
+         , "correct": "Leaders must know their jobs, and have a general understanding of their subordinates’ jobs. Your followers will respect you if they know, or feel, that you know what you are doing and can count on your support when necessary."
+         , "wrong": "Leaders must know their jobs, and have a general understanding of their subordinates’ jobs. Your followers will respect you if they know, or feel, that you know what you are doing and can count on your support when necessary."
+    }, {
+         "question": "Respect for One's Word"
+         , "answer": "KEY2"
+         , "type": "text"
+         , "color": "default"
+         , "correct": "Never make a promise unless you are certain you can keep it. A leader's word is sacred!"
+         , "wrong": "Never make a promise unless you are certain you can keep it. A leader's word is sacred!"
+    }
+  ]
+}

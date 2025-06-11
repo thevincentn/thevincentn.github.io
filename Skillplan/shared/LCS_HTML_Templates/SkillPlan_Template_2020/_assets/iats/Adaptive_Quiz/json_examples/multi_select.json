@@ -1,0 +1,32 @@
+{
+  "questionType": "multi-select",
+  "questionHtml": "<p>Place a checkmark beside <strong>gas giant</strong> planets.</p>",
+  "hintHtml": false,
+  "randomizeOptions": true,
+  "feedbackForPerfect": "<b>Correct!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+  "feedbackForImperfect": "<b>Not quite!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+  "options": [
+    {
+      "optionText": "Venus"
+    },
+    {
+      "optionText": "Jupiter",
+      "score": 1
+    },
+    {
+      "optionText": "Saturn",
+      "score": 1
+    },
+    {
+      "optionText": "Titan"
+    },
+    {
+      "optionText": "Uranus",
+      "score": 1
+    },
+    {
+      "optionText": "Neptune",
+      "score": 1
+    }
+  ]
+}

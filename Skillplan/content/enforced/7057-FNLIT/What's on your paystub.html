@@ -1,0 +1,763 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/fnlit-css.css">
+
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/flickity/flickity.css" media="screen">
+    <link rel="stylesheet" href="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/flickity/fullscreen.css">
+    <style>
+        .modal-div-button {
+            color: #000000;
+            padding: 2px;
+            margin: 0;
+        }
+
+        .dim {
+            opacity: 1;
+            transition: opacity .25s ease-in;
+        }
+
+        .dim:focus,
+        .dim:hover {
+            opacity: .5;
+        }
+
+        .highlight {
+            cursor: default;
+            pointer-events: all;
+            fill: none;
+            transition: fill .25s ease-in;
+        }
+
+        .highlight:focus,
+        .highlight:hover {
+            cursor: pointer;
+            pointer-events: all;
+            fill: #2667ff !important;
+            opacity: .5;
+        }
+
+    </style>
+    <title>Module Introduction Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/paystub-banner.png" alt=""></p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Reading Your Paystub</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="offset-sm-1 col-sm-10">
+                <div class="row pt-3 pb-3 card">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Jeffrey's Key Questions:</h3>
+                            <ul>
+                                <li>How much is my take home pay?</li>
+                                <!--<li>How am I supposed to read my paystub?</li>-->
+                                <li>Why is so much money being deducted?</li>
+                                <li>Where is that money going?</li>
+                            </ul>
+                            <p></p>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4"><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/jeffrey-questions.png" alt="Jeffrey ponders several key questions." data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: cover; min-width: 220px; min-height: 220px; max-height: 250px;"></div>
+                    </div>
+                </div>
+                <br>
+                <h3>What Do You Think?</h3>
+                <p></p>
+                <p>Consider the questions below. Click on each card to learn the answers.</p>
+                <div class="flip-card-set row">
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center;"><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/square%20(7).png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;">
+                                <h4>True or False</h4>
+                                <p>Your take home pay is simply your hourly wage multiplied by the hours you worked.</p>
+                            </div>
+                            <div class="flip-card-back" style="text-align: center;">
+                                <h4>False</h4>
+                                <p>Your take home pay is more complicated than just your hourly wage multiplied by the hours you worked. For instance, you might get paid more for working overtime, and you’ll have money deducted for taxes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center;"><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/square%20(9).png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;">
+                                <h4>True or False</h4>
+                                <p>The deductions on your paystub go towards helping other tradespeople and your future self.</p>
+                            </div>
+                            <div class="flip-card-back" style="text-align: center;">
+                                <h4>True</h4>
+                                <p>The deductions you see on your paystub fund some of the services to support yourself and other tradespeople.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <p>Let's learn more about your paystub below.</p>
+                <p></p>
+                <hr>
+                <h1>What's on your paystub?</h1>
+                <div class="row pt-3 pb-3 card">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Jeffrey's Thoughts</h3>
+                            <p>"So my supervisor told me that I'd be making $17 an hour during my apprenticeship work terms. I worked 75 hours in the last two weeks so I was expecting to be paid $1,275 for this pay period but I only ended up with like 900 bucks. What gives?"</p>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4"><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/jeffrey-wtf.png" alt="Jeffrey acting surprised" data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: cover; min-width: 220px; min-height: 220px; max-height: 250px;"></div>
+                    </div>
+                </div>
+                <p></p>
+                <p class="pb-3 pt-3">Improving your financial health begins with knowing how much money you're earning, your income. But to know how much money you're taking home, you first have to learn how to read your paystub.</p>
+                <h3>Breaking Down a Paystub</h3>
+                <p class="pt-2">To clear the air for Jeffrey, let's take a look at a typical paystub and break down its different components. After you've looked at the paycheck we'll ask you some questions, so review the paystub closely.</p>
+                <p class="direction pt-4">Click on the different parts of the paystub to learn more.</p>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1170 780" style="enable-background: new 0 0 1170 780;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            fill: none;
+                            stroke: #2667FF;
+                            stroke-miterlimit: 10;
+                        }
+
+                    </style>
+                    <image style="overflow: visible;" width="1170" height="780" xlink:href="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/barbara-paystub-bg.png"> </image> <a data-toggle="modal" data-target="#paystub-general">
+                        <rect x="18.8" y="80.46" class="st0 highlight" width="1133.36" height="64.8"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-you">
+                        <rect x="18.8" y="145.26" class="st0 highlight" width="287.15" height="251.58"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-earnings">
+                        <rect x="305.95" y="145.26" class="st0 highlight" width="846.21" height="66.07"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-regular-hours">
+                        <rect x="305.95" y="211.33" class="st0 highlight" width="846.21" height="59.72"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-overtime">
+                        <rect x="305.95" y="271.05" class="st0 highlight" width="846.21" height="59.72"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-lieu">
+                        <rect x="305.95" y="330.76" class="st0 highlight" width="846.21" height="66.07"></rect>
+                    </a>
+                    <!--
+    <a data-toggle="modal" data-target="#paystub-deductions"><rect x="18.8" y="396.2" class="st0 highlight" width="1133.36" height="27.95"></rect></a> 
+    <a data-toggle="modal" data-target="#paystub-before-deductions"><rect x="18.8" y="424.15" class="st0 highlight" width="376.09" height="222.31"></rect></a> 
+    <a data-toggle="modal" data-target="#paystub-tax-deductions"><rect x="394.89" y="424.91" class="st0 highlight" width="365.93" height="221.55"></rect></a> 
+    <a data-toggle="modal" data-target="#paystub-after-deductions"><rect x="760.82" y="424.53" class="st0 highlight" width="391.34" height="221.55"></rect></a> 
+--> <a data-toggle="modal" data-target="#paystub-deductions">
+                        <rect x="18.8" y="396.2" class="st0 highlight" width="1133.4" height="63.8"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-tax-deductions">
+                        <rect x="18.8" y="460" class="st0 highlight" width="352.1" height="186.5"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-other-deductions">
+                        <rect x="370.9" y="460" class="st0 highlight" width="781.2" height="186.5"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-total-gross">
+                        <rect x="18.8" y="646.08" class="st0 highlight" width="315.11" height="105.25"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-taxable-gross">
+                        <rect x="333.91" y="646.08" class="st0 highlight" width="209.65" height="105.25"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-total-taxes">
+                        <rect x="543.55" y="646.08" class="st0 highlight" width="217.27" height="105.25"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-total-deductions">
+                        <rect x="760.82" y="646.08" class="st0 highlight" width="217.27" height="105.25"></rect>
+                    </a> <a data-toggle="modal" data-target="#paystub-net-pay">
+                        <rect x="978.09" y="646.08" class="st0 highlight" width="174.07" height="105.25"></rect>
+                    </a>
+                </svg>
+                <div class="modal fade" id="paystub-general" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Paystub information</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Each paystub you receive has information about the paystub itself. This includes</p>
+                                <ul>
+                                    <li>your employer's information,</li>
+                                    <li>the period for which you are being paid, and</li>
+                                    <li>when you should expect to receive the money.</li>
+                                </ul>
+                                <p>It's important to save your paystubs to keep track of your income especially if you have multiple employers for tax purposes.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-you" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Employee information</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This is your paystub so there'll be information about you.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-earnings" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Earnings</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>In this section, you'll see information about money that you earned by working. It's separated into:</p>
+                                <ul>
+                                    <li>Current - For money earned during the reporting period, the two week period you're being paid for.</li>
+                                    <li>YTD - Which stands for "Year to Date", for money earned from the start of year to the end of the current reporting period.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-regular-hours" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Regular Hours</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>In this row, you'll see the money you earned for your regular hours of work during the <em>current period</em> and the <em>YTD</em>. The "rate" you see is what was agreed upon during your contract negotiations.</p>
+                                <p>Your agreed upon work hours vary from company to company. On a regular day you'll be asked to work between 7 to 8 hours. Lunch breaks are not typically included in this time and you won't be paid for them.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-overtime" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Overtime</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Overtime, or extra hours of work, is paid at different rates, depending on the number of hours worked. It is always your regular hourly wage multiplied by 1.5 or 2.</p>
+                                <h4>Time-and-a-half</h4>
+                                <p><strong>Time-and-a-half</strong> is your regular wage <strong>multiplied by 1.5</strong>. You get time-and-a-half for any time worked over eight hours in a day, up to 10-12 hours depending on your employer's agreement with your union. You will also get time-and-a-half if you work over 40 hours a week.</p>
+                                <h4>Double time</h4>
+                                <p><strong>Double time</strong> is your regular wage <strong>multiplied by 2</strong>. Depending on your agreement, you may get double time if you work over the 10-12 hours in a day or if you work on a <strong>statutory holiday</strong> (stat day), which is a holiday recognized by the government where employees typically get time off.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-lieu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Pay in Lieu</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Many Canadian employers reward their employees with time off for vacation or on stat days. In the skilled construction trades, workers are instead paid out a percentage of their wage instead of getting this time off (in lieu of). This percentage is typically 6% for vacations and 6% for stat days.</p>
+                                <p>If you don't get your stat days off, you may earn this 6% in lieu of in addition to the <strong>double time</strong> you would be earning for working the stat day.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Deductions</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>When you first start your apprenticeship, you may be really excited about making $XX.XX an hour but when you look at your paystub, things may not live up to your initial expectations. But where does this money go exactly?</p>
+                                <p>Deductions are amounts taken off of your pay as required by law, your union agreements, and any benefits you are subscribed to. There are 3 categories of deductions:</p>
+                                <ol>
+                                    <li>Tax Deductions</li>
+                                    <li>Before Tax Deductions</li>
+                                    <li>After Tax Deductions</li>
+                                </ol>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+<div class="modal fade" id="paystub-before-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h3>Before Tax Deductions</h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button></div>
+<div class="modal-body">
+<p>Before tax deductions are deductions made from your earnings before any tax is deducted. This is typically determined by your union and cover different things. They can be calculated at a fixed rate or as a percentage. We'll talk more about the benefits of these deductions in the next lesson.</p>
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+</div>
+</div>
+</div>
+-->
+                <div class="modal fade" id="paystub-tax-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Tax Deductions</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Tax deductions are amounts taken off of your pay as required by law. There are 3 types of tax deductions:</p>
+                                <ol>
+                                    <li><strong>Income Tax</strong> includes both federal and provincial taxes used for things like health care, infrastructure, and other societal services.</li>
+                                    <li><strong>Canadian Pension Plan (CPP)</strong> is a contribution made to a retirement plan for all Canadian workers. Although you are not earning this money now, it will support you in the future when you retire. Note that CPP is often not enough for retirement and you'll still need to prepare yourself. We'll talk more about ways to prepare for retirement throughout this course.</li>
+                                    <li><strong>Employment Insurance (EI)</strong> is a contribution made to support Canadian workers if they lose their jobs at no fault of their own. You'll likely use this benefit throughout your apprenticeship and into your career. We'll talk more about how to access this benefit later this module.</li>
+                                </ol>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-other-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Other Deductions</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>In addition to tax deductions there are "before tax deductions" and "after tax deductions."</p>
+                                <h4>Before Tax Deductions</h4>
+                                <p><strong>Before tax deductions</strong> are deductions made that you do not need to pay tax on and are taken from your earnings before any tax is deducted.
+                                    <!--This is typically determined by your union and cover different things. They can be calculated at a fixed rate or as a percentage.-->
+                                </p>
+                                <p>This includes your union dues, which you pay to receive the benefits of union representation, for example:</p>
+                                <ul>
+                                    <li>negotiated pay raises</li>
+                                    <li>health and pension benefits</li>
+                                    <li>minimum standards for working conditions</li>
+                                    <li>a grievance procedure</li>
+                                </ul>
+                                <h4>After Tax Deductions</h4>
+                                <p>On the other hand, <strong>after tax deductions</strong> are deducted from your pay after the tax deductions are calculated.</p>
+                                <p>We'll talk more about the benefits of these deductions in the next lesson.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+<div class="modal fade" id="paystub-after-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h3>After Tax Deductions</h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button></div>
+<div class="modal-body">
+<p>You may not always have after tax deductions but these deductions are typically very valuable. These deductions go towards benefits pooled together by people you work with, those in your union, and your employer. The benefits you get by contributing to these <em>group plans</em> includes things like:</p>
+<ul>
+<li>Extended health benefits if you ever seriously ill.</li>
+<li>Dental care to protect your dental health.</li>
+<li>Massages, physiotherapy, and chiropractic care to help with any aches or pains you may develop.</li>
+<li>Vision care to help pay for eye exams and glasses.</li>
+</ul>
+<p>If you wish, you can also extend these benefits to your family members in some cases. We'll talk more about these benefits in the next lesson.</p>
+</div>
+<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+</div>
+</div>
+</div>
+-->
+                <div class="modal fade" id="paystub-total-gross" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Total Gross</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Your <strong>Total Gross Income</strong> is how much you earned in total before any deductions are taken from your pay.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-taxable-gross" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Taxable Gross</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Not all of your gross income is taxed. This section summarizes the gross income that you'll be taxed on. It's typically your gross income with the "before tax deductions" taken off.</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-total-taxes" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Total Taxes</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>This is just the total from the "taxes" section under "deductions."</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-total-deductions" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Total Deductions</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Your <strong>Total Deductions</strong> is the total deducted from your:</p>
+                                <ul>
+                                    <li>Before Tax Deductions;</li>
+                                    <li>Tax Deductions; and</li>
+                                    <li>After Tax Deductions.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="paystub-net-pay" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Net Pay</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Your <strong>Net Pay</strong>, or net income, is how much you "take home" after the deductions from your gross income. This is the money you get to spend!</p>
+                            </div>
+                            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h3 class="mt-4">Quiz! Can You Read This Paystub?</h3>
+                <p>Scan the paycheck above to find the answers to the questions below.&nbsp;</p>
+                <p class="direction">Click on the arrows to see the questions.</p>
+                <div id="help-us-choose" class="carousel slide" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#help-us-choose" data-slide-to="0" class="active"></li>
+                        <li data-target="#help-us-choose" data-slide-to="1"></li>
+                        <li data-target="#help-us-choose" data-slide-to="2"></li>
+                        <li data-target="#help-us-choose" data-slide-to="3"></li>
+                        <li data-target="#help-us-choose" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner pb-3">
+                        <div class="carousel-item active ">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <fieldset class="radio">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-8">
+                                                <h4>Question 1</h4>
+                                                <p>Whose paystub are we looking at?</p>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[Y]]</p>
+                                                        </div>
+                                                        <div class="col-11"><label class="radio-label">Barbara</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div class="col-11"><label class="radio-label">Justin</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div class="col-11"><label class="radio-label">Jeffrey</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block col-md-4 my-auto">
+                                                <figure class="float-right mr-4">
+                                                    <p><img id="blankpic" src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/blank-portrait.png" class="float-right" style="width: 100%; max-width: 150px;"></p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess" onclick="document.getElementById('blankpic').src = '/content/enforced/7057-FNLIT/barbara-portrait.png'">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <p><strong>Correct Answer:</strong> We're looking at Barbara's paystub.</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <fieldset class="radio">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-8">
+                                                <h4>Question 2</h4>
+                                                <p>How many hours did Barbara work this pay period?</p>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">45</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[Y]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">75</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">900</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block col-md-4 my-auto">
+                                                <figure class="float-right mr-4">
+                                                    <p><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/barbara-portrait.png" alt="Photo of Barbara" class="float-right" style="width: 100%; max-width: 150px;"></p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <p><strong>Correct Answer:</strong> Barbara worked 75 hours this pay period. She worked a total of 900 hours this year.</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <fieldset class="radio">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-8">
+                                                <h4>Question 3</h4>
+                                                <p>How much overtime did Barbara work this pay period?</p>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[Y]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">0</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">3</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">22.50</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block col-md-4 my-auto">
+                                                <figure class="float-right mr-4">
+                                                    <p><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/barbara-portrait.png" class="float-right" style="width: 100%; max-width: 150px;"></p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <p><strong>Correct Answer:</strong> Barbara didn't do any overtime this pay period. The overtime we see on her paystub is what she did at a different time this year.</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <fieldset class="radio">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-8">
+                                                <h4>Question 4</h4>
+                                                <p>How much did Barbara make this period before deductions?</p>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[Y]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$3,780.00</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$3,389.88</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$2,342.85</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block col-md-4 my-auto">
+                                                <figure class="float-right mr-4">
+                                                    <p><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/barbara-portrait.png" class="float-right" style="width: 100%; max-width: 150px;"></p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <p><strong>Correct Answer:</strong> Barbara's total gross was $3,780.00.</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <fieldset class="radio">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-8">
+                                                <h4>Question 5</h4>
+                                                <p>What is Barbara's total take home pay so far this year?</p>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$40,500.00</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[N]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$47,854.80</label></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check pl-3">
+                                                    <div class="row">
+                                                        <div class="col-1 pr-0 pr-sm-1">
+                                                            <p>[[Y]]</p>
+                                                        </div>
+                                                        <div><label class="radio-label">$29,764.27</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-block col-md-4 my-auto">
+                                                <figure class="float-right mr-4">
+                                                    <p><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/barbara-portrait.png" class="float-right" style="width: 100%; max-width: 150px;"></p>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <p><strong>Correct Answer:</strong> Barbara's total net pay this year is $29,764.27. Her total take home pay for this period is $2,342.85.</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#help-us-choose" role="button" data-slide="prev"> <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#help-us-choose" role="button" data-slide="next"> <span class="carousel-control-next-icon-dark" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+                </div>
+                <p></p>
+                <div class="card card-standard">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <!--
+<h4>Financial Tip</h4>
+<p>It's a great idea to put aside this "pay in lieu of" money for vacations. This extra money you get from lieu pay may be nice to have but memories and experiences are <em>priceless</em>.</p>
+-->
+                            <h4>Pay yourself first</h4>
+                            <p>Many tradespeople put their “Pay in Lieu of - Vacation” money aside so they can have an income stream while taking a vacation between construction projects. This is a concept called “paying yourself first.”</p>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <br>
+                <div class="row pt-3 pb-3 card">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Jeffrey's Thoughts</h3>
+                            <p>"Alright, so now I have a better understanding of how to read a pay stub. My mistake was thinking in terms of my gross income instead of my net income. I can figure out my cash flow by looking at my Net Pay. "</p>
+                            <!--I feel better knowing that my deductions go towards benefiting other Canadians and myself in the future and I'm looking forward to making the same amount of money as Barbara 😳.-->
+                        </div>
+                        <div class="d-none d-md-flex col-md-4"><img src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/jeffrey-casual.png" alt="Jeffrey explains his financial plan." data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: cover; min-width: 220px; min-height: 220px; max-height: 250px;"></div>
+                    </div>
+                </div>
+                <br>
+                <p></p>
+                <p><a href="https://skillplan.brightspace.com/d2l/common/dialogs/quickLink/quickLink.d2l?ou=7057&amp;type=content&amp;rcode=4D065962-7937-4444-B64B-53DA813E6C2A-3430" type="button" class="btn btn-secondary" target="_top">Proceed to the Next Lesson</a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p><img src="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo"></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <p>
+        <script src="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js">
+        </script>
+        <script src="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js">
+        </script>
+        <script src="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </p>
+    <!-- Template JavaScript -->
+    <p>
+        <script src="https://skillplan.brightspace.com/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+        <script src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/flickity/flickity.pkgd.js"></script>
+        <script src="https://skillplan.brightspace.com/content/enforced/7057-FNLIT/flickity/fullscreen.js"></script>
+    </p>
+</body>
+
+</html>

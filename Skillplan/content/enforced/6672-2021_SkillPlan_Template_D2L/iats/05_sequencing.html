@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+   <!-- Font Awesome CSS -->
+   <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+   <!-- Template CSS -->
+   <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+   <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+   <!-- Sequencing CSS -->
+   <link href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/iats/Sequencing/css/sequencing.min.css" rel="stylesheet">
+   <title>Sequencing Activity</title>
+</head>
+
+<body>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+            <h1>Sequencing Activity</h1>
+            <p>Insert your content here.</p>
+         </div>
+         <div class="col-12 offset-md-1 col-md-10">
+            <hr>
+            <section id="dbox"></section>
+            <hr>
+         </div>
+         <div class="col-12 offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+            <p>Insert your content here.</p>
+         </div>
+         <div class="col-12">
+            <footer>
+               <!-- <p>© [Client] [Year]</p> -->
+               <p><img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" alt="logo"></p>
+            </footer>
+         </div>
+      </div>
+
+   </div>
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+   <!-- Template JavaScript -->
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+   <!-- Sequencing JavaScript -->
+   <!--script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/iats/Sequencing/thirdpartylib/jquery/jquery.sortable.min.js"></script-->
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/iats/Sequencing/thirdpartylib/draggable.bundle.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins/resize-mirror.js"></script>
+   <!--script src="thirdpartylib/sortable.js"></script-->
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/iats/Sequencing/js/vendorPrefix.min.js"></script>
+   <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/iats/Sequencing/js/sequencing.min.js"></script>
+
+   <script>
+      $(document).ready(function () {
+         detectBrowserData();
+         SequencingApp.setupApp("data/sequencing-data.json", "dbox");
+      });
+   </script>
+   <noscript>This activity will only load in an online environment with JavaScript enabled.</noscript>
+</body>
+
+</html>

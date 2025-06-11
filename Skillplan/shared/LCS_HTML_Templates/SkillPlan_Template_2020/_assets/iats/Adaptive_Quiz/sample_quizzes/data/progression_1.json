@@ -1,0 +1,206 @@
+{
+	"quizHeading": "<h1>Progression 1 💯</h1>",
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<p>Make it to the end of the quiz by answering all questions correctly.</p><p>Get two answers correct to advance to the next level.</p><p>If you get two questions wrong you will be downgraded to the previous level.</p>",
+	"postQuizHtml": "<iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><p>The quiz ended. Enjoy the above video. :)</p>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You correctly answer any 5 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+				{
+			"poolId": 6,
+			"poolName": "<h2>Level 1<br>⬛⬜⬜⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 7,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": "<div class='center-feedback'>Great work! Let's advance to Level 2! ⬆️</div>",
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "How many planets does our solar system have?",
+					"hintHtml": "One was demoted to \"dwarf planet\" recently!",
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "7",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+						},
+						{
+							"optionText": "8",
+							"feedback": "<p>Yes! There are <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+							"score": 1
+        		},
+						{
+							"optionText": "9",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		},
+						{
+							"optionText": "None of the above",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		}
+					]
+				},
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "What year was the first moon landing?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "1967",
+							"feedback": "No, the first manned mission to the moon took place in 1969."
+						},
+						{
+							"optionText": "1969",
+							"feedback": "Yes! No the first manned mission to the moon took place in 1969.",
+							"score": 1
+        		},
+						{
+							"optionText": "1971",
+							"feedback": "No, the first manned mission to the moon took place in 1969."
+        		},
+						{
+							"optionText": "We didn't land on the moon",
+							"feedback": "🤔"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 7,
+			"poolName": "<h2>Level 2<br>⬛⬛⬜⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 8,
+			"downgradePoolId": 6,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": "<div class='center-feedback'>Dang! Back to Level 1 you go! ⬇️</div>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "mc",
+					"questionHtml": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/moon_large.jpg\" alt=\"An image of Saturn's largest moon.\" class=\"mb-2\"><p>The largest moon of Saturn has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "<p>That's correct!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 8,
+			"poolName": "<h2>Level 3<br>⬛⬛⬛⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 9,
+			"downgradePoolId": 7,
+			"feedbackOnUpgradeHtml": "<h3>⚠️ Warning! ⚠️</h3><p>If you get ONE QUESTION WRONG in the next level, you will be returning to <strong style='color:orange;'>Level 1</strong></p>",
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vacuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum."
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 9,
+			"poolName": "<h2>Level 4<br>⬛⬛⬛⬛</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 1,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 10,
+			"downgradePoolId": 6,
+			"feedbackOnUpgradeHtml": "<h3>WELL DONE!</h3><div class='center-feedback'><img src='https://cdn.pixabay.com/photo/2012/11/28/11/19/astronaut-67710_1280.jpg' style='max-width: 100%; max-height: 100%; margin-top: 12px;'></div>",
+			"feedbackOnDowngradeHtml": "<h3>Oh no! 😔</h3><div class='center-feedback'><p>Back to level 1!</p></div>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "What is the estimated age of the Milky Way?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "13.51 billion years",
+							"feedback": "Yes! How did you know that?",
+							"score": 1
+						},
+						{
+							"optionText": "13.1 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		},
+						{
+							"optionText": "512.3 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		},
+						{
+							"optionText": "42.72 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		}
+					]
+				}
+			]
+		}
+	]
+}

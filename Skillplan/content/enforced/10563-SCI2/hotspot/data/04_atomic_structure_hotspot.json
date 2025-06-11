@@ -1,0 +1,130 @@
+{
+ "ActivityName": "Atomic Structure",
+ "HeadingLevel": 1,
+ "Randomize": true,
+ "ShowScenes": "1",
+ "visible": true,
+ "SCORMEnabled": true,
+ "visibleStyle": {
+  "colour": "#fbb033",
+  "opacity": "40%",
+  "stroke": true,
+  "strokeColour": "#fbb033",
+  "strokeWidth": "2"
+ },
+ "highlight": true,
+ "highlightStyle": {
+  "colour": "#FFFFFF",
+  "opacity": "20%",
+  "stroke": true,
+  "strokeColour": "#fbb033",
+  "strokeWidth": "2"
+ },
+ "PreActivityText": "none",
+ "PreActivityMedia": "none",
+ "PostActivityText": "none",
+ "PostActivityMedia": "none",
+ "Scenes": [{
+  "SceneName": "The Carbon Atom",
+  "Instructions": "none",
+  "Background": {
+   "src": "/content/enforced/10563-SCI2/hotspot/img/carbon_atom.png",
+   "alt": "Diagram of a carbon atom.",
+   "imgWidth": "800",
+   "imgHeight": "700"
+  },
+  "HotSpots": [{
+    "id": "one",
+    "shapeType": "rectangle",
+    "desc": "Electron.",
+    "xPos": "629",
+    "yPos": "34",
+    "shapeWidth": "143",
+    "shapeHeight": "35"
+   },
+   {
+    "id": "two",
+    "shapeType": "rectangle",
+    "desc": "Proton.",
+    "xPos": "27",
+    "yPos": "163",
+    "shapeWidth": "128",
+    "shapeHeight": "35"
+   },
+   {
+    "id": "three",
+    "shapeType": "rectangle",
+    "desc": "Neutron.",
+    "xPos": "261",
+    "yPos": "132",
+    "shapeWidth": "128",
+    "shapeHeight": "35"
+   },
+   {
+    "id": "four",
+    "shapeType": "rectangle",
+    "desc": "Valence shell.",
+    "xPos": "30",
+    "yPos": "631",
+    "shapeWidth": "190",
+    "shapeHeight": "35"
+   },
+   {
+    "id": "five",
+    "shapeType": "rectangle",
+    "desc": "Nucleus.",
+    "xPos": "551",
+    "yPos": "415",
+    "shapeWidth": "128",
+    "shapeHeight": "35"
+   }
+  ],
+  "HotSpotContent": [{
+    "key": "one",
+    "activityType": "presentation",
+    "popUpName": "Electrons",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "Electrons have a negative charge. They orbit the nucleus. The number of electrons in an atom determines how it interacts with other atoms."
+    }]
+   },
+   {
+    "key": "two",
+    "activityType": "presentation",
+    "popUpName": "Protons",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "Protons have a positive charge."
+    }]
+   },
+   {
+    "key": "three",
+    "activityType": "presentation",
+    "popUpName": "Neutrons",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "Neutrons are neutral which means they have neither a positive nor a negative charge."
+    }]
+   },
+   {
+    "key": "four",
+    "activityType": "presentation",
+    "popUpName": "Valence Shell",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "The electrons located in the outer shell of an atom are called valence electrons."
+    }]
+   },
+   {
+    "key": "five",
+    "activityType": "presentation",
+    "popUpName": "Nucleus",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "Protons and neutrons make up the small, dense, centre of an atom called the nucleus. The nucleus has a positive charge."
+    }]
+   }
+
+  ]
+ }]
+}

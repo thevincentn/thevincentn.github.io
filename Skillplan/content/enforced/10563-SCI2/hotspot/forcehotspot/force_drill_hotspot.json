@@ -1,0 +1,111 @@
+{
+ "ActivityName": "Understanding the force on a drill.",
+ "HeadingLevel": 1,
+ "Randomize": true,
+ "ShowScenes": "1",
+ "visible": true,
+ "SCORMEnabled": true,
+ "visibleStyle": {
+  "colour": "#fbb033",
+  "opacity": "40%",
+  "stroke": true,
+  "strokeColour": "#fbb033",
+  "strokeWidth": "2"
+ },
+ "highlight": true,
+ "highlightStyle": {
+  "colour": "#FFFFFF",
+  "opacity": "20%",
+  "stroke": true,
+  "strokeColour": "#fbb033",
+  "strokeWidth": "2"
+ },
+ "PreActivityText": "none",
+ "PreActivityMedia": "none",
+ "PostActivityText": "none",
+ "PostActivityMedia": "none",
+ "Scenes": [{
+  "SceneName": "A worker driving in a screw.",
+  "Instructions": "none",
+  "Background": {
+   "src": "/content/enforced/10563-SCI2/hotspot/forcehotspot/drivingscrew.png",
+   "alt": "A worker driving in a screw.",
+   "imgWidth": "800",
+   "imgHeight": "700"
+  },
+  "HotSpots": [{
+    "id": "one",
+    "shapeType": "rectangle",
+    "desc": "Your Hands",
+    "xPos": "70",
+    "yPos": "130",
+    "shapeWidth": "50",
+    "shapeHeight": "50"
+   },
+   {
+    "id": "two",
+    "shapeType": "rectangle",
+    "desc": "The Drill",
+    "xPos": "325",
+    "yPos": "290",
+    "shapeWidth": "50",
+    "shapeHeight": "50"
+   },
+   {
+    "id": "three",
+    "shapeType": "rectangle",
+    "desc": "The Screw",
+    "xPos": "503",
+    "yPos": "268",
+    "shapeWidth": "50",
+    "shapeHeight": "50"
+   },
+   {
+    "id": "four",
+    "shapeType": "rectangle",
+    "desc": "The Wall",
+    "xPos": "643",
+    "yPos": "376",
+    "shapeWidth": "50",
+    "shapeHeight": "50"
+   }
+  ],
+  "HotSpotContent": [{
+    "key": "one",
+    "activityType": "presentation",
+    "popUpName": "Applied Force from Your Hands",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "Your hands apply force in two ways: pushing the drill forward and keeping it steady. You control how much force is delivered."
+    }]
+   },
+   {
+    "key": "two",
+    "activityType": "presentation",
+    "popUpName": "Twising Force from the Drill",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "This is where twisting force is generated. The motor spins the drill bit, turning the screw into the drywall. You risk stripping the screw or damaging the drywall if you apply too much force."
+    }]
+   },
+   {
+    "key": "three",
+    "activityType": "presentation",
+    "popUpName": "Tension in the Threads",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "As the screw tightens, the threads pull against the drywall. This creates tension, helping the screw hold tight. If the tension isn't balanced — like if the drywall is too soft or the screw too loose — it won’t hold securely."
+    }]
+   },
+   {
+    "key": "four",
+    "activityType": "presentation",
+    "popUpName": "Resistance from the Wall",
+    "hotSpotMedia": [{
+     "type": "text",
+     "content": "As the screw enters the drywall, the material pushes back. This resistance slows the screw’s motion and builds up friction. You need enough force to overcome this, but not so much that you break through the material."
+    }]
+   }
+  ]
+ }]
+}

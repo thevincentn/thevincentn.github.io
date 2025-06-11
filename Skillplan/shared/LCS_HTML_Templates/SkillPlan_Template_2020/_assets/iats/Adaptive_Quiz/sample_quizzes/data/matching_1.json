@@ -1,0 +1,140 @@
+{
+	"quizHeading": "<h1>🔭 Matching Examples 1️⃣🅰️</h1>",	
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": false,
+	"colouredFeedback": true,
+	"postQuizHtml": "<p>If you want to learn more about the galaxy, I recommend you check out this page on National Geographic's website:</p><p><a href=\"https://video.nationalgeographic.com/video/101-videos/00000161-d7ea-dcda-a37f-d7fe96d30000\" target=\"_blank\">Origins of the Universe 101</a></p>",
+	"endConditions": {
+		"preface": "This quiz will end if...",
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 4,
+			"preQuizText": "You correctly answer any 10 questions.",
+			"useForProgressBar": false
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You incorrectly answer any 10 questions.",
+			"useForStrikes": false
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": false
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "☀️ The Solar System",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 4,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 2,
+			"downgradePoolId": "END",
+			"feedbackOnUpgradeHtml": "<p>Great work! Now we're going to check out outer space... watch this video on galaxies before continuing to the next section!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+			"feedbackOnDowngradeHtml": "<p class=\"mb-5\">Dang! Review the Solar System 101 Video, then try again! Nice try though.</p> <img src=\"https://previews.123rf.com/images/vector2011/vector20111606/vector2011160600045/58662850-funny-drawing-of-a-sun-i-is-making-a-selfie-with-his-mobile.jpg\" style='max-width: 100%;'>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "match",
+					"questionHtml": "Categorize the planets as either a <strong>gas giant</strong> or <strong>terrestrial</strong>.<br>[Randomize options is OFF.]<br>[There is no hint for this question.]",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"feedbackForPerfect": "Correct!",
+					"feedbackForImperfect": "The terrestrial planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+					"options": [
+						{
+							"optionText": "Mercury",
+							"matchingText": "Terrestrial"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "Terrestrial"
+						},
+						{
+							"optionText": "Earth",
+							"matchingText": "Terrestrial"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Terrestrial"
+						},
+						{
+							"optionText": "Jupiter",
+							"matchingText": "Gas giant"
+						},
+						{
+							"optionText": "Saturn",
+							"matchingText": "Gas giant"
+						},
+						{
+							"optionText": "Uranus",
+							"matchingText": "Gas giant"
+						},
+						{
+							"optionText": "Neptune",
+							"matchingText": "Gas giant"
+						}
+					]
+				},
+				{
+					"questionType": "sorting",
+					"questionHtml": "Rank the below planets in order of their size, starting with the smallest.<br>[Randomize options is ON.]",
+					"hintHtml": "Jupiter is the biggest planet! So it should be number 4.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<h3>Correct!</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\"  style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"feedbackForImperfect": "<h3>That's the wrong order...</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\" style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"options": [
+						{
+							"optionText": "Jupiter",
+							"matchingText": 4
+						},
+						{
+							"optionText": "Saturn",
+							"matchingText": 3
+						},
+						{
+							"optionText": "Uranus",
+							"matchingText": 1
+						},
+						{
+							"optionText": "Neptune",
+							"matchingText": 2
+						}
+					]
+				},
+				{
+					"questionType": "ord",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.<br>[Randomize options is on.]",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				}
+			]
+		}
+	]
+}

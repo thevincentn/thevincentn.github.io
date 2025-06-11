@@ -1,0 +1,14 @@
+{
+	"poolId": 1,
+	"poolName": "<h2>Multiple Choice Questions ⚪️⚫️⚪️⚪️</h2>",
+	"repeatWrong": true,
+	"repeatCorrect": false,
+	"numWrongBeforeDowngrade": 2,
+	"numRightBeforeUpgrade": 2,
+	"upgradePoolId": 2,
+	"downgradePoolId": false,
+	"feedbackOnUpgradeHtml": false,
+	"feedbackOnDowngradeHtml": false,
+	"randomizeQuestionOrder": false,
+	"questions": []
+}

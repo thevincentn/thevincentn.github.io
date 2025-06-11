@@ -1,0 +1,23 @@
+{
+  "questionType": "fitb",  
+  "questionHtml": "The Milky Way is a #{blank} galaxy.<br>Cygnus A, which played a major role in Carl Sagan's sci-fi story \"Contact\", is an #{blank-2} galaxy.<br><em>Make sure you get your spelling right!</em>",
+  "hintHtml": "The first blank is six letters. 🌌<h3>Did you know?</h3><p>Contact was also a feature film starring Jodie Foster.</p>",
+  "caseSensitive": false,
+  "feedbackForPerfect": "Perfect! The Milky Way is a <strong>spiral galaxy</strong>, or a 'barred spiral' galaxy if you wanted to be more specific!<br>Cygnus A is an <strong>elliptical</strong> galaxy.",
+  "feedbackForImperfect": "The Milky Way is a <strong>spiral galaxy</strong>, or a 'barred spiral' galaxy if you wanted to be more specific!<br>Cygnus A is an <strong>elliptical</strong> galaxy.",
+  "blanks": [
+    {
+      "replaceString": "#{blank}",
+      "size": 10,
+      "maxLength": 20,
+      "answers": ["spiral", "barred spiral"]
+    },
+    {
+      "replaceString": "#{blank-2}",
+      "size": 10,
+      "maxLength": 20,
+      "answers": ["elliptical"]
+    }
+  ]
+
+}

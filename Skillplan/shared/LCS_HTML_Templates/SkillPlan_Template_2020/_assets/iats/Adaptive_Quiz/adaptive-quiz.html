@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Adaptive Quiz Demo</title>
+	<!-- Course Styles -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://lcs-dev-cdn.s3.us-east-2.amazonaws.com/interactive_assessment_tools/adaptive_quiz/css/adaptive_quiz.min.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-6 offset-sm-3">
+				<section id="astronomy"></section>
+			</div>
+		</div>		
+	</div>
+	<script src="js/adaptive_quiz.js"></script>
+	<script>
+		loadAdaptiveQuiz("data/small_quiz.json", "astronomy");
+	</script>
+	<noscript>This activity will only load in an online environment with JavaScript enabled.</noscript>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+	"quizHeading": "<h4>The Adaptive Quiz 🚀</h4>",	
+  "showFeedbackReport": true,  
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<h3>Ah, the classic pre-activity page</h3><ul style='font-size: 1.3em'><li>Introduction</li><li>Use HTML</li><li style='color: darkblue'><i>Style the way <b>you</b> like</i></li></ul><p style='text-align: center'>GOOD LUCK!</p>",
+	"postQuizHtml": "<h3>This is the end page!</h3><p>I'd like to congratulate you by providing this fun embedded video.</p><div class='center-feedback'><iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><br><h3>End page replace strings!</h3><ul><li>Your level at the end: #{endingLevel}</li><li>Highest level achieved: #{highestLevelAchieved}</li></ul>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You correctly answer any 5 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": []
+}

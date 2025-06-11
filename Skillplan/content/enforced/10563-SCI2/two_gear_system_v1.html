@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Gear System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+    .gear {
+      position: relative;
+    }
+    .gear svg {
+      width: 150px;
+      height: 150px;
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+    }
+    .controls div {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Interactive Gear System</h1>
+
+<div class="container">
+  <div class="gear" id="gear1"></div>
+  <div class="gear" id="gear2"></div>
+</div>
+
+<div class="controls">
+  <div>
+    <label for="smallGear">Small Gear Teeth</label>
+    <input type="range" id="smallGear" min="10" max="30" value="14">
+  </div>
+  <div>
+    <label for="largeGear">Large Gear Teeth</label>
+    <input type="range" id="largeGear" min="10" max="90" value="28">
+  </div>
+</div>
+
+<script>
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  function createGear(teeth, radius, id) {
+    const gear = document.getElementById(id);
+    gear.innerHTML = "";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "-100 -100 200 200");
+    for (let i = 0; i < teeth; i++) {
+      const angle = (i * 360) / teeth;
+      const tooth = document.createElementNS(svgNS, "rect");
+      tooth.setAttribute("width", "10");
+      tooth.setAttribute("height", "20");
+      tooth.setAttribute("x", radius);
+      tooth.setAttribute("y", -10);
+      tooth.setAttribute("fill", "#007bff");
+      tooth.setAttribute("transform", `rotate(${angle})`);
+      svg.appendChild(tooth);
+    }
+    const circle = document.createElementNS(svgNS, "circle");
+    circle.setAttribute("cx", "0");
+    circle.setAttribute("cy", "0");
+    circle.setAttribute("r", radius);
+    circle.setAttribute("fill", "none");
+    circle.setAttribute("stroke", "#000");
+    circle.setAttribute("stroke-width", "2");
+    svg.appendChild(circle);
+    gear.appendChild(svg);
+  }
+
+  function updateGears() {
+    const smallGearTeeth = document.getElementById("smallGear").value;
+    const largeGearTeeth = document.getElementById("largeGear").value;
+
+    const smallRadius = smallGearTeeth * 2;
+    const largeRadius = largeGearTeeth * 2;
+
+    createGear(smallGearTeeth, smallRadius, "gear1");
+    createGear(largeGearTeeth, largeRadius, "gear2");
+  }
+
+  document.getElementById("smallGear").addEventListener("input", updateGears);
+  document.getElementById("largeGear").addEventListener("input", updateGears);
+
+  updateGears();
+</script>
+
+</body>
+</html>

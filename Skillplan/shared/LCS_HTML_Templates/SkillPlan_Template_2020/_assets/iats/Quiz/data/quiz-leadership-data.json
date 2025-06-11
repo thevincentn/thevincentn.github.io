@@ -1,0 +1,96 @@
+{
+    "General": {
+        "QuizName": "Follow the What?"
+        , "HeadingLevel": 2
+        , "instructions": "none"
+        , "feedBackType": "continuous"
+        , "forceCorrect": false
+        , "repeatOnComplete": true
+        , "allowNone": false
+        , "allowPrevious": true
+        , "showHints": true
+        , "allowPartial": true
+        , "randomize": true
+        , "subtractWrong": true
+        , "preQuizText": "<p>John C. Maxwell, a well-known author on the subject of leadership, defines a leader as someone, “who knows the way, goes the way, and shows the way.”  Although this is a very powerful and catchy definition, there is much more to being a leader than this.</p><p>Other authorities on the subject agree that, “You will never be a leader unless you first learn to follow and be led,” (Tiorio) which alludes to the importance of having knowledge of followers as well as leaders to hone your leadership skills.</p><p>These two sides of the leadership coin are the focus of this module.  Before we begin, let’s see what you already know.  Select “Start Activity” to begin.</p>"
+        , "preQuizMedia": [{
+            "type": "image"
+            , "src": "../assets/tool/Quiz/img/preQuizImg.png"
+            , "width": "none"
+            , "height": "none"
+      }]
+        , "postQuizText": "<p>How did you do?  Did you get all of the questions correct?  If not, come back after you have completed the module to try again.</p><p>Now it’s time to get started with the leadership learning.  Here are a few more inspirational leadership quotes (and stock images) for the road:</p>"
+        , "postQuizMedia": [{
+            "type": "YouTubeVideo"
+            , "src": "https://www.youtube.com/watch?v=MgUYvRmEJkk"
+            , "width": "none"
+            , "height": "none"
+      }]
+    }
+    , "Questions": [{
+            "questionType": "Multiple Choice"
+            , "maxScoreValue": 1
+            , "questionText": "What is “leadership”?"
+            , "hintText": "Leadership involves getting people to act a certain way"
+            , "hintMedia": "none"
+            , "answers": [{
+                "answerText": "The art of influencing human behaviour so as to achieve a given goal."
+                , "feedBack": "Correct!  Although some consider it a “craft” because it is part art, part science."
+                , "scoreValue": 1
+         }, {
+                "answerText": "Anyone responsible for influencing human behaviour and for the achievement of a goal by a group."
+                , "feedBack": "Not quite.  This more accurately describes a leader rather than leadership."
+         }, {
+                "answerText": "A sea-faring vessel full of leaders."
+                , "feedBack": "Funny, but no."
+         }]
+      }, {
+            "questionType": "All That Apply"
+            , "maxScoreValue": 3
+            , "questionText": "Which of the following are examples of leaders?"
+            , "hintText": "In some instances, leaders may have leaders of their own.  Very rarely is there just one ultimate leader – a chain of command often puts people into their roles as both leaders and followers."
+            , "hintMedia": "none"
+            , "answers": [{
+                "answerText": "Military Officers"
+                , "feedBack": "Correct!  If there is gold on the shoulder, they are a leader."
+                , "scoreValue": 1
+         }, {
+                "answerText": "Jedi Knights"
+                , "feedBack": "Correct!  Although they answer to the Jedi council, they also have prodigies that they must lead and mentor in the ways of The Force."
+                , "scoreValue": 1
+         }, {
+                "answerText": "Civil Servants"
+                , "feedBack": "Correct! Contrary to what the name suggests, these people are considered to be leaders of the public."
+                , "scoreValue": 1
+         }, {
+                "answerText": "Padawans"
+                , "feedBack": "Star Wars fans will know that this the name given to young apprentices of the Jedi Knights.  Padawans are followers and leaders-in-training."
+         }]
+      }, {
+            "questionType": "Fill In The Blank"
+            , "maxScoreValue": 1
+            , "questionText": "Complete the following sentence below.<br>Before you can lead, you must first learn to BLANK1."
+            , "hintText": "Although this quote comes from “Drumline”, a movie with mixed reviews, it is quite true."
+            , "hintMedia": ""
+            , "answers": [
+                {
+                    "answerText": "FOLLOW"
+                    , "feedBack": "none"
+                    , "scoreValue": 1
+          }
+        ]
+      }, {
+            "questionType": "Math"
+            , "maxScoreValue": 1
+            , "questionText": "If Jane has 40 followers and John has 30 followers, how many followers do they have in total?<br>BLANK1"
+            , "hintText": "You can use a calculator if you wish."
+            , "hintMedia": "none"
+            , "answers": [{
+                "answerText": "70"
+                , "feedBack": "40 followers + 30 followers = 70 followers"
+                , "scoreValue": 1
+         }]
+      }
+
+  ]
+}

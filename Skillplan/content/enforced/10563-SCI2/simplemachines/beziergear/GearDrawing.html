@@ -1,0 +1,1632 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Gear Drawing with Bézier Curves</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="gear drawing, gear animation, involute gears, involute approximation, Bezier approximation, Bézier curve drawing">
+
+    <link rel="stylesheet" href="2ColStickyScroll-22.css">
+    <link rel="stylesheet" href="contentStyle-24.css">
+    <link rel="stylesheet" href="console-71.css">
+    <link rel="stylesheet" href="jqmath-0.4.3.css">
+
+    <!-- 'indexNested.js' defines the global 'var indexData' holding menu entries  -->
+    <script src="indexNested.js"></script>
+
+    <script src="gearUtils-09.js"></script>
+    <script src="jqmath-modern.js"></script>
+
+    <script src="Cango-29v04.js"></script>
+    <script src="CangoTextUtils-4v11.js"></script>
+    <script src="CangoAnimation-13v02.js"></script>
+    <script src="CangoAxes-10v06.js"></script>
+    <script src="CangoArrows-1v01.js"></script>
+    <script src="CangoZoomPan-3v00.js"></script>
+
+    
+
+</head>
+
+<body>
+    <div class="outer">
+
+        <div id="headerBkg">
+            <div class="header">
+                <p class="banner" style="z-index:1">MISCELLANY</p>
+                <p class="hdrBlurb">MISCELLANEOUS TECHNICAL ARTICLES BY <span style="letter-spacing: 1px;">Dr</span> A R COLLINS</p>
+                <div id="logoHolder">
+                    <p class="banner inverse">MISCELLANY</p>
+                </div>
+                <div id="logo">
+                    <a class="logoText" href="index.html"><b>arc</b><br><span style="font-size:14px">.id.au</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="page">
+            <div id="sideNavBkg">
+                <div id="sideNav" class="sticky">
+                    <!--
+                filled by 'buildMenu()'
+          -->
+                </div> <!-- sideNav -->
+            </div>
+
+            <div id="content">
+                <div class="h1Bkg"></div>
+                <h1>Gear Drawing with Bézier Curves</h1>
+                <div class="text_01">
+
+                    <h2>Introduction</h2>
+
+                    <p>Spur gear tooth profiles are shaped as circle involute curves. The involute is generated from its base circle to the tip or addendum circle as if a taut line were unwound from the circumference, the end of that line would describe a circle involute. The involute is a transcendental function usually drawn by calculating coordinates of many points along the curve and plotting straight line segments between them.</p>
+
+                    <p>In an effort to simplify the drafting of circular involute functions, Fumitaka Higuchi et al [1] developed a method of approximating the involute using Bézier curves. The result is a smooth, quite accurate approximation, suitable for CAD. The Bézier curve is defined by just a few control points and maintains it shape under 3D transformation. This greatly reduces the computational load required for drafting.</p>
+
+                    <p>Set out here is a brief description of the Higuchi method, along with a JavaScript implementation. The accuracy of the approximation is calculated and examples of drawing gears with the Bézier curves are shown.</p>
+
+                    <h3>Circle involute parametric equations</h3>
+
+                    <p>Fig 1 shows a graphical representation of how the involute profile for a gear tooth is generated. Click on the red dot and drag the 'taut' line as it unwraps from the blue base circle. The dot traces out a circle involute.</p>
+
+                    <div style="position: relative; width: 500px; margin: 20px auto;">
+                        <canvas id="cvs0" width="475" height="300"></canvas>
+                        <div class="captionHolder">
+                            <p><b>Figure 1.</b> Schematic diagram of gear showing involute profile (magenta) and its base circle (blue). Drag the red dot to demonstrate the involute generation geometry.</p>
+                        </div> <!-- captionHolder -->
+                    </div>
+
+                    <p>The Cartesian coordinates of a point on the involute may be expressed in parametric form using the generating angle \( θ \) as a parameter. Click <a href="javascript:showConstruction()">here</a> to show the construction lines of the derivation (click again to hide them).</p>
+
+                    <p>From the diagram, point \( x',y' \) is at radius \( R_b \) and angle \( θ \), therefore:</p>
+
+                    $$ x' = R_b\, \cos(θ) $$
+                    $$ y' = R_b\, \sin(θ) $$
+
+                    <p>The line c, as it unwinds from the circle, is always tangential to the circumference and the radius \( R_b \) is always perpendicular to c. Therefore:</p>
+
+                    $$ x = x' + c\, \sin(θ) $$
+                    $$ y = y' - c\, \cos(θ) $$
+
+                    <p>The involute is the locus of the end of a string being 'unwound' from the base circle. This implies:</p>
+
+                    $$ c' = c = R_b θ $$
+
+                    <p>Therefore, the parametric equations for the involute, to be approximated with Bézier curves, are:</p>
+
+                    $$ x = R_b \cos(θ) + R_b θ \sin(θ) $$ <span class="tag">(1)</span>
+                    $$ y = R_b \sin(θ) - R_b θ \cos(θ) $$
+
+                    <h3>Involute gear tooth profile dimensions</h3>
+
+                    <p>The geometry of a gear is set by the following basic factors: </p>
+
+                    <p style="margin-left:2em">Module value, \( m \), the size of the teeth,<br>
+                        Number of gear teeth \( Z \), <br>
+                        Pressure angle \( φ \).</p>
+
+                    <p>The pitch circle diameter \( D \), involute base circle radius \( R_b \) and addendum circle radius \( R_a \) are related by the formulae:</p>
+
+                    $$ D = m*Z $$
+                    $$ R_b = D/2 \, \cos(φ) $$
+                    $$ R_a = D/2 + m $$
+
+                    <p>The involute gear profile starts at the base circle and ends where the involute meets the tip circle, also known as the addendum circle. The value of the involute generating parameter \( θ \) starts at \( 0 \) on the base circle and ends at value, \( θ_a \), which may be calculated the schematic diagram shown in Fig. 2 as follows:</p>
+
+                    <div style="position: relative; width: 500px; margin: 20px auto;">
+                        <canvas id="cvsA" width="450" height="250"></canvas>
+                        <div class="captionHolder">
+                            <p><b>Figure 2.</b> Schematic diagram of involute gear tooth showing the polar coordinates of the involute profile (magenta) and its base circle (blue).</p>
+                        </div> <!-- captionHolder -->
+                    </div>
+
+                    <p>The Cartesian coordinates of a point on the involute are given at eqn 1. Substituting the polar coordinates of the point, \( (R, ψ) \), results in the expression:</p>
+
+                    $$ R \cos(ψ) = R_b \cos(θ) + R_b θ \sin(θ) $$
+                    $$ R \sin(ψ) = R_b \sin(θ) - R_b θ \cos(θ) $$
+
+                    <p>Squaring both sides and adding:</p>
+
+                    $$ R^2 = R_b^2 (1 + θ^2) $$
+                    $$ θ = {√{R^2 - R_b^2}}/{R_b} $$
+
+                    <p>Hence the value of \( θ \) at the addendum, the outer radius of the gear teeth, is given by</p>
+
+                    $$ θ_a = {√{R_a^2 - R_b^2}}/{R_b} $$
+
+                    <p>Also useful in Higuchi's approximation method, is an expression for the distance along the involute, \( s \), as a function of \( θ \).</p>
+
+                    $$ s(θ) = {R_bθ^2}/{2} $$
+
+                    <h2>Higuchi <span style="font-size: 0.9em"><i>et al</i></span> involute approximation method</h2>
+
+                    <p>The first step in the Higuchi method [1] is to approximate the circle involute curve using the Chebyshev approximation formula which expresses the curve as a truncated series of polynomials. This requires mapping &theta; onto the -1..+1 range expected by the Chebyshev formula. The terms of the series are then recombined to represent the Bernstein polynomial form (the basis of Bézier curves). A further parameter mapping of the Chebyshev parameter onto the 0..1 range for the Bézier parameter is required.</p>
+
+                    <p>The radius of curvature of the involute varies along its length, starting from zero at its on the base circle. This singularity generates a corresponding singularity in the Bézier approximation, resulting in a double control point at the base circle. Higuchi suggests avoiding this wasted node by beginning the approximation a short distance from the base circle, say 1% of the total length.</p>
+
+                    <p>Higuchi applies this method to a typical gear, having module 3mm, 17 teeth and pressure angle 25&deg;. Approximation errors are reported for Bézier approximations of order 4, 6 and 8. These errors are typically a few parts in 10<sup>6</sup>, 10<sup>9</sup> and 10<sup>12</sup> respectively when normalised by the diametral pitch.</p>
+
+                    <h3>JavaScript implementation</h3>
+
+                    <p>A JavaScript implementation of the Higuchi method was written and the source code is available in the file <a href='gearUtils-09.js' download>gearUtils-09.js</a>. This implementation handles any order Bézier curve from 3 upward, with arbitrary start and end points along the involute.</p>
+
+                    <p>The JavaScript utility provides the function:</p>
+
+                    <div class='srcFmt'>
+                        <pre>
+involuteBezCoeffs(module, numTeeth, pressureAngle, order, fstart, fstop)
+</pre>
+                    </div>
+
+                    <p>The required parameters are <b>module</b>, the metric gear size, and <b>numTeeth</b>, the number of teeth. The optional parameters are: <b>pressureAngle</b> (defaults to 20&deg;), <b>order</b>, the order of the Bézier approximation (defaults to 3), <b>fstart</b>, the start offset as a proportion of the involute profile length from start to addendum (defaults to 0.01) and <b>fstop</b>, the stop offset as a fraction of the distance to addendum (defaults to 1). The function returns an array of JavaScript objects of the form {x:, y:} representing a x,y coordinates of the Bézier curve nodes. For an order N approximation, there will be N+1 nodes in the array; the start point, N-1 control points and the end point.</p>
+
+                    <h3>Cubic Bézier approximation</h3>
+
+                    <p>The Higuchi technique would be of great benefit in web based gear modelling if it produced accurate approximations using cubic (order 3) Bézier curves, as the HTML5 canvas element has native support only for quadratic and cubic Bézier curves.</p>
+
+                    <p>To test the method's performance, a cubic Bézier curve fit was made to a typical gear profile. The specifications of the gear used in the example are the same as used in Higuchi's paper, (module=3, teeth=17, pressureAngle=25). Fig. 3 shows a plot of the cubic Bézier curve approximation to the involute (green line). A piece-wise plot of the true involute, is shown for comparison (magenta line). The Bézier curve control points are shown as crosses.</p>
+
+                    <div class="canvasHolder" style="width:600px; height:400px">
+                        <canvas id="cvs1" width="600" height="400"></canvas>
+                    </div>
+
+                    <div class="captionHolder" style="width: 600px">
+                        <p><b>Figure 3.</b> Cubic Bézier approximation to a circular involute (green line) calculated using the Higuchi-Chebyshev approximation method. The true involute is shown for comparison (magenta line).</p>
+                    </div>
+
+                    <h3>Cubic Bézier errors</h3>
+
+                    <p>Table 1 shows the approximation errors for the cubic Bézier approximation to the involute shown in Fig. 3. The errors are calculated at intervals along the involute. Column 1 shows the distance along the profile as a fraction of total length. Column 2 shows the errors as the absolute value of the distance of the point on the approximation to the closest point on the true involute, measured in millimetres. Column 3 shows these error values normalised to the pitch diameter.</p>
+
+                    <table class="txtTbl" style="text-align: center">
+                        <thead>
+                            <tr>
+                                <th style="width:33%">Distance<br />along involute</th>
+                                <th style="width:33%">Error<br>(mm)</th>
+                                <th style="width:33%">Error/Diametral Pitch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="t1row0">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row1">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row2">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row3">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row4">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row5">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row6">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row7">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t1row8">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="captionHolder">
+                        <p><b>Table 1.</b> Approximation errors for a single cubic Bézier curve approximation to the involute shown in Fig. 3. Each error is the distance from a point on the approximation to the closest point on the true involute.</p>
+                    </div>
+
+                    <p>Using a cubic Bézier curve to approximate the full profile length results in normalised errors of a few parts in 10<sup>4</sup>. The worst errors occur at the extremities, not accurate enough for gear design work.</p>
+
+                    <h2>Two cubic Bézier approximation</h2>
+
+                    <p>The solution to reducing the approximation error is to split the involute into two sections fitting a cubic Bézier curve to each. This reduces the errors by an order of magnitude, to just of a few parts in 10<sup>5</sup>.</p>
+
+                    <p>The junction point of the two Bézier curves is set 25% along the involute, this helps apportion the curvature to be modelled between the two curves. The first cubic Bézier starts 1% of the way along the involute to avoid the duplicated node at the involute singularity. The start point of the second Bézier coincides with the end point of the first Bézier, so one of these nodes may be discarded. The resulting Bézier approximation has 7 nodes, start, mid and end points and 4 control points.</p>
+
+                    <p>Here is an example using the 'involuteBezCoeffs' function to generate the two cubic Bézier curves representing a gear profile. The gear parameters are the same as the example in the Higuchi paper.</p>
+
+                    <div class='srcFmt'>
+                        <pre>
+var module = 3;
+var teeth = 17;
+var pressureAngle = 25;
+var Rpitch = module*teeth/2;
+var Rb = Rpitch * Math.cos(pressureAngle*Math.PI/180); // base circle radius
+</pre>
+                    </div>
+
+                    <div class='srcFmt'>
+                        <pre>
+// generate Higuchi involute approximation
+var fs = 0.01;  // start 1% off the base circle
+var fm = 0.25;  // break 25% along involute
+var fe = 1;     // end at 100%
+var dedBz = involuteBezCoeffs(module, teeth, pressureAngle, 3, fs, fm);
+var addBz = involuteBezCoeffs(module, teeth, pressureAngle, 3, fm, fe);
+ ...
+// draw the approximation
+data = ["M", dedBez[0].x, dedBez[0].y,
+        "C", dedBez[1].x, dedBez[1].y, dedBez[2].x, dedBez[2].y, dedBez[3].x, dedBez[3].y,
+        "C", addBez[1].x, addBez[1].y, addBez[2].x, addBez[2].y, addBez[3].x, addBez[3].y];
+// draw the involute using Cango library
+g.drawPath(data, {x:-Rpitch, y:0, strokeColor:'blue'});
+</pre>
+                    </div>
+
+                    <p>Fig. 4 shows a plot of the two cubic Bézier approximation to a circular involute (blue line) calculated by dividing the involute into two sections and fitting a cubic Bézier to each section using the Higuchi-Chebyshev approximation method. For comparison the magenta line is the true involute.</p>
+
+
+                    <div class="canvasHolder" style="width:600px; height:400px">
+                        <canvas id="cvs2" width="600" height="400"></canvas>
+                    </div>
+
+                    <div class="captionHolder" style="width: 600px">
+                        <p><b>Figure 4.</b> A two cubic Bézier approximation to the same circular involute shown in Fig. 3 (blue line). The true involute, is shown in magenta for comparison.</p>
+                    </div>
+
+                    <h2>Two cubic Bézier errors</h2>
+                    <p>Table 2 shows the approximation errors at various points along the involute. Column 1 shows the distance along the involute expressed as a fraction of the total length. Column 2 shows the approximation error, the absolute value of distance of a point from a Bézier curve measured in millimetres. Column 3 shows these values normalised to the gear's pitch circle diameter.</p>
+
+                    <table class="txtTbl" style="text-align: center">
+                        <thead>
+                            <tr>
+                                <th style="width:33%">Distance<br />along involute</th>
+                                <th style="width:33%">Error<br>(mm)</th>
+                                <th style="width:33%">Error/Diametral Pitch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="t2row0">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row1">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row2">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row3">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row4">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row5">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row6">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row7">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                            <tr id="t2row8">
+                                <td>xx</td>
+                                <td>yy</td>
+                                <td>zz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p><b>Table 2.</b> Approximation errors for a two cubic Bézier curve approximation. Each error is the distance to the closest point on the true involute.</p>
+
+                    <p> The two cubic Bézier approximation provides a quick, accurate method of drawing involute gear teeth suitable for 3D manipulation.</p>
+
+                    <h2>Drawing an spur gear tooth with Cango</h2>
+
+                    <p>Having established the profile of the tooth face, the full tooth shape may be generated by the addition of an arc across the tip of the tooth, the mirror image of the tooth profile and then root fillets and the arc across the root circle to the next tooth.</p>
+
+                    <p>The angular spacing between teeth, pitch angle, for a gear with Z teeth is:</p>
+
+                    <p>
+                        pitch angle = \( 2\pi/Z \)
+                    </p>
+                    <p>Drawing involute profiles is simplified by using the polar coordinate form of the involute equation. This expression is readily determined from Fig. 2:</p>
+
+                    <p>Using the cosine rule of the triangle in Fig. 2:</p>
+
+                    $$ R_b^2 + R^2 - 2R_b\, R\, \cos(θ - ψ) = c^2 $$
+                    <p style="padding-left:13em">$$ = R^2 - R_b^2 $$</p>
+                    <p style="padding-left:8em">$$ \cos(θ - ψ) = {R_b}/{R} $$</p>
+
+                    <p>Since \(c = R_b θ\)</p>
+
+                    $$ ψ(R) = {√{R^2 - R_b^2}}/{R_b} - \cos^{-1}({R_b}/{R}) $$
+
+                    <p>Shown below is the JavaScript source code to create a set of drawing commands for a single gear tooth outline. The output of this function is an array of drawing commands in pseudo SVG format that can be used to create a the outline of a single gear tooth, or by duplication and rotation, create a profile of a full gear. Code for these operations is included in the 'gearUtils' file.</p>
+
+                    <div class="srcFmt">
+                        <pre>
+function genGearToothData(m, Z, phi)
+{
+  // ****** external gear specifications
+  var addendum = m,                                   // distance from pitch circle to tip circle
+      dedendum = 1.25*m,                              // pitch circle to root, sets clearance
+      clearance = dedendum - addendum,
+      // Calculate radii
+      Rpitch = Z*m/2,                                 // pitch circle radius
+      Rb = Rpitch*Math.cos(phi*Math.PI/180),          // base circle radius
+      Ra = Rpitch + addendum,                         // tip (addendum) circle radius
+      Rroot = Rpitch - dedendum,                      // root circle radius
+      fRad = 1.5*clearance,                           // fillet radius, max 1.5*clearance
+      Rf,                                             // radius at top of fillet
+      // ****** calculate angles (all in radians)
+      pitchAngle = 2*Math.PI/Z,                       // angle subtended by whole tooth (rads)
+      baseToPitchAngle = genInvolutePolar(Rb, Rpitch),
+      pitchToFilletAngle = baseToPitchAngle,          // profile starts at base circle
+      filletAngle = Math.atan(fRad/(fRad+Rroot)),     // radians
+      fe, fs, fm,
+      dedBz, addBz, inv, invR,
+      fillet, filletR, filletNext,
+      rootR, rootNext,
+      pt, i, data;
+
+  Rf = Math.sqrt((Rroot+fRad)*(Rroot+fRad)-(fRad*fRad)); // radius at top of fillet
+  if (Rb &lt; Rf)
+  {
+    Rf = Rroot+clearance;
+  }
+  if (Rf > Rb)                   // start profile at top of fillet (if its greater)
+  {
+    pitchToFilletAngle -= genInvolutePolar(Rb, Rf);
+  }
+  // ****** generate Higuchi involute approximation
+  fe = 1;                    // fraction of profile length at end of approx
+  fs = 0.01;                 // fraction of length offset from base to avoid singularity
+  if (Rf > Rb)
+  {
+    fs = (Rf*Rf-Rb*Rb)/(Ra*Ra-Rb*Rb);  // offset start to top of fillet
+  }
+  // approximate in 2 sections, split 25% along the involute
+  fm = fs+(fe-fs)/4;         // fraction of length at junction (25% along profile)
+  dedBz = involuteBezCoeffs(m, Z, phi, 3, fs, fm);
+  addBz = involuteBezCoeffs(m, Z, phi, 3, fm, fe);
+  // join the 2 sets of coeffs (skip duplicate mid point)
+  inv = dedBz.concat(addBz.slice(1));
+  //create the back profile of tooth (mirror image)
+  invR = [];                // involute profile along back of tooth
+  for (i=0; i&lt;inv.length; i++)
+  {
+    // rotate all points to put pitch point at y = 0
+    pt = rotate(inv[i], -baseToPitchAngle-pitchAngle/4);
+    inv[i] = pt;
+    // generate the back of tooth profile nodes, mirror coords in X axis
+    invR[i] = {x:pt.x, y:-pt.y};
+  }
+  // ****** calculate section junction points R=back of tooth, Next=front of next tooth)
+  fillet = toCartesian(Rf, -pitchAngle/4-pitchToFilletAngle); // top of fillet
+  filletR = {x:fillet.x, y:-fillet.y};   // flip to make same point on back of tooth
+  rootR = toCartesian(Rroot, pitchAngle/4+pitchToFilletAngle+filletAngle);
+  rootNext = toCartesian(Rroot, 3*pitchAngle/4-pitchToFilletAngle-filletAngle);
+  filletNext = rotate(fillet, pitchAngle);  // top of fillet, front of next tooth
+  // ****** create the drawing command data array for the tooth
+  data = [];
+  data.push("M", fillet);           // start at top of fillet
+  if (Rf &lt; Rb)
+  {
+    data.push("L", inv[0]);         // line from fillet up to base circle
+  }
+  data.push("C", inv[1], inv[2], inv[3], inv[4], inv[5], inv[6]);
+  data.push("A", Ra, Ra, 0,0,1, invR[6]); // arc across addendum, sweep 1 for RHC, 0 for SVG
+  data.push("C", invR[5], invR[4], invR[3], invR[2], invR[1], invR[0]);
+  if (Rf &lt; Rb)
+  {
+    data.push("L", filletR);       // line down to top of fillet
+  }
+  if (rootNext.y > rootR.y)    // is there a section of root circle between fillets?
+  {
+    data.push("A", fRad, fRad, 0,0,0, rootR); // back fillet, sweep 0 for RHC, 1 for SVG
+    data.push("A", Rroot, Rroot, 0,0,1, rootNext); // root circle arc, sweep 1 for RHC, 0 for SVG
+  }
+  data.push("A", fRad, fRad, 0, 0, 0, filletNext); // sweep 0 for RHC, 1 for SVG
+
+  return data;  // return an array of pseudo SVG path data
+}
+</pre>
+                    </div>
+
+                    <h2>Drawing gears with Cango</h2>
+                    <p>To draw the outline of a full gear the "gearUtils" functions can be used to generate the SVG data array suitable for creating a Cango Shape object representing the gear outline with a circular axle shaft hole appended. The code snippet to create a gear using Cango is shown below:</p>
+
+                    <div class="srcFmt" style="max-height: 660px">
+                        <pre>
+var m = module,                   // Module = pitch diameter(mm)/teeth
+    Zg = gearTeeth,               // number of teeth
+    phi = pressureAngle || 20,
+    Rg = Zg*m/2,                  // gear Pitch radius
+    shaftRadius = 0.3*Rg,
+    data = createGearOutline(m, Zg, phi, shaftRadius), // generate gear outline
+    gear = new Shape(data, {
+      fillColor:"#ddd0dd",
+      border: true,
+      strokeColor: "#606060",
+      fillRule: "evenodd" });
+</pre>
+                    </div>
+
+                    <h3>Adding backlash when drawing meshed gears</h3>
+
+                    <p>In practical gearing there is always a gap between the non-drive face of the pinion tooth and the adjacent wheel tooth to prevent gears from jamming. This gap is termed backlash. If the direction of rotation is reversed, there is a period during which the pinion moves independently until the backlash gap is taken up and gear tooth contact re-established.</p>
+
+                    <p>Backlash may be created by cutting the gear spaces a little deeper, so the gaps are wider than the teeth, this method is preferred for stock gears. Alternatively, backlash may be introduced by increasing the center distance between the gears. This separation does not affect the speed ratio between the gears or require any alteration to the gear tooth profile.</p>
+
+                    <p>Recommended backlash is:
+
+                    <pre>
+backlash = 0.04*Module
+</pre>
+
+                    <p>To create this backlash the center distance is increased by &Delta;C where:</p>
+
+                    <pre>
+&Delta;C = backlash/2 * tan(phi);
+</pre>
+
+
+                    <p>Fig. 5 shows a pair of gears with module value of 5&nbsp;mm. The pinion has 24 teeth and the gear 52, the pressure angle is 20&deg;. The involute profiles were calculated using the 2 cubic Bézier approximation. Backlash of 0.2&nbsp;mm was added by increasing the center distance by 0.275&nbsp;mm.</p>
+
+                    <div class="consoleHolder">
+                        <div class="consoleBezel">
+
+                            <div class="screenHolder" style="background-color: ivory">
+                                <canvas id="cvs3" width="600" height="400"></canvas>
+                            </div>
+
+                            <div class="buttonHolder" style="margin-left:70%;grid-template-columns: 1fr 1fr;">
+                                <button type="button" onclick="consoleBtns3.f1()" class="buttonLink">PLAY</button>
+                                <button type="button" onclick="consoleBtns3.f2()" class="buttonLink">PAUSE</button>
+                            </div>
+
+                        </div> <!-- consoleBezel -->
+                    </div> <!-- consoleHolder -->
+                    <div class="controls mt-4">
+                <div class="item">
+                    <label for="teeth1">Gear 1 - Number of Teeth:</label>
+                    <input id="teeth1" type="range" min="5" max="50" value="12" oninput="updateCanvas()">
+                    <span id="teethValue1">12</span>
+                </div>
+                <div class="item">
+                    <label for="teeth2">Gear 2 - Number of Teeth:</label>
+                    <input id="teeth2" type="range" min="5" max="50" value="24" oninput="updateCanvas()">
+                    <span id="teethValue2">24</span>
+                </div>
+            </div>
+                    <div class="captionHolder" style="width: 620px">
+                        <p><b>Figure 5.</b> A spur gear animation drawn with the two cubic Bézier approximation to the involute gear tooth profiles. </p>
+                    </div>
+
+                    <h2>Internal gear drawing example</h2>
+                    <p>Internal gears, or ring gears, may be drawn with similar efficiency. Fig. 6 shows an internal gear and pinion with module value of 5&nbsp;mm. The pinion has 22 teeth and the ring gear 42. The involute profiles were calculated using the 2 cubic Bézier approximation. Backlash of 0.2&nbsp;mm was added by increasing the center distance.</p>
+
+                    <div class="consoleHolder">
+                        <div class="consoleBezel">
+
+                            <div class="screenHolder" style="background-color: ivory">
+                                <canvas id="cvs4" width="600" height="400"></canvas>
+                            </div> <!-- screenHolder -->
+
+                            <div class="buttonHolder" style="margin-left:70%;grid-template-columns: 1fr 1fr;">
+                                <button type="button" onclick="consoleBtns4.f1()" class="buttonLink">PLAY</button>
+                                <button type="button" onclick="consoleBtns4.f2()" class="buttonLink">PAUSE</button>
+                            </div>
+
+                        </div> <!-- consoleBezel -->
+                    </div> <!-- consoleHolder -->
+
+                    <div class="captionHolder" style="width: 620px">
+                        <p><b>Figure 6.</b> An internal gear animation, drawn with the two cubic Bézier approximation to the involute gear tooth profiles.</p>
+                    </div>
+
+                    <p>The Higuchi method has proven to be applicable to gear drawing on the HTML5 canvas element despite the limitation to order 3 Bézier approximation that the canvas imposes. All the source code used on this page is released free for non-commercial use.</p>
+
+                    <hr style="margin-top:2em;" />
+
+                    <p style="font-size: 11px"><b>References:</b><br />
+                        1. F.Higuchi, S. Gofuku, T. Maekawa, H. Mukundan, N.M. Patrikalakis, "Approximation of Involute Curves for CAD-System
+                        Processing"
+                        <i>YNU Digital Eng Lab Memorandum 05-1</i> 2006.<br>
+                        2. G.M.Maitra, Handbook of Gear Design, 1994
+                    </p>
+                </div> <!-- text_01 -->
+            </div> <!--  content -->
+        </div> <!-- page  -->
+
+    </div> <!-- outer -->
+    <script>
+        "use strict";
+
+        function distanceFromCurve(pt, bezNodes) {
+            /* Calculates distance from point (pt) to the closest point on cubic Bezier curve (bez)
+             * Algorithm suggested by Mike Kamermans http://pomax.github.io/bezierinfo/
+             * Note: this is designed for well behaved Bezier curves only (no kinks)
+             */
+            var mu = 0.5,
+                dMu = 1.0,
+                dMuMin = 0.000001,
+                testPt, testLft, testRgt;
+
+            function pointOnBezier(p) {
+                var x1 = bezNodes[0].x,
+                    y1 = bezNodes[0].y,
+                    x2 = bezNodes[1].x,
+                    y2 = bezNodes[1].y,
+                    x3 = bezNodes[2].x,
+                    y3 = bezNodes[2].y,
+                    x4 = bezNodes[3].x,
+                    y4 = bezNodes[3].y,
+                    f1 = function(t) {
+                        return (t * t * t);
+                    },
+                    f2 = function(t) {
+                        return (3 * t * t * (1 - t));
+                    },
+                    f3 = function(t) {
+                        return (3 * t * (1 - t) * (1 - t));
+                    },
+                    f4 = function(t) {
+                        return ((1 - t) * (1 - t) * (1 - t));
+                    },
+                    /* p from 0 to 1 */
+                    bezX = function() {
+                        return x1 * f1(p) + x2 * f2(p) + x3 * f3(p) + x4 * f4(p);
+                    },
+                    bezY = function() {
+                        return y1 * f1(p) + y2 * f2(p) + y3 * f3(p) + y4 * f4(p);
+                    };
+
+                return {
+                    x: bezX(),
+                    y: bezY()
+                }
+            }
+
+            function calcDist(p, u) {
+                var bezPt = pointOnBezier(u),
+                    distVal = Math.sqrt((bezPt.x - p.x) * (bezPt.x - p.x) + (bezPt.y - p.y) * (bezPt.y - p.y));
+
+                return {
+                    distance: distVal,
+                    x: bezPt.x,
+                    y: bezPt.y
+                };
+            }
+
+            do {
+                testPt = calcDist(pt, mu);
+                // half distance to left
+                dMu /= 2;
+                testLft = calcDist(pt, mu - dMu);
+                testRgt = calcDist(pt, mu + dMu);
+                if (testLft.distance < testPt.distance) {
+                    mu -= dMu;
+                    if (mu < 0) {
+                        mu = 0;
+                    }
+                }
+                if (testRgt.distance < testPt.distance) {
+                    mu += dMu;
+                    if (mu > 1) {
+                        mu = 1;
+                    }
+                }
+            }
+            while (dMu > dMuMin)
+
+            return testPt; // object {distance:, x:, y: }
+        }
+
+        function updateErrors(tbl, rowNum, str0, str1, str2) {
+            var rowId = "t" + tbl + "row" + rowNum;
+            var rowNode = document.getElementById(rowId);
+            var tds = rowNode.getElementsByTagName("TD"); // array of TD elements
+            tds[0].childNodes[0].nodeValue = str0; // text node of TD element
+            tds[1].childNodes[0].nodeValue = str1;
+            tds[2].childNodes[0].nodeValue = str2;
+        }
+
+        function toCartesian(radius, angle) {
+            return {
+                x: radius * Math.cos(angle),
+                y: radius * Math.sin(angle)
+            };
+        }
+
+        function genInvolute2(Rb, theta) {
+            // given the parameter theta, return the x, y of the involute
+            var ix = Rb * (Math.cos(theta) + theta * Math.sin(theta)),
+                iy = Rb * (Math.sin(theta) - theta * Math.cos(theta));
+
+            return {
+                x: ix,
+                y: iy
+            };
+        }
+
+        function InvoluteDefined(cvsID, module, teeth, pressureAngle) {
+            // =============== DIN GEAR DESIGN ===================
+            var m = module, // Module = pitch diameter(mm)/teeth
+                Z = teeth,
+                phi = pressureAngle || 20, // pressure angle in degs
+                Rpitch = Z * m / 2, // pitch radius
+                Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                addendum = m, // distance from pitch circle to outer circle
+                Ra = Rpitch + addendum, // addendum (outer) radius
+                tooth, newTooth,
+                toothData, toothObj,
+                pitchToBaseAngle,
+                gear, gearData, invData,
+                invMax, invMin,
+                xspan, yspan,
+                pt, A,
+                cx1, cy1,
+                c1,
+                i, theta;
+            var g = new Cango(cvsID), // g is the graphics context for the background
+                xmin = -54,
+                xmax = 20,
+                ymin = -5,
+                ymax = 40;
+
+            const dragC1 = (evt) => // called in scope of dragNdrop obj
+                {
+                    var xp, yp,
+                        wPos = evt.dragPos;
+                    // generate a value of A (involute generating angle) near to the drag point
+                    // origin is at invMin and invMax is the end, get current pos as proportion of inv span
+                    xp = (wPos.x < 0) ? 0 : wPos.x / xspan;
+                    if (xp > 1) {
+                        xp = 1;
+                    }
+                    yp = (wPos.y < 0) ? 0 : wPos.y / yspan;
+                    if (yp > 1) {
+                        yp = 1;
+                    }
+                    A = Math.sqrt(0.707 * Math.sqrt(xp * xp + yp * yp));
+                    pt = genInvolute2(Rb, A);
+                    cx1 = pt.x - Rb;
+                    cy1 = pt.y;
+                    this.drawInv();
+                }
+
+            g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+            g.setPropertyDefault("fillColor", 'black');
+            g.setPropertyDefault("fontSize", 12);
+
+            // generate gear tooth outline path
+            tooth = createGearTooth(m, Z, phi);
+            // make 5 teeth by duplicating
+            toothData = new PathSVG(tooth);
+            gearData = toothData.dup();
+            for (i = 1; i < 4; i++) {
+                newTooth = toothData.rotate(360 * i / Z);
+                gearData = gearData.joinPath(newTooth);
+            }
+            // rotate the tooth to put start of involute on the x axis
+            pitchToBaseAngle = (Math.sqrt(Rpitch * Rpitch - Rb * Rb) / Rb) - Math.acos(Rb / Rpitch);
+            gear = new Path(gearData.rotate(-270 / Z), {
+                rot: 180 * pitchToBaseAngle / Math.PI,
+                x: -Rb,
+                strokeColor: 'red'
+            });
+            // now draw the extended involute
+            invData = [];
+            pt = {};
+            for (theta = 0; theta < 1; theta += 0.05) // step along involute by inc parameter
+            {
+                pt = genInvolute2(Rb, theta);
+                invData.push(pt.x, pt.y);
+            }
+            invMax = genInvolute2(Rb, 1);
+            invData.push(invMax.x, invMax.y); // plot the last point (theta = 1 radian)
+            invMin = {
+                x: Rb,
+                y: 0
+            };
+            xspan = invMax.x - invMin.x; // use these when dragging dot
+            yspan = invMax.y - invMin.y;
+            A = 0.8; // initial involute generating angle 0.8 rads
+            cx1 = 59.7 - Rb;
+            cy1 = 7.5; // eqiv x,y on involute for 0.8 theta
+            // create the involute control point and make it draggable
+            c1 = new Shape(PathSVG.circle(2), {
+                fillColor: 'red'
+            });
+            c1.enableDrag(dragC1);
+
+            this.showConst = false; // show construction lines
+
+            this.drawInv = () => {
+                var compA, gPt, genLines;
+
+                g.clearCanvas();
+                g.drawAxes(xmin, xmax, ymin, ymax, {
+                    xOrigin: -Rb,
+                    yOrigin: 0,
+                    yLabelInterval: 0,
+                    strokeColor: "#888888",
+                    fillColor: "#888888"
+                });
+                g.render(gear);
+                g.drawPath(PathSVG.circle(Rb * 2), {
+                    x: -Rb,
+                    y: 0,
+                    strokeColor: 'rgba(0,0,255,0.3)'
+                });
+                g.drawPath(invData, {
+                    x: -Rb,
+                    y: 0,
+                    strokeColor: 'magenta'
+                });
+
+                // draw generating right angle
+                compA = Math.PI / 2 - A;
+                gPt = toCartesian(Rb, A);
+                genLines = ['M', 0, 0, 'l', gPt.x, gPt.y, Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA)];
+                g.drawPath(genLines, {
+                    x: -Rb,
+                    y: 0
+                });
+                // draw little right angle sign
+                genLines = ['M', 0.95 * gPt.x, 0.95 * gPt.y, 'l', 0.05 * Rb * Math.cos(compA), -0.05 * Rb * Math.sin(compA),
+                    0.05 * Rb * Math.cos(A), 0.05 * Rb * Math.sin(A)
+                ];
+                g.drawPath(genLines, {
+                    x: -Rb,
+                    y: 0
+                });
+                // draw draggable end point
+                c1.translate(cx1, cy1);
+                g.render(c1);
+                if (this.showConst) {
+                    genLines = ['M', 0, 0, 'L', gPt.x, gPt.y, gPt.x, 0, "Z", "M", gPt.x, gPt.y,
+                        "l", Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA), -Rb * A * Math.cos(compA), 0, "Z"
+                    ];
+                    g.drawPath(genLines, {
+                        x: -Rb,
+                        y: 0
+                    });
+                    // label if they fit
+                    g.drawText("R", {
+                        x: gPt.x / 2 - Rb - 1.8,
+                        y: gPt.y / 2 + 1.5,
+                        lorg: 9
+                    });
+                    g.drawText("b", {
+                        x: gPt.x / 2 - Rb - 1,
+                        y: gPt.y / 2 + 1,
+                        fontSize: 10,
+                        lorg: 9
+                    });
+                    if (A > 0.3) {
+                        g.drawArrowArc(7.5, 0, 180 * A / Math.PI, {
+                            x: -Rb,
+                            y: 0,
+                            fillColor: "#aaaaaa",
+                            clockWise: false,
+                            shaftWidth: 1,
+                            headSize: 7
+                        });
+                        g.drawText("\u03B8", {
+                            x: gPt.x / 4 - Rb,
+                            y: gPt.y / 8,
+                            lorg: 4
+                        });
+                        g.drawText("x'", {
+                            x: 2 * gPt.x / 3 - Rb,
+                            y: 2,
+                            lorg: 5
+                        });
+                        g.drawText("y'", {
+                            x: gPt.x - Rb - 1,
+                            y: gPt.y / 3,
+                            lorg: 3
+                        });
+                        g.drawText("\u03B8", {
+                            x: gPt.x - Rb + Rb * A * Math.sin(A) / 20,
+                            y: gPt.y - 4,
+                            lorg: 1
+                        });
+                        g.drawText("x", {
+                            x: gPt.x - Rb + Rb * A * Math.sin(A) / 2,
+                            y: gPt.y - Rb * A * Math.cos(A) + 1,
+                            lorg: 9
+                        });
+                        g.drawText("y", {
+                            x: gPt.x - Rb + 1,
+                            y: 2 * gPt.y / 3,
+                            lorg: 1
+                        });
+                        g.drawText("c", {
+                            x: gPt.x - Rb + Rb * A * Math.sin(A) / 2 + 1,
+                            y: gPt.y - Rb * A * Math.cos(A) / 2 + 1,
+                            lorg: 7
+                        });
+                        g.drawText("c'", {
+                            x: -Rb + Rb * Math.cos(A / 2) - 1,
+                            y: Rb * Math.sin(A / 2) - 1,
+                            lorg: 6
+                        });
+                    }
+                }
+            };
+
+            this.drawInv();
+        }
+
+        function InvoluteDefined2(cvsID, module, teeth, pressureAngle) {
+            // =============== DIN GEAR DESIGN ===================
+            var m = module, // Module = pitch diameter(mm)/teeth
+                Z = teeth,
+                phi = pressureAngle || 20, // pressure angle in degs
+                Rpitch = Z * m / 2, // pitch radius
+                Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                addendum = m, // distance from pitch circle to outer circle
+                Ra = Rpitch + addendum, // addendum (outer) radius
+                toothData, tooth,
+                pitchToBaseAngle,
+                gear, gearData, i, newTooth,
+                invData, pt, theta,
+                invMax, invMin,
+                xspan, yspan,
+                A, cx1, cy1,
+                compA, gPt,
+                genLines, ph;
+            var g = new Cango(cvsID), // g is the graphics context for the background     
+                xmin = -45,
+                xmax = 20,
+                ymin = -4,
+                ymax = 40;
+
+            // generate gear tooth outline path
+            tooth = createGearTooth(m, Z, phi);
+            toothData = new PathSVG(tooth);
+            // make 5 teeth by duplicating
+            gearData = toothData.dup();
+            for (i = 1; i < 3; i++) {
+                newTooth = toothData.rotate(360 * i / Z);
+                gearData = gearData.joinPath(newTooth);
+            }
+            gear = new Path(gearData.rotate(-270 / Z), {
+                strokeColor: 'red'
+            });
+            // rotate the tooth to put start of involute on the x axis
+            pitchToBaseAngle = (Math.sqrt(Rpitch * Rpitch - Rb * Rb) / Rb) - Math.acos(Rb / Rpitch);
+            gear.rotate(180 * pitchToBaseAngle / Math.PI);
+            // now draw the extended involute
+            invData = [];
+            pt = {};
+            for (theta = 0; theta < 1; theta += 0.05) // step along involute by inc parameter
+            {
+                pt = genInvolute2(Rb, theta);
+                invData.push(pt.x, pt.y);
+            }
+            invMax = genInvolute2(Rb, 1);
+            invData.push(invMax.x, invMax.y); // plot the last point (theta = 1 radian)
+            invMin = {
+                x: Rb,
+                y: 0
+            };
+            xspan = invMax.x - invMin.x; // use these when dragging dot
+            yspan = invMax.y - invMin.y;
+            A = 0.8; // initial involute generating angle 0.8 rads
+            cx1 = 59.7 - Rb;
+            cy1 = 7.5; // eqiv x,y on involute for 0.8 theta
+
+            g.gridboxPadding(5, 1);
+            g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+            g.setPropertyDefault("fillColor", 'black');
+            g.setPropertyDefault("fontSize", 12);
+            g.clearCanvas();
+            g.drawAxes(xmin, xmax, ymin, ymax, {
+                xOrigin: -Rb,
+                yOrigin: 0,
+                yTickInterval: 10,
+                strokeColor: "#888888",
+                fillColor: "#888888"
+            });
+            gear.translate(-Rb, 0);
+            g.render(gear);
+            g.drawPath(PathSVG.circle(Rb * 2), {
+                x: -Rb,
+                y: 0,
+                strokeColor: 'rgba(0,0,255,0.3)'
+            });
+            g.drawPath(invData, {
+                x: -Rb,
+                y: 0,
+                strokeColor: 'magenta'
+            });
+            // draw generating right angle
+            compA = Math.PI / 2 - A;
+            gPt = toCartesian(Rb, A);
+            genLines = ['M', 0, 0, 'l', gPt.x, gPt.y, Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA), 'z'];
+            g.drawPath(genLines, {
+                x: -Rb,
+                y: 0
+            });
+
+            g.drawArrowArc(9, 0, 180 * A / Math.PI, {
+                x: -Rb,
+                y: 0,
+                fillColor: "#aaaaaa",
+                clockwise: false,
+                shaftWidth: 1,
+                headSize: 7
+            });
+            ph = 0.13;
+            g.drawArrowArc(20, 0, 180 * ph / Math.PI, {
+                x: -Rb,
+                y: 0,
+                fillColor: "#aaaaaa",
+                clockWise: false,
+                shaftWidth: 1,
+                headSize: 7
+            });
+            // draw little right angle sign
+            genLines = ['M', 0.95 * gPt.x, 0.95 * gPt.y, 'l', 0.05 * Rb * Math.cos(compA), -0.05 * Rb * Math.sin(compA),
+                0.05 * Rb * Math.cos(A), 0.05 * Rb * Math.sin(A)
+            ];
+            g.drawPath(genLines, {
+                x: -Rb,
+                y: 0
+            });
+            // label if they fit
+            g.drawText("R", {
+                x: gPt.x / 2 - Rb - 1.8,
+                y: gPt.y / 2 + 1.5,
+                lorg: 9
+            });
+            g.drawText("b", {
+                x: gPt.x / 2 - Rb - 1,
+                y: gPt.y / 2 + 1,
+                fontSize: 10,
+                lorg: 9
+            });
+            g.drawText("R", {
+                x: gPt.x - Rb,
+                y: gPt.y / 6,
+                lorg: 9
+            });
+            g.drawText("\u03B8", {
+                x: 3 * gPt.x / 8 - Rb,
+                y: gPt.y / 8,
+                lorg: 4
+            });
+            g.drawText("\u03C8", {
+                x: 7 * gPt.x / 8 - Rb,
+                y: 1.5,
+                lorg: 5
+            });
+            g.drawText("c", {
+                x: gPt.x - Rb + Rb * A * Math.sin(A) / 2 + 1,
+                y: gPt.y - Rb * A * Math.cos(A) / 2 + 1,
+                lorg: 7
+            });
+            g.drawText("c'", {
+                x: -Rb + Rb * Math.cos(A / 2) - 1,
+                y: Rb * Math.sin(A / 2) - 1,
+                lorg: 6
+            });
+        }
+
+        function InvoluteProfile(g, module, teeth, pressureAngle) {
+            // =============== Demo Gear ===================
+            var m = module, // Module = pitch diameter(mm)/teeth
+                Z = teeth,
+                phi = pressureAngle || 20, // pressure angle in degs
+                Rpitch = Z * m / 2, // pitch radius
+                Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                addendum = m, // pitch circle to outer circle
+                Ra = Rpitch + addendum, // addendum (outer) radius
+                ta = Math.sqrt(Ra * Ra - Rb * Rb) / Rb, // involute angle at addendum
+                order = 4;
+            var xmin = -3,
+                xmax = 3,
+                ymin = -0.5,
+                ymax = 5.5;
+
+            g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+
+            this.drawCubicBezInvolute = function() {
+                var data, p, theta, row, sa, s, err, pt;
+
+                // generate 2 Cubic Bezier approximation
+                var fs = 0.01, // start 1% off the base circle
+                    fm = 0.25, // break 25% along involute
+                    fe = 1, // end at 100%
+                    dedBez = involuteBezCoeffs(m, Z, phi, 3, fs, fm),
+                    addBez = involuteBezCoeffs(m, Z, phi, 3, fm, fe);
+
+                g.clearCanvas();
+                g.drawAxes(-5, 5, -5, 5, {
+                    xOrigin: 0,
+                    yOrigin: 0,
+                    xUnits: "mm",
+                    yUnits: "mm",
+                    xLabel: "X",
+                    yLabels: "Y"
+                });
+                g.drawPath(PathSVG.circle(Rpitch * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'orange'
+                });
+                g.drawPath(PathSVG.circle(Rb * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'red'
+                });
+                g.drawPath(PathSVG.circle(Ra * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'green'
+                });
+
+                // draw the approximation
+                data = ["M", dedBez[0].x, dedBez[0].y,
+                    "C", dedBez[1].x, dedBez[1].y, dedBez[2].x, dedBez[2].y, dedBez[3].x, dedBez[3].y,
+                    "C", addBez[1].x, addBez[1].y, addBez[2].x, addBez[2].y, addBez[3].x, addBez[3].y
+                ];
+                g.drawPath(data, {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'blue'
+                });
+                // plot the Bezier nodes as exes
+                for (p = 0; p < dedBez.length; p++) // skip duplicate at start
+                {
+                    g.drawPath(PathSVG.ex(0.2), {
+                        x: dedBez[p].x - Rpitch,
+                        y: dedBez[p].y,
+                        strokeColor: 'blue'
+                    });
+                }
+                // plot the Bezier nodes
+                for (p = 0; p < addBez.length; p++) // skip duplicate at start
+                {
+                    g.drawPath(PathSVG.cross(0.2), {
+                        x: addBez[p].x - Rpitch,
+                        y: addBez[p].y,
+                        strokeColor: 'green'
+                    });
+                }
+                // calculate the errors
+                sa = (Ra * Ra - Rb * Rb) / (2 * Rb);
+                for (theta = 0.08, row = 0; theta < ta; theta += 0.08, row++) // step along involute
+                {
+                    pt = genInvolute2(Rb, theta);
+                    // calculate the errors
+                    s = Rb * theta * theta / 2;
+                    if ((s / sa) < 0.25) {
+                        err = distanceFromCurve(pt, dedBez);
+                    } else {
+                        err = distanceFromCurve(pt, addBez);
+                    }
+                    // write the error in table
+                    updateErrors(2, row, sprintf("%4.2f", s / sa), sprintf("%7.5f", err.distance), sprintf("%.1E", err.distance / (Z * m)));
+                }
+            };
+
+            this.drawRealInvolute = function() {
+                var theta, pt,
+                    data = [];
+
+                // now draw the real involute
+                for (theta = 0; theta < ta; theta += 0.01) // step along involute
+                {
+                    pt = genInvolute2(Rb, theta);
+                    data.push(pt.x, pt.y);
+                }
+                pt = genInvolute2(Rb, ta); // add the end point
+                data.push(pt.x, pt.y);
+                g.drawPath(data, {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'magenta'
+                });
+            };
+
+            this.drawCubicBezInvolute();
+            this.drawRealInvolute();
+        }
+
+        function InvoluteOrderN(g, module, teeth, pressureAngle, bezOrder) {
+            // =============== this Demo Gear has Rroot < Rbase ===================
+            var m = module, // Module = pitch diameter(mm)/teeth
+                Z = teeth,
+                phi = pressureAngle || 20, // pressure angle in degs
+                Rpitch = Z * m / 2, // pitch radius
+                Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                addendum = m, // pitch circle to outer circle
+                Ra = Rpitch + addendum, // addendum (outer) radius
+                order = bezOrder || 4,
+                fs = 0.01, // start offset as fraction of length
+                fe = 1, // fraction of length at end of approx
+                ta = Math.sqrt(Ra * Ra - Rb * Rb) / Rb, // involute angle at addendum, end of approx
+                ts = Math.sqrt(fs) * ta, // involute angle, theta, at start of approx
+                bez;
+            var xmin = -3,
+                xmax = 3,
+                ymin = -0.5,
+                ymax = 5.5;
+
+            /* Computes deCasteljau p(t) for n-control points
+             * @param cp - list of control points [][x,y]
+             * @param r - amount points (init value : points.length-1)
+             * @param i - start value (init value : 0)
+             * @param t - portion on the graph (range between 0.0 and 1.0)
+             * @return point{x:,y:} - point on graph at p(t)
+             *
+             * @see http://stackoverflow.com/a/6271870 for n-control points
+             */
+            function getBezierPoint(cp, r, i, t) {
+                var p1, p2;
+
+                if (r == 0) {
+                    return cp[i];
+                }
+                p1 = getBezierPoint(cp, r - 1, i, t);
+                p2 = getBezierPoint(cp, r - 1, i + 1, t);
+
+                return {
+                    x: (1 - t) * p1.x + t * p2.x,
+                    y: (1 - t) * p1.y + t * p2.y
+                };
+            }
+
+            g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+
+            // generate Bezier approximation
+            bez = involuteBezCoeffs(m, Z, phi, order, fs, fe);
+
+            this.drawBezInvolute = function() {
+                var data = [],
+                    t, p, pt, theta, row,
+                    sa, s, err;
+
+                g.clearCanvas();
+                g.drawAxes(-5, 5, -5, 5, {
+                    xOrigin: 0,
+                    yOrigin: 0,
+                    xUnits: "mm",
+                    yUnits: "mm",
+                    xLabel: "X",
+                    yLabels: "Y"
+                });
+                g.drawPath(PathSVG.circle(Rpitch * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'orange'
+                });
+                g.drawPath(PathSVG.circle(Rb * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'red'
+                });
+                g.drawPath(PathSVG.circle(Ra * 2), {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'green'
+                });
+
+                // draw approximation Bezier
+                for (theta = ts; theta < ta; theta += 0.05) // fraction of theta_a
+                {
+                    t = (theta - ts) / (ta - ts); // map t (0 <= t <= 1) from theta (ts <= theta <= ta)
+                    pt = getBezierPoint(bez, order, 0, t);
+                    data.push(pt.x, pt.y);
+                }
+                // add the end point
+                data.push(bez[bez.length - 1].x, bez[bez.length - 1].y);
+                g.drawPath(data, {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'green'
+                });
+                // plot the Bezier nodes
+                for (p = 0; p < bez.length; p++) {
+                    g.drawPath(PathSVG.ex(0.2), {
+                        x: bez[p].x - Rpitch,
+                        y: bez[p].y,
+                        strokeColor: 'green'
+                    });
+                }
+
+                // calculate the errors (need a higher order version of Simon Porritt's jsBezier code)
+                if (order == 3) {
+                    sa = (Ra * Ra - Rb * Rb) / (2 * Rb);
+                    for (theta = 0.08, row = 0; theta < ta; theta += 0.08, row++) // step along involute
+                    {
+                        pt = genInvolute2(Rb, theta);
+                        // calculate the errors
+                        s = Rb * theta * theta / 2;
+                        err = distanceFromCurve(pt, bez);
+                        // write the error in table
+                        updateErrors(1, row, sprintf("%4.2f", s / sa),
+                            sprintf("%6.4f", err.distance),
+                            sprintf("%.1E", err.distance / (Z * m)));
+                    }
+                }
+            };
+
+            this.drawRealInvolute = function() {
+                var theta, pt,
+                    data = [];
+
+                // now draw the real involute
+                for (theta = 0; theta < ta; theta += 0.01) // step along involute by inc parameter
+                {
+                    pt = genInvolute2(Rb, theta);
+                    data.push(pt.x, pt.y);
+                }
+                pt = genInvolute2(Rb, ta); // add the end point
+                data.push(pt.x, pt.y);
+                g.drawPath(data, {
+                    x: -Rpitch,
+                    y: 0,
+                    strokeColor: 'magenta'
+                });
+            };
+
+            this.drawBezInvolute();
+            this.drawRealInvolute();
+        }
+
+        function GearSpec(module, gearTeeth, options) {
+            // =============== DIN GEAR DESIGN ===================
+            var opts = options || {};
+            var md = module || 1,
+                shaftRad = opts.shaftWidth / 2 || 0.15 * gearTeeth * md,
+                prAngle = opts.pressureAngle || 20,
+                bkLashGap = opts.backlashGap || 0.04 * md, // gap between teeth faces
+                bkLashRpInc = bkLashGap / (2 * Math.tan(Math.PI * prAngle / 180));
+
+            return {
+                m: md, // Module = mm of pitch diameter per tooth
+                Z: gearTeeth,
+                phi: prAngle, // see involute spur gear definition drawing
+                Rp: gearTeeth * md / 2, // pitch radius
+                shaftR: shaftRad,
+                dC: bkLashRpInc
+            }; // increase in gear separation to create backlash gap
+        }
+
+        function addGearTrainSpecs(gearSpecAry, axlePosAry, rotVel) {
+            var md = gearSpecAry[0].m,
+                bkLashSep = 0.04 * md, // backlash (mm gap between non touching faces)
+                angVel = rotVel || 1,
+                bkLashDir = (angVel > 0) ? 1 : -1,
+                axleAngle, // rad
+                axleAngleDegs, // deg
+                internal,
+                rot,
+                prev, curr;
+
+            function calcMeshingRot(angleToAxle, mZ, sZ, prevRot, int) {
+                var mRot = prevRot || 0; // degs
+                var sRot = 0;
+                var sTeethRot = (sZ - 1) / 2; // turn the mesh on x axis measured in teeth
+
+                sTeethRot -= mRot * mZ / 360; // undo the effect of prev gears rotation so calcs start with both at 0 
+                sTeethRot += angleToAxle * sZ / 360; // equiv number of teeth to rotate the gear round prev gear's center to get to idler axle
+                sTeethRot += angleToAxle * mZ / 360; // number of teeth around prev gear the gear is rolled to idler axis
+                // convert to deg
+                sRot = sTeethRot * 360 / sZ;
+                // don't flip backlash dir if internal gear - driver and driven move in same direction
+                bkLashDir *= internal; // flip sign if internal - gears go in same direction
+                sRot += bkLashDir * 180 * bkLashSep / (sZ * md * Math.PI); // take up backlash
+
+                return sRot;
+            }
+
+            gearSpecAry[0].meshRot = 0;
+            gearSpecAry[0].coords = {
+                x: axlePosAry[0].x,
+                y: axlePosAry[0].y
+            }
+            gearSpecAry[0].relAngVel = angVel; // angular velocities are relative to 1st gear
+            for (prev = 0, curr = 1; curr < gearSpecAry.length; curr++, prev++) {
+                axleAngle = Math.atan2(axlePosAry[curr].y - axlePosAry[prev].y, axlePosAry[curr].x - axlePosAry[prev].x) || 0; // rads
+                axleAngleDegs = 180 * axleAngle / Math.PI; // degs
+                internal = (gearSpecAry[prev].shaftR > gearSpecAry[prev].Rp) ? -1 : 1; // was previous gear internal?
+                rot = calcMeshingRot(axleAngleDegs, gearSpecAry[prev].Z, gearSpecAry[curr].Z, gearSpecAry[prev].meshRot, internal);
+                // add meshRotation property to the gear spec
+                gearSpecAry[curr].meshRot = rot;
+                // add position property to the gear spec
+                gearSpecAry[curr].coords = {
+                    x: axlePosAry[curr].x,
+                    y: axlePosAry[curr].y
+                };
+                // add the relative angular velocity for animation
+                gearSpecAry[curr].relAngVel = -internal * gearSpecAry[prev].relAngVel * gearSpecAry[prev].Z / gearSpecAry[curr].Z;
+                // rotation direction switches for each gear so toggle bkLashDir
+                bkLashDir *= -1;
+            }
+        }
+
+        function makeGearObj(gearSpec, grColor, sftColor, addMeshRot) {
+            var data, svgData,
+                gear,
+                grp,
+                shaft,
+                axlePos = gearSpec.coords || {
+                    x: 0,
+                    y: 0
+                },
+                gearColor = grColor || "silver",
+                outlineCol = "#606060",
+                shaftColor = sftColor || "none";
+
+            if (gearSpec.shaftR > gearSpec.Rp) // internal gear
+            {
+                data = createIntGearOutline(gearSpec.m, gearSpec.Z, gearSpec.phi, gearSpec.shaftR);
+            } else {
+                data = createGearOutline(gearSpec.m, gearSpec.Z, gearSpec.phi, gearSpec.shaftR);
+            }
+            svgData = new PathSVG(data);
+            if (addMeshRot) {
+                svgData = svgData.rotate(-gearSpec.meshRot); // SVG angle are +ve CCW for RHC
+            }
+            gear = new Shape(svgData, {
+                fillColor: gearColor,
+                border: true,
+                strokeColor: outlineCol,
+                fillRule: "evenodd"
+            });
+            grp = new Group(gear);
+            // add a property holding the axle position for soft translate when animated
+            grp.coords = axlePos;
+            grp.angVel = gearSpec.relAngVel || 1;
+            // add axle hole
+            if (sftColor != "none") // not transparent so make a solid fill circle to cover the shaft hole
+            {
+                shaft = new Shape(PathSVG.circle(gearSpec.shaftR * 2), {
+                    fillColor: shaftColor
+                });
+                grp.addObj(shaft);
+            }
+
+            return grp;
+        }
+
+        function GearAnimation(g, module, gearTeeth, pinionTeeth) {
+            // =============== DIN GEAR DESIGN ===================
+            const gear1 = new GearSpec(module, gearTeeth);
+            const gear2 = new GearSpec(module, pinionTeeth);
+            const gearCol = "#ddd0dd",
+                pinionCol = "#d0d0e8",
+                shaftCol = "none";
+            const xmin = -30,
+                ymin = -20,
+                xspan = 60;
+            // generate gear specs
+            addGearTrainSpecs([gear1, gear2], [{
+                x: gear1.Rp + gear1.dC,
+                y: 0
+            }, {
+                x: -gear2.Rp,
+                y: 0
+            }], 1);
+            // build the gears
+            const gear = makeGearObj(gear1, gearCol, shaftCol, true); // true = add mesh rotation
+            const pinion = makeGearObj(gear2, pinionCol, shaftCol, true);
+
+            // setup the animation properties
+            const gearConfig = {
+                    degs: [0, 360]
+                }, // gear is driving pinion
+                twnr = new Tweener(0, 90000, "loop"); // 0.666 rpm
+
+            function drawGears(opts) {
+                gear.rotate(-this.nextState.rot * gear.angVel);
+                gear.translate(gear.coords.x, gear.coords.y);
+                this.gc.render(gear, true);
+                pinion.rotate(-this.nextState.rot * pinion.angVel);
+                pinion.translate(pinion.coords.x, pinion.coords.y);
+                this.gc.render(pinion);
+            }
+
+            function turnGears(time, opts) {
+                var rotVal = twnr.getVal(time, opts.degs);
+                // create the required contents of next state vector (the default for others are OK)
+                this.nextState.rot = rotVal;
+            }
+
+            g.setWorldCoordsRHC(xmin, ymin, xspan);
+            g.animation(drawGears, turnGears, gearConfig);
+
+            this.run = function() {
+                g.playAnimation();
+            };
+
+            this.halt = function() {
+                g.pauseAnimation();
+            };
+
+            g.playAnimation();
+        }
+
+        function IntGearAnimation(g, module, gearTeeth, pinionTeeth, pressureAngle) {
+            // =============== DIN GEAR DESIGN ===================
+            const gear1 = new GearSpec(module, gearTeeth, {
+                shaftWidth: (gearTeeth + 6) * module
+            });
+            const gear2 = new GearSpec(module, pinionTeeth);
+            const gearCol = "#ddd0dd",
+                pinionCol = "#d0d0e8",
+                shaftCol = "none";
+            const xmin = -200,
+                ymin = -130,
+                xspan = 400;
+            // generate gear specs
+            addGearTrainSpecs([gear1, gear2], [{
+                x: 0,
+                y: 0
+            }, {
+                x: gear1.Rp - gear2.Rp - gear1.dC,
+                y: 0
+            }], 1);
+            // build the gears
+            const gear = makeGearObj(gear1, gearCol, shaftCol, true);
+            const pinion = makeGearObj(gear2, pinionCol, shaftCol, true);
+
+            // setup the animation properties
+            const gearConfig = {
+                    degs: [0, 360]
+                }, // gear is driving pinion
+                twnr = new Tweener(0, 90000, "loop"); // 0.666 rpm
+
+            function drawGears(opts) {
+                gear.rotate(this.nextState.rot * gear.angVel);
+                gear.translate(gear.coords.x, gear.coords.y);
+                this.gc.render(gear, true);
+                pinion.rotate(this.nextState.rot * pinion.angVel);
+                pinion.translate(pinion.coords.x, pinion.coords.y);
+                this.gc.render(pinion);
+            }
+
+            function turnGears(time, opts) {
+                var rotVal = twnr.getVal(time, opts.degs);
+                // create the required contents of next state vector (the default for others are OK)
+                this.nextState.rot = rotVal;
+            }
+
+            g.setWorldCoordsRHC(xmin, ymin, xspan);
+            g.animation(drawGears, turnGears, gearConfig);
+
+            this.run = function() {
+                g.playAnimation();
+            };
+
+            this.halt = function() {
+                g.pauseAnimation();
+            };
+
+            g.playAnimation();
+        }
+
+        //============================================================
+        var invDiagram, involuteDemo1, involuteDemo2, gearDemo, intGearDemo;
+        
+        var teeth1 = 12;
+        teeth1 = parseInt(document.getElementById("teeth1").value);
+        
+        var teeth2 = 24;
+        teeth2 = parseInt(document.getElementById("teeth2").value);
+
+        function init() {
+            invDiagram = new InvoluteDefined('cvs0', 5, 20, 20);
+            InvoluteDefined2('cvsA', 10, 8, 20);
+
+            const g1 = new Cango('cvs1');
+            involuteDemo1 = new InvoluteOrderN(g1, 3, 17, 25, 3);
+            initZoomPan(g1, function() {
+                involuteDemo1.drawBezInvolute();
+                involuteDemo1.drawRealInvolute();
+            });
+
+            const g2 = new Cango('cvs2');
+            involuteDemo2 = new InvoluteProfile(g2, 3, 17, 25);
+            initZoomPan(g2, function() {
+                involuteDemo2.drawCubicBezInvolute();
+                involuteDemo2.drawRealInvolute();
+            });
+
+            const g3 = new Cango('cvs3');
+            gearDemo = new GearAnimation(g3, 3, teeth2, teeth1);
+            initZoomPan(g3, function() {
+                g3.redrawAnimation();
+            });
+
+            const g4 = new Cango('cvs4');
+            intGearDemo = new IntGearAnimation(g4, 5, 42, 22);
+            initZoomPan(g4, function() {
+                g4.redrawAnimation();
+            });
+        }
+
+        function showConstruction() {
+            invDiagram.showConst = !invDiagram.showConst;
+            invDiagram.drawInv();
+        }
+
+        var consoleBtns3 = {
+            f1: function() {
+                gearDemo.run()
+            },
+            f2: function() {
+                gearDemo.halt()
+            }
+        };
+
+        var consoleBtns4 = {
+            f1: function() {
+                intGearDemo.run()
+            },
+            f2: function() {
+                intGearDemo.halt()
+            }
+        };
+        function updateCanvas() {
+            teeth1 = parseInt(document.getElementById("teeth1").value);
+            
+            teeth2 = parseInt(document.getElementById("teeth2").value);
+            
+            document.getElementById("teethValue1").innerText = teeth1;
+            
+            document.getElementById("teethValue2").innerText = teeth2;
+            
+            init();
+        }
+        
+        
+        window.addEventListener("load", function() {
+            buildMenu(indexData);
+
+            init();
+        });
+    </script>
+</body>
+
+</html>

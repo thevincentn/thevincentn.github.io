@@ -1,0 +1,67 @@
+.direction{
+    color:#41607F;
+}
+.highlight{
+    cursor:default;
+    pointer-events: all;
+    fill: none;
+    transition:fill .25s ease-in;
+}
+.highlight:focus,.highlight:hover{
+    cursor:pointer;
+    pointer-events: all;
+    fill:#2667ff!important;
+    opacity:.5;
+}
+
+.modal-div-button{
+     background-color: #fbb033;
+     border-color: #fbb033;
+     color: #000000;
+ }
+ .modal-div-button:hover{
+     background-color: #333F48;
+     border-color: #333F48;
+     color: #FFFFFF;
+}
+.modal-div-button-2{
+    color: #000000;
+    padding: 2px;
+    margin: 0;
+}
+.carousel .carousel-indicators li {
+    background-color: #2667ff;
+}
+.carousel .carousel-indicators li.active {
+    background-color: #fe4c42;
+}
+ .directive {
+     /* Add visual styling to Instruction Text for Interactive elements - for example Accordions, Flip Cards and Tabs. */
+     color: #2667ff;
+     font-weight: bold;
+     /* Mobile Sizing - up to $screen-md*/
+     font-size: 1rem;
+     line-height: 1.5rem;
+ /* Tablet and up Sizing - from $screen-md*/
+}
+.carousel-control-prev-icon-dark,
+.carousel-control-next-icon-dark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat 50% / 100% 100%;
+}
+.carousel-control-prev-icon-dark {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23011733' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon-dark {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23011733' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.dim{
+    opacity:1;
+    transition:opacity .25s ease-in;
+}
+.dim:focus,.dim:hover{
+    opacity:.5;
+}

@@ -1,0 +1,70 @@
+
+:root {
+    --smokey: #f5f5f5;
+    --darky: #262625;
+    --thickness: 0.1vmin;
+    --half: 50%;
+    --border: var(--thickness) solid var(--smokey);
+    --border-radius: var(--half);
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--darky);
+    color: var(--smokey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.interactive-container {
+    width: 80vmin;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls .item {
+    margin-bottom: 10px;
+}
+
+#container {
+    position: relative;
+    display: flex;
+    border: var(--border);
+    justify-content: center;
+    align-items: center;
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: var(--border-radius);
+}
+
+#container .cover {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: var(--darky);
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+#container .tooth {
+    position: absolute;
+    box-sizing: border-box;
+}
+
+#container .tooth::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--border);
+    content: "";
+    background: var(--darky);
+}

@@ -1,0 +1,381 @@
+{
+    "ActivityName": "Motivating Followers"
+    , "HeadingLevel": 2
+    , "Randomize": true
+    , "ShowScenes": "1"
+    , "visible": true
+    , "visibleStyle": {
+        "colour": "#F902AB"
+        , "opacity": "25%"
+        , "stroke": false
+        , "strokeColour": "#FF0000"
+        , "strokeWidth": "2"
+    }
+    , "highlight": false
+    , "highlightStyle": {
+        "colour": "#FFFFFF"
+        , "opacity": "50%"
+        , "stroke": true
+        , "strokeColour": "#00FFFF"
+        , "strokeWidth": "5"
+    }
+    , "PreActivityText": "<p>We have already recognized that identifying needs and wants of a follower and striving to fulfill them can have a strong effect on motivating them to perform.  However, just as students react differently to various teaching styles, followers react different to various motivators or incentives.</p><p>In this activity, you will explore these different types of motivators by selecting different campers at Camp Leadership.  Click on each camper to view a short explanation of what motives them.</p>"
+    , "PreActivityMedia": [
+        {
+            "type": "image"
+            , "src": "img/leadership_preActImg.png"
+            , "description": "Leadership!"
+            , "mediaLink": false
+            , "width": "184"
+            , "height": "225"
+     	 }
+        , {
+            "type": false
+            , "src": false
+            , "description": false
+      	}
+    ]
+    , "PostActivityText": "<p>Now that you have a toolkit of different motivators, the key is to be able to identify which motivator will appeal to different followers.  Some may find competition enticing while others may find it stressful and unnecessary.  This is why it is important to get to know your followers on an individual basis and although it may be difficult to address everyone’s ideal motivators on an individual basis, you may begin to notice trends that you can target. </p><p>Remember that leadership is defined as the “art of influencing behaviour…” and these motivators are a key component to this influence.</p>"
+    , "PostActivityMedia": [
+        {
+            "type": "image"
+            , "src": "img/leadership_preActImg.png"
+            , "description": "Leadership!"
+            , "mediaLink": false
+            , "width": "184"
+            , "height": "225"
+     	 }
+        , {
+            "type": false
+            , "src": false
+            , "description": false
+      	}
+	]
+    , "Scenes": [
+        {
+            "SceneName": "Camp Leadership"
+            , "Instructions": "<p>Select each of the characters pictured here to learn about different types of motivators and incentives that can encourage different types of followers.</p>"
+            , "Background": {
+                "src": "img/leadership_background.png"
+                , "alt": "A campground of various leaders and followers"
+                , "imgWidth": "964"
+                , "imgHeight": "553"
+            }
+            , "HotSpots": [
+                {
+                    "id": "one"
+                    , "shapeType": "custom"
+                    , "desc": "Arm wrestlers"
+                    , "coords": "277,395,267,404,270,418,242,434,237,445,235,465,233,473,245,474,257,477,268,480,284,471,294,467,311,468,329,471,340,474,344,479,369,475,382,473,378,467,378,446,367,427,360,425,355,410,340,397,330,399,320,404,316,414,308,414,300,413,300,401,293,397,285,395,278,394,277,395"
+				}
+                , {
+                    "id": "two"
+                    , "shapeType": "custom"
+                    , "desc": "Pair presenting medal"
+                    , "coords": "818,324,813,325,800,343,797,356,786,362,778,394,774,400,782,408,787,427,784,439,779,451,791,461,798,465,799,509,802,510,795,527,795,537,820,539,834,541,851,512,868,529,879,536,890,533,886,507,884,435,891,404,889,363,878,356,887,338,881,326,871,320,859,330,852,340,854,353,835,359,828,334,826,326,817,324"
+				}
+                , {
+                    "id": "three"
+                    , "shapeType": "custom"
+                    , "desc": "Man with clipboard"
+                    , "coords": "732,321,721,334,723,346,726,353,705,367,702,395,706,405,713,409,713,435,722,440,727,513,725,533,734,537,747,528,756,528,766,538,776,540,777,532,770,516,769,507,762,440,762,409,765,370,746,355,744,352,749,339,747,328,730,323"
+				}, {
+                    "id": "four"
+                    , "shapeType": "custom"
+                    , "desc": "Cheerleader"
+                    , "coords": "498,237,491,253,495,261,501,269,506,272,510,301,504,322,500,348,504,355,523,379,540,367,563,365,586,347,584,321,569,318,558,320,549,301,550,286,535,274,517,275,523,257,527,242,505,234,497,236"
+         }, {
+                    "id": "five"
+                    , "shapeType": "custom"
+                    , "desc": "Man by sports equipment"
+                    , "coords": "694,181,686,195,679,216,681,241,688,280,686,296,686,300,702,301,713,297,719,287,778,286,779,180,709,180,694,180"
+         }, {
+                    "id": "six"
+                    , "shapeType": "custom"
+                    , "desc": "Woman with bullhorn"
+                    , "coords": "439,272,430,295,430,300,426,309,425,320,435,322,429,379,425,425,424,437,435,443,447,432,459,440,468,440,474,350,469,335,482,336,497,337,501,321,483,311,466,311,459,295,456,271,439,272"
+         }, {
+                    "id": "seven"
+                    , "shapeType": "custom"
+                    , "desc": "Baseball team"
+                    , "coords": "881,167,871,174,868,188,856,183,854,187,864,203,859,210,854,231,859,249,855,268,853,276,856,279,870,278,874,267,874,259,873,236,879,233,892,226,895,206,897,190,893,182,881,167,941,164,950,164,958,154,968,154,960,182,959,222,955,228,946,225,942,210,937,224,934,239,928,266,921,270,913,262,912,227,922,212,914,197,921,191,927,195,939,195,931,179,940,169,949,164"
+         }, {
+                    "id": "eight"
+                    , "shapeType": "custom"
+                    , "desc": "Woman with charts"
+                    , "coords": "211,191,300,194,306,213,307,228,312,236,317,266,313,285,309,287,307,309,305,355,306,360,300,366,296,373,282,368,276,353,275,286,210,283,212,190"
+         }, {
+                    "id": "nine"
+                    , "shapeType": "custom"
+                    , "desc": "dog"
+                    , "coords": "569,492,580,489,583,481,589,480,592,469,601,481,620,487,636,492,657,495,678,492,693,488,705,481,707,468,715,478,712,487,706,496,690,498,682,498,698,514,705,521,705,526,717,531,720,537,715,543,695,537,686,526,669,525,655,527,634,525,627,522,613,521,612,528,608,534,596,517,610,511,596,502,583,503,568,491"
+         }, {
+                    "id": "ten"
+                    , "shapeType": "custom"
+                    , "desc": "Man reading book"
+                    , "coords": "22,279,38,274,47,281,49,291,45,298,43,305,43,308,59,306,74,305,71,329,61,345,55,351,49,350,57,484,67,491,62,501,48,499,36,507,12,501,5,484,17,439,7,386,16,358,7,320,21,308,21,280"
+         }, {
+                    "id": "eleven"
+                    , "shapeType": "custom"
+                    , "desc": "Pair carrying logs"
+                    , "coords": "693,115,686,128,679,144,681,168,682,175,730,176,732,132,756,130,754,120,694,116"
+         }
+			]
+            , "HotSpotContent": [{
+                "key": "one"
+                , "activityType": "assessment"
+                , "popUpName": "Arm Wrestlers"
+                , "feedback": true
+                , "questionText": "Which motivator might encourage these followers?"
+                , "answers": [{
+                    "answerText": "Competition"
+                    , "correct": true
+                    , "feedback": "Providing various competitive opportunities can help to enhance performance. The habit of constantly improving performance will often reflect positively on their work."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "Providing various competitive opportunities can help to enhance performance. The habit of constantly improving performance will often reflect positively on their work."
+         }, {
+                    "answerText": "Promotion"
+                    , "correct": false
+                    , "feedback": "Providing various competitive opportunities can help to enhance performance. The habit of constantly improving performance will often reflect positively on their work."
+         }, {
+                    "answerText": "Enthusiasm"
+                    , "correct": false
+                    , "feedback": "Providing various competitive opportunities can help to enhance performance. The habit of constantly improving performance will often reflect positively on their work."
+         }]
+      }, {
+                "key": "two"
+                , "activityType": "assessment"
+                , "popUpName": "Pair Presenting Medal"
+                , "feedback": true
+                , "questionText": "What motivator is being demonstrated by awarding this follower his medal?"
+                , "answers": [{
+                    "answerText": "Competition"
+                    , "correct": false
+                    , "feedback": "A leader must recognize good performance and commend their followers when they do well.  However, praise should be user only when it is truly deserved.  If praise is given too frequently, it becomes a doubtful motivator."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": true
+                    , "feedback": "A leader must recognize good performance and commend their followers when they do well.  However, praise should be user only when it is truly deserved.  If praise is given too frequently, it becomes a doubtful motivator."
+         }, {
+                    "answerText": "Promotion"
+                    , "correct": false
+                    , "feedback": "A leader must recognize good performance and commend their followers when they do well.  However, praise should be user only when it is truly deserved.  If praise is given too frequently, it becomes a doubtful motivator."
+         }, {
+                    "answerText": "Enthusiasm"
+                    , "correct": false
+                    , "feedback": "A leader must recognize good performance and commend their followers when they do well.  However, praise should be user only when it is truly deserved.  If praise is given too frequently, it becomes a doubtful motivator."
+         }]
+      }, {
+                "key": "three"
+                , "activityType": "assessment"
+                , "popUpName": "Man With Clipboard"
+                , "feedback": true
+                , "questionText": "This man looks like he is an assistant camp counselor.  What motivator might he be interested in?"
+                , "answers": [{
+                    "answerText": "Competition"
+                    , "correct": false
+                    , "feedback": "Promotions often depend on the leader’s recommendation and the evaluation of a follower’s performance.  If your followers see, at the onset, that every good performance is rewarded with promotions, they will be more likely to strive towards high performance."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "Promotions often depend on the leader’s recommendation and the evaluation of a follower’s performance.  If your followers see, at the onset, that every good performance is rewarded with promotions, they will be more likely to strive towards high performance."
+         }, {
+                    "answerText": "Promotion"
+                    , "correct": true
+                    , "feedback": "Promotions often depend on the leader’s recommendation and the evaluation of a follower’s performance.  If your followers see, at the onset, that every good performance is rewarded with promotions, they will be more likely to strive towards high performance."
+         }, {
+                    "answerText": "Enthusiasm"
+                    , "correct": false
+                    , "feedback": "Promotions often depend on the leader’s recommendation and the evaluation of a follower’s performance.  If your followers see, at the onset, that every good performance is rewarded with promotions, they will be more likely to strive towards high performance."
+         }]
+      }, {
+                "key": "four"
+                , "activityType": "assessment"
+                , "popUpName": "Cheerleader"
+                , "feedback": true
+                , "questionText": "Which motivator might encourage this peppy cheerleader?"
+                , "answers": [{
+                    "answerText": "Competition"
+                    , "correct": false
+                    , "feedback": "Poorly motivated leaders often have follower who are even less motivated than they are.  Furthermore, enthusiasm is contagious.  If a leader is perceptive and enthusiastic, their follower will probably turn in an excellent performance."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "Poorly motivated leaders often have follower who are even less motivated than they are.  Furthermore, enthusiasm is contagious.  If a leader is perceptive and enthusiastic, their follower will probably turn in an excellent performance."
+         }, {
+                    "answerText": "Promotion"
+                    , "correct": false
+                    , "feedback": "Poorly motivated leaders often have follower who are even less motivated than they are.  Furthermore, enthusiasm is contagious.  If a leader is perceptive and enthusiastic, their follower will probably turn in an excellent performance."
+         }, {
+                    "answerText": "Enthusiasm"
+                    , "correct": true
+                    , "feedback": "Poorly motivated leaders often have follower who are even less motivated than they are.  Furthermore, enthusiasm is contagious.  If a leader is perceptive and enthusiastic, their follower will probably turn in an excellent performance."
+         }]
+      }, {
+                "key": "five"
+                , "activityType": "assessment"
+                , "popUpName": "Man by sports equipment"
+                , "feedback": true
+                , "questionText": "Which motivator might appeal to this man admiring the neatly stored sports equipment?"
+                , "answers": [{
+                    "answerText": "Organizational Efficiency"
+                    , "correct": true
+                    , "feedback": "Followers are better motivated if their assigned duties are clearly defined, the chain of command is clearly indicated, the equipment is appropriate and the task is carried out in an orderly and conscientious manner."
+         }, {
+                    "answerText": "Delegation"
+                    , "correct": false
+                    , "feedback": "Followers are better motivated if their assigned duties are clearly defined, the chain of command is clearly indicated, the equipment is appropriate and the task is carried out in an orderly and conscientious manner."
+         }, {
+                    "answerText": "Participation"
+                    , "correct": false
+                    , "feedback": "Followers are better motivated if their assigned duties are clearly defined, the chain of command is clearly indicated, the equipment is appropriate and the task is carried out in an orderly and conscientious manner."
+         }, {
+                    "answerText": "Knowledge of Results"
+                    , "correct": false
+                    , "feedback": "Followers are better motivated if their assigned duties are clearly defined, the chain of command is clearly indicated, the equipment is appropriate and the task is carried out in an orderly and conscientious manner."
+         }]
+      }, {
+                "key": "six"
+                , "activityType": "assessment"
+                , "popUpName": "Woman with bullhorn"
+                , "feedback": true
+                , "questionText": "What motivator might appeal to this follower?"
+                , "answers": [{
+                    "answerText": "Organizational Efficiency"
+                    , "correct": false
+                    , "feedback": "Delegation stimulates interest and initiative.  It allows followers the opportunity to improve their skills and it shows them that they are trusted."
+         }, {
+                    "answerText": "Delegation"
+                    , "correct": true
+                    , "feedback": "Delegation stimulates interest and initiative.  It allows followers the opportunity to improve their skills and it shows them that they are trusted."
+         }, {
+                    "answerText": "Participation"
+                    , "correct": false
+                    , "feedback": "Delegation stimulates interest and initiative.  It allows followers the opportunity to improve their skills and it shows them that they are trusted."
+         }, {
+                    "answerText": "Knowledge of Results"
+                    , "correct": false
+                    , "feedback": "Delegation stimulates interest and initiative.  It allows followers the opportunity to improve their skills and it shows them that they are trusted."
+         }]
+      }, {
+                "key": "seven"
+                , "activityType": "assessment"
+                , "popUpName": "Baseball team"
+                , "feedback": true
+                , "questionText": "Team sports are examples of which kind of motivator?"
+                , "answers": [{
+                    "answerText": "Organizational Efficiency"
+                    , "correct": false
+                    , "feedback": "Participation, particularly in decision-making, is a strong motivator.  Not only does the follower bring a valued perspective, it also incites confidence in the follower, a sense of responsibility and the follower will identify more strongly with their work."
+         }, {
+                    "answerText": "Delegation"
+                    , "correct": false
+                    , "feedback": "Participation, particularly in decision-making, is a strong motivator.  Not only does the follower bring a valued perspective, it also incites confidence in the follower, a sense of responsibility and the follower will identify more strongly with their work."
+         }, {
+                    "answerText": "Participation"
+                    , "correct": true
+                    , "feedback": "Participation, particularly in decision-making, is a strong motivator.  Not only does the follower bring a valued perspective, it also incites confidence in the follower, a sense of responsibility and the follower will identify more strongly with their work."
+         }, {
+                    "answerText": "Knowledge of Results"
+                    , "correct": false
+                    , "feedback": "Participation, particularly in decision-making, is a strong motivator.  Not only does the follower bring a valued perspective, it also incites confidence in the follower, a sense of responsibility and the follower will identify more strongly with their work."
+         }]
+      }, {
+                "key": "eight"
+                , "activityType": "assessment"
+                , "popUpName": "Woman with charts"
+                , "feedback": true
+                , "questionText": "This woman is quite interested in these charts.  What motivator might appeal to her?"
+                , "answers": [{
+                    "answerText": "Organizational Efficiency"
+                    , "correct": false
+                    , "feedback": "If you advise your followers of their progress, they will almost certainly improve their performance since they will be more aware of their strengths and weaknesses."
+         }, {
+                    "answerText": "Delegation"
+                    , "correct": false
+                    , "feedback": "If you advise your followers of their progress, they will almost certainly improve their performance since they will be more aware of their strengths and weaknesses."
+         }, {
+                    "answerText": "Participation"
+                    , "correct": false
+                    , "feedback": "If you advise your followers of their progress, they will almost certainly improve their performance since they will be more aware of their strengths and weaknesses."
+         }, {
+                    "answerText": "Knowledge of Results"
+                    , "correct": true
+                    , "feedback": "If you advise your followers of their progress, they will almost certainly improve their performance since they will be more aware of their strengths and weaknesses."
+         }]
+      }, {
+                "key": "nine"
+                , "activityType": "assessment"
+                , "popUpName": "Dog"
+                , "feedback": true
+                , "questionText": "This dog seems to be running free and loving it.  What motivation tactic does this “good boy” appreciate?"
+                , "answers": [{
+                    "answerText": "Avoid Overcontrolling"
+                    , "correct": true
+                    , "feedback": "A leader must resist the temptation to supervise too closely.  Trying to control the actions of followers at all times is counterproductive to the task and gives the impression that the leader does not trust their followers."
+         }, {
+                    "answerText": "Development"
+                    , "correct": false
+                    , "feedback": "A leader must resist the temptation to supervise too closely.  Trying to control the actions of followers at all times is counterproductive to the task and gives the impression that the leader does not trust their followers."
+         }, {
+                    "answerText": "Good Selection"
+                    , "correct": false
+                    , "feedback": "A leader must resist the temptation to supervise too closely.  Trying to control the actions of followers at all times is counterproductive to the task and gives the impression that the leader does not trust their followers."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "A leader must resist the temptation to supervise too closely.  Trying to control the actions of followers at all times is counterproductive to the task and gives the impression that the leader does not trust their followers."
+         }]
+      }, {
+                "key": "ten"
+                , "activityType": "assessment"
+                , "popUpName": "Man reading book"
+                , "feedback": true
+                , "questionText": "Looks like this man is doing some research.  What motivates him?"
+                , "answers": [{
+                    "answerText": "Avoid Overcontrolling"
+                    , "correct": false
+                    , "feedback": "Allowing followers to improve their skills also improves their motivation and performance.  It also prepares them for greater responsibility in the future."
+         }, {
+                    "answerText": "Development"
+                    , "correct": true
+                    , "feedback": "Allowing followers to improve their skills also improves their motivation and performance.  It also prepares them for greater responsibility in the future."
+         }, {
+                    "answerText": "Good Selection"
+                    , "correct": false
+                    , "feedback": "Allowing followers to improve their skills also improves their motivation and performance.  It also prepares them for greater responsibility in the future."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "Allowing followers to improve their skills also improves their motivation and performance.  It also prepares them for greater responsibility in the future."
+         }]
+      }, {
+                "key": "eleven"
+                , "activityType": "assessment"
+                , "popUpName": "Pair carrying logs"
+                , "feedback": true
+                , "questionText": "The big guy is carrying the big logs and the little guy is carrying the little logs.  What motivator does this represent?"
+                , "answers": [{
+                    "answerText": "Avoid Overcontrolling"
+                    , "correct": false
+                    , "feedback": "Assigning tasks to suit the follower’s preferences and qualifications not only ensures that talents are being effectively managed, but it sets up the individuals for successful and enjoyable work.  However, tasks should still be assigned on an equitable basis – this is a bit of balancing act."
+         }, {
+                    "answerText": "Development"
+                    , "correct": false
+                    , "feedback": "Assigning tasks to suit the follower’s preferences and qualifications not only ensures that talents are being effectively managed, but it sets up the individuals for successful and enjoyable work.  However, tasks should still be assigned on an equitable basis – this is a bit of balancing act."
+         }, {
+                    "answerText": "Good Selection"
+                    , "correct": true
+                    , "feedback": "Assigning tasks to suit the follower’s preferences and qualifications not only ensures that talents are being effectively managed, but it sets up the individuals for successful and enjoyable work.  However, tasks should still be assigned on an equitable basis – this is a bit of balancing act."
+         }, {
+                    "answerText": "Recognition"
+                    , "correct": false
+                    , "feedback": "Assigning tasks to suit the follower’s preferences and qualifications not only ensures that talents are being effectively managed, but it sets up the individuals for successful and enjoyable work.  However, tasks should still be assigned on an equitable basis – this is a bit of balancing act."
+         }]
+      }]
+		}
+
+	]
+}

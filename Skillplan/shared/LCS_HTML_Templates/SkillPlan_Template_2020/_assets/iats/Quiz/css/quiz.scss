@@ -1,0 +1,631 @@
+//*========= Variables ==========*//
+@import '../../../css/00_variables/breakpoints';
+@import '../../../css/00_variables/colour';
+@import '../../../css/00_variables/fonts';
+
+//*========= Mixins ==========*//
+
+@import '../../../css/01_mixins/text_white.scss';
+
+#ILQ_container {
+    margin-left: auto;
+    margin-top: $f10;
+    margin-right: auto;
+    border-top: none !important;
+    border-bottom: $f5 transparent !important;
+    background: $white;
+    width: 100%;
+
+    @media (max-width: 400px) {
+        .ILQ_MediaEmbeddedVideo {
+            height: 200px;
+        }
+
+        /* Removed to align button text to center
+		.ILQ_BaseButtonLabel,
+		.ILQ_GenericLabel {
+			padding-top: $f10;
+		}
+		*/
+    }
+
+    @media (min-width: 401px) and (max-width: 500px) {
+        .ILQ_MediaEmbeddedVideo {
+            height: 200px;
+        }
+
+        /* Removed to align button text to center
+		.ILQ_BaseButtonLabel,
+		.ILQ_GenericLabel {
+			padding-top: $f10;
+		}
+		*/
+    }
+
+    @media (min-width: 501px) and (max-width: 700px) {
+        /* Removed to align button text to center
+		.ILQ_BaseButtonLabel,
+		.ILQ_GenericLabel {
+			padding-top: $f10;
+		}
+		*/
+    }
+
+    @media (min-width: 701px) and (max-width: 939px) {
+        /* Removed to align button text to center
+		.ILQ_BaseButtonLabel,
+		.ILQ_GenericLabel {
+			padding-top: $f10;
+		}*/
+    }
+
+    @media (min-width: 940px) {
+        /* Removed to align button text to center
+		.ILQ_BaseButtonLabel,
+		.ILQ_GenericLabel {
+			padding-top: $f10;
+		}*/
+    }
+
+    /* #ILQ_header styling removed to align to Course appearance
+#ILQ_header h1,
+#ILQ_header h2,
+#ILQ_header h3,
+#ILQ_header h4,
+#ILQ_header h5,
+#ILQ_header h6 {
+	margin: $f5 0;
+	color: $white;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 60px;
+	letter-spacing: -0.5px;
+}
+
+#ILQ_header {
+	padding: $f5 $f10;
+	background: #006FBF;
+}
+*/
+    .ILQ_instructionText {
+        margin: $f10 0;
+        padding-bottom: $f10;
+        font-size: $f16;
+        border-bottom: 1px $neutral-three solid;
+    }
+
+    .ILQ_instructionText > p {
+        margin-bottom: 0;
+    }
+
+    .ILQ_questionHeader,
+    .ILQ_hintHeader,
+    #ILQ_ContinuousResponseHeader {
+        margin: $f10 0;
+        font-weight: 300;
+        font-size: $f30;
+        line-height: $f45;
+        letter-spacing: -0.3px;
+    }
+
+    .ILQ_hintHeader {
+        margin-left: 0;
+    }
+
+    #ILQ_ContinuousResponseHeader {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    #ILQ_content {
+        min-height: 200px;
+        height: 100%;
+        background: $white;
+        overflow-y: auto;
+        text-shadow: none;
+    }
+
+    .ILQ_AccessOnly {
+        font-size: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+    }
+
+    .ILQ_Description {
+        margin: $f10 0;
+    }
+
+    /*
+	.ILQ_Description>p {
+		margin: $f10 0;
+		margin-left: 0;
+	}
+*/
+    .ILQ_Media {
+        width: 100%;
+        padding-bottom: $f20;
+        display: inline-block;
+    }
+
+    .ILQ_MediaLink,
+    .ILQ_MediaAltLink {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .ILQ_MediaImage,
+    .ILQ_MediaImage > img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ILQ_MediaEmbeddedVideo {
+        max-width: 100%;
+    }
+
+    .ILQ_fullReport > .ILQ_miniReport {
+        margin-left: 2%;
+        padding-bottom: $f10;
+    }
+
+    .ILQ_questionText {
+        margin: $f10 0;
+    }
+
+    .ILQ_preInstructionsText {
+        font-size: $f14;
+
+        @media screen and (min-width: $screen-md) {
+            font-size: $f16;
+        }
+    }
+
+    .ILQ_questionText > p {
+        margin-top: 0;
+    }
+
+    .ILQ_quizField {
+        border: none;
+        margin: $f10 0;
+    }
+
+    .ILQ_AnswerSlot {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding: $f5 0;
+        margin: 1px;
+        background: $white;
+        transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        -webkit-transition: background-color 0.2s linear;
+        -ms-transition: background-color 0.2s linear;
+    }
+
+    .ILQ_AnswerSlot.over {
+        background: #e6eaf0;
+        transition: background-color 0.2s linear;
+        -moz-transition: background-color 0.2s linear;
+        -webkit-transition: background-color 0.2s linear;
+        -ms-transition: background-color 0.2s linear;
+    }
+
+    /*.ILQ_AnswerSlot.down {
+    background: #e5e5e5;
+    transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    -webkit-transition: background-color 0.2s linear;
+    -ms-transition: background-color 0.2s linear;
+}
+*/
+
+    .ILQ_AnswerSlot.AnsCorrect,
+    .ILQ_AnswerSlot.correct {
+        background-color: #f2f3f5;
+        transition: background-color 0.5s linear;
+        -moz-transition: background-color 0.5s linear;
+        -webkit-transition: background-color 0.5s linear;
+        -ms-transition: background-color 0.5s linear;
+    }
+
+    .ILQ_AnswerSlot.AnsIncorrect {
+        background-color: #f2f3f5;
+        transition: background-color 0.5s linear;
+        -moz-transition: background-color 0.5s linear;
+        -webkit-transition: background-color 0.5s linear;
+        -ms-transition: background-color 0.5s linear;
+    }
+
+    .ILQ_AnswerSlot.correct > .ILQ_impCont {
+        &:before {
+            content: '';
+            position: absolute;
+            left: -54px;
+            top: -5px;
+            height: 24px;
+            width: 48px;
+            background-image: url('../img/icon-right-24.png');
+            background-size: contain;
+            background-position: 0 0;
+            cursor: default;
+        }
+    }
+
+    .ILQ_AnswerSlot.incorrect > .ILQ_impCont.selected:before {
+        content: '';
+        position: absolute;
+        left: -$f30;
+        top: -5px;
+        height: 24px;
+        width: 24px;
+        background-image: url('../img/icon-wrong-24.png');
+        background-size: contain;
+        background-position: 0 0;
+        cursor: default;
+    }
+
+    .ILQ_AnswerSlot.arrowIncorrect > .ILQ_impCont:before {
+        content: '';
+        position: absolute;
+        left: -$f30;
+        top: -5px;
+        height: 24px;
+        width: 48px;
+        background-image: url('../img/arrow_wrong.png');
+        background-size: contain;
+        background-position: 0 0;
+        cursor: default;
+    }
+
+    .ILQ_AnswerSlot.arrowCorrect > .ILQ_impCont {
+        background-image: url('../img/arrow_wrong.png');
+        background-size: contain;
+        background-position: 0 0;
+        cursor: default;
+    }
+
+    .ILQ_AnswerSlot.blankIncorrect > .ILQ_impCont {
+        background-image: url('../img/icon-unchecked-24.png');
+        background-size: contain;
+        background-position: 0 0;
+        cursor: default;
+    }
+
+    .ILQ_AnswerSlot.partial > .ILQ_impCont {
+        background-image: url('../img/icon-partial-24.png');
+        background-size: contain;
+        background-position: 0 0;
+        cursor: default;
+    }
+
+    .ILQ_impCont {
+        display: inline-block;
+        width: $f20;
+        height: $f20;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 1px;
+        top: 7px;
+        left: 25px;
+        position: absolute;
+        //float: right;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAApxJREFUeNrsWDFv2kAUftiRmoE2jESVomxV1YUsVVUxwMaKYGFKFyYmJiYmJn4AO/4FWRkZoKq6lKWqKjFEkaowkpQhFUra+6530fl0Z2yMsAc+ybJ9797nz893796Z6IB4yMiLz1++/o1D9PHD+4x6vyu+I7Xx3ds3W5F9//HT2L4LPictn3K1WhnbUyFwMplQo9Ew2o6SFud5Hg2HQ+p0OumLoBTXarWoUqmkS+BoNOLiisUi1et1az9nX5Gaz+fP94vFggaDAWWzWR69IDj7mJ2IVLPZ5FED+v0+b0fk8vl8sgIRJTkBIKzdbtNsNuPttVpto/9ePjEmgBQJcQCiB5GpEKiLBMJEb+95UKaS6XQaKnqJJGqItOW81C51oSNoq0q2xa75Djgg0T2JDran+MROl+woaaYx1n+2ZxhGedC2fBkD0Tk7XbGjkDs5oVcvs+S4/7PR0+MT3f9e0fLujq9a7Kgy4usNwmLxZQxk346PX+Ren54SOxsf+vDwh37d3uK8ZLcXNpG74NMT9RXIzs/OrGQAbKJPTkTHhth8jjZGCnhT1928wKAP+sJH+JrGnI9Pbo7K5TI/cI22ID5VySXGSNCbmt4cPmLw6/DxQUi32+XVtFpZo02KNPGpAksYwFEhfEoGk48PJb4Nqk3nc8TnyPEbN3rtYPLR+VDeq5HTodqkzzOHb1w5buoStSN+1GB603q9jkyAXGb48bNUbShOgzZHqk36SA41gmMkzagQPmODyccXtL1UbTqfKtBDRkfSDAv0FauAZ9oOq3zYoPd6PV+0cI022Gx8+kqCrF9A0tyUCx/Zp7i+uQHpjH2OC8tKEptP96piuREdAyMn+mCcVAOeG5svdLGAGY5JlGixkMZy64C4+CfAAOTQjJfDNo0VAAAAAElFTkSuQmCC');
+        background-repeat: no-repeat;
+    }
+
+    .ILQ_impCont.ILQ_radio {
+        background-position: -1px -20px;
+    }
+
+    .ILQ_impCont.ILQ_check {
+        background-position: -1px 0;
+    }
+
+    .ILQ_impCont.ILQ_radio.selected {
+        background-position: -20px -20px;
+    }
+
+    .ILQ_impCont.ILQ_check.selected {
+        background-position: -20px 0;
+    }
+
+    .ILQ_AnswerSlot > .ILQ_answerLabel {
+        display: inline-block;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.1875rem;
+        }
+    }
+
+    .ILQ_answerLabel {
+        margin-left: 65px;
+    }
+
+    .ILQ_quizField.ATA_quizField .ILQ_AnswerSlot.incorrect > .ILQ_impCont:before {
+        background-image: url('../img/icon-right-24.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -23px 0;
+    }
+
+    .ILQ_quizField.ATA_quizField .ILQ_AnswerSlot.incorrect > .ILQ_impCont.selected:before {
+        background-image: url('../img/icon-wrong-24.png');
+
+        background-size: contain;
+        background-position: 0 0;
+    }
+
+    #ILQ_buttonSet {
+        text-align: right;
+        width: 100%;
+        padding-bottom: $f10;
+    }
+
+    #ILQ_buttonSet > span {
+        width: 100%;
+    }
+
+    .ILQ_BaseButtonContainer.FullButton,
+    .ILQ_BaseButtonContainer.RightHalfButton,
+    .ILQ_BaseButtonContainer.LeftHalfButton,
+    #ILQ_HintButton.ILQ_GenericButtonContainer,
+    .ILQ_GenericButtonContainer.Generic {
+        background-color: $btn-default;
+        /*
+		transition: background-color 0.15s linear;
+		-moz-transition: background-color 0.15s linear;
+		-webkit-transition: background-color 0.15s linear;
+		-ms-transition: background-color 0.15s linear;
+		*/
+        color: $white;
+        border-radius: 6px;
+        //height: 40px;
+        display: inline-block;
+        white-space: normal;
+        border: 1px solid $btn-default;
+        cursor: pointer;
+        min-width: 100px;
+        margin-right: $f10;
+
+        &:hover {
+            background-color: $btn-hover;
+            border-color: $btn-hover;
+            color: $btn-text;
+        }
+
+        &:focus {
+            background-color: $btn-focus;
+            border-color: $btn-focus-border;
+            box-shadow: 0 0 0 1px rgba($btn-focus-shadow, 0.5);
+        }
+    }
+
+    /*
+	.ILQ_BaseButtonContainer.FullButton:hover,
+	.ILQ_BaseButtonContainer.RightHalfButton:hover,
+	.ILQ_BaseButtonContainer.LeftHalfButton:hover,
+	#ILQ_HintButton.ILQ_GenericButtonContainer:hover,
+	.ILQ_GenericButtonContainer.Generic:hover,
+	.ILQ_BaseButtonContainer.FullButton:focus,
+	.ILQ_BaseButtonContainer.RightHalfButton:focus,
+	.ILQ_BaseButtonContainer.LeftHalfButton:focus,
+	#ILQ_HintButton.ILQ_GenericButtonContainer:focus,
+	.ILQ_GenericButtonContainer.Generic:focus {
+		background-color: #1c5295;
+
+		transition: background-color 0.15s linear;
+		-moz-transition: background-color 0.15s linear;
+		-webkit-transition: background-color 0.15s linear;
+		-ms-transition: background-color 0.15s linear;
+
+		color: $white;
+		border: 1px solid #1c5295;
+	}
+
+	.ILQ_BaseButtonContainer.FullButton:hover,
+	.ILQ_BaseButtonContainer.RightHalfButton:hover,
+	.ILQ_BaseButtonContainer.LeftHalfButton:hover,
+	#ILQ_HintButton.ILQ_GenericButtonContainer:hover,
+	.ILQ_GenericButtonContainer.Generic:hover,
+	.ILQ_BaseButtonContainer.FullButton:focus,
+	.ILQ_BaseButtonContainer.RightHalfButton:focus,
+	.ILQ_BaseButtonContainer.LeftHalfButton:focus,
+	#ILQ_HintButton.ILQ_GenericButtonContainer:focus,
+	.ILQ_GenericButtonContainer.Generic:focus {
+		background-color: #1c5295;
+		/*
+		transition: background-color 0.15s linear;
+		-moz-transition: background-color 0.15s linear;
+		-webkit-transition: background-color 0.15s linear;
+		-ms-transition: background-color 0.15s linear;
+
+		color: $white;
+		border: 1px solid #1c5295;
+	}
+	*/
+    /*.ILQ_BaseButtonContainer.FullButton:active,
+.ILQ_BaseButtonContainer.RightHalfButton:active,
+.ILQ_BaseButtonContainer.LeftHalfButton:active,
+#ILQ_HintButton.ILQ_GenericButtonContainer:active,
+.ILQ_GenericButtonContainer.Generic:active {
+    background-color: #7C8695;
+    transition: background-color 0.15s linear;
+    -moz-transition: background-color 0.15s linear;
+    -webkit-transition: background-color 0.15s linear;
+    -ms-transition: background-color 0.15s linear;
+    border: 1px solid #7C8695;
+    color: #333333;
+}*/
+
+    @media screen and (max-width: 472px) {
+        .ILQ_BaseButtonContainer.FullButton,
+        .ILQ_BaseButtonContainer.RightHalfButton,
+        .ILQ_BaseButtonContainer.LeftHalfButton,
+        #ILQ_HintButton.ILQ_GenericButtonContainer,
+        .ILQ_GenericButtonContainer.Generic {
+            width: 96%;
+            margin-bottom: $f10;
+        }
+    }
+
+    @media screen and (min-width: 473px) {
+        .ILQ_BaseButtonContainer.FullButton,
+        .ILQ_BaseButtonContainer.RightHalfButton,
+        .ILQ_BaseButtonContainer.LeftHalfButton,
+        #ILQ_HintButton.ILQ_GenericButtonContainer,
+        .ILQ_GenericButtonContainer.Generic {
+            min-width: 160px;
+        }
+    }
+
+    /*
+	#ILQ_HintButton {
+		float: left;
+		margin-left: $f10;
+	}
+*/
+    .ILQ_BaseButtonDisabled,
+    .ILQ_GenericButtonDisabled {
+        background: $btn-disabled !important;
+        border: 1px solid $btn-disabled !important;
+        color: $white !important;
+        cursor: default;
+    }
+
+    .ILQ_BaseButtonContainer.LeftHalfButton.hidden {
+        display: none;
+    }
+
+    .ILQ_BaseButtonContainer.RightHalfButton.hidden {
+        display: none;
+    }
+
+    #ILQ_NextButton {
+        float: right;
+        margin-right: 0;
+    }
+
+    .ILQ_GenericButtonContainer.Generic.hidden {
+        display: none;
+    }
+
+    .ILQ_BaseButtonLabel,
+    .ILQ_GenericLabel {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        padding-left: $f10;
+        padding-right: $f10;
+    }
+
+    #ILQ_ContinuousResponseCont {
+        margin: 0 auto;
+        padding: $f10 0;
+    }
+
+    .ILQ_ContinuousResponseGraphic,
+    .ILQ_RecapResponseGraphic {
+        height: $f20;
+        vertical-align: middle;
+        padding-right: 15px;
+        margin-top: -3px;
+    }
+
+    .ILQ_ContinuousResponseText {
+        margin-top: $f10;
+    }
+
+    .ILQ_RecapResponseText,
+    .ILQ_miniReport {
+        margin: $f10 0;
+        //font-size: 18px;
+    }
+
+    .ILQ_miniReportHeader {
+        margin: $f10 0;
+        //font-size: 18px;
+    }
+
+    .ILQ_questionRecap {
+        margin: $f10 0;
+        min-height: $f16;
+        font-size: 1.2em;
+    }
+
+    .ILQ_RightHighlight,
+    .ILQ_WrongHighlight,
+    .ILQ_SimilarHighlight,
+    .ILQ_ReferenceHighlight {
+        font-weight: bold;
+    }
+
+    ul {
+        line-height: 160%;
+    }
+
+    input.blank {
+        width: 100px;
+        min-width: 100px;
+        max-width: 100%;
+        margin-bottom: $f5;
+        //font-size: 18px;
+        position: relative;
+        /*
+		&.correct:after {}
+
+		&.incorrect {}
+		*/
+    }
+
+    .check_box {
+        height: 16px;
+        width: 16px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAAD1BMVEUAAAAAtE8AtE8AtE8AtE9v6LpuAAAABHRSTlMAAYiXL2AYCQAAAD5JREFUCNdjYAADJgUIzaDiBBVwcYYKuBjCBAQYGGECwgoQAQYTJ6gKFRclsABQ3AWqRQUiABIyhBqvDBYAALpACD5M0b/4AAAAAElFTkSuQmCC');
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    .x_box {
+        height: 16px;
+        width: 16px;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAAFVBMVEUAAAD////sAETsAETsAETsAETsAESw/0zlAAAABnRSTlMAAAZpqLHWcx0ZAAAASElEQVQI11WNwQ2AMAzELIUBEhB75JVBYISW23+EvhqJ78n2cb6APcGthPqCSwPTCLyUpQzcNDUInJKSwDk0+S3NbKs7Xd5fCyfWEixwJTuKAAAAAElFTkSuQmCC');
+
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: 2px;
+    }
+
+    input.number {
+        //old styles
+        // width: $f30;
+        // min-width: $f30;
+        // max-width: 100%;
+        // margin-bottom: $f5;
+        //font-size: 18px;
+
+        //new styles
+        width: $f80;
+        min-width: $f80;
+        max-width: 100%;
+        margin-bottom: $f5;
+        margin-left: $f10;
+        margin-top: $f5;
+    }
+
+    .blankLabel {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .ILQ_miniReportContent {
+        padding: 2px 0;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABkCAIAAABSARqqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkM0QjUzNDYwRTFBMTFFNjg3ODQ5NzBBMUYxODk5RDIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkM0QjUzNDUwRTFBMTFFNjg3ODQ5NzBBMUYxODk5RDIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFQTE0N0Y2RjA0OUMxMUU2QkZDQkEwQUREOTFCQjUwNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFQTE0N0Y3MDA0OUMxMUU2QkZDQkEwQUREOTFCQjUwNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmZUJK8AAAN8SURBVHja7JvtVsMgDIa7Lfd/wTtnq9XoawyQhhZo6wk/Np21y0M+gfT2fD6nnuP1ej0ej95fcbvdiN+W3+/3+3Sp8X6/+QeWn5YJ448YCWOe5zMDLOItQvLss7QktbFcNH8NfDgYyfi6+WfwREsL4n8hebVEUlaH7+jKlr0zzy8LU3K5Tz/JzgpLz3MgkcbwKDcwAOQUkFKrlI/1iJvyKyAHuAEE8Ngk8ZstGaxuuQxT1TbWSTfwKCG1SaqaXXY15imF71rDq7IiY9A2pyw5ksfwGFUCNFEv7QyacCQg2ca9wQ1GkMhJxUyrjLTfDYaSKKvjuWcq6EGls+Zj7609FgKFoEZKb3K8TpR/SytiDXAtLMOdhPfkgKHWZRRFkJh9g01ueUVAP4ufpNnAziepI7XyH9oPoORwTjObHI8mSGR7s5KstDbIXuxxMFXaeTLSFhKIJZ0yuzbYX1Maa6Q21oWcwABZH2hb4as1kv3VRRJcLa1I5mNV82Mh0GO5Yiz7LBIWhedgtaqTSaDWPTYjrToSYdXhr+qk3MNW+cqRkJF+SaC43rtSXa3ue5douubAcuhbP9PFByLB3fjzxVTk33e6JMkl3SZIgiRIgiRIgiRIgiRIgiRIgiRIgmQkySEbGl1I1Pbx5XWCTVp5bNRvUEPpoQq1U572UaTMJyKBBqbktAjiQj/YRz/Rien09+DX2GVWrSHpZvuRJJ5uuIxr/j3+VR8OJSmdeNX6Ve2plZdk9YQtPfhtFanTU6sN96fsrUtu0LWLpnRW2sC6WnXD7UGS7c0yyaahj3pb0X4kFb5LJ9p0FID/4FsmH6Ozj4a5geHxTlSFpDoyiTPUSc5NpfRGw4JMshwbPru1ZQPM4SPte1stjqAlQiw/8+MbMlKlhQW39VE2lh+IlLUoxC6jsCBP4FOBvOvJsHoCwR9RyRP4ZN065oAbXV7+iLpSd8kosadu9WtSFRaY0Ir+rrTLSf4zty1KpKoev5IQqRVxCi8ZmzE1ZFQy2Z+VI+1sj1fr5NLEZ2NAdS1cuwA0zEC26aVVfVXit3TStRRHm57MBhseajMaSJvtSEhHSh/tWj4prZNbBcPGzzpMyUM28EAAwKnaBnSaOgz5bOcCs63J+xQkh7SHxV59fSX7H0jGGFtYV5AESZAESZAESZAESZAESZAESZAEyXXGhwADAF1fAtY3nb4XAAAAAElFTkSuQmCC');
+    }
+}

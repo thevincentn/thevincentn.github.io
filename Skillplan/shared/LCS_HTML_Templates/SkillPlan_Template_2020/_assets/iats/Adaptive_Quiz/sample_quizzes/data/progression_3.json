@@ -1,0 +1,250 @@
+{
+	"quizHeading": "<h1>Progression 3 💯</h1>",
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<p>Make it to the end of the quiz by answering all questions correctly.</p><p>Get two answers correct to advance to the next level.</p><p>In this quiz, the progress bar measures the OVERALL correct number of answers. If you get 4 correct, the quiz will end.</p>Also, the number of strikes similarly measures the OVERALL number of incorrect answers. If you get 3 wrong, the quiz will end.",
+	"postQuizHtml": "<iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><p>The quiz ended. Enjoy the above video. :)</p>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": "This quiz has special end conditions. The quiz will end if: ",
+		"numQuestionsCorrectToEnd": {
+			"enabled": true,
+			"limit": 20,
+			"preQuizText": "You correctly answer any 4 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": true,
+			"limit": 20,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "Level 1",
+			"repeatWrong": false,
+			"repeatCorrect": true,
+			"numWrongBeforeDowngrade": 15,
+			"numRightBeforeUpgrade": 50,
+			"upgradePoolId": 2,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": "<p>You are about to upgraded...</p>",
+			"feedbackOnDowngradeHtml": "<p>You are about to be downgraded...</p>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "True or false? Moons revolve around planets.",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct, moons revolve around planets.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Moons DO revolve around planets!"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Which planet is known as the <em>\"red planet\"</em>?",
+					"hintHtml": "It's one of our neighbours...",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Mars",
+							"feedback": "Correct! Mars is red due to iron rusting within its dust and dirt.",
+							"score": 1
+						},
+						{
+							"optionText": "Venus",
+							"feedback": "It's not Venus. Venus does have a reddish-brown surface, but not nearly as red as Mars'. Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Mercury",
+							"feedback": "Mercury is grey! Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "Neptune is a bright blue. Mars is red due to iron rusting within its dust and dirt."
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolName": "Level 2",
+			"poolId": 2,
+			"poolLevel": 2,
+			"upgradePoolId": 3,
+			"downgradePoolId": 1,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"feedbackOnUpgradeHtml": "Good job on passing level 2! The quiz is now about to show you some tougher questions.<br>If you get two wrong, you'll be downgraded back to Level 1, so be careful!",
+			"feedbackOnDowngradeHtml": "You are about to be downgraded to Level 1...",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum. That's SO FAST. If you had a ship that went at the speed of light, could go around earth over 7 times in one second.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "The speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum. Blazing speed! If you had a ship that went at the speed of light, could go around earth over 7 times in one second."
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "The largest moon in our solar system has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "That's correct!",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "No, it's actually Titan!"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "No, it's actually Titan!"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "No, it's actually Titan!"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 3,
+			"poolName": "Level 3",
+			"poolLevel": 3,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": false,
+			"downgradePoolId": 2,
+			"feedbackOnUpgradeHtml": "You are about to upgraded...",
+			"feedbackOnDowngradeHtml": "You are about to be downgraded...",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multi-select",
+					"questionHtml": "<p>Place a checkmark beside the <strong>Gas Giant</strong> the planets.</p>",
+					"hintHtml": "There are four terrestrial planets.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Correct! The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+					"feedbackForImperfect": "The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+					"options": [
+						{
+							"optionText": "Mercury"
+						},
+						{
+							"optionText": "Venus"
+						},
+						{
+							"optionText": "Earth"
+						},
+						{
+							"optionText": "Mars"
+						},
+						{
+							"optionText": "Jupiter",
+							"score": 1
+						},
+						{
+							"optionText": "Saturn",
+							"score": 1
+						},
+						{
+							"optionText": "Uranus",
+							"score": 1
+						},
+						{
+							"optionText": "Neptune",
+							"score": 1
+						}
+					]
+				},
+				{
+					"questionType": "sorting",
+					"questionHtml": "Rank the below planets in order of their size, starting with the smallest.",
+					"hintHtml": "Jupiter is the biggest planet! So it should be number 4.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<h3>Correct!</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\"  style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"feedbackForImperfect": "<h3>That's the wrong order...</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"img/gas_planets.jpg\" style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"options": [
+						{
+							"optionText": "Jupiter",
+							"matchingText": 4
+						},
+						{
+							"optionText": "Saturn",
+							"matchingText": 3
+						},
+						{
+							"optionText": "Uranus",
+							"matchingText": 1
+						},
+						{
+							"optionText": "Neptune",
+							"matchingText": 2
+						}
+					]
+				},
+				{
+					"questionType": "ord",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				}
+			]
+		}
+	]
+}

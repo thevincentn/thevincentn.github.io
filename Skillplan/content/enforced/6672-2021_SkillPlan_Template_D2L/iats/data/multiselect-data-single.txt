@@ -1,0 +1,119 @@
+{
+	"ActivityName": "How Followers Respond to Different Types of Leadership",
+	"QuestionDisplay": "single",
+	"ProvideContinuous": false,
+	"ProvideQuestionReport": true,
+	"ProvideEndReport": false,
+	"ShowQuestionFeedback": true,
+	"VisualFeedback": true,
+	"AllowPrevious": false,
+	"Randomize": false,
+	"HeadingLevel": 2,
+	"Instructions": "<p>For each of the follower types, determine to which leadership approaches they might respond positively.  Check the boxes for favourable leadership types and leave unfavourable types unchecked.  Select Submit to see your results and Reset Answers to uncheck all of the boxes.</p>",
+	"PreActivityText": "<p>No one leadership style is better than the others in all situations.  You must adopt a leadership style that suits your followers’ character, preferences, and dispositions. Not everyone responds productively to the same leadership approach.</p><p>Here are 4 unique follower types.  Consider which leadership approach(s) (autocratic, democratic, and/or free rein) each might respond positively too.</p>",
+	"PreActivityMedia": [
+		{
+			"type": "image",
+			"src": "img/preImg.jpg",
+			"description": "4 followers",
+			"width": "798",
+			"height": "140"
+       }
+    ],
+	"PostActivityText": "<p>After hearing what some of these followers had to say about different leadership styles, it should become clear that there is no one correct leadership style.  A leader must learn to recognize which follower types are following them and adapt accordingly.<p><p>Here is a short video on these three leadership styles as one final review.</p>",
+	"PostActivityMedia": [
+		{
+			"type": "YouTubeVideo",
+			"src": "https://www.youtube.com/watch?v=M4SLS6lD9RM",
+			"altLink": "https://www.youtube.com/watch?v=M4SLS6lD9RM ",
+			"width": "420",
+			"height": "420"
+      }
+	],
+	"TableHeading": "Items or categories to be distinguished/identified",
+	"Answers": [
+		{
+			"text": "Autocratic"
+		},
+		{
+			"text": "Democratic"
+		},
+		{
+			"text": "Free-rein"
+		}
+	],
+	"Questions": [
+		{
+			"text": "Independent Follower<br><img src='img/q1.jpg'/>",
+			"questionFeedback": "“I don’t like being told how to do my work. I can usually achieve goals without strict direction.  I think my way is the best way and I’m not looking for input from other team members.  I work well by myself and have some ideas for initiatives I can work on.”",
+			"answers": [
+				{
+					"check": false,
+					"feedback": []
+				},
+				{
+					"check": false,
+					"feedback": []
+				},
+				{
+					"check": true,
+					"feedback": []
+				}
+			]
+		},
+		{
+			"text": "Dependent Follower<br><img src='img/q2.jpg'/>",
+			"questionFeedback": "“I like structure and being part of a team with clear direction determined by our leader.  I enjoy hearing others’ opinions. We are all here to help each other.”",
+			"answers": [
+				{
+					"check": true,
+					"feedback": []
+				},
+				{
+					"check": true,
+					"feedback": []
+				},
+				{
+					"check": false,
+					"feedback": []
+				}
+			]
+		},
+		{
+			"text": "Team-Spirited Follower<br><img src='img/q3.jpg'/>",
+			"questionFeedback": "“I love cheering for my team, but I feel more like a drone than a team member if some is always telling me what to do.  I feel like we can conquer any challenge if we put our heads together.”",
+			"answers": [
+				{
+					"check": false,
+					"feedback": []
+            },
+				{
+					"check": true,
+					"feedback": []
+            },
+				{
+					"check": true,
+					"feedback": []
+            }
+         ]
+      },
+		{
+			"text": "Individualist Follower<br><img src='img/q4.jpg'/>",
+			"questionFeedback": "“I usually like to add my own style to projects.  I appreciate my voice being heard and I like working with others but in the end, the solution just isn’t me.  I often have ideas that no one else would think of.”",
+			"answers": [
+				{
+					"check": false,
+					"feedback": []
+            },
+				{
+					"check": false,
+					"feedback": []
+            },
+				{
+					"check": true,
+					"feedback": []
+            }
+         ]
+      }
+	]
+}

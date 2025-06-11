@@ -1,0 +1,130 @@
+{
+  "quizHeading": "<h1>Multi-select Examples ☑️☑️☑️</h1>",
+  "feedbackType": "continuous",
+  "showPoolName": true,
+  "showProgressBar": true,
+  "showStrikes": true,
+  "colouredFeedback": false,
+  "preQuizHtml": false,
+  "postQuizHtml": "<p>If you want to learn more about the galaxy, I recommend you check out this page on National Geographic's website:</p><p><a href=\"https://video.nationalgeographic.com/video/101-videos/00000161-d7ea-dcda-a37f-d7fe96d30000\" target=\"_blank\">Origins of the Universe 101</a></p>",
+  "endConditions": {
+    "preface": false,
+    "numQuestionsCorrectToEnd": {
+      "enabled": false,
+      "limit": 4,
+      "preQuizText": "You correctly answer any 10 questions.",
+      "useForProgressBar": false
+    },
+    "numQuestionsIncorrectToEnd": {
+      "enabled": false,
+      "limit": 5,
+      "preQuizText": "You incorrectly answer any 10 questions.",
+      "useForStrikes": false
+    },
+    "noRemainingQuestionsAtCurrentPool": {
+      "enabled": false,
+      "preQuizText": false
+    }
+  },
+  "questionPools": [
+    {
+      "poolId": 1,
+      "poolName": "☀️ The Solar System",
+      "repeatWrong": true,
+      "repeatCorrect": false,
+      "numWrongBeforeDowngrade": 5,
+      "numRightBeforeUpgrade": 3,
+      "upgradePoolId": "END",
+      "downgradePoolId": "END",
+      "feedbackOnUpgradeHtml": "<p>Great work! Now we're going to check out outer space... watch this video on galaxies before continuing to the next section!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+      "feedbackOnDowngradeHtml": "<p class=\"mb-5\">Dang! Review the Solar System 101 Video, then try again! Nice try though.</p> <img src=\"https://previews.123rf.com/images/vector2011/vector20111606/vector2011160600045/58662850-funny-drawing-of-a-sun-i-is-making-a-selfie-with-his-mobile.jpg\" style='max-width: 100%;'>",
+      "randomizeQuestionOrder": true,
+      "questions": [
+        {
+          "questionType": "ms",
+          "questionHtml": "How many planets does our solar system have?<br>[Please note that Coloured feedback is OFF for this quiz.]",
+          "hintHtml": "One was demoted to \"dwarf planet\" recently!",
+          "randomizeOptions": true,
+          "feedbackForPerfect": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>",
+          "feedbackForImperfect": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p>",
+          "options": [
+            {
+              "optionText": "7"
+						},
+            {
+              "optionText": "8",
+              "score": 1
+        		},
+            {
+              "optionText": "9"
+        		},
+            {
+              "optionText": "None of the above"
+        		}
+					]
+				},
+        {
+          "questionType": "MS",
+          "questionHtml": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/moon_large.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\"><p>The largest moon in our solar system has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:</p><p>[Please note that Coloured feedback is OFF for this quiz.]</p>",
+          "hintHtml": false,
+          "randomizeOptions": true,
+          "feedbackForPerfect": "<p>Yes! Only Titan should be checked.</p>",
+          "feedbackForImperfect": "<p>No, only Titan should be checked.</p>",
+          "options": [
+            {
+              "optionText": "Titan",
+              "score": 1
+						},
+            {
+              "optionText": "Triton"
+        		},
+            {
+              "optionText": "Ganymede"
+        		},
+            {
+              "optionText": "Io"
+        		}
+					]
+				},
+        {
+          "questionType": "multi-select",
+          "questionHtml": "<p>Place a checkmark beside the <strong>Gas Giant</strong> the planets.</p><p>[Please note that Coloured feedback is OFF for this quiz.]</p>",
+          "hintHtml": "There are four terrestrial planets.",
+          "randomizeOptions": true,
+          "feedbackForPerfect": "Correct! The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+          "feedbackForImperfect": "The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.",
+          "options": [
+            {
+              "optionText": "Mercury"
+						},
+            {
+              "optionText": "Venus"
+						},
+            {
+              "optionText": "Earth"
+						},
+            {
+              "optionText": "Mars"
+						},
+            {
+              "optionText": "Jupiter",
+              "score": 1
+						},
+            {
+              "optionText": "Saturn",
+              "score": 1
+						},
+            {
+              "optionText": "Uranus",
+              "score": 1
+						},
+            {
+              "optionText": "Neptune",
+              "score": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,282 @@
+{
+	"ActivityName": "GHS Pictograms and Hazards.",
+	"ActivityType" : "sort",
+    "HeadingLevel": 2,
+	"FeedbackType" : "report",
+	"HighlightEffect" : true,
+	"QuestionColumns" : "1",
+	"Randomize": true,
+	"HorizontalAlignment": true,
+    "Instructions": "<p class='instruction'>Match the hazard with the associated GHS label/icon</p>",
+	"PreActivityText" : "none",
+	"PreActivityMedia" : "none",
+	"IncludePostPage" : false,
+	"PostActivityText" : "none",
+	"PostActivityMedia" : "none",
+	"AnswerNodes": [
+		{
+			"key": "KEY1", 
+		 	"title": "<img src='img/GHS-flame.png' class='img-fluid mx-auto d-block' alt='Conduction' style='max-width: 150px;'>Flame", 
+		 	"color": "default",
+		 	"src" : "none"
+		},
+		{
+			"key": "KEY2",
+			"title": "<img src='img/GHS-hazard.png' class='img-fluid mx-auto d-block' alt='Convection' style='max-width: 150px;'>Exclamation Mark", 
+			"color": "default",
+			"src" : "none"
+		}, 
+        {
+			"key": "KEY3",
+			"title": "<img src='img/GHS-hazards-health-hazard.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Health Hazard", 
+			"color": "default",
+			"src" : "none"
+		},
+        {
+			"key": "KEY4",
+			"title": "<img src='img/GHS-poison.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Skull & Crossbones", 
+			"color": "default",
+			"src" : "none"
+		},
+        {
+			"key": "KEY5",
+			"title": "<img src='img/GHS-hazards-explosive.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Exploding Bomb", 
+			"color": "default",
+			"src" : "none"
+		},
+            {
+			"key": "KEY6",
+			"title": "<img src='img/GHS-hazards-oxidizer.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Flame Over Circle", 
+			"color": "default",
+			"src" : "none"
+		},
+        {
+			"key": "KEY7",
+			"title": "<img src='img/GHS-hazards-corrosive.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Corrosion", 
+			"color": "default",
+			"src" : "none"
+		},
+        {
+			"key": "KEY8",
+			"title": "<img src='img/GHS-hazards-gas-cylinder.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Gas Cylinder", 
+			"color": "default",
+			"src" : "none"
+		},
+        {
+			"key": "KEY9",
+			"title": "<img src='img/GHS-environment.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Environment", 
+			"color": "default",
+			"src" : "none"
+		}
+        
+	],
+	"QuestionNodes": [
+		{
+			"question": "Flammable",
+            "answer": "KEY1",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			},
+            {
+                "question": "Self-Reactive",
+                "answer": "KEY1",
+                "type": "text",
+                "color": "default",
+                "correct": "none",
+                "wrong": "none"
+                },
+                {
+                    "question": "Pyrophoric",
+                    "answer": "KEY1",
+                    "type": "text",
+                    "color": "default",
+                    "correct": "none",
+                    "wrong": "none"
+                    },
+                    {
+                        "question": "Self-Heating",
+                        "answer": "KEY1",
+                        "type": "text",
+                        "color": "default",
+                        "correct": "none",
+                        "wrong": "none"
+                        },
+                        {
+                            "question": "In Contact with Water, Emits Flammable Gases",
+                            "answer": "KEY1",
+                            "type": "text",
+                            "color": "default",
+                            "correct": "none",
+                            "wrong": "none"
+                            },
+                            {
+                                "question": "Organic Peroxide",
+                                "answer": "KEY1",
+                                "type": "text",
+                                "color": "default",
+                                "correct": "none",
+                                "wrong": "none"
+                                },
+		{
+			"question": "Irritation (skin or eyes)",
+            "answer": "KEY2",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			
+		},
+        {
+			"question": "Skin Sensitization",
+            "answer": "KEY2",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			
+		},
+        {
+			"question": "Acute Toxicity (harmful)",
+            "answer": "KEY2",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			
+		},
+        {
+			"question": "Specific Target Organ  Toxicity – Single Exposure (drowsiness or dizziness, or  respiratory irritation)",
+            "answer": "KEY2",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			
+		},
+        {
+			"question": "Hazardous to the Ozone Layer",
+            "answer": "KEY2",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			
+		},
+		{
+			"question": "Carcinogenicity",
+            "answer": "KEY3",
+            "type": "text",
+            "color": "default",
+            "correct": "none",
+            "wrong": "none"
+			},
+            {
+                "question": "Respiratory Sensitization",
+                "answer": "KEY3",
+                "type": "text",
+                "color": "default",
+                "correct": "none",
+                "wrong": "none"
+                },
+                {
+                    "question": "Reproductive Toxicity",
+                    "answer": "KEY3",
+                    "type": "text",
+                    "color": "default",
+                    "correct": "none",
+                    "wrong": "none"
+                    },
+                    {
+                        "question": "Specific Target Organ  Toxicity – Single or  Repeated Exposure",
+                        "answer": "KEY3",
+                        "type": "text",
+                        "color": "default",
+                        "correct": "none",
+                        "wrong": "none"
+                        },
+                        {
+                            "question": "Germ Cell Mutagenicity",
+                            "answer": "KEY3",
+                            "type": "text",
+                            "color": "default",
+                            "correct": "none",
+                            "wrong": "none"
+                            },
+                            {
+                                "question": "Aspiration Hazard",
+                                "answer": "KEY3",
+                                "type": "text",
+                                "color": "default",
+                                "correct": "none",
+                                "wrong": "none"
+                                },
+                                {
+                                    "question": "Acute Toxicity (fatal or toxic)",
+                                    "answer": "KEY4",
+                                    "type": "text",
+                                    "color": "default",
+                                    "correct": "none",
+                                    "wrong": "none"
+                                    },
+                                    {
+                                        "question": "Explosive",
+                                        "answer": "KEY5",
+                                        "type": "text",
+                                        "color": "default",
+                                        "correct": "none",
+                                        "wrong": "none"
+                                        },
+                                        {
+                                            "question": "Self-Reactive (severe)",
+                                            "answer": "KEY5",
+                                            "type": "text",
+                                            "color": "default",
+                                            "correct": "none",
+                                            "wrong": "none"
+                                            },
+                                            {
+                                                "question": "Organic Peroxide (severe)",
+                                                "answer": "KEY5",
+                                                "type": "text",
+                                                "color": "default",
+                                                "correct": "none",
+                                                "wrong": "none"
+                                                },
+                                                {
+                                                    "question": "Oxidizer",
+                                                    "answer": "KEY6",
+                                                    "type": "text",
+                                                    "color": "default",
+                                                    "correct": "none",
+                                                    "wrong": "none"
+                                                    },
+                                                    {
+                                                        "question": "Corrosive (skin, eyes, or metal)",
+                                                        "answer": "KEY7",
+                                                        "type": "text",
+                                                        "color": "default",
+                                                        "correct": "none",
+                                                        "wrong": "none"
+                                                        },
+                                                        {
+                                                            "question": "Gas Under Pressure",
+                                                            "answer": "KEY8",
+                                                            "type": "text",
+                                                            "color": "default",
+                                                            "correct": "none",
+                                                            "wrong": "none"
+                                                            },
+                                                            {
+                                                                "question": "Hazardous to the Aquatic Environment (acute or long-term)",
+                                                                "answer": "KEY9",
+                                                                "type": "text",
+                                                                "color": "default",
+                                                                "correct": "none",
+                                                                "wrong": "none"
+                                                                }					
+
+		
+	]
+}

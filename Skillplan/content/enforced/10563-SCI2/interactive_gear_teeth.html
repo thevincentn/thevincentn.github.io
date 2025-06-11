@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gear System with Teeth</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 20px; }
+        .container { display: flex; flex-direction: column; align-items: center; }
+        .controls { margin-bottom: 20px; }
+        .gear { fill: #3498db; stroke: #2980b9; stroke-width: 2px; }
+        .gear teeth { fill: #2ecc71; }
+        svg { background-color: #fff; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interactive Gear System with Teeth</h1>
+    <div class="controls">
+        <label>Small Gear Teeth: <input type="range" id="smallTeeth" min="10" max="30" value="14"></label>
+        <span id="smallTeethCount">14</span>
+        <br>
+        <label>Large Gear Teeth: <input type="range" id="largeTeeth" min="10" max="90" value="28"></label>
+        <span id="largeTeethCount">28</span>
+    </div>
+
+    <svg id="gearSystem" width="500" height="300" viewBox="0 0 500 300">
+        <!-- Small Gear -->
+        <g id="smallGear" transform="translate(150, 150)"></g>
+        <!-- Large Gear -->
+        <g id="largeGear" transform="translate(350, 150)"></g>
+    </svg>
+</div>
+
+<script>
+    function createGear teeth(numTeeth, radius) {
+        let teethPath = "";
+        const angleIncrement = (2 * Math.PI) / numTeeth;
+        for (let i = 0; i < numTeeth; i++) {
+            const angle = i * angleIncrement;
+            const x1 = Math.cos(angle) * radius;
+            const y1 = Math.sin(angle) * radius;
+            const x2 = Math.cos(angle) * (radius + 10);
+            const y2 = Math.sin(angle) * (radius + 10);
+
+            teethPath += `M ${x1} ${y1} L ${x2} ${y2} `;
+        }
+        return teethPath;
+    }
+
+    function updateGears() {
+        const smallTeeth = parseInt(document.getElementById("smallTeeth").value);
+        const largeTeeth = parseInt(document.getElementById("largeTeeth").value);
+        document.getElementById("smallTeethCount").textContent = smallTeeth;
+        document.getElementById("largeTeethCount").textContent = largeTeeth;
+
+        const smallGear = document.getElementById("smallGear");
+        const largeGear = document.getElementById("largeGear");
+
+        const smallRadius = 40;
+        const largeRadius = 80;
+
+        smallGear.innerHTML = `<circle cx="0" cy="0" r="${smallRadius}" class="gear" />
+                               <path d="${createGear teeth(smallTeeth, smallRadius)}" class="gear teeth" />`;
+
+        largeGear.innerHTML = `<circle cx="0" cy="0" r="${largeRadius}" class="gear" />
+                               <path d="${createGear teeth(largeTeeth, largeRadius)}" class="gear teeth" />`;
+    }
+
+    document.getElementById("smallTeeth").addEventListener("input", updateGears);
+    document.getElementById("largeTeeth").addEventListener("input", updateGears);
+
+    // Initialize gears
+    updateGears();
+</script>
+
+</body>
+</html>

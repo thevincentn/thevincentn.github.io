@@ -1,0 +1,21 @@
+
+
+/*========= Empty CSS file for client to add custom CSS ==========*/
+mark {
+ background-color: #ccff00 !important;
+}
+
+.box {
+ display: inline-block;
+ width: auto;
+ border: 1px solid #000;
+}
+
+#HS_header {
+ display: none !important;
+}
+
+#MAT_header {
+ display: none !important;
+}
+

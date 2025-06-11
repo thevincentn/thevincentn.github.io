@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/flickity.css" media="screen">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/fullscreen.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/content/enforced/10511-SP2025/custom.css">
+    <!-- Playing Cards       -->
+    <style>
+        .lever-container {
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .controls {
+            margin: 24px 0 8px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        input[type=range] {
+            width: 80%;
+            max-width: 350px;
+            accent-color: #2a72e6;
+        }
+
+        .stats {
+            margin-top: 18px;
+            font-size: 1.12em;
+            text-align: center;
+        }
+
+        .lever-visual {
+            position: relative;
+            height: 320px;
+            margin: 0 auto 10px auto;
+            width: 95vw;
+            max-width: 700px;
+            min-width: 250px;
+        }
+
+        .beam {
+            position: absolute;
+            left: 2vw;
+            width: 60vw;
+            max-width: 586px;
+            min-width: 200px;
+            top: 150px;
+            height: 12px;
+            background: linear-gradient(90deg, #b6c3d4 60%, #d7e4f0 100%);
+            border-radius: 8px;
+            transform-origin: var(--fulcrum-pos, 280px) 6px;
+            transition: transform 0.5s cubic-bezier(.37, 1.04, .68, .98);
+            box-shadow: 0 4px 10px rgba(36, 52, 74, 0.07);
+            z-index: 3;
+        }
+
+        .fulcrum {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            top: 147px;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .fulcrum svg {
+            display: block;
+        }
+
+        .arrow {
+            position: absolute;
+            z-index: 4;
+            text-align: center;
+            transition: top 0.5s cubic-bezier(.37, 1.04, .68, .98);
+        }
+
+        .arrow svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .arrow-label {
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .load-label {
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .lever-visual {
+                width: 99vw;
+                min-width: 0;
+                padding: 0;
+            }
+
+
+            .stats {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+
+            .arrow svg {
+                transform: scale(0.9);
+            }
+
+            .arrow-label,
+            .load-label {
+                font-size: 0.95em;
+            }
+
+            .controls {
+                padding: 0 12px;
+            }
+        }
+    </style>
+    <title>Module Introduction Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p><img src="/content/enforced/10563-SCI2/branding/lessonbanners/4.png" alt=""></p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Levers</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="offset-sm-1 col-sm-10">
+                <div class="row pt-3 pb-3 card mb-4 mx-auto">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Key Questions:</h3>
+                            <ul>
+                                <li>How do levers multiply force?</li>
+                                <li>How is mechanical advantage calculated for levers?</li>
+                            </ul>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4 p-4"><img src="/content/enforced/10511-SP2025/questions.png" alt="" data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: scale-down; min-width: 175px; min-height: 175px; max-height: 250px;"></div>
+                    </div>
+                </div>
+                <div class="quick-assess quick-assess-mc quick-border">
+                    <fieldset class="radio">
+                        <h3>What Do You Think?</h3>
+                        <p> How does a lever produce mechanical advantage? </p>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> By increasing the total work needed to move an object </label> </div>
+                            </div>
+                        </div>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[Y]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> By letting you use less force over a greater distance to move a load </label> </div>
+                            </div>
+                        </div>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> By making the load weigh less </label> </div>
+                            </div>
+                        </div>
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11"> <label class="radio-label"> By reducing the amount of distance the load moves </label> </div>
+                            </div>
+                        </div>
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                        <div class="collapse feedback">
+                            <p><strong>Correct Answer:</strong> By letting you use less force over a greater distance to move a load.</p>
+                            <p> A lever doesn’t reduce the total amount of work required, but it lets you spread the work out over a longer distance. </p>
+                        </div>
+                    </fieldset>
+                </div>
+                <p></p>
+                <p class="mt-4">Keep reading to learn more about levers.</p>
+                <hr>
+                <h1>More Distance, Less Force</h1>
+                <p>Let's recall what we've learned about work, force and distance.</p>
+                <div class="table-responsive">
+                    <table class="table">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <p></p>
+                                </th>
+                                <th scope="col">
+                                    <p style="text-align: center;">Symbol</p>
+                                </th>
+                                <th scope="col" style="text-align: center;">
+                                    <p>Measured in (abbreviation)</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <p>Work</p>
+                                </th>
+                                <td>
+                                    <p style="text-align: center;">W</p>
+                                </td>
+                                <td style="text-align: center;">
+                                    <p>Joules (J)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <p>Force</p>
+                                </th>
+                                <td style="text-align: center;">
+                                    <p>F</p>
+                                </td>
+                                <td style="text-align: center;">
+                                    <p>Newtons (N) or pounds (lbs)</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <p>Distance</p>
+                                </th>
+                                <td style="text-align: center;">
+                                    <p>D</p>
+                                </td>
+                                <td style="text-align: center;">
+                                    <p>Metres (m), centimetres (cm), feet (ft) or inches (in)</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Levers take advantage of the relationship between force and distance to move heavy loads. For example, 100J of work is needed to lift a 10N object 10m into the air. But the same amount of work can also lift a 100N object 1m into the air. </p>
+
+                <div class="jumbotron mt-4">
+                    <h2></h2>
+                    <p style="text-align: center;"><span style="font-size: 48px;"><strong>W = F x d</strong></span></p>
+                    <p style="text-align: center;">It takes 500J of energy to move a 50N object 10 metres</p>
+                    <p style="text-align: center;"></p>
+                </div>
+
+                <p>A lever has three important parts: the <a data-toggle="tooltip" data-placement="top" title="The fixed point the lever pivots around.">fulcrum</a>, the <a data-toggle="tooltip" data-placement="top" title="The side of the lever that supports the load you're trying to move.">load arm</a>, and the <a data-toggle="tooltip" data-placement="top" title="The side of the lever where you apply your force.">effort arm</a>. <strong>Mechanical advantage (MA)</strong> is created in a lever by increasing the <strong>length of the effort arm / effort distance (ED)</strong> compared to the <strong>length of the load arm / resistance distance (RD)</strong>. A longer effort arm lets you lift heavier loads with less force. You can explore this relationship in the activity below.</p>
+
+                <p class="directive">Move the sliders to learn more.</p>
+
+
+                <div class="container lever-container p-5 pt-5">
+                    <div class="lever-visual mt-5 mx-auto" id="leverVisual">
+                        <div class="beam" id="beam"></div>
+                        <div id="armA" style="position:absolute;z-index:10;pointer-events:none;"></div>
+                        <div id="armB" style="position:absolute;z-index:10;pointer-events:none;"></div>
+                        <div class="fulcrum" id="fulcrum">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <polygon points="60,15 105,105 15,105" fill="#efc65e" stroke="#c29736" stroke-width="4" />
+                            </svg>
+                        </div>
+                        <div class="arrow arrow-effort" id="effortArrow">
+                            <svg width="40" height="70" viewBox="0 0 40 70">
+                                <rect x="16" y="0" width="8" height="45" fill="#e55039" />
+                                <polygon points="10,45 30,45 20,70" fill="#e55039" />
+                            </svg>
+                            <div class="arrow-label" id="effortLabel"></div>
+                        </div>
+                        <div class="arrow arrow-load" id="loadArrow">
+                            <svg width="40" height="70" viewBox="0 0 40 70">
+                                <rect x="16" y="0" width="8" height="45" fill="#3dbb7d" />
+                                <polygon points="10,45 30,45 20,70" fill="#3dbb7d" />
+                            </svg>
+                            <div class="load-label" id="loadLabel"></div>
+                        </div>
+                    </div>
+                    <div class="controls px-2 mx-auto">
+                        <label for="fulcrumSlider">Move the fulcrum (pivot): </label>
+                        <input id="fulcrumSlider" type="range">
+                        <label for="effortMassSlider" style="margin-top:20px;">Effort (lbs):</label>
+                        <input id="effortMassSlider" type="range" min="10" max="200" step="1" value="100">
+                        <label for="loadMassSlider" style="margin-top:20px;">Load (lbs):</label>
+                        <input id="loadMassSlider" type="range" min="10" max="200" step="1" value="100">
+                    </div>
+                    <div class="stats" id="statsDisplay"></div>
+                </div>
+                <div class="card card-standard ">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <h4 class="mb-4">Key Idea</h4>
+                            <p>You can use a smaller force to move a heavy load, as long as you increase the distance over which you apply that force. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h1>Types of Levers</h1>
+                <p>There are three classes of levers. The placement of the fulcrum determines whether the lever is a class 1, 2 or 3.</p>
+                <!-- Tabs Start -->
+                <p class="directive">Click on each to learn more.</p>
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Class 1</a><a class="list-group-item list-group-item-action">Class 2</a><a class="list-group-item list-group-item-action">Class 3</a></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade pb-3 show active">
+                                    <p>The fulcrum is between the resistance (load) and the effort.</p>
+                                    <p><img src="/content/enforced/10563-SCI2/simplemachines/levers/class1.PNG" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 500px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>The load is between the fulcrum and the effort.</p>
+                                    <p><img src="/content/enforced/10563-SCI2/simplemachines/levers/class2.PNG" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 500px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>The effort is between the fulcrum and the load.</p>
+                                    <p><img src="/content/enforced/10563-SCI2/simplemachines/levers/class3.PNG" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 500px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tabs End -->
+
+                <div class="card card-standard ">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <h4 class="mb-4">Same Formulas</h4>
+                            <p>You can use the same formulas to calculate mechanical advantage for levers, regardless of the type of lever. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-assess quick-assess-mc quick-border">
+                    <fieldset class="radio">
+                        <h3>What Do You Think?</h3>
+                        <p>If you can apply 10 lbs of force, how much weight do you think you could lift with a lever that has an effort arm that is <strong>four times longer</strong> than the load arm?</p>
+
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11">
+                                    <label class="radio-label"> 10 lbs </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11">
+                                    <label class="radio-label"> 20 lbs </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[Y]]</p>
+                                </div>
+                                <div class="col-11">
+                                    <label class="radio-label"> 40 lbs </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check pl-2">
+                            <div class="row">
+                                <div class="col-1 pr-0 pr-sm-1">
+                                    <p>[[N]]</p>
+                                </div>
+                                <div class="col-11">
+                                    <label class="radio-label"> 100 lbs </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+
+                        <div class="collapse feedback mb-3">
+                            <p><strong>Correct Answer:</strong> 40 lbs</p>
+                            <p>
+                                Since the effort arm is four times longer than the load arm, the lever gives you a mechanical advantage of 4. That means your 10 lbs of force can lift a 40 lb load (10 lbs × 4 = 40 lbs).
+                            </p>
+                        </div>
+                    </fieldset>
+                </div>
+                <hr>
+                <h1>Calculating Mechanical Advantage</h1>
+                <p>You can calculate the mechanical advantage of any simple machine using the <a data-toggle="tooltip" data-placement="top" title="The resistance force is the weight you're trying to move.">resistance force (RF)</a> and <a data-toggle="tooltip" data-placement="top" title="The effort force is the force you apply to move the lever.">effort force (EF)</a>. </p>
+                <div class="jumbotron">
+                    <h2></h2>
+                    <p style="text-align: center;"><span style="font-size: 48px;"><strong>MA = RF &divide; EF</strong></span></p>
+                    <p style="text-align: center;">The mechanical advantage of a lever of a lever that can lift a 100lb load with 10lbs of effort is 10.</p>
+                    <p style="text-align: center;"></p>
+                </div>
+                <h3>Learn</h3>
+
+
+
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <figure>
+                            <div class="lottieclass" id="maTriangle"></div>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8">
+                        <p><span style="font-size: 19px;">Let's learn how to use this formula with the Question Strategy for Numeracy to solve mechanical advantage problems involving levers.</span></p>
+                    </div>
+                </div>
+
+                <br>
+                <p class="lead"><strong>Problem 1:</strong> You apply 15 lbs of force to lift a 90 lb load. What is the mechanical advantage?</p>
+
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+
+                <div class="accordion">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <ul>
+                                    <li><strong>Need:</strong> the mechanical advantage</li>
+                                    <li><strong>Know:</strong> load = 90 lbs, effort = 15 lbs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Organize</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-7">
+                                        <p>Find the formula that relates to the resistance force (RF) and effort force (EF) to mechanical advantage (MA).</p>
+                                        <h4 class="text-center my-3"><strong>MA = RF ÷ EF</strong></h4>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Set Up &amp; Calculate</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Substitute the values:</p>
+                                <p class="text-center"><strong>MA = 90 ÷ 15 = 6</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 4: Decide</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Does the answer make sense?</p>
+                                <p>Yes! If you can lift a 90 lb load with just 15 lbs of effort, the mechanical advantage is 6. ✅</p>
+                                <p><strong>Final Answer:</strong> The mechanical advantage is <strong>6</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <h1>Using Lengths</h1>
+                <p>For levers, mechanical advantage can also be calculated using the <strong>effort arm length / effort distance (ED)</strong> and the <strong>load arm length / resistance distance (RD)</strong>. </p>
+
+                <div class="jumbotron">
+                    <h2></h2>
+                    <p style="text-align: center;"><span style="font-size: 48px;"><strong>MA = ED &divide; RD</strong></span></p>
+                    <p style="text-align: center;">The mechanical advantage of a lever of a 8ft effort arm and a 2ft load arm is 4. </p>
+                    <p style="text-align: center;"></p>
+                </div>
+
+                <h3>Learn</h3>
+
+
+
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <figure>
+                            <div class="lottieclass" id="maTriangleLeverArm"></div>
+                        </figure>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-8">
+                        <p><span style="font-size: 19px;">Let's learn how to use the Question Strategy for Numeracy to solve mechanical advantage problems involving levers.</span></p>
+                    </div>
+                </div>
+
+                <br>
+
+
+                <p class="lead"><strong>Problem 2:</strong> A crowbar has an effort arm that is 70 cm long and a load arm that is 35 cm long. What is the mechanical advantage?</p>
+
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 1: Identify</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <ul>
+                                    <li><strong>Need:</strong> the mechanical advantage</li>
+                                    <li><strong>Know:</strong> effort arm = 70 cm, load arm = 35 cm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 2: Organize</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-7">
+                                        <p>Find the formula that relates to the effort arm length (ED) and load arm length (RD) to mechanical advantage (MA).</p>
+                                        <h4 class="text-center my-3"><strong>MA = ED ÷ RD</strong></h4>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 3: Set Up &amp; Calculate</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Substitute the known numbers:</p>
+                                <p class="text-center"><strong>MA = 70 ÷ 35 = 2</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Step 4: Decide</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>Does the answer make sense?</p>
+                                <p>Yes! The effort arm is 2 times longer than the load arm, so the mechanical advantage is 2. ✅</p>
+                                <p><strong>Final Answer:</strong> The mechanical advantage is <strong>2</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <h3>Apply Your Knowledge</h3>
+                <p class="mt-4">Let's review what you've learned so far!</p>
+                <p class="instruction">Answer the following questions. When you’re ready, select "Check Answer" to reveal the solution steps.</p>
+
+                <!-- Problem 1 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 1</strong></p>
+                                <p>A lever is used to lift a 180 lb load with 30 lb of effort. What is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 6</strong></p>
+                                <hr>
+
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active">
+                                                    <p>A lever is used to lift a <u>180 lb load</u> with <u>30 lb of effort</u>. What is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Resistance force (180 lb) and effort force (30 lb)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = RF ÷ EF</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">RF = 180 lbs</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">EF = 30 lbs</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;"></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">RF</mi>
+                                                                                    <mi mathvariant="normal">EF</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>1</mn>
+                                                                                    <mn>8</mn>
+
+                                                                                    <mn>0</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">lbs</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>3</mn>
+                                                                                    <mn>0</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">lbs</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 6</strong></p>
+                                                    <!--                                                    <p style="margin-left: 3.125rem;">You can also state this as <strong>43:1</strong></p>-->
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Problem 2 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 2</strong></p>
+                                <p>A lever has an effort arm 12 ft long and a load arm 3 ft long. What is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 4</strong></p>
+                                <hr>
+
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active">
+                                                    <p>A lever has an <u>effort arm 12 ft long</u> and a <u>load arm 3 ft long</u>. What is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Effort arm length (12ft) and load arm length (3ft)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = ED ÷ RD</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">ED = 12 ft</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">RD = 3 ft</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;"></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">ED</mi>
+                                                                                    <mi mathvariant="normal">RD</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>1</mn>
+                                                                                    <mn>2</mn>
+
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">ft</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>3</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">ft</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 4</strong></p>
+                                                    <!--                                                    <p style="margin-left: 3.125rem;">You can also state this as <strong>43:1</strong></p>-->
+                                                </div>
+                                                <!-- -------------------------------------------------- -->
+                                                <div class="tab-pane fade">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Problem 3 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 3</strong></p>
+                                <p>A crowbar has an effort arm of 60 cm and a load arm of 20 cm. What is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 3</strong></p>
+                                <hr>
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade pb-3 show active ">
+                                                    <p>A crowbar has an <u>effort arm of 60 cm</u> and a <u>load arm of 20 cm</u>. What is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Effort arm length (60 cm) and load arm length (20 cm)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade pb-3">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = ED ÷ RD</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">ED = 60 cm</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">RD = 20 cm</p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade pb-3">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">ED</mi>
+                                                                                    <mi mathvariant="normal">RD</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>6</mn>
+                                                                                    <mn>0</mn>
+
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">cm</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>2</mn>
+                                                                                    <mn>0</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">cm</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 3</strong></p>
+
+
+                                                </div>
+                                                <div class="tab-pane fade pb-3">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 4</strong></p>
+                                <p>You are using a lever to lift a 200 lb object with an effort of 50 lb. What is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 4</strong></p>
+                                <hr>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active">
+                                                    <p>You are using a lever to <u>lift a 200 lb object</u> with an <u>effort of 50 lb</u>. What is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Resistance force (200 lb) and effort force (50 lb)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = RF ÷ EF</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">RF = 200 lbs</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">EF = 50 lbs</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;"></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade pb-3">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">RF</mi>
+                                                                                    <mi mathvariant="normal">EF</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>2</mn>
+                                                                                    <mn>0</mn>
+
+                                                                                    <mn>0</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">lbs</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>5</mn>
+                                                                                    <mn>0</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">lbs</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 4</strong></p>
+                                                </div>
+
+                                                <div class="tab-pane fade pb-3">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8">
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                            <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--
+
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 5</strong></p>
+                                <p>A lever has an effort arm that is 15 ft long and a load arm that is 5 ft long. What is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 3</strong></p>
+                                <hr>
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active">
+                                                    <p>A lever has an <u>effort arm that is 15 ft long</u> and a <u>load arm that is 5 ft long</u>. What is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Effort arm length (15 ft) and load arm length (5 ft)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = A ÷ B</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">ED = 15 ft</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">RD = 5 ft</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;"></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">A</mi>
+                                                                                    <mi mathvariant="normal">B</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>1</mn>
+                                                                                    <mn>5</mn>
+
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">cm</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>5</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">cm</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 3</strong></p>
+
+                                                    <div class="tab-pane fade">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <figure>
+                                                                    <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-8">
+                                                                <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                                <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 6</strong></p>
+                                <p>Using a lever with a 24-inch effort arm and a 6-inch load arm, what is the mechanical advantage?</p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                    <div class="collapse panel panel-reveal">
+                        <div class="panel panel-alt">
+                            <div class="panel-body">
+                                <p><strong>Answer: 4</strong></p>
+                                <hr>
+                                <h5>Answer Key</h5>
+                                <p>Click on each step to see how the problem was solved.</p>
+                                <div class="tabs-wrapper tabs-horizontal">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Identify</a> <a class="list-group-item list-group-item-action">Organize</a> <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a> <a class="list-group-item list-group-item-action">Decide</a></div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active">
+                                                    <p>Using a lever with a <u>24-inch effort arm</u> and a <u>6-inch load arm</u>, what is the <mark>mechanical advantage</mark>?</p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <figure>
+                                                                <p><img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-8"><br>
+                                                            <p><strong>Identify what you need:</strong> Mechanical advantage<br><strong>Identify what you know:&nbsp;</strong>Effort arm length (24 in) and load arm length (6 in)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Locate the formulas.</strong></p>
+                                                    <p class=""><strong>MA = A ÷ B</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 50px;">Locate the information required by the formula.</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">ED = 24 in</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0;">MA = ?</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;">RD = 6 in</p>
+                                                            <p style="margin-left: 50px; margin-bottom: 0px;"></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade">
+                                                    <p><strong>Step 1: Set up the equation.</strong></p>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-7">
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Write the formula.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mstyle mathsize="19px">
+                                                                                <mfrac>
+                                                                                    <mi mathvariant="normal">A</mi>
+                                                                                    <mi mathvariant="normal">B</mi>
+                                                                                </mfrac>
+                                                                            </mstyle>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML" data-mce-style="font-family: Lato, sans-serif; font-size: 19px; font-style: normal;"&gt;&lt;mstyle mathsize="19px"&gt;&lt;mfrac&gt;&lt;mi mathvariant="normal"&gt;E&lt;/mi&gt;&lt;mi mathvariant="normal"&gt;I&lt;/mi&gt;&lt;/mfrac&gt;&lt;/mstyle&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Enter the known values.</p>
+                                                            <p style="margin-left: 3.125rem; margin-bottom: 0;">Include the units.</p>
+                                                            <p style="margin-left: 3.125rem;">MA = <math title="" style="font-family: Arial;" xmlns="http://www.w3.org/1998/Math/MathML" display="inline" data-mce-style="font-family: Arial;">
+                                                                    <semantics>
+                                                                        <mstyle>
+                                                                            <mfrac>
+                                                                                <mrow>
+                                                                                    <mn>2</mn>
+                                                                                    <mn>4</mn>
+
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">in</mi>
+                                                                                </mrow>
+                                                                                <mrow>
+                                                                                    <mn>6</mn>
+                                                                                    <mo>&nbsp;</mo>
+                                                                                    <mi mathvariant="normal">in</mi>
+                                                                                </mrow>
+                                                                            </mfrac>
+                                                                        </mstyle>
+                                                                        <annotation encoding="wiris" data-d2l-attr-encoding="wiris">{"version":"1.1","math":"&lt;math style="font-family:Arial" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;V&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;mn&gt;01&lt;/mn&gt;&lt;mo&gt;&amp;#xA0;&lt;/mo&gt;&lt;mi mathvariant="normal"&gt;A&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;"}</annotation>
+                                                                    </semantics>
+                                                                </math></p>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-5"><img src="/content/enforced/10563-SCI2/simplemachines/levers/pyramid01.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></div>
+                                                    </div>
+                                                    <p><strong>Step 2: Calculate.</strong></p>
+                                                    <p style="margin-left: 3.125rem;"><strong>MA = 4</strong></p>
+
+                                                    <div class="tab-pane fade">
+                                                        <div class="row">
+                                                            <div class="col-12 col-sm-6 col-md-4">
+                                                                <figure>
+                                                                    <p><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 150px; display: block; margin-left: auto; margin-right: auto;"></p>
+                                                                </figure>
+                                                            </div>
+                                                            <div class="col-12 col-sm-6 col-md-8">
+                                                                <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Calculated mechanical advantage</p>
+                                                                <p><i class="fa fa-check" aria-hidden="true"></i>&nbsp;Reasonable mechanical advantage</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                -->
+                <h2>How did you do?</h2>
+                <p>If you got 4 out of 4, you're ready to move on. If not, go back and review this section.</p>
+
+
+
+                <hr>
+                <h1>Lesson Complete!</h1>
+                <p><strong>Click an image</strong> to be directed to a lesson.&nbsp;</p>
+                <div class="sdf-container sdf-5col">
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10550">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/icons/1.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Introduction to Mechanical Advantage</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10619">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/icons/2.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Levers</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10640">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/icons/3.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Inclined Planes, Wedges &amp; Screws</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10647">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/icons/4.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Wheels &amp; Axles</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10648">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/icons/5.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Pulleys</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <br />
+                <!--<p>Click the blue button for the next lesson.</p>-->
+                <p>Click here for the <a href="/d2l/le/lessons/10563/topics/10651" target="_top" rel="noopener"><strong>Module Quiz</strong></a> or click the blue button for the next lesson.</p>
+                <!--<p>Click here for the <a href="/d2l/le/lessons/10177/topics/9536" target="_top" rel="noopener"><strong>Module Quiz</strong></a> or click the blue button for the next lesson.</p>-->
+                <br>
+                <p><a href="/d2l/le/lessons/10563/topics/10640" type="button" class="btn btn-secondary" target="_top">Next Lesson</a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p><img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo"></p>
+                </footer>
+            </div>
+        </div>
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/flickity.pkgd.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/fullscreen.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        </p>
+        <!-- Template JavaScript -->
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.js"></script>
+            <script>
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangle'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageTriangle.json"
+                });
+
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangleLeverArm'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageTriangleLeverArm.json"
+                });
+
+                var problemOneStepOneanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemOneStepOne'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemOneStepOne.json"
+                });
+
+                var eEqualsITimesRanimation = lottie.loadAnimation({
+                    container: document.getElementById('eEqualsITimesR'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/eEqualsITimesR.json"
+                });
+
+                var problemOneStepThreeanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemOneStepThree'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemOneStepThree.json"
+                });
+
+                var problemTwoStepOneanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemTwoStepOne'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemTwoStepOne.json"
+                });
+
+                var rEqualsEOverIanimation = lottie.loadAnimation({
+                    container: document.getElementById('rEqualsEOverI'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/rEqualsEOverI.json"
+                });
+
+                var problemTwoStepThreeanimation = lottie.loadAnimation({
+                    container: document.getElementById('problemTwoStepThree'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/6735-BYSSCI12021/lotties/problemTwoStepThree.json"
+                });
+            </script>
+        </p>
+        <p>
+            <script>
+                $(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+            <script>
+                // === Fixed values for beam and arms ===
+                const beamTipMargin = 16;
+                const beamY = 150;
+                const beamHeight = 12;
+                const pxPerInch = 10;
+
+                const leverVisual = document.getElementById('leverVisual');
+                const beam = document.getElementById('beam');
+                const fulcrum = document.getElementById('fulcrum');
+                const effortArrow = document.getElementById('effortArrow');
+                const loadArrow = document.getElementById('loadArrow');
+                const statsDisplay = document.getElementById('statsDisplay');
+                const slider = document.getElementById('fulcrumSlider');
+                const effortMassSlider = document.getElementById('effortMassSlider');
+                const loadMassSlider = document.getElementById('loadMassSlider');
+                const effortLabel = document.getElementById('effortLabel');
+                const loadLabel = document.getElementById('loadLabel');
+                const armA = document.getElementById('armA');
+                const armB = document.getElementById('armB');
+
+                // "Ground" = bottom of fulcrum
+                const fulcrumTop = 147,
+                    fulcrumSvgBase = 105,
+                    groundY = fulcrumTop + fulcrumSvgBase;
+
+                // We only update these on resize or load
+                let effortFixedX = 0,
+                    loadFixedX = 0,
+                    beamLength = 0,
+                    beamLeft = 0;
+
+                function updateBeamAnchors() {
+                    const leverRect = leverVisual.getBoundingClientRect();
+                    const beamRect = beam.getBoundingClientRect();
+                    beamLeft = beamRect.left - leverRect.left;
+                    beamLength = beamRect.width;
+                    effortFixedX = beamLeft + beamTipMargin;
+                    loadFixedX = beamLeft + beamLength - beamTipMargin;
+                    slider.min = beamTipMargin;
+                    slider.max = beamLength - beamTipMargin;
+                    // Only set default if untouched
+                    if (!slider.dataset.touched) {
+                        slider.value = Math.round((parseInt(slider.min) + parseInt(slider.max)) / 2);
+                    }
+                }
+
+                function rotatePoint(x, y, cx, cy, angleDeg) {
+                    const angle = angleDeg * Math.PI / 180;
+                    const dx = x - cx;
+                    const dy = y - cy;
+                    const rx = cx + dx * Math.cos(angle) - dy * Math.sin(angle);
+                    const ry = cy + dx * Math.sin(angle) + dy * Math.cos(angle);
+                    return [rx, ry];
+                }
+
+                function updateLever() {
+                    const fulcrumRel = Number(slider.value);
+                    const fulcrumX = beamLeft + fulcrumRel;
+                    const massEffort = Number(effortMassSlider.value);
+                    const massLoad = Number(loadMassSlider.value);
+
+                    // Use only fixed, parent-relative endpoints for arm lengths
+                    const armALength = Math.abs(fulcrumX - effortFixedX);
+
+                    (armALength / pxPerInch).toFixed(1)
+                    const armAStartX = Math.min(effortFixedX, fulcrumX);
+                    const armBLength = Math.abs(loadFixedX - fulcrumX);
+                    const armBStartX = Math.min(fulcrumX, loadFixedX);
+
+                    // Draw horizontal arms (fixed, always underneath beam)
+                    armA.innerHTML = `
+                <svg width="${armALength}" height="40"
+                     style="position:absolute;left:${armAStartX}px;top:${groundY}px;overflow:visible;">
+                    <defs>
+                        <marker id="arrowA" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L6,3 z" fill="#d88"/>
+                        </marker>
+                    </defs>
+                    <line x1="0" y1="10" x2="${armALength}" y2="10" stroke="#d88" stroke-width="3"
+                        marker-end="url(#arrowA)"/>
+                    <text x="${armALength/2}" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#d88">
+                        Effort Arm (ED)
+                    </text>
+                </svg>
+            `;
+                    armB.innerHTML = `
+                <svg width="${armBLength}" height="40"
+                     style="position:absolute;left:${armBStartX}px;top:${groundY}px;overflow:visible;">
+                    <defs>
+                        <marker id="arrowB" markerWidth="6" markerHeight="6" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M6,0 L6,6 L0,3 z" fill="#4a8"/>
+                        </marker>
+                    </defs>
+                    <line x1="0" y1="10" x2="${armBLength}" y2="10" stroke="#4a8" stroke-width="3"
+                        marker-start="url(#arrowB)"/>
+                    <text x="${armBLength/2}" y="32" text-anchor="middle" font-size="15" font-weight="bold" fill="#4a8">
+                        Load Arm (RD)
+                    </text>
+                </svg>
+            `;
+
+                    // For stats and MA
+                    const displayEffort = Math.round(armALength / pxPerInch);
+                    const displayLoad = Math.round(armBLength / pxPerInch);
+                    const mechanicalAdvantage = displayEffort / displayLoad;
+                    const loadLifted = mechanicalAdvantage * massEffort;
+
+                    // --- ROTATE THE BEAM and FORCE ARROWS ---
+                    // We want the force arrows and beam to be visually correct, as before:
+                    const beamMidY = beamY + beamHeight / 2;
+                    // For rotation, use actual arm lengths for torques:
+                    const torqueEffort = massEffort * Math.round(armALength / pxPerInch);
+                    const torqueLoad = massLoad * Math.round(armBLength / pxPerInch);
+                    let angle = 0;
+                    const maxAngle = 35;
+
+
+
+                    if (torqueEffort !== torqueLoad) {
+                        let desiredAngle = Math.atan2(torqueLoad - torqueEffort, beamLength * 2) * 140;
+                        desiredAngle = Math.max(Math.min(desiredAngle, maxAngle), -maxAngle);
+
+                        function getTipY(endX, atAngle) {
+                            return rotatePoint(endX, beamMidY, fulcrumX, beamMidY, atAngle)[1] + 6;
+                        }
+                        let testAngle = desiredAngle;
+                        let leftY = getTipY(effortFixedX, testAngle);
+                        let rightY = getTipY(loadFixedX, testAngle);
+                        while (leftY > groundY && testAngle < 0) {
+                            testAngle += 0.2;
+                            leftY = getTipY(effortFixedX, testAngle);
+                        }
+                        while (rightY > groundY && testAngle > 0) {
+                            testAngle -= 0.2;
+                            rightY = getTipY(loadFixedX, testAngle);
+                        }
+                        angle = testAngle;
+                    }
+                    // Rotate beam
+                    beam.style.setProperty('--fulcrum-pos', `${fulcrumRel}px`);
+                    beam.style.transform = `rotate(${angle}deg)`;
+                    // Move fulcrum triangle
+                    fulcrum.style.left = `calc(${fulcrumX}px - 60px)`;
+
+                    // Rotate arrows (attach them to rotated beam visually)
+                    const [effortEndX, effortEndY] = rotatePoint(effortFixedX, beamMidY, fulcrumX, beamMidY, angle);
+                    const [loadEndX, loadEndY] = rotatePoint(loadFixedX, beamMidY, fulcrumX, beamMidY, angle);
+                    const effortSitY = effortEndY + 6;
+                    const loadSitY = loadEndY + 6;
+                    effortArrow.style.left = `${effortEndX - 20}px`;
+                    effortArrow.style.top = `${effortSitY - 70}px`;
+                    loadArrow.style.left = `${loadEndX - 20}px`;
+                    loadArrow.style.top = `${loadSitY - 70}px`;
+                    effortLabel.innerHTML = `Effort<br><span style="font-weight:400; font-size:0.95em;">${massEffort} lbs</span>`;
+                    loadLabel.innerHTML = `Load<br><span style="font-weight:400; font-size:0.95em;">${massLoad} lbs</span>`;
+
+                    statsDisplay.innerHTML = `
+                <div>
+                    <b>Effort Arm Length (ED):</b> ${displayEffort} inches &nbsp; &nbsp;
+                    <b>Load Arm Length (RD):</b> ${displayLoad} inches
+                </div>
+                <div>
+                    <b>Mechanical Advantage (MA):</b> ${mechanicalAdvantage.toFixed(3)} &nbsp; | &nbsp;
+                    <b>Load lifted for Effort:</b> ${loadLifted.toFixed(1)} lbs
+                </div>
+                <div style="margin-top:6px;">
+                    <span style="font-size:0.96em; color:#788;">
+                        Try moving the fulcrum or changing the effort and load values!
+                    </span>
+                </div>
+            `;
+                }
+
+                // --- Event listeners ---
+                slider.addEventListener('input', function() {
+                    slider.dataset.touched = true;
+                    updateLever();
+                });
+                effortMassSlider.addEventListener('input', updateLever);
+                loadMassSlider.addEventListener('input', updateLever);
+                window.addEventListener('resize', function() {
+                    slider.dataset.touched = '';
+                    updateBeamAnchors();
+                    updateLever();
+                });
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    updateBeamAnchors();
+                    updateLever();
+                });
+            </script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+            <!-- Start of skillplan Zendesk Widget script -->
+            <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28773c90-16a6-4f5b-9d96-a69bfcf7a0c0"></script>
+            <!-- End of skillplan Zendesk Widget script -->
+        </p>
+
+    </div>
+</body>
+
+</html>

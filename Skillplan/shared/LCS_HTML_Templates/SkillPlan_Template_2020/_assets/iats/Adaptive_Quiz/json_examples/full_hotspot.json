@@ -1,0 +1,57 @@
+{
+  "activityName": "Hot Spot Activity Template",
+  "headingLevel": 1,
+  "randomize": true,
+  "showScenes": "1",
+  "visible": true,  
+  "visibleStyle": {
+    "colour": "#F902AB",
+    "opacity": "25%",
+    "stroke": false,
+    "strokeColour": "#FF0000",
+    "strokeWidth": "2"
+  },
+  "highlight": false,
+  "highlightStyle": {
+    "colour": "#FFFFFF",
+    "opacity": "50%",
+    "stroke": true,
+    "strokeColour": "#00FFFF",
+    "strokeWidth": "5"
+  },
+  "preActivityHtml": "Lorem ipsum dolor sit amet...<br><img src=\"image.png\">",
+  "postActivityHtml": "<h2 class=\"classic\"></h2><p>Lorem</p>",
+  "scenes": [
+    {
+      "sceneId": 2311,
+      "sceneName": "The Beach",
+      "instructions": "There are several shapes on the beach, select each one to learn something different!",
+      "background": {
+        "src": "img/bg-beach.jpg",
+        "alt": "A beach just after a sunset.",
+        "imgWidth": "1024",
+        "imgHeight": "576"
+      },
+      "hotSpots": [
+        {
+          "id": 1234,
+          "activityId": 9823,
+          "popupName": "My little popup.",
+          "desc": "A circle on the beach.",
+          "shapeType": "circle",
+          "xPos": "500",
+          "yPos": "200",
+          "radius": "100"
+				},
+        {
+          "id": 1235,
+          "activityId": 9829,
+          "popupName": "My other little popup.",
+          "shapeType": "custom",
+          "desc": "A star on the beach.",
+          "coords": "304,438,275,513,370,457,423,512,414,419,483,376,396,359,380,288,323,373,255,379"
+				}
+			]
+    }
+	]
+}

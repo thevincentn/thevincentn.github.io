@@ -1,0 +1,304 @@
+/*================================================================
+  Filename: 2ColStickyScroll-22.css
+
+  Style Sheet for ARC Web Pages
+
+  Date    Description                                          By
+  -------|----------------------------------------------------|---
+  14Nov13 First release with Leaf Corcoran's Sticky-kit nav    ARC
+  26Mar14 Logo z-index=2 to sit above the sticky nav panel     ARC
+  18May14 Use accordion style menu                             ARC
+  19May14 Add transition effects                               ARC
+  22May14 Add height to menu input button to stop inheritance  ARC
+  26May14 Made accordion specifiers prefixed with #sidenav     ARC
+  09Jan15 Assume support for linear-gradient                   ARC
+  10Jan15 Reduced height of items, menus getting too long      ARC
+  03Jan16 Use stickyfill.js                                    ARC
+  15Jan16 De-clutter and lighten                               ARC
+  05Mar16 bugfix: header missing border-bottom
+          Use header to set min page width not content margin  ARC
+  24Apr17 Use browser support for sticky no javascript         ARC
+  10Feb21 Add text-align:left to sideNav                       ARC
+  09Jul21 Add text-align:left to outer (needed if console-68)  ARC
+  05Jul24 Use display grid instead of floats                   ARC
+  01Jan25 no default padding:0, its breaks jqmath formatting   ARC
+  02Jan23 Tweak content to align userManual settings           ARC 
+ =================================================================*/
+
+/*=================================
+  Layout
+ =================================*/
+
+  body {
+    background-color: #d0d0d0;
+    margin: 0;
+    border: 0;
+    font-family: Arial,Helvetica,sans-serif;
+  }
+
+  .outer {
+    display: grid;
+    grid-template-rows: 80px 100%;    
+    position: relative;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #page {
+    display: grid;
+    grid-template-columns: 200px 800px;
+    position: relative;
+    width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+/*=================================
+  Navigation Stuff
+ =================================*/
+
+  #sideNavBkg {
+    position: relative;
+    background-color:#687888;  /* sidebar color for sidebar shorter than content */
+    bottom: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #sideNav {
+    position: sticky;
+    top: 0px;
+    width: 200px;
+    font-family: Arial, Helvetica;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: left;
+    padding: 20px 0 10px 0;
+    margin: 0 0 10px 0;
+    background-color: transparent;
+  }
+
+  /*==== Accordion menu ====*/
+
+  #sideNav ul {
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  	margin: 0;
+  }
+
+  #sideNav ul li input {
+   	border-top: 1px solid #687078;
+   	border-left: 1px solid #586068;
+   	border-right: 1px solid #505e6a;
+  	border-bottom: 1px solid #43474d;
+    border-radius: 2px;
+    font-weight: bold;
+  	background: #788898; /* fallback colour */
+  	background: linear-gradient(to bottom right, #8898a8, #586878);
+    padding: 5px 0px 5px 5px;
+    width: 200px;
+    height: 33px;
+    color: #f8f8f8;
+    text-align: left;
+    margin: 0;
+  }
+
+  #sideNav ul li input:hover {
+  	background: #98acc4;
+  	background: linear-gradient(to bottom right, #b0c4de, #8094ae);
+    text-shadow: none;
+    color: #444;
+  }
+
+  #sideNav ul li.sectOpen input {
+    background: #a8bcd4;   /* #98acc4; */
+  	text-shadow: 0 0 1px #fff;
+    color: #444;
+  }
+
+  #sideNav ul li.sectOpen ul.options {
+  	height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  #sideNav ul li.sectClosed ul.options {
+  	max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  #sideNav ul ul {
+    width: 200px;
+  }
+
+  #sideNav ul ul li a {
+  	display: block;
+  	padding: 6px 5px;
+    color: #333;
+    font-weight: bold;
+  	text-decoration: none;
+    border-left: 1px solid #888888;
+    border-right: 1px solid #888888;
+    border-bottom: 1px solid #888888;
+    background: #f8fafc;
+  }
+
+  #sideNav ul ul li a:hover {
+  	color: #000000;
+    background: #d0dcec;
+  }
+
+  /*================================
+    User Guide menu stuff
+   ================================*/
+
+   #sideNav ul li.itemClosed input.item {
+    background: #a8bcd4; 
+    text-shadow: 0;
+    color: #000;
+    border-top: 0; 
+  }
+
+  #sideNav ul li.itemOpen input.item {
+    background: #a8bcd4; 
+    border-top: 0;
+    border-bottom: 0; 
+    color: #444;
+  }
+
+  #sideNav ul li.itemOpen ul.options {
+  	height: auto;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    border-top: 1px solid #888;
+  }
+
+  #sideNav ul li.itemClosed ul.options {
+  	max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  #sideNav ul li.itemOpen li a.live {
+    color: #444;
+  }
+
+  /*================================
+    Content stuff
+   ================================*/
+
+  #content {
+    position: relative;
+    width: 740px;
+    min-height: 100vh;
+    margin: 20px 0px 10px 20px;
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  #content .h1Bkg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: #687888;
+  	background: linear-gradient(to bottom right, #78889c, #48586c);
+  }
+
+  /*================================
+    Header Stuff
+   ================================*/
+
+  .header {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    padding-right: 20px;
+    height: 100%;
+    border-bottom: 1px solid #58606d;
+  }
+
+  #headerBkg {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #58606d;
+    width: 100%;
+    height: 100%;
+  }
+
+  #logo {
+    position: absolute;
+    top: 12px;
+    left: 25px;
+    width: 57px;
+    height: 53px;
+    background-color: #58606d;
+    border: 2px solid #cccccc;
+    z-index: 2;   /* above sticky scroll nav */
+  }
+
+  #logoHolder {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    overflow:hidden;
+    z-index:2;
+    background-color: #687888;
+    border-bottom:1px solid #d0d0d0;
+  }
+
+  #logo a.logoText {
+    display: block;
+    width: 51px;
+    height: 42px;
+    font-family: Verdana, Arial;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 19px;
+    letter-spacing: 0;
+    text-align: center;
+    background-color: #f2f4f6;
+    color: #687288;
+    margin: 3px;
+    padding: 3px 0px 2px 0px;
+    text-decoration: none;
+  }
+
+  p.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #687288;
+    font-family: "Trebuchet MS",Verdana,Arial;
+    font-size: 50px;
+    letter-spacing: 7px;
+    line-height: 1.5em;
+    margin: 4px 0 0 182px;
+    padding: 0;
+  }
+
+  p.inverse {
+    color: #cccccc;
+  }
+
+  p.hdrBlurb {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    color: #687288;
+    font-family: Verdana;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }

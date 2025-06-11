@@ -1,0 +1,135 @@
+{
+	"quizHeading": "<h4>The Adaptive Quiz 🚀</h4>",
+	"feedbackType": "continuous",
+  "showFeedbackReport": true,  
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": false,
+	"postQuizHtml": "<h3>You finished the last level!</h3><p>Well done. I'd like to congratulate you by providing this fun embedded video.</p><div class='center-feedback'><iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>",
+	"colouredFeedback": false,
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You correctly answer any 5 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "<h2>Multiple Choice Questions ⚪️⚫️⚪️⚪️</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 2,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": false,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "True or false? Moons revolve around planets.",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct, moons revolve around planets.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Moons DO revolve around planets!"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Which planet is known as the <em>\"red planet\"</em>?",
+					"hintHtml": "It's one of our neighbours...",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Mars",
+							"feedback": "Correct! Mars is red due to iron rusting within its dust and dirt.",
+							"score": 1
+						},
+						{
+							"optionText": "Venus",
+							"feedback": "It's not Venus. Venus does have a reddish-brown surface, but not nearly as red as Mars'. Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Mercury",
+							"feedback": "Mercury is grey! Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "Neptune is a bright blue. Mars is red due to iron rusting within its dust and dirt."
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolName": "<h2>Multi-select Questions ☑️☑️☑️☑️</h2>",
+			"poolId": 2,
+			"poolLevel": 2,
+			"upgradePoolId": false,
+			"downgradePoolId": 2,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 3,
+			"numRightBeforeUpgrade": 1,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": false,
+			"questions": [
+				{
+					"questionType": "multi-select",
+					"questionHtml": "<p>Place a checkmark beside <strong>gas giant</strong> planets.</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<b>Correct!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+					"feedbackForImperfect": "<b>Not quite!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+					"options": [
+						{
+							"optionText": "Venus"
+						},
+						{
+							"optionText": "Jupiter",
+							"score": 1
+						},
+						{
+							"optionText": "Saturn",
+							"score": 1
+						},
+						{
+							"optionText": "Titan"
+						},
+						{
+							"optionText": "Uranus",
+							"score": 1
+						},
+						{
+							"optionText": "Neptune",
+							"score": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

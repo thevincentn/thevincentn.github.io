@@ -1,0 +1,26 @@
+{
+  "questionType": "match",
+  "questionHtml": "Match the terrestrial planets with the number of moons they have.",
+  "hintHtml": "Some planets don't have moons.",
+  "randomizeOptions": true,
+  "feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with  one. Mercury and Venus don't have any moons! 👍",
+  "feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, hile Earth has one and Mars has two. Good try. 👍",
+  "options": [
+    {
+      "optionText": "Earth",
+      "matchingText": "One moon"
+    },
+    {
+      "optionText": "Mercury",
+      "matchingText": "No moons"
+    },
+    {
+      "optionText": "Mars",
+      "matchingText": "Two moons"
+    },
+    {
+      "optionText": "Venus",
+      "matchingText": "No moons"
+    }
+  ]
+}

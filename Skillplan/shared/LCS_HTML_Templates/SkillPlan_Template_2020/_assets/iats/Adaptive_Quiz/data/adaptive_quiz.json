@@ -1,0 +1,613 @@
+{
+	"quizHeading": "<h4>The Adaptive Quiz 🚀</h4>",
+	"feedbackType": "continuous",
+  "showFeedbackReport": true,  
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<h3>Ah, the classic pre-activity page</h3><ul style='font-size: 1.3em'><li>Introduction</li><li>Use HTML</li><li style='color: darkblue'><i>Style the way <b>you</b> like</i></li></ul><p style='text-align: center'>GOOD LUCK!</p>",
+	"postQuizHtml": "<h3>You finished the last level!</h3><p>Well done. I'd like to congratulate you by providing this fun embedded video.</p><div class='center-feedback'><iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><br><h3>End page replace strings!</h3><ul><li>Your level at the end: #{endingLevel}</li><li>Highest level achieved: #{highestLevelAchieved}</li></ul>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You correctly answer any 5 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "<h2>Multiple Choice Questions ⚪️⚫️⚪️⚪️</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 2,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": false,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "True or false? Moons revolve around planets.",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct, moons revolve around planets.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Moons DO revolve around planets!"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Which planet is known as the <em>\"red planet\"</em>?",
+					"hintHtml": "It's one of our neighbours...",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Mars",
+							"feedback": "Correct! Mars is red due to iron rusting within its dust and dirt.",
+							"score": 1
+						},
+						{
+							"optionText": "Venus",
+							"feedback": "It's not Venus. Venus does have a reddish-brown surface, but not nearly as red as Mars'. Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Mercury",
+							"feedback": "Mercury is grey! Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "Neptune is a bright blue. Mars is red due to iron rusting within its dust and dirt."
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolName": "<h2>Multi-select Questions ☑️☑️☑️☑️</h2>",
+			"poolId": 2,
+			"poolLevel": 2,
+			"upgradePoolId": 3,
+			"downgradePoolId": 1,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 3,
+			"numRightBeforeUpgrade": 1,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": false,
+			"questions": [
+				{
+					"questionType": "multi-select",
+					"questionHtml": "<p>Place a checkmark beside <strong>gas giant</strong> planets.</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<b>Correct!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+					"feedbackForImperfect": "<b>Not quite!</b> The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants. Titan isn't a planet, it's a moon!<br><br><img src='../sample_quizzes/img/gas_planets_2.jpg'>",
+					"options": [
+						{
+							"optionText": "Venus"
+						},
+						{
+							"optionText": "Jupiter",
+							"score": 1
+						},
+						{
+							"optionText": "Saturn",
+							"score": 1
+						},
+						{
+							"optionText": "Titan"
+						},
+						{
+							"optionText": "Uranus",
+							"score": 1
+						},
+						{
+							"optionText": "Neptune",
+							"score": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 3,
+			"poolName": "<h2>Matching, Ordering, and Categorization 1️⃣🅰</h2>",
+			"poolLevel": 3,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 4,
+			"downgradePoolId": 2,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "ord",
+					"questionHtml": "Rank the below planets in order of their size, starting with the smallest.",
+					"hintHtml": "Jupiter is the biggest planet! So it should be number 4.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<h3>Correct!</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"../sample_quizzes/img/gas_planets.jpg\"  style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"feedbackForImperfect": "<h3>That's the wrong order...</h3><p>The order, for smallest to largest, is 1. Uranus, 2. Neptune, 3. Saturn, 4. Jupiter. Jupiter is the biggest!</p><img src=\"../sample_quizzes/img/gas_planets.jpg\" style=\"max-width: 100%\" alt=\"The gas giants to scale. The order of their sizes from smallest to biggest is: Uranus, Neptune, Saturn, and Jupiter.\">",
+					"options": [
+						{
+							"optionText": "Jupiter",
+							"matchingText": 4
+						},
+						{
+							"optionText": "Saturn",
+							"matchingText": 3
+						},
+						{
+							"optionText": "Uranus",
+							"matchingText": 1
+						},
+						{
+							"optionText": "Neptune",
+							"matchingText": 2
+						}
+					]
+				},
+				{
+					"questionType": "match",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 4,
+			"poolName": "<h2>🔭 Fill in the 🅱____</h2>",
+			"poolLevel": 4,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 6,
+			"downgradePoolId": 4,
+			"feedbackOnUpgradeHtml": "<div class='center-feedback'>For the next question pool, how about you check out the mobile view? 📱</div>",
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": false,
+			"questions": [
+				{
+					"questionType": "fitb",
+					"questionHtml": "The milky way is a #{blank} galaxy.",
+					"hintHtml": "It's six letters. 🌌",
+					"caseSensitive": false,
+					"feedbackForPerfect": "Perfect! It is a 'spiral' galaxy, or a 'barred spiral' galaxy if you wanted to be more specific!",
+					"feedbackForImperfect": "Hmm, that isn't right. It is a 'spiral' galaxy, or a 'barred spiral' if you wanted to be more specific!<br><br>While we're here, I wanted to demonstrate some replace strings.<br><ul><li>Current Question Pool Name: #{currentPool}</li><li>Upgrade Pool: #{upgradePool}</li><li>Downgrade Pool: #{downgradePool}</li><li>Number of correct answers left to upgrade: #{numRemainingToUpgrade}</li><li>Number of incorrect answers left before you downgrade: #{numRemainingToDowngrade}</li></ul>",
+					"blankSize": 10,
+					"blankMaxLength": 20,
+					"answers": [
+						"spiral", "barred spiral"
+					]
+				},
+				{
+					"questionType": "fitb",
+					"questionHtml": "The symbol for the speed of light is:<br>#{blank}",
+					"hintHtml": "<p>It's a letter...</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"planning_files/sample_images/idea.jpg\" alt=\"\" class=\"mb-2\">",
+					"caseSensitive": false,
+					"feedbackForPerfect": "Yes, it is <strong><em>c</em></strong>",
+					"feedbackForImperfect": "Actually, it is <strong><em>c</em></strong>",
+					"blankSize": 4,
+					"blankMaxLength": 4,
+					"answers": [
+						"c"
+					]
+				}
+			]
+		},
+		{
+			"poolId": 6,
+			"poolName": "<h2>Level 1<br>⬛⬜⬜⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 7,
+			"downgradePoolId": 4,
+			"feedbackOnUpgradeHtml": "<div class='center-feedback'>Great work! Let's advance to Level 2! ⬆️</div>",
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "How many planets does our solar system have?",
+					"hintHtml": "One was demoted to \"dwarf planet\" recently!",
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "7",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+						},
+						{
+							"optionText": "8",
+							"feedback": "<p>Yes! There are <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+							"score": 1
+        		},
+						{
+							"optionText": "9",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		},
+						{
+							"optionText": "None of the above",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		}
+					]
+				},
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "What year was the first moon landing?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "1967",
+							"feedback": "No, the first manned mission to the moon took place in 1969."
+						},
+						{
+							"optionText": "1969",
+							"feedback": "Yes! No the first manned mission to the moon took place in 1969.",
+							"score": 1
+        		},
+						{
+							"optionText": "1971",
+							"feedback": "No, the first manned mission to the moon took place in 1969."
+        		},
+						{
+							"optionText": "We didn't land on the moon",
+							"feedback": "🤔"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 7,
+			"poolName": "<h2>Level 2<br>⬛⬛⬜⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 8,
+			"downgradePoolId": 6,
+			"feedbackOnUpgradeHtml": false,
+			"feedbackOnDowngradeHtml": "<div class='center-feedback'>Dang! Back to Level 1 you go! ⬇️</div>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "mc",
+					"questionHtml": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"../sample_quizzes/img/moon_large.jpg\" alt=\"An image of Saturn's largest moon.\" class=\"mb-2\"><p>The largest moon of Saturn has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "<p>That's correct!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"../sample_quizzes/img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"../sample_quizzes/img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"../sample_quizzes/img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"../sample_quizzes/img/saturn_titan.jpg\" alt=\"An image of the moon Titan.\" class=\"mb-2\">"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 8,
+			"poolName": "<h2>Level 3<br>⬛⬛⬛⬜</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 9,
+			"downgradePoolId": 7,
+			"feedbackOnUpgradeHtml": "<h3>⚠️ Warning! ⚠️</h3><p>If you get ONE QUESTION WRONG in the next level, you will be returning to <strong style='color:orange;'>Level 1</strong></p>",
+			"feedbackOnDowngradeHtml": false,
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vacuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum."
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 9,
+			"poolName": "<h2>Level 4<br>⬛⬛⬛⬛</h2>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 2,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": 10,
+			"downgradePoolId": 8,
+			"feedbackOnUpgradeHtml": "<h3>WELL DONE!</h3><div class='center-feedback'><img src='https://cdn.pixabay.com/photo/2012/11/28/11/19/astronaut-67710_1280.jpg' style='max-width: 100%; max-height: 100%; margin-top: 12px;'></div>",
+			"feedbackOnDowngradeHtml": "<h3>Oh no! 😔</h3><div class='center-feedback'><p>Back to level 1!</p></div>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "What is the estimated age of the Milky Way?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "13.51 billion years",
+							"feedback": "Yes! How did you know that?",
+							"score": 1
+						},
+						{
+							"optionText": "13.1 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		},
+						{
+							"optionText": "512.3 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		},
+						{
+							"optionText": "42.72 million years",
+							"feedback": "Actually, it is 13.51 billion years!"
+        		}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 10,
+			"poolName": "<h1>Adaptive Quiz Quiz 📝</h1>",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 3,
+			"numRightBeforeUpgrade": 8,
+			"upgradePoolId": false,
+			"downgradePoolId": 9,
+			"feedbackOnUpgradeHtml": "<div class='center-feedback'><h3>Great work!</h3></div>",
+			"feedbackOnDowngradeHtml": "<div class='center-feedback'><h3>Oh no! 😔</h3><p>Back to Level 4!</p></div>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "tf",
+					"questionHtml": "The Adaptive Quiz can report to a grade item.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "False",
+							"feedback": "Yeah, not yet. But maybe in the future!👀",
+							"score": 1
+						},
+						{
+							"optionText": "True",
+							"feedback": "Actually, not yet. But maybe in the future!👀"
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "Where can I find more info on this adaptive quiz tool?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Confluence 📃",
+							"feedback": "Correct! Search for Adaptive Quiz in Confluence and you should find the page pretty easily.",
+							"score": 1
+						},
+						{
+							"optionText": "Wikipedia 🌐",
+							"feedback": "Actually, Confluence is the place to go here."
+        		},
+						{
+							"optionText": "Hell's Kitchen 🍳",
+							"feedback": "Actually, Confluence is the place to go here."
+        		},
+						{
+							"optionText": "Moe's Tavern 🍺",
+							"feedback": "Actually, Confluence is the place to go here."
+        		},
+						{
+							"optionText": "Costco 🌭",
+							"feedback": "Actually, Confluence is the place to go here."
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "You have can as many question pools as you like.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct!",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually, you can have as many as you want!"
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "<strong>Only one</strong> adaptive quiz is allowed on an HTML page. Other adaptive quizzes would need to be in an iframe.",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! You can have as many as you want.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually, you can have as many as you want!"
+        		}
+					]
+				},
+				{
+					"questionType": "ms",
+					"questionHtml": "Which of the following features can be toggled on and off?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"feedbackForPerfect": "<b>Correct!</b> They can all be toggled, except for randomizing the order of Question Pools.",
+					"feedbackForImperfect": "<b>Not quite!</b> They can all be toggled, except for randomizing the order of Question Pools.",
+					"options": [
+						{
+							"optionText": "Progress bar",
+							"score": 1
+						},
+						{
+							"optionText": "Strike zone",
+							"score": 1
+						},
+						{
+							"optionText": "Randomizing question order",
+							"score": 1
+						},
+						{
+							"optionText": "Randomizing the order of a question's options",
+							"score": 1
+						},
+						{
+							"optionText": "Repeat questions you got wrong",
+							"score": 1
+						},
+						{
+							"optionText": "Repeat questions you got right",
+							"score": 1
+						},
+						{
+							"optionText": "Randomizing the order of question pools"
+						}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "How many correct answers does it take to upgrade to the next question pool?",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "2",
+							"feedback": "There is no single number. You can choose however many questions you want!"
+						},
+						{
+							"optionText": "3",
+							"feedback": "There is no single number. You can choose however many questions you want!"
+						},
+						{
+							"optionText": "4",
+							"feedback": "There is no single number. You can choose however many questions you want!"
+						},
+						{
+							"optionText": "There is no single number. You can choose however many questions you want!",
+							"feedback": "Correct!",
+							"score": 1
+						}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Does the adaptive quiz support language terms?",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "Oui!",
+							"feedback": "<img src='../sample_quizzes/img/lang.png' style='max-width: 100%'>",
+							"score": 1
+						},
+						{
+							"optionText": "Sacré bleu! Zut alors! Mon Dieu! Non!",
+							"feedback": "<img src='../sample_quizzes/img/lang.png' style='max-width: 100%'>"
+						}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Is the adaptive quiz accessible?",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "Yes!",
+							"feedback": "Yes, it has all the appropriate aria attributes, keyboard controls, and was tested with a screenreader during development.",
+							"score": 1
+						},
+						{
+							"optionText": "No!",
+							"feedback": "It totally is!"
+						}
+					]
+				}
+			]
+		}
+	]
+}

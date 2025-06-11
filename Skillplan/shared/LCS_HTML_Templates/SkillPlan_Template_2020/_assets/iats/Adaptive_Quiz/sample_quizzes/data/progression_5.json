@@ -1,0 +1,86 @@
+{
+	"quizHeading": "<h1>Progression 5 💯</h1>",
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<p>Make it to the end of the quiz by answering all questions correctly.</p><p>Get two answers correct to advance to the next level.</p><p>In this quiz, the progress bar measures the OVERALL correct number of answers. If you get 4 correct, the quiz will end.</p>Also, the number of strikes similarly measures the OVERALL number of incorrect answers. If you get 3 wrong, the quiz will end.",
+	"postQuizHtml": "<iframe style=\"max-width: 100%\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><p>The quiz ended. Enjoy the above video. :)</p>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": false,
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 4,
+			"preQuizText": "You correctly answer any 4 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "Level 1",
+			"repeatWrong": false,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 20,
+			"numRightBeforeUpgrade": 20,
+			"upgradePoolId": 2,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": "<p>You are about to upgraded...</p>",
+			"feedbackOnDowngradeHtml": "<p>You are about to be downgraded...</p>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "True or false? Moons revolve around planets.",
+					"hintHtml": false,
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct, moons revolve around planets.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Moons DO revolve around planets!"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "Which planet is known as the <em>\"red planet\"</em>?",
+					"hintHtml": "It's one of our neighbours...",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Mars",
+							"feedback": "Correct! Mars is red due to iron rusting within its dust and dirt.",
+							"score": 1
+						},
+						{
+							"optionText": "Venus",
+							"feedback": "It's not Venus. Venus does have a reddish-brown surface, but not nearly as red as Mars'. Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Mercury",
+							"feedback": "Mercury is grey! Mars is red due to iron rusting within its dust and dirt."
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "Neptune is a bright blue. Mars is red due to iron rusting within its dust and dirt."
+        		}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,113 @@
+{
+	"quizHeading": "<h1>🔭 Post-quiz HTML testing 2</h1>",
+	"feedbackType": "continuous",
+	"showPoolName": true,
+	"showProgressBar": true,
+	"showStrikes": true,
+	"preQuizHtml": "<h2>Adaptive Quiz</h2><p>Watch this video by National Geographic, then begin the quiz!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/libKVRa01L8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe><p class=\"mt-4\">You'll need to answer three questions correctly in the first phase, and two in the second phase to mvoe on.</p><p class=\"mt-4\"><strong>GOOD LUCK!</strong></p>",
+	"postQuizHtml": "<h2>Well done.</h2><p>If you want to learn more about the galaxy, I recommend you check out this page on National Geographic's website:</p><p><a href=\"https://video.nationalgeographic.com/video/101-videos/00000161-d7ea-dcda-a37f-d7fe96d30000\" target=\"_blank\">Origins of the Universe 101</a></p>",
+	"colouredFeedback": true,
+	"endConditions": {
+		"preface": "This quiz will end if...",
+		"numQuestionsCorrectToEnd": {			
+			"enabled": false,
+			"limit": 4,
+			"preQuizText": "You correctly answer any 10 questions.",
+			"useForProgressBar": false
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You incorrectly answer any 10 questions.",
+			"useForStrikes": false
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": false,
+			"preQuizText": false
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "☀️ The Solar System",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 4,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 2,
+			"downgradePoolId": "END",
+			"feedbackOnUpgradeHtml": "<p>Great work! Now we're going to check out outer space... watch this video on galaxies before continuing to the next section!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+			"feedbackOnDowngradeHtml": "<p class=\"mb-5\">Dang! Review the Solar System 101 Video, then try again! Nice try though.</p> <img src=\"https://previews.123rf.com/images/vector2011/vector20111606/vector2011160600045/58662850-funny-drawing-of-a-sun-i-is-making-a-selfie-with-his-mobile.jpg\" style='max-width: 100%;'>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "How many planets does our solar system have?",
+					"hintHtml": "One was demoted to \"dwarf planet\" recently!",
+					"randomizeOptions": false,
+					"options": [
+						{
+							"optionText": "7",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+						},
+						{
+							"optionText": "8",
+							"feedback": "<p>Yes! There are <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>",
+							"score": 1
+        		},
+						{
+							"optionText": "9",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		},
+						{
+							"optionText": "None of the above",
+							"feedback": "<p>There are actually <strong>8 planets</strong>. Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune!</p><p>Pluto used to be classified as a planet, but is now considered a dwarf planet.</p><p>Here's that video again in case you wanted to check it out!</p><iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wsCedw3iBU0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen style=\"max-width: 100%; display: block; margin-left: auto; margin-right: auto\"></iframe>"
+        		}
+					]
+				},
+				{
+					"questionType": "mc",
+					"questionHtml": "<img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/moon_large.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\"><p>The largest moon in our solar system has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:</p>",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "<p>That's correct!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\">",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\">"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "<p>No, it's actually Titan!</p><img style='max-height: 250px; display: block; margin-left: auto; margin-right: auto' src=\"img/saturn_titan.jpg\" alt=\"An image of the solar systen's largest moon.\" class=\"mb-2\">"
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum."
+        		}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,3 @@
+Accessibility:
+- Use WCAG 1.2 guidelines
+--- e.g. more contrast, button colours

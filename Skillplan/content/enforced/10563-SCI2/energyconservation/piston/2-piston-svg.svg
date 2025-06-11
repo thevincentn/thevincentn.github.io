@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 700 300">
+  <!-- Generator: Adobe Illustrator 29.5.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 137)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: blue;
+      }
+
+      .st2 {
+        fill: #363636;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="st0" points="163 269.5 163 30.5 212 30.5 212 240.5 428 240.5 428 180.5 537 180.5 537 269.5 163 269.5"/>
+    <path d="M211.5,31v210h217v-60h108v88H163.5V31h48M212.5,30h-50v240h375v-90h-110v60h-215V30h0Z"/>
+  </g>
+  <g>
+    <polygon class="st1" points="163 269.5 163 145.2 212 145.2 212 240.5 428 240.5 428 225.7 537 225.7 537 269.5 163 269.5"/>
+    <path d="M211.5,145.7v95.3h217v-14.8h108v42.8H163.5v-123.3h48M212.5,144.7h-50v125.3h375v-44.8h-110v14.8h-215v-95.3h0Z"/>
+  </g>
+  <g>
+    <rect class="st2" x="163" y="129.7" width="49" height="14.5"/>
+    <path d="M211.5,130.2v13.5h-48v-13.5h48M212.5,129.2h-50v15.5h50v-15.5h0Z"/>
+  </g>
+  <g>
+    <rect class="st2" x="428.4" y="208.8" width="108.6" height="15.8"/>
+    <path d="M536.5,209.3v14.8h-107.6v-14.8h107.6M537.5,208.3h-109.6v16.8h109.6v-16.8h0Z"/>
+  </g>
+</svg>

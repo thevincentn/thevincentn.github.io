@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/flickity.css" media="screen">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/fullscreen.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/content/enforced/10511-SP2025/custom.css">
+
+    <style>
+        .lever-container {
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .controls {
+            margin: 24px 0 8px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        input[type=range] {
+            width: 100%;
+            min-width: 350px;
+            max-width: 700px;
+        }
+
+        #gearDemoCanvas {
+            width: 100vw;
+            height: 45vw;
+            min-height: 300px;
+            max-height: 550px;
+        }
+
+        .frac {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            letter-spacing: 0.001em;
+            text-align: center;
+        }
+
+        .frac>span {
+            display: block;
+            padding: 0.1em;
+        }
+
+        .frac span.bottom {
+            border-top: thin solid black;
+        }
+
+        .frac span.symbol {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="/content/enforced/10563-SCI2/simplemachines/beziergear/jqmath-0.4.3.css">
+
+    <!-- 'indexNested.js' defines the global 'var indexData' holding menu entries  -->
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/indexNested.js"></script>
+
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/gearUtils-09.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/jqmath-modern.js"></script>
+
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/Cango-29v04.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/CangoTextUtils-4v11.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/CangoAnimation-13v02.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/CangoAxes-10v06.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/CangoArrows-1v01.js"></script>
+    <script src="/content/enforced/10563-SCI2/simplemachines/beziergear/CangoZoomPan-3v00.js"></script>
+    <title>Module Introduction Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p><img src="/content/enforced/10563-SCI2/branding/lessonbanners/2.png" alt=""></p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Gears</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="offset-sm-1 col-sm-10">
+                <div class="row pt-3 pb-3 card mb-4 mx-auto">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Key Questions:</h3>
+                            <ul>
+                                <li>What are gears?</li>
+                                <li>What is the purpose of a gear train?</li>
+                                <li>How do gears move in a gear train?</li>
+                                <li>Why is gear ratio important?</li>
+                            </ul>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4 p-4"><img src="/content/enforced/10511-SP2025/questions.png" alt="" data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: scale-down; min-width: 175px; min-height: 175px; max-height: 250px;"></div>
+                    </div>
+                </div>
+
+                <h3>What Do You Think?</h3>
+                <p>Consider the questions below. Click on each card to learn the answers.</p>
+                <div class="flip-card-set row">
+
+                    <!-- Card 1 -->
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/content/enforced/10563-SCI2/simplemachines/gear/tf1.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4 style="text-align: center">True or False</h4>
+                                <p class="text-left">
+                                    When one gear rotates another, the other gear turns in the opposite direction.
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">True</h4>
+                                <p class="text-left">
+                                    If the driving gear rotates in a clockwise direction, the gear that is driven rotates in a counter-clockwise direction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/content/enforced/10563-SCI2/simplemachines/gear/tf2.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4 style="text-align: center">True or False</h4>
+                                <p class="text-left">
+                                    Smaller gears rotate more slowly than larger gears.
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">False</h4>
+                                <p class="text-left">
+                                    Small gears move more quickly because they don't need to rotate as far to make a complete rotation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+                <h1>Introduction</h1>
+
+                <p>A <strong>gear</strong> is a rotating mechanical component with evenly spaced <strong>teeth</strong> around its edge, designed to <a data-toggle="tooltip" data-placement="top" title="When the teeth of one gear fit into the gaps between the teeth of another gear, allowing them to interlock.">mesh</a> with other gears to transmit rotational motion and <a data-toggle="tooltip" data-placement="top" title="Rotational force">torque</a>. A system with two or more meshing gears is called a <strong>gear train</strong>. The smaller of the two gears is called the <strong>pinion</strong> and the larger one is simply called the gear.</p>
+
+                <p>The <strong>gear ratio</strong> compares the number of teeth between two gears, and describes the mechanical advantage. You can explore this relationship in the activity below.</p>
+
+                <p class="directive">Move the sliders to learn more.</p>
+
+
+                <div class="container lever-container p-5 pt-5">
+                    <h4 class="text-center">Gear Ratio = <span id="gearDemoRatioTeeth2"> 5</span>:<span id="gearDemoRatioTeeth1"> 1</span></h4>
+                    <h4 class="text-center">Mechanical Advantage: <span id="gearDemoMA"> 5</span></h4>
+
+                    <div class="row">
+                        <div class="mx-auto text-center col" id="gearDemoCanvas">
+                            <canvas class="mx-auto" id="cvs3"></canvas>
+                        </div>
+                    </div>
+                    <p class="text-center small">Source: <a href="https://www.arc.id.au/GearDrawing.html" target="_blank">Gear Drawing with Bézier Curves</a> | Dr. A. R. Collins </p>
+
+                    <div class="controls mt-4">
+                        <p>Number of Teeth in the Pinion:&nbsp;&nbsp;<strong><span id="teethValue1">10</span></strong></p>
+                        <input id="teeth1" type="range" min="5" max="50" value="10" oninput="updateCanvas()">
+
+                        <p>Number of Teeth in the Gear:&nbsp;&nbsp;<strong><span id="teethValue2">50</span></strong></p>
+                        <input id="teeth2" type="range" min="5" max="50" value="50" oninput="updateCanvas()">
+
+                        <!--
+                        
+                        
+                        <label for="xminslider">xminslider:</label>
+                        <input id="xminslider" type="range" min="-200" max="200" value="-178" oninput="updateCanvas()">
+                        <span id="xminslidervalue">-178</span>
+                        
+                        <label for="yminslider">yminslider:</label>
+                        <input id="yminslider" type="range" min="-200" max="200" value="-123" oninput="updateCanvas()">
+                        <span id="yminslidervalue">-123</span>
+                        
+                        <label for="xspanslider">xspan:</label>
+                        <input id="xspanslider" type="range" min="0" max="500" value="361" oninput="updateCanvas()">
+                        <span id="xspanslidervalue">361</span>
+-->
+                    </div>
+                    <div class="buttonHolder mt-5" style="margin-left:70%;grid-template-columns: 1fr 1fr;">
+                        <button type="button" onclick="consoleBtns3.f1()" class="buttonLink">PLAY</button>
+                        <button type="button" onclick="consoleBtns3.f2()" class="buttonLink">PAUSE</button>
+                    </div>
+                </div>
+                <br>
+                <h2>Transferring Motion &amp; Torque</h2>
+                <p>When one gear moves another in a gear train, we say it <strong>drives</strong> the other one and the force applied is the effort. The gear that gets driven will always turn in the opposite direction of the driving gear and is the resistence. In a two-gear system, the driving gear will either increase force or speed, depending on whether the pinion or the larger gear is driving.
+
+                </p>
+
+                <p class="directive">Click on each to learn more.</p>
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Pinion Drives</a><a class="list-group-item list-group-item-action">Gear Drives</a></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade pb-3 show active">
+                                    <p>
+                                        If the pinion drives the gear, the system increases torque while reducing speed, providing a mechanical advantage in force. When determining gear ratios for mechanical advantage with force, we use the moment of force equation. </p>
+                                    <div class="jumbotron-secondary">
+
+                                        <p style="text-align: center;"><strong>EF &times; ED = RF &times; RD</strong></p>
+                                        
+                                        <p style="text-align: center;"><strong>Mechanical Advantage = Gear Ratio = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span> = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span></strong></p>
+                                        
+                                        <p style="text-align: center;"><strong>Force = # of Teeth or Torque</strong></p>
+                                        <p style="text-align: center;"><strong>Distance = Rotations Per Minute (RPM) or Diameter/Radius</strong></p>
+                                    </div>
+                                    <br>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/1.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>
+                                        If the larger gear drives the pinion, the system increases speed while reducing torque, providing a mechanical advantage in speed. When determining gear ratios for mechanical advantage with force, we use the same equations shown earlier.</p>
+                                    <div class="jumbotron-secondary">
+
+                                        <p style="text-align: center;"><strong>EF &times; ED = RF &times; RD</strong></p>
+                                        
+                                        <p style="text-align: center;"><strong>Mechanical Advantage = Gear Ratio = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span> = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span></strong></p>
+                                        
+                                        <p style="text-align: center;"><strong>Force = # of Teeth or Torque</strong></p>
+                                        <p style="text-align: center;"><strong>Distance = Rotations Per Minute (RPM) or Diameter/Radius</strong></p>
+                                    </div>
+                                    <br>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/2.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-graphic">
+                    <div class="card-body">
+                        <p>The trade-off between speed and force is a fundamental principle in gear systems.</p>
+                    </div>
+                </div>
+                <hr>
+                <h1>Calculations with Gear Ratios</h1>
+                <h3>Learn</h3>
+                <p>Let's break down some problems involving gear ratios using the following example of a two-gear gear train. Try the eight problems below on your own and then click on "Check Answer" to learn more.</p>
+                <p class="directive">Click on the arrows to navigate through the questions.</p>
+                <div id="help-us-choose" class="carousel slide" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#help-us-choose" data-slide-to="0" class="active"></li>
+                        <li data-target="#help-us-choose" data-slide-to="1"></li>
+                        <li data-target="#help-us-choose" data-slide-to="2"></li>
+                        <li data-target="#help-us-choose" data-slide-to="3"></li>
+                        <li data-target="#help-us-choose" data-slide-to="4"></li>
+                        <li data-target="#help-us-choose" data-slide-to="5"></li>
+                        <li data-target="#help-us-choose" data-slide-to="6"></li>
+                        <li data-target="#help-us-choose" data-slide-to="7"></li>
+                    </ol>
+                    <div class="carousel-inner pb-3">
+                        <div class="carousel-item active ">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 1</strong> </h4>
+                                    <p>If the pinion spins in a counter-clockwise direction, which way does the large gear rotate?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label">Counter-clockwise</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label">Clockwise</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> Clockwise</p>
+                                            <p>The driven gear always rotates in the opposite direction of the driving gear.
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 2</strong> </h4>
+                                    <p>How many teeth are on the pinion?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 6</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 8</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 10</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 12</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 8</p>
+                                            <p>The pinion is the smaller gear on the left and it has 8 teeth.
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 3</strong> </h4>
+                                    <p>How many teeth are on the larger gear?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 6</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 8</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 10</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 12</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 12</p>
+                                            <p>The larger gear is on the right and it has 12 teeth.
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 4</strong> </h4>
+                                    <p>What is the gear ratio of this two-gear gear train?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 2:1</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 2:3</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3:1</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3:2</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 3:2</p>
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    EF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RF
+                                                    </span>
+                                                </span> = 
+                                                <span class="frac">
+
+                                                    Number of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        Number of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    12
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        8
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    3
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        2
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 5</strong> </h4>
+                                    <p>What is the mechanical advantage of this two-gear gear train system?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 1.5</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 2</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3.2</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 1.5 </p>
+                                            <p>Because the gear ratio is 3:2, the mechanical advantage is 3&nbsp;&divide;&nbsp;2&nbsp;=&nbsp;1.5.
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 6</strong> </h4>
+                                    <p>How many times does the pinion rotate when the large gear rotates once?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 1.5&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 2&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3.2&times;</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 1.5 times</p>
+                                            <p>Because the gear ratio is 3:2, the pinion will rotate 3 times every time the large gear rotates twice. If the large gear only rotates once, the pinion would rotate half of 3 or 3&nbsp;&divide;&nbsp;2&nbsp;=&nbsp;1.5 times.
+                                            </p>
+                                            <p></p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 7</strong> </h4>
+                                    <p>How many times does the large gear rotate when the pinion rotates once?</p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 0.67&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 1.5&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 2&times;</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 3&times;</label></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 0.67 times</p>
+                                            <p style="text-align: center;">Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span> </p>
+                                            <p style="text-align: center;">Gear Ratio = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span> </p>
+                                            <p style="text-align: center;">1.5 = <span class="frac">
+
+                                                    1
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span> </p>
+                                            
+                                            <p style="text-align: center;">RD = <span class="frac">
+
+                                                    1
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        1.5
+                                                    </span>
+                                                </span> </p>
+                                            
+                                            
+                                            <p class="text-center">
+                                                Number of Rotations on Driven Gear (RD) = 0.66666 or 0.67
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item justify-content-center">
+                            <div class="row justify-content-center">
+                                <div class="quick-assess quick-assess-mc quick-border col-9">
+                                    <h4><strong>Problem 8</strong> </h4>
+                                    <p>If the effort torque applied on the pinion is 30N, what is the output or resistance torque on the large gear? </p>
+                                    <p class="mx-auto text-center mt-4">
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/gear/12to8Example.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                    </p>
+                                    <fieldset class="radio">
+                                        <div class="row p-3 pl-md-4">
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 30N</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[Y]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 45N</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 60N</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <p>[[N]]</p>
+                                                    </div>
+                                                    <div class="col"><label class="radio-label"> 75N</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                                        <div class="collapse feedback">
+                                            <hr class="my-4">
+                                            <p><strong>Correct Answer:</strong> 45N</p>
+                                            <p>Since the mechanical advantage is 1.5, the resistance torque is 1.5 &times; 30 = 45N.
+                                            </p>
+                                        </div>
+
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#help-us-choose" role="button" data-slide="prev"> <span class="carousel-control-prev-icon-dark" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#help-us-choose" role="button" data-slide="next"> <span class="carousel-control-next-icon-dark" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+                </div>
+                <div class="card card-graphic">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p><strong>Measuring Rotations</strong></p>
+                            <p>The standard unit for measuring the speed of a gear's rotation is <strong>rotations per minute (RPM)</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Apply Your Knowledge</h3>
+                <p class="mt-4">Let's review what you've learned so far!</p>
+                <p class="instruction">Answer the following questions. When you’re ready, select "Check Answer" to reveal the solution steps.</p>
+                <!-- Problem 1 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 1</strong></p>
+                                <p>If the driving gear rotates at 120 rpm, how quickly does the pinion spin?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/gear/10to8Example.png" alt="placeholder" style="width:100%; max-width:500px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">Your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            
+                                            <p><strong>Answer: </strong>150</p>
+   
+                                            
+                                            
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> =
+                                                <span class="frac">
+
+                                                    # of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    8
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        10
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center mb-4 pb-3">
+                                                <strong>Gear Ratio = 0.8 or 4:5</strong>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span>  = 
+                                                <span class="frac">
+
+                                                    # of Rotations on Driving Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Rotations on Driven Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            
+                                            <p class="text-center">
+                                                0.8 = 
+                                                <span class="frac">
+
+                                                    120
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Rotations on Driven Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            
+                                            <p class="text-center">
+                                                # of Rotations on Driven Gear = 
+                                                <span class="frac">
+
+                                                    120 rpm
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        0.8
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            <p class="text-center">
+                                                <strong># of Rotations on Driven Gear = 150 rpm</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- Problem 2 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 2</strong></p>
+                                <p>If the pinion rotates at 100 rpm, how quickly does the driven gear spin?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/gear/9to15Example.png" alt="placeholder" style="width:100%; max-width:500px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">Your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: </strong>60</p>
+                                            
+                                            
+                                            
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> = 
+                                                <span class="frac">
+
+                                                    # of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    9
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        15
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center mb-4 pb-3">
+                                                <strong>Gear Ratio = 0.6 or 3:5</strong>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    # of Rotations on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Rotations on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                # of Rotations on Driven Gear =
+                                                Gear Ratio &times; # of Rotations on Driving Gear
+                                            </p>
+
+                                            <p class="text-center">
+                                                # of Rotations on Driven Gear =
+                                                0.6 &times; 100
+                                            </p>
+                                            <p class="text-center">
+                                                <strong># of Rotations on Driven Gear = 60 rpm</strong>
+                                            </p>
+                                            
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> =
+                                                <span class="frac">
+
+                                                    # of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    10
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        8
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center mb-4 pb-3">
+                                                <strong>Gear Ratio = 1.25 or 5:4</strong>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    ED
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        RD
+                                                    </span>
+                                                </span>  = 
+                                                <span class="frac">
+
+                                                    # of Rotations on Driving Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Rotations on Driven Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            
+                                            <p class="text-center">
+                                                1.25 = 
+                                                <span class="frac">
+
+                                                    100
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Rotations on Driven Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            
+                                            <p class="text-center">
+                                                # of Rotations on Driven Gear = 
+                                                <span class="frac">
+
+                                                    100 rpm
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        1.25
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            <p class="text-center">
+                                                <strong># of Rotations on Driven Gear = 60 rpm</strong>
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <!-- Problem 3 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 3</strong></p>
+                                <p class="pr-5">If the output or resistence torque on the driven gear is 41 N, what is the effort  torque created by the pinion?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/gear/10to20Example.png" alt="placeholder" style="width:100%; max-width:500px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: 20.5 N</strong></p>
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> =
+                                                <span class="frac">
+
+                                                    # of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    20
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        10
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center mb-4 pb-3">
+                                                <strong>Gear Ratio = 2 or 2:1</strong>
+                                            </p>
+                                            
+                                            <p class="text-center">
+                                                Gear Ratio = <span class="frac">
+
+                                                    RF
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        EF
+                                                    </span>
+                                                </span> =
+                                                <span class="frac">
+
+                                                    Resistence Torque
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        Effort Torque
+                                                    </span>
+                                                </span>
+                                            </p>
+
+                                            
+                                            <p class="text-center">
+                                                2 =
+                                                <span class="frac">
+
+                                                    41
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        Effort Torque
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Effort Torque =
+                                                <span class="frac">
+
+                                                    41 N
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        2
+                                                    </span>
+                                                </span>
+                                            </p>
+
+
+                                            <p class="text-center">
+                                                <strong>Effort Torque  = 20.5 N</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+
+
+                <!-- Problem 4 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 4</strong></p>
+                                <p class="pr-5">What is the torque on the pinion if the effort torque on the driving gear is 68 N?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/gear/24to18Example.png" alt="placeholder" style="width:100%; max-width:500px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: 51 N</strong></p>
+                                            
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    # of Teeth on Driven Gear
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        # of Teeth on Driving Gear
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    18
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        24
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center mb-4 pb-3">
+                                                <strong>Gear Ratio = 0.75 or 3:4</strong>
+                                            </p>
+                                            <p class="text-center">
+                                                Gear Ratio =
+                                                <span class="frac">
+
+                                                    Resistence Torque
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        Effort Torque
+                                                    </span>
+                                                </span>
+                                            </p>
+                                            <p class="text-center">
+                                                0.75 =
+                                                <span class="frac">
+
+                                                    Resistence Torque
+                                                    <span class="symbol">/</span>
+                                                    <span class="bottom">
+                                                        68 N
+                                                    </span>
+                                                </span>
+                                            </p>
+
+
+                                            <p class="text-center">
+                                                Resistance Torque = 0.75 &times; 68 N
+                                            </p>
+                                            <p class="text-center">
+                                                <strong>Resistance Torque  = 51 N</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <h2>How did you do?</h2>
+                <p>If you got 4 out of 4, you're ready to move on. If not, go back and review this section.</p>
+
+
+
+                <hr>
+                <h1>Lesson Complete!</h1>
+                <p><strong>Click an image</strong> to be directed to a lesson.&nbsp;</p>
+                <div class="sdf-container sdf-5col">
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10659">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/1.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Conservation of Energy</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10660">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/2.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Hydraulics</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10658">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/3.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Belt Drives</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10650">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/4.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Gears</h3>
+                        </div>
+                    </div>
+                    <div class="sdf-nav-card dim">
+                        <a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10663">
+                            <img src="/content/enforced/10563-SCI2/energyconservation/icons/5.png" alt="">&nbsp; </a>
+                        <div class="sdf-title">
+                            <h3>Mechanical Efficiency</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <p>Click here for the <a href="/d2l/le/lessons/10563/topics/10662" target="_top" rel="noopener"><strong>Module Quiz</strong></a> or click the blue button for the next lesson.</p>
+                <br>
+                <p><a href="/d2l/le/lessons/10563/topics/10663" type="button" class="btn btn-secondary" target="_top">Next Lesson</a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p><img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo"></p>
+                </footer>
+            </div>
+        </div>
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/flickity.pkgd.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/fullscreen.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        </p>
+        <!-- Template JavaScript -->
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.js"></script>
+
+        </p>
+        <p>
+            <script>
+                $(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+            <script>
+                var xmin = -178,
+                    ymin = -123,
+                    xspan = 361;
+
+
+                "use strict";
+
+                function distanceFromCurve(pt, bezNodes) {
+                    /* Calculates distance from point (pt) to the closest point on cubic Bezier curve (bez)
+                     * Algorithm suggested by Mike Kamermans http://pomax.github.io/bezierinfo/
+                     * Note: this is designed for well behaved Bezier curves only (no kinks)
+                     */
+                    var mu = 0.5,
+                        dMu = 1.0,
+                        dMuMin = 0.000001,
+                        testPt, testLft, testRgt;
+
+                    function pointOnBezier(p) {
+                        var x1 = bezNodes[0].x,
+                            y1 = bezNodes[0].y,
+                            x2 = bezNodes[1].x,
+                            y2 = bezNodes[1].y,
+                            x3 = bezNodes[2].x,
+                            y3 = bezNodes[2].y,
+                            x4 = bezNodes[3].x,
+                            y4 = bezNodes[3].y,
+                            f1 = function(t) {
+                                return (t * t * t);
+                            },
+                            f2 = function(t) {
+                                return (3 * t * t * (1 - t));
+                            },
+                            f3 = function(t) {
+                                return (3 * t * (1 - t) * (1 - t));
+                            },
+                            f4 = function(t) {
+                                return ((1 - t) * (1 - t) * (1 - t));
+                            },
+                            /* p from 0 to 1 */
+                            bezX = function() {
+                                return x1 * f1(p) + x2 * f2(p) + x3 * f3(p) + x4 * f4(p);
+                            },
+                            bezY = function() {
+                                return y1 * f1(p) + y2 * f2(p) + y3 * f3(p) + y4 * f4(p);
+                            };
+
+                        return {
+                            x: bezX(),
+                            y: bezY()
+                        }
+                    }
+
+                    function calcDist(p, u) {
+                        var bezPt = pointOnBezier(u),
+                            distVal = Math.sqrt((bezPt.x - p.x) * (bezPt.x - p.x) + (bezPt.y - p.y) * (bezPt.y - p.y));
+
+                        return {
+                            distance: distVal,
+                            x: bezPt.x,
+                            y: bezPt.y
+                        };
+                    }
+
+                    do {
+                        testPt = calcDist(pt, mu);
+                        // half distance to left
+                        dMu /= 2;
+                        testLft = calcDist(pt, mu - dMu);
+                        testRgt = calcDist(pt, mu + dMu);
+                        if (testLft.distance < testPt.distance) {
+                            mu -= dMu;
+                            if (mu < 0) {
+                                mu = 0;
+                            }
+                        }
+                        if (testRgt.distance < testPt.distance) {
+                            mu += dMu;
+                            if (mu > 1) {
+                                mu = 1;
+                            }
+                        }
+                    }
+                    while (dMu > dMuMin)
+
+                    return testPt; // object {distance:, x:, y: }
+                }
+
+                function updateErrors(tbl, rowNum, str0, str1, str2) {
+                    var rowId = "t" + tbl + "row" + rowNum;
+                    var rowNode = document.getElementById(rowId);
+                    var tds = rowNode.getElementsByTagName("TD"); // array of TD elements
+                    tds[0].childNodes[0].nodeValue = str0; // text node of TD element
+                    tds[1].childNodes[0].nodeValue = str1;
+                    tds[2].childNodes[0].nodeValue = str2;
+                }
+
+                function toCartesian(radius, angle) {
+                    return {
+                        x: radius * Math.cos(angle),
+                        y: radius * Math.sin(angle)
+                    };
+                }
+
+                function genInvolute2(Rb, theta) {
+                    // given the parameter theta, return the x, y of the involute
+                    var ix = Rb * (Math.cos(theta) + theta * Math.sin(theta)),
+                        iy = Rb * (Math.sin(theta) - theta * Math.cos(theta));
+
+                    return {
+                        x: ix,
+                        y: iy
+                    };
+                }
+
+                function InvoluteDefined(cvsID, module, teeth, pressureAngle) {
+                    // =============== DIN GEAR DESIGN ===================
+                    var m = module, // Module = pitch diameter(mm)/teeth
+                        Z = teeth,
+                        phi = pressureAngle || 20, // pressure angle in degs
+                        Rpitch = Z * m / 2, // pitch radius
+                        Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                        addendum = m, // distance from pitch circle to outer circle
+                        Ra = Rpitch + addendum, // addendum (outer) radius
+                        tooth, newTooth,
+                        toothData, toothObj,
+                        pitchToBaseAngle,
+                        gear, gearData, invData,
+                        invMax, invMin,
+                        xspan, yspan,
+                        pt, A,
+                        cx1, cy1,
+                        c1,
+                        i, theta;
+                    var g = new Cango(cvsID), // g is the graphics context for the background
+                        xmin = -54,
+                        xmax = 20,
+                        ymin = -5,
+                        ymax = 40;
+
+                    const dragC1 = (evt) => // called in scope of dragNdrop obj
+                        {
+                            var xp, yp,
+                                wPos = evt.dragPos;
+                            // generate a value of A (involute generating angle) near to the drag point
+                            // origin is at invMin and invMax is the end, get current pos as proportion of inv span
+                            xp = (wPos.x < 0) ? 0 : wPos.x / xspan;
+                            if (xp > 1) {
+                                xp = 1;
+                            }
+                            yp = (wPos.y < 0) ? 0 : wPos.y / yspan;
+                            if (yp > 1) {
+                                yp = 1;
+                            }
+                            A = Math.sqrt(0.707 * Math.sqrt(xp * xp + yp * yp));
+                            pt = genInvolute2(Rb, A);
+                            cx1 = pt.x - Rb;
+                            cy1 = pt.y;
+                            this.drawInv();
+                        }
+
+                    g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+                    g.setPropertyDefault("fillColor", 'black');
+                    g.setPropertyDefault("fontSize", 12);
+
+                    // generate gear tooth outline path
+                    tooth = createGearTooth(m, Z, phi);
+                    // make 5 teeth by duplicating
+                    toothData = new PathSVG(tooth);
+                    gearData = toothData.dup();
+                    for (i = 1; i < 4; i++) {
+                        newTooth = toothData.rotate(360 * i / Z);
+                        gearData = gearData.joinPath(newTooth);
+                    }
+                    // rotate the tooth to put start of involute on the x axis
+                    pitchToBaseAngle = (Math.sqrt(Rpitch * Rpitch - Rb * Rb) / Rb) - Math.acos(Rb / Rpitch);
+                    gear = new Path(gearData.rotate(-270 / Z), {
+                        rot: 180 * pitchToBaseAngle / Math.PI,
+                        x: -Rb,
+                        strokeColor: 'red'
+                    });
+                    // now draw the extended involute
+                    invData = [];
+                    pt = {};
+                    for (theta = 0; theta < 1; theta += 0.05) // step along involute by inc parameter
+                    {
+                        pt = genInvolute2(Rb, theta);
+                        invData.push(pt.x, pt.y);
+                    }
+                    invMax = genInvolute2(Rb, 1);
+                    invData.push(invMax.x, invMax.y); // plot the last point (theta = 1 radian)
+                    invMin = {
+                        x: Rb,
+                        y: 0
+                    };
+                    xspan = invMax.x - invMin.x; // use these when dragging dot
+                    yspan = invMax.y - invMin.y;
+                    A = 0.8; // initial involute generating angle 0.8 rads
+                    cx1 = 59.7 - Rb;
+                    cy1 = 7.5; // eqiv x,y on involute for 0.8 theta
+                    // create the involute control point and make it draggable
+                    c1 = new Shape(PathSVG.circle(2), {
+                        fillColor: 'red'
+                    });
+                    c1.enableDrag(dragC1);
+
+                    this.showConst = false; // show construction lines
+
+                    this.drawInv = () => {
+                        var compA, gPt, genLines;
+
+                        g.clearCanvas();
+                        g.drawAxes(xmin, xmax, ymin, ymax, {
+                            xOrigin: -Rb,
+                            yOrigin: 0,
+                            yLabelInterval: 0,
+                            strokeColor: "#888888",
+                            fillColor: "#888888"
+                        });
+                        g.render(gear);
+                        g.drawPath(PathSVG.circle(Rb * 2), {
+                            x: -Rb,
+                            y: 0,
+                            strokeColor: 'rgba(0,0,255,0.3)'
+                        });
+                        g.drawPath(invData, {
+                            x: -Rb,
+                            y: 0,
+                            strokeColor: 'magenta'
+                        });
+
+                        // draw generating right angle
+                        compA = Math.PI / 2 - A;
+                        gPt = toCartesian(Rb, A);
+                        genLines = ['M', 0, 0, 'l', gPt.x, gPt.y, Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA)];
+                        g.drawPath(genLines, {
+                            x: -Rb,
+                            y: 0
+                        });
+                        // draw little right angle sign
+                        genLines = ['M', 0.95 * gPt.x, 0.95 * gPt.y, 'l', 0.05 * Rb * Math.cos(compA), -0.05 * Rb * Math.sin(compA),
+                            0.05 * Rb * Math.cos(A), 0.05 * Rb * Math.sin(A)
+                        ];
+                        g.drawPath(genLines, {
+                            x: -Rb,
+                            y: 0
+                        });
+                        // draw draggable end point
+                        c1.translate(cx1, cy1);
+                        g.render(c1);
+                        if (this.showConst) {
+                            genLines = ['M', 0, 0, 'L', gPt.x, gPt.y, gPt.x, 0, "Z", "M", gPt.x, gPt.y,
+                                "l", Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA), -Rb * A * Math.cos(compA), 0, "Z"
+                            ];
+                            g.drawPath(genLines, {
+                                x: -Rb,
+                                y: 0
+                            });
+                            // label if they fit
+                            g.drawText("R", {
+                                x: gPt.x / 2 - Rb - 1.8,
+                                y: gPt.y / 2 + 1.5,
+                                lorg: 9
+                            });
+                            g.drawText("b", {
+                                x: gPt.x / 2 - Rb - 1,
+                                y: gPt.y / 2 + 1,
+                                fontSize: 10,
+                                lorg: 9
+                            });
+                            if (A > 0.3) {
+                                g.drawArrowArc(7.5, 0, 180 * A / Math.PI, {
+                                    x: -Rb,
+                                    y: 0,
+                                    fillColor: "#aaaaaa",
+                                    clockWise: false,
+                                    shaftWidth: 1,
+                                    headSize: 7
+                                });
+                                g.drawText("\u03B8", {
+                                    x: gPt.x / 4 - Rb,
+                                    y: gPt.y / 8,
+                                    lorg: 4
+                                });
+                                g.drawText("x'", {
+                                    x: 2 * gPt.x / 3 - Rb,
+                                    y: 2,
+                                    lorg: 5
+                                });
+                                g.drawText("y'", {
+                                    x: gPt.x - Rb - 1,
+                                    y: gPt.y / 3,
+                                    lorg: 3
+                                });
+                                g.drawText("\u03B8", {
+                                    x: gPt.x - Rb + Rb * A * Math.sin(A) / 20,
+                                    y: gPt.y - 4,
+                                    lorg: 1
+                                });
+                                g.drawText("x", {
+                                    x: gPt.x - Rb + Rb * A * Math.sin(A) / 2,
+                                    y: gPt.y - Rb * A * Math.cos(A) + 1,
+                                    lorg: 9
+                                });
+                                g.drawText("y", {
+                                    x: gPt.x - Rb + 1,
+                                    y: 2 * gPt.y / 3,
+                                    lorg: 1
+                                });
+                                g.drawText("c", {
+                                    x: gPt.x - Rb + Rb * A * Math.sin(A) / 2 + 1,
+                                    y: gPt.y - Rb * A * Math.cos(A) / 2 + 1,
+                                    lorg: 7
+                                });
+                                g.drawText("c'", {
+                                    x: -Rb + Rb * Math.cos(A / 2) - 1,
+                                    y: Rb * Math.sin(A / 2) - 1,
+                                    lorg: 6
+                                });
+                            }
+                        }
+                    };
+
+                    this.drawInv();
+                }
+
+                function InvoluteDefined2(cvsID, module, teeth, pressureAngle) {
+                    // =============== DIN GEAR DESIGN ===================
+                    var m = module, // Module = pitch diameter(mm)/teeth
+                        Z = teeth,
+                        phi = pressureAngle || 20, // pressure angle in degs
+                        Rpitch = Z * m / 2, // pitch radius
+                        Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                        addendum = m, // distance from pitch circle to outer circle
+                        Ra = Rpitch + addendum, // addendum (outer) radius
+                        toothData, tooth,
+                        pitchToBaseAngle,
+                        gear, gearData, i, newTooth,
+                        invData, pt, theta,
+                        invMax, invMin,
+                        xspan, yspan,
+                        A, cx1, cy1,
+                        compA, gPt,
+                        genLines, ph;
+                    var g = new Cango(cvsID), // g is the graphics context for the background     
+                        xmin = -45,
+                        xmax = 20,
+                        ymin = -4,
+                        ymax = 40;
+
+                    // generate gear tooth outline path
+                    tooth = createGearTooth(m, Z, phi);
+                    toothData = new PathSVG(tooth);
+                    // make 5 teeth by duplicating
+                    gearData = toothData.dup();
+                    for (i = 1; i < 3; i++) {
+                        newTooth = toothData.rotate(360 * i / Z);
+                        gearData = gearData.joinPath(newTooth);
+                    }
+                    gear = new Path(gearData.rotate(-270 / Z), {
+                        strokeColor: 'red'
+                    });
+                    // rotate the tooth to put start of involute on the x axis
+                    pitchToBaseAngle = (Math.sqrt(Rpitch * Rpitch - Rb * Rb) / Rb) - Math.acos(Rb / Rpitch);
+                    gear.rotate(180 * pitchToBaseAngle / Math.PI);
+                    // now draw the extended involute
+                    invData = [];
+                    pt = {};
+                    for (theta = 0; theta < 1; theta += 0.05) // step along involute by inc parameter
+                    {
+                        pt = genInvolute2(Rb, theta);
+                        invData.push(pt.x, pt.y);
+                    }
+                    invMax = genInvolute2(Rb, 1);
+                    invData.push(invMax.x, invMax.y); // plot the last point (theta = 1 radian)
+                    invMin = {
+                        x: Rb,
+                        y: 0
+                    };
+                    xspan = invMax.x - invMin.x; // use these when dragging dot
+                    yspan = invMax.y - invMin.y;
+                    A = 0.8; // initial involute generating angle 0.8 rads
+                    cx1 = 59.7 - Rb;
+                    cy1 = 7.5; // eqiv x,y on involute for 0.8 theta
+
+                    g.gridboxPadding(5, 1);
+                    g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+                    g.setPropertyDefault("fillColor", 'black');
+                    g.setPropertyDefault("fontSize", 12);
+                    g.clearCanvas();
+                    g.drawAxes(xmin, xmax, ymin, ymax, {
+                        xOrigin: -Rb,
+                        yOrigin: 0,
+                        yTickInterval: 10,
+                        strokeColor: "#888888",
+                        fillColor: "#888888"
+                    });
+                    gear.translate(-Rb, 0);
+                    g.render(gear);
+                    g.drawPath(PathSVG.circle(Rb * 2), {
+                        x: -Rb,
+                        y: 0,
+                        strokeColor: 'rgba(0,0,255,0.3)'
+                    });
+                    g.drawPath(invData, {
+                        x: -Rb,
+                        y: 0,
+                        strokeColor: 'magenta'
+                    });
+                    // draw generating right angle
+                    compA = Math.PI / 2 - A;
+                    gPt = toCartesian(Rb, A);
+                    genLines = ['M', 0, 0, 'l', gPt.x, gPt.y, Rb * A * Math.cos(compA), -Rb * A * Math.sin(compA), 'z'];
+                    g.drawPath(genLines, {
+                        x: -Rb,
+                        y: 0
+                    });
+
+                    g.drawArrowArc(9, 0, 180 * A / Math.PI, {
+                        x: -Rb,
+                        y: 0,
+                        fillColor: "#aaaaaa",
+                        clockwise: false,
+                        shaftWidth: 1,
+                        headSize: 7
+                    });
+                    ph = 0.13;
+                    g.drawArrowArc(20, 0, 180 * ph / Math.PI, {
+                        x: -Rb,
+                        y: 0,
+                        fillColor: "#aaaaaa",
+                        clockWise: false,
+                        shaftWidth: 1,
+                        headSize: 7
+                    });
+                    // draw little right angle sign
+                    genLines = ['M', 0.95 * gPt.x, 0.95 * gPt.y, 'l', 0.05 * Rb * Math.cos(compA), -0.05 * Rb * Math.sin(compA),
+                        0.05 * Rb * Math.cos(A), 0.05 * Rb * Math.sin(A)
+                    ];
+                    g.drawPath(genLines, {
+                        x: -Rb,
+                        y: 0
+                    });
+                    // label if they fit
+                    g.drawText("R", {
+                        x: gPt.x / 2 - Rb - 1.8,
+                        y: gPt.y / 2 + 1.5,
+                        lorg: 9
+                    });
+                    g.drawText("b", {
+                        x: gPt.x / 2 - Rb - 1,
+                        y: gPt.y / 2 + 1,
+                        fontSize: 10,
+                        lorg: 9
+                    });
+                    g.drawText("R", {
+                        x: gPt.x - Rb,
+                        y: gPt.y / 6,
+                        lorg: 9
+                    });
+                    g.drawText("\u03B8", {
+                        x: 3 * gPt.x / 8 - Rb,
+                        y: gPt.y / 8,
+                        lorg: 4
+                    });
+                    g.drawText("\u03C8", {
+                        x: 7 * gPt.x / 8 - Rb,
+                        y: 1.5,
+                        lorg: 5
+                    });
+                    g.drawText("c", {
+                        x: gPt.x - Rb + Rb * A * Math.sin(A) / 2 + 1,
+                        y: gPt.y - Rb * A * Math.cos(A) / 2 + 1,
+                        lorg: 7
+                    });
+                    g.drawText("c'", {
+                        x: -Rb + Rb * Math.cos(A / 2) - 1,
+                        y: Rb * Math.sin(A / 2) - 1,
+                        lorg: 6
+                    });
+                }
+
+                function InvoluteProfile(g, module, teeth, pressureAngle) {
+                    // =============== Demo Gear ===================
+                    var m = module, // Module = pitch diameter(mm)/teeth
+                        Z = teeth,
+                        phi = pressureAngle || 20, // pressure angle in degs
+                        Rpitch = Z * m / 2, // pitch radius
+                        Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                        addendum = m, // pitch circle to outer circle
+                        Ra = Rpitch + addendum, // addendum (outer) radius
+                        ta = Math.sqrt(Ra * Ra - Rb * Rb) / Rb, // involute angle at addendum
+                        order = 4;
+                    var xmin = -3,
+                        xmax = 3,
+                        ymin = -0.5,
+                        ymax = 5.5;
+
+                    g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+
+                    this.drawCubicBezInvolute = function() {
+                        var data, p, theta, row, sa, s, err, pt;
+
+                        // generate 2 Cubic Bezier approximation
+                        var fs = 0.01, // start 1% off the base circle
+                            fm = 0.25, // break 25% along involute
+                            fe = 1, // end at 100%
+                            dedBez = involuteBezCoeffs(m, Z, phi, 3, fs, fm),
+                            addBez = involuteBezCoeffs(m, Z, phi, 3, fm, fe);
+
+                        g.clearCanvas();
+                        g.drawAxes(-5, 5, -5, 5, {
+                            xOrigin: 0,
+                            yOrigin: 0,
+                            xUnits: "mm",
+                            yUnits: "mm",
+                            xLabel: "X",
+                            yLabels: "Y"
+                        });
+                        g.drawPath(PathSVG.circle(Rpitch * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'orange'
+                        });
+                        g.drawPath(PathSVG.circle(Rb * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'red'
+                        });
+                        g.drawPath(PathSVG.circle(Ra * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'green'
+                        });
+
+                        // draw the approximation
+                        data = ["M", dedBez[0].x, dedBez[0].y,
+                            "C", dedBez[1].x, dedBez[1].y, dedBez[2].x, dedBez[2].y, dedBez[3].x, dedBez[3].y,
+                            "C", addBez[1].x, addBez[1].y, addBez[2].x, addBez[2].y, addBez[3].x, addBez[3].y
+                        ];
+                        g.drawPath(data, {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'blue'
+                        });
+                        // plot the Bezier nodes as exes
+                        for (p = 0; p < dedBez.length; p++) // skip duplicate at start
+                        {
+                            g.drawPath(PathSVG.ex(0.2), {
+                                x: dedBez[p].x - Rpitch,
+                                y: dedBez[p].y,
+                                strokeColor: 'blue'
+                            });
+                        }
+                        // plot the Bezier nodes
+                        for (p = 0; p < addBez.length; p++) // skip duplicate at start
+                        {
+                            g.drawPath(PathSVG.cross(0.2), {
+                                x: addBez[p].x - Rpitch,
+                                y: addBez[p].y,
+                                strokeColor: 'green'
+                            });
+                        }
+                        // calculate the errors
+                        sa = (Ra * Ra - Rb * Rb) / (2 * Rb);
+                        for (theta = 0.08, row = 0; theta < ta; theta += 0.08, row++) // step along involute
+                        {
+                            pt = genInvolute2(Rb, theta);
+                            // calculate the errors
+                            s = Rb * theta * theta / 2;
+                            if ((s / sa) < 0.25) {
+                                err = distanceFromCurve(pt, dedBez);
+                            } else {
+                                err = distanceFromCurve(pt, addBez);
+                            }
+                            // write the error in table
+                            updateErrors(2, row, sprintf("%4.2f", s / sa), sprintf("%7.5f", err.distance), sprintf("%.1E", err.distance / (Z * m)));
+                        }
+                    };
+
+                    this.drawRealInvolute = function() {
+                        var theta, pt,
+                            data = [];
+
+                        // now draw the real involute
+                        for (theta = 0; theta < ta; theta += 0.01) // step along involute
+                        {
+                            pt = genInvolute2(Rb, theta);
+                            data.push(pt.x, pt.y);
+                        }
+                        pt = genInvolute2(Rb, ta); // add the end point
+                        data.push(pt.x, pt.y);
+                        g.drawPath(data, {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'magenta'
+                        });
+                    };
+
+                    this.drawCubicBezInvolute();
+                    this.drawRealInvolute();
+                }
+
+                function InvoluteOrderN(g, module, teeth, pressureAngle, bezOrder) {
+                    // =============== this Demo Gear has Rroot < Rbase ===================
+                    var m = module, // Module = pitch diameter(mm)/teeth
+                        Z = teeth,
+                        phi = pressureAngle || 20, // pressure angle in degs
+                        Rpitch = Z * m / 2, // pitch radius
+                        Rb = Rpitch * Math.cos(phi * Math.PI / 180), // base radius
+                        addendum = m, // pitch circle to outer circle
+                        Ra = Rpitch + addendum, // addendum (outer) radius
+                        order = bezOrder || 4,
+                        fs = 0.01, // start offset as fraction of length
+                        fe = 1, // fraction of length at end of approx
+                        ta = Math.sqrt(Ra * Ra - Rb * Rb) / Rb, // involute angle at addendum, end of approx
+                        ts = Math.sqrt(fs) * ta, // involute angle, theta, at start of approx
+                        bez;
+                    var xmin = -3,
+                        xmax = 3,
+                        ymin = -0.5,
+                        ymax = 5.5;
+
+                    /* Computes deCasteljau p(t) for n-control points
+                     * @param cp - list of control points [][x,y]
+                     * @param r - amount points (init value : points.length-1)
+                     * @param i - start value (init value : 0)
+                     * @param t - portion on the graph (range between 0.0 and 1.0)
+                     * @return point{x:,y:} - point on graph at p(t)
+                     *
+                     * @see http://stackoverflow.com/a/6271870 for n-control points
+                     */
+                    function getBezierPoint(cp, r, i, t) {
+                        var p1, p2;
+
+                        if (r == 0) {
+                            return cp[i];
+                        }
+                        p1 = getBezierPoint(cp, r - 1, i, t);
+                        p2 = getBezierPoint(cp, r - 1, i + 1, t);
+
+                        return {
+                            x: (1 - t) * p1.x + t * p2.x,
+                            y: (1 - t) * p1.y + t * p2.y
+                        };
+                    }
+
+                    g.setWorldCoordsRHC(xmin, ymin, xmax - xmin); // square pixels
+
+                    // generate Bezier approximation
+                    bez = involuteBezCoeffs(m, Z, phi, order, fs, fe);
+
+                    this.drawBezInvolute = function() {
+                        var data = [],
+                            t, p, pt, theta, row,
+                            sa, s, err;
+
+                        g.clearCanvas();
+                        g.drawAxes(-5, 5, -5, 5, {
+                            xOrigin: 0,
+                            yOrigin: 0,
+                            xUnits: "mm",
+                            yUnits: "mm",
+                            xLabel: "X",
+                            yLabels: "Y"
+                        });
+                        g.drawPath(PathSVG.circle(Rpitch * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'orange'
+                        });
+                        g.drawPath(PathSVG.circle(Rb * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'red'
+                        });
+                        g.drawPath(PathSVG.circle(Ra * 2), {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'green'
+                        });
+
+                        // draw approximation Bezier
+                        for (theta = ts; theta < ta; theta += 0.05) // fraction of theta_a
+                        {
+                            t = (theta - ts) / (ta - ts); // map t (0 <= t <= 1) from theta (ts <= theta <= ta)
+                            pt = getBezierPoint(bez, order, 0, t);
+                            data.push(pt.x, pt.y);
+                        }
+                        // add the end point
+                        data.push(bez[bez.length - 1].x, bez[bez.length - 1].y);
+                        g.drawPath(data, {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'green'
+                        });
+                        // plot the Bezier nodes
+                        for (p = 0; p < bez.length; p++) {
+                            g.drawPath(PathSVG.ex(0.2), {
+                                x: bez[p].x - Rpitch,
+                                y: bez[p].y,
+                                strokeColor: 'green'
+                            });
+                        }
+
+                        // calculate the errors (need a higher order version of Simon Porritt's jsBezier code)
+                        if (order == 3) {
+                            sa = (Ra * Ra - Rb * Rb) / (2 * Rb);
+                            for (theta = 0.08, row = 0; theta < ta; theta += 0.08, row++) // step along involute
+                            {
+                                pt = genInvolute2(Rb, theta);
+                                // calculate the errors
+                                s = Rb * theta * theta / 2;
+                                err = distanceFromCurve(pt, bez);
+                                // write the error in table
+                                updateErrors(1, row, sprintf("%4.2f", s / sa),
+                                    sprintf("%6.4f", err.distance),
+                                    sprintf("%.1E", err.distance / (Z * m)));
+                            }
+                        }
+                    };
+
+                    this.drawRealInvolute = function() {
+                        var theta, pt,
+                            data = [];
+
+                        // now draw the real involute
+                        for (theta = 0; theta < ta; theta += 0.01) // step along involute by inc parameter
+                        {
+                            pt = genInvolute2(Rb, theta);
+                            data.push(pt.x, pt.y);
+                        }
+                        pt = genInvolute2(Rb, ta); // add the end point
+                        data.push(pt.x, pt.y);
+                        g.drawPath(data, {
+                            x: -Rpitch,
+                            y: 0,
+                            strokeColor: 'magenta'
+                        });
+                    };
+
+                    this.drawBezInvolute();
+                    this.drawRealInvolute();
+                }
+
+                function GearSpec(module, gearTeeth, options) {
+                    // =============== DIN GEAR DESIGN ===================
+                    var opts = options || {};
+                    var md = module || 1,
+                        shaftRad = opts.shaftWidth / 2 || 0.15 * gearTeeth * md,
+                        prAngle = opts.pressureAngle || 20,
+                        bkLashGap = opts.backlashGap || 0.04 * md, // gap between teeth faces
+                        bkLashRpInc = bkLashGap / (2 * Math.tan(Math.PI * prAngle / 180));
+
+                    return {
+                        m: md, // Module = mm of pitch diameter per tooth
+                        Z: gearTeeth,
+                        phi: prAngle, // see involute spur gear definition drawing
+                        Rp: gearTeeth * md / 2, // pitch radius
+                        shaftR: shaftRad,
+                        dC: bkLashRpInc
+                    }; // increase in gear separation to create backlash gap
+                }
+
+                function addGearTrainSpecs(gearSpecAry, axlePosAry, rotVel) {
+                    var md = gearSpecAry[0].m,
+                        bkLashSep = 0.04 * md, // backlash (mm gap between non touching faces)
+                        angVel = rotVel || 1,
+                        bkLashDir = (angVel > 0) ? 1 : -1,
+                        axleAngle, // rad
+                        axleAngleDegs, // deg
+                        internal,
+                        rot,
+                        prev, curr;
+
+                    function calcMeshingRot(angleToAxle, mZ, sZ, prevRot, int) {
+                        var mRot = prevRot || 0; // degs
+                        var sRot = 0;
+                        var sTeethRot = (sZ - 1) / 2; // turn the mesh on x axis measured in teeth
+
+                        sTeethRot -= mRot * mZ / 360; // undo the effect of prev gears rotation so calcs start with both at 0 
+                        sTeethRot += angleToAxle * sZ / 360; // equiv number of teeth to rotate the gear round prev gear's center to get to idler axle
+                        sTeethRot += angleToAxle * mZ / 360; // number of teeth around prev gear the gear is rolled to idler axis
+                        // convert to deg
+                        sRot = sTeethRot * 360 / sZ;
+                        // don't flip backlash dir if internal gear - driver and driven move in same direction
+                        bkLashDir *= internal; // flip sign if internal - gears go in same direction
+                        sRot += bkLashDir * 180 * bkLashSep / (sZ * md * Math.PI); // take up backlash
+
+                        return sRot;
+                    }
+
+                    gearSpecAry[0].meshRot = 0;
+                    gearSpecAry[0].coords = {
+                        x: axlePosAry[0].x,
+                        y: axlePosAry[0].y
+                    }
+                    gearSpecAry[0].relAngVel = angVel; // angular velocities are relative to 1st gear
+                    for (prev = 0, curr = 1; curr < gearSpecAry.length; curr++, prev++) {
+                        axleAngle = Math.atan2(axlePosAry[curr].y - axlePosAry[prev].y, axlePosAry[curr].x - axlePosAry[prev].x) || 0; // rads
+                        axleAngleDegs = 180 * axleAngle / Math.PI; // degs
+                        internal = (gearSpecAry[prev].shaftR > gearSpecAry[prev].Rp) ? -1 : 1; // was previous gear internal?
+                        rot = calcMeshingRot(axleAngleDegs, gearSpecAry[prev].Z, gearSpecAry[curr].Z, gearSpecAry[prev].meshRot, internal);
+                        // add meshRotation property to the gear spec
+                        gearSpecAry[curr].meshRot = rot;
+                        // add position property to the gear spec
+                        gearSpecAry[curr].coords = {
+                            x: axlePosAry[curr].x,
+                            y: axlePosAry[curr].y
+                        };
+                        // add the relative angular velocity for animation
+                        gearSpecAry[curr].relAngVel = -internal * gearSpecAry[prev].relAngVel * gearSpecAry[prev].Z / gearSpecAry[curr].Z;
+                        // rotation direction switches for each gear so toggle bkLashDir
+                        bkLashDir *= -1;
+                    }
+                }
+
+                function makeGearObj(gearSpec, grColor, sftColor, addMeshRot) {
+                    var data, svgData,
+                        gear,
+                        grp,
+                        shaft,
+                        axlePos = gearSpec.coords || {
+                            x: 0,
+                            y: 0
+                        },
+                        gearColor = grColor || "silver",
+                        outlineCol = "#606060",
+                        shaftColor = sftColor || "none";
+
+                    if (gearSpec.shaftR > gearSpec.Rp) // internal gear
+                    {
+                        data = createIntGearOutline(gearSpec.m, gearSpec.Z, gearSpec.phi, gearSpec.shaftR);
+                    } else {
+                        data = createGearOutline(gearSpec.m, gearSpec.Z, gearSpec.phi, gearSpec.shaftR);
+                    }
+                    svgData = new PathSVG(data);
+                    if (addMeshRot) {
+                        svgData = svgData.rotate(-gearSpec.meshRot); // SVG angle are +ve CCW for RHC
+                    }
+                    gear = new Shape(svgData, {
+                        fillColor: gearColor,
+                        border: true,
+                        strokeColor: outlineCol,
+                        fillRule: "evenodd"
+                    });
+                    grp = new Group(gear);
+                    // add a property holding the axle position for soft translate when animated
+                    grp.coords = axlePos;
+                    grp.angVel = gearSpec.relAngVel || 1;
+                    // add axle hole
+                    if (sftColor != "none") // not transparent so make a solid fill circle to cover the shaft hole
+                    {
+                        shaft = new Shape(PathSVG.circle(gearSpec.shaftR * 2), {
+                            fillColor: shaftColor
+                        });
+                        grp.addObj(shaft);
+                    }
+
+                    return grp;
+                }
+
+                function GearAnimation(g, module, gearTeeth, pinionTeeth, xmin, ymin, xspan) {
+                    // =============== DIN GEAR DESIGN ===================
+                    const gear1 = new GearSpec(module, gearTeeth);
+                    const gear2 = new GearSpec(module, pinionTeeth);
+                    const gearCol = "#ddd0dd",
+                        pinionCol = "#d0d0e8",
+                        shaftCol = "none";
+
+                    // generate gear specs
+                    addGearTrainSpecs([gear1, gear2], [{
+                        x: gear1.Rp + gear1.dC,
+                        y: 0
+                    }, {
+                        x: -gear2.Rp,
+                        y: 0
+                    }], 1);
+                    // build the gears
+                    const gear = makeGearObj(gear1, gearCol, shaftCol, true); // true = add mesh rotation
+                    const pinion = makeGearObj(gear2, pinionCol, shaftCol, true);
+
+                    // setup the animation properties
+                    const gearConfig = {
+                            degs: [0, 360]
+                        }, // gear is driving pinion
+                        twnr = new Tweener(0, 90000, "loop"); // 0.666 rpm
+
+                    function drawGears(opts) {
+                        gear.rotate(-this.nextState.rot * gear.angVel);
+                        gear.translate(gear.coords.x, gear.coords.y);
+                        this.gc.render(gear, true);
+                        pinion.rotate(-this.nextState.rot * pinion.angVel);
+                        pinion.translate(pinion.coords.x, pinion.coords.y);
+                        this.gc.render(pinion);
+                    }
+
+                    function turnGears(time, opts) {
+                        var rotVal = twnr.getVal(time, opts.degs);
+                        // create the required contents of next state vector (the default for others are OK)
+                        this.nextState.rot = rotVal;
+                    }
+
+                    g.setWorldCoordsRHC(xmin, ymin, xspan);
+                    g.animation(drawGears, turnGears, gearConfig);
+
+                    this.run = function() {
+                        g.playAnimation();
+                    };
+
+                    this.halt = function() {
+                        g.pauseAnimation();
+                    };
+
+                    g.playAnimation();
+                }
+
+                function IntGearAnimation(g, module, gearTeeth, pinionTeeth, pressureAngle) {
+                    // =============== DIN GEAR DESIGN ===================
+                    const gear1 = new GearSpec(module, gearTeeth, {
+                        shaftWidth: (gearTeeth + 6) * module
+                    });
+                    const gear2 = new GearSpec(module, pinionTeeth);
+                    const gearCol = "#ddd0dd",
+                        pinionCol = "#d0d0e8",
+                        shaftCol = "none";
+                    const xmin = -200,
+                        ymin = -130,
+                        xspan = 400;
+                    // generate gear specs
+                    addGearTrainSpecs([gear1, gear2], [{
+                        x: 0,
+                        y: 0
+                    }, {
+                        x: gear1.Rp - gear2.Rp - gear1.dC,
+                        y: 0
+                    }], 1);
+                    // build the gears
+                    const gear = makeGearObj(gear1, gearCol, shaftCol, true);
+                    const pinion = makeGearObj(gear2, pinionCol, shaftCol, true);
+
+                    // setup the animation properties
+                    const gearConfig = {
+                            degs: [0, 360]
+                        }, // gear is driving pinion
+                        twnr = new Tweener(0, 90000, "loop"); // 0.666 rpm
+
+                    function drawGears(opts) {
+                        gear.rotate(this.nextState.rot * gear.angVel);
+                        gear.translate(gear.coords.x, gear.coords.y);
+                        this.gc.render(gear, true);
+                        pinion.rotate(this.nextState.rot * pinion.angVel);
+                        pinion.translate(pinion.coords.x, pinion.coords.y);
+                        this.gc.render(pinion);
+                    }
+
+                    function turnGears(time, opts) {
+                        var rotVal = twnr.getVal(time, opts.degs);
+                        // create the required contents of next state vector (the default for others are OK)
+                        this.nextState.rot = rotVal;
+                    }
+
+                    g.setWorldCoordsRHC(xmin, ymin, xspan);
+                    g.animation(drawGears, turnGears, gearConfig);
+
+                    this.run = function() {
+                        g.playAnimation();
+                    };
+
+                    this.halt = function() {
+                        g.pauseAnimation();
+                    };
+
+                    g.playAnimation();
+                }
+
+                //============================================================
+                var invDiagram, involuteDemo1, involuteDemo2, gearDemo, intGearDemo, zoomPan;
+
+                var teeth1 = 10;
+                teeth1 = parseInt(document.getElementById("teeth1").value);
+
+                var teeth2 = 50;
+                teeth2 = parseInt(document.getElementById("teeth2").value);
+
+                function init() {
+                    var canvas = document.getElementById('cvs3');
+                    var divHeight = document.getElementById('gearDemoCanvas').clientHeight;
+                    var divWidth = document.getElementById('gearDemoCanvas').clientWidth;
+
+                    canvas.height = divHeight;
+                    canvas.width = divWidth;
+
+                    const g3 = new Cango('cvs3');
+                    gearDemo = new GearAnimation(g3, 3, teeth2, teeth1, xmin, ymin, xspan);
+                    //                    zoomPan = new ZoomPan(g3, function() {
+                    //                        g3.redrawAnimation();
+                    //                    });
+                }
+
+                function showConstruction() {
+                    invDiagram.showConst = !invDiagram.showConst;
+                    invDiagram.drawInv();
+                }
+
+                var consoleBtns3 = {
+                    f1: function() {
+                        gearDemo.run()
+                    },
+                    f2: function() {
+                        gearDemo.halt()
+                    }
+                };
+
+                var consoleBtns4 = {
+                    f1: function() {
+                        intGearDemo.run()
+                    },
+                    f2: function() {
+                        intGearDemo.halt()
+                    }
+                };
+
+                function reduce(numerator, denominator) {
+                    var gcd = function gcd(a, b) {
+                        return b ? gcd(b, a % b) : a;
+                    };
+                    gcd = gcd(numerator, denominator);
+                    return [numerator / gcd, denominator / gcd];
+                }
+
+
+
+                function updateCanvas() {
+                    var canvas = document.getElementById('cvs3');
+                    var divHeight = document.getElementById('gearDemoCanvas').clientHeight;
+                    var divWidth = document.getElementById('gearDemoCanvas').clientWidth;
+
+                    canvas.height = divHeight;
+                    canvas.width = divWidth;
+
+
+                    teeth1 = parseInt(document.getElementById("teeth1").value);
+
+                    teeth2 = parseInt(document.getElementById("teeth2").value);
+
+                    //if (teeth2 < teeth1) {
+                    //    teeth2 = teeth1;
+//
+                    //    document.getElementById("teeth2").value = teeth1; // Sync slider position
+                    //}
+                    document.getElementById("teethValue1").innerText = teeth1;
+
+                    document.getElementById("teethValue2").innerText = teeth2;
+
+
+                    const myGCD = reduce(teeth1, teeth2);
+
+                    document.getElementById("gearDemoRatioTeeth1").innerText = myGCD[0];
+
+                    document.getElementById("gearDemoRatioTeeth2").innerText = myGCD[1];
+
+                    document.getElementById("gearDemoMA").innerText = (Math.round(teeth2 / teeth1 * 100) / 100).toFixed(2);
+
+                    //                    
+                    //                    xmin = parseInt(document.getElementById("xminslider").value);
+                    //                    
+                    //                    ymin = parseInt(document.getElementById("yminslider").value);
+                    //                    
+                    //                    xspan = parseInt(document.getElementById("xspanslider").value);
+                    //                    
+                    //                    document.getElementById("xminslidervalue").innerText = xmin;
+                    //
+                    //                    document.getElementById("yminslidervalue").innerText = ymin;
+                    //                    
+                    //                    document.getElementById("xspanslidervalue").innerText = xspan;
+
+
+                    //                    zoomPan.reset();
+                    const g3 = new Cango('cvs3');
+                    gearDemo = new GearAnimation(g3, 3, teeth2, teeth1, xmin, ymin, xspan);
+
+
+                }
+
+
+                window.addEventListener("load", function() {
+
+                    init();
+                });
+
+                window.addEventListener("resize", function() {
+
+                    updateCanvas();
+                    init();
+                });
+            </script>
+            <script>
+                var firstTabEl = document.querySelector('#myTab li:last-child a')
+                var firstTab = new bootstrap.Tab(firstTabEl)
+
+                firstTab.show()
+            </script>
+
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+            <!-- Start of skillplan Zendesk Widget script -->
+            <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28773c90-16a6-4f5b-9d96-a69bfcf7a0c0"></script>
+            <!-- End of skillplan Zendesk Widget script -->
+        </p>
+
+    </div>
+</body>
+
+</html>

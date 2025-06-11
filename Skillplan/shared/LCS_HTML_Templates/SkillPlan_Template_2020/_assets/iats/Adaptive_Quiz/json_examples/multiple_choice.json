@@ -1,0 +1,17 @@
+{
+  "questionType": "multiple choice",
+  "questionHtml": "True or false? Moons revolve around planets.",
+  "hintHtml": false,
+  "randomizeOptions": false,
+  "options": [
+    {
+      "optionText": "True",
+      "feedback": "Correct, moons revolve around planets.",
+      "score": 1
+    },
+    {
+      "optionText": "False",
+      "feedback": "Moons DO revolve around planets!"
+    }
+  ]
+}

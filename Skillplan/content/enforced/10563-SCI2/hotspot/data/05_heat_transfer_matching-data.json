@@ -1,0 +1,62 @@
+{
+ "ActivityName": "Heat Transfer",
+ "ActivityType": "sort",
+ "HeadingLevel": 2,
+ "FeedbackType": "report",
+ "HighlightEffect": true,
+ "QuestionColumns": "1",
+ "Randomize": true,
+ "HorizontalAlignment": true,
+ "Instructions": "none",
+ "PreActivityText": "none",
+ "PreActivityMedia": "none",
+ "IncludePostPage": false,
+ "PostActivityText": "none",
+ "PostActivityMedia": "none",
+ "AnswerNodes": [{
+   "key": "KEY1",
+   "title": "<img src='img/Conduction.png' class='img-fluid mx-auto d-block' alt='Conduction' style='max-width: 150px;'>Conduction",
+   "color": "default",
+   "src": "none"
+  },
+  {
+   "key": "KEY2",
+   "title": "<img src='img/Convection.png' class='img-fluid mx-auto d-block' alt='Convection' style='max-width: 150px;'>Convection",
+   "color": "default",
+   "src": "none"
+  },
+  {
+   "key": "KEY3",
+   "title": "<img src='img/Radiation.png' class='img-fluid mx-auto d-block' alt='Radiation' style='max-width: 150px;'>Radiation",
+   "color": "default",
+   "src": "none"
+  }
+ ],
+ "QuestionNodes": [{
+   "question": "Heat transfer through direct molecular collisions. Energy moves from one molecule to adjoining molecules.",
+   "answer": "KEY1",
+   "type": "text",
+   "color": "default",
+   "correct": "none",
+   "wrong": "none"
+  },
+  {
+   "question": "Heat transfer due to the motion of a fluid (liquid or gas) that carries heat energy away from a heat source",
+   "answer": "KEY2",
+   "type": "text",
+   "color": "default",
+   "correct": "none",
+   "wrong": "none"
+
+  },
+  {
+   "question": "Heat transfer through electromagnetic waves.",
+   "answer": "KEY3",
+   "type": "text",
+   "color": "default",
+   "correct": "none",
+   "wrong": "none"
+  }
+
+ ]
+}

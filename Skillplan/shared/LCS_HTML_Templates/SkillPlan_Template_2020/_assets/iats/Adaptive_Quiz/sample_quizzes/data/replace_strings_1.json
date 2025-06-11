@@ -1,0 +1,355 @@
+{
+	"quizHeading": "Replace Strings 1 💯",
+	"feedbackType": "continuous",
+	"showPoolName": false,
+	"showProgressBar": false,
+	"showStrikes": true,
+	"useLevelProgress": false,	
+	"preQuizHtml": "<p>Replace strings are expected to work on feedback text, pre-upgrade html, pre-downgrade html, and the post-quiz HTML page.</p><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+	"postQuizHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FshtPsOTCP4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe><p>The quiz ended. Enjoy the above video. :)</p><p>Your highest level was: #{highestLevelAchieved}</p><p>Your ending level was: #{endingLevel}</p><p>Welcome to the adaptive quiz. This quiz has various levels in it. You will start with some easy questions, and if you do well, the questions will become more difficult. Try to make it to Level 3!</p><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+	"endConditions": {
+		"preface": "This quiz will end if...",
+		"numQuestionsCorrectToEnd": {
+			"enabled": false,
+			"limit": 5,
+			"preQuizText": "You correctly answer any 5 questions."
+		},
+		"numQuestionsIncorrectToEnd": {
+			"enabled": false,
+			"limit": 3,
+			"preQuizText": "You incorrectly answer any 3 questions."
+		},
+		"noRemainingQuestionsAtCurrentPool": {
+			"enabled": true,
+			"preQuizText": "There are no questions remaining to answer."
+		}
+	},
+	"questionPools": [
+		{
+			"poolId": 1,
+			"poolName": "Level 1",
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 1,
+			"numRightBeforeUpgrade": 2,
+			"upgradePoolId": 2,
+			"downgradePoolId": false,
+			"feedbackOnUpgradeHtml": "<p>You are about to upgraded...</p><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+			"feedbackOnDowngradeHtml": "<p>You are about to be downgraded...</p><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "Which planet's atmosphere is composed mostly of Nitrogen?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Pluto",
+							"feedback": "No, Pluto is not a planet. It's our home, Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+						},
+						{
+							"optionText": "Saturn",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Uranus",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Earth",
+							"feedback": "Yes! Earth atmosphere is mostly nitrogen.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		}
+					]
+				},
+				{
+					"questionType": "ord",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.<br>[Randomize options is on.]",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				}
+			]
+		},
+		{
+			"poolName": "Level 2",
+			"poolId": 2,
+			"poolLevel": 2,
+			"upgradePoolId": 3,
+			"downgradePoolId": 1,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 1,
+			"numRightBeforeUpgrade": 2,
+			"feedbackOnUpgradeHtml": "Good job on passing level 1! The quiz is now about to show you some tougher questions.<br>If you get one wrong, you'll be downgraded back to level 1, so be careful!",
+			"feedbackOnDowngradeHtml": "You are about to be downgraded to level 0...",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "Which planet's atmosphere is composed mostly of Nitrogen?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Pluto",
+							"feedback": "No, Pluto is not a planet. It's our home, Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+						},
+						{
+							"optionText": "Saturn",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Uranus",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "No, it's Earth!<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Earth",
+							"feedback": "Yes! Earth atmosphere is mostly nitrogen.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		}
+					]
+				},
+				{
+					"questionType": "ord",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.<br>[Randomize options is on.]",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				}
+			]
+		},
+		{
+			"poolId": 3,
+			"poolName": "Level 3",
+			"poolLevel": 3,
+			"repeatWrong": true,
+			"repeatCorrect": false,
+			"numWrongBeforeDowngrade": 3,
+			"numRightBeforeUpgrade": 1,
+			"upgradePoolId": null,
+			"downgradePoolId": 2,
+			"feedbackOnUpgradeHtml": "You are about to upgraded...",
+			"feedbackOnDowngradeHtml": "You are about to be downgraded...",
+			"randomizeQuestionOrder": true,
+			"questions": [
+				{
+					"questionType": "mc",
+					"questionHtml": "The largest moon in our solar system has an atmosphere that is denser than the atmosphere of Mars. The name of this moon is:",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Titan",
+							"feedback": "That's correct!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+						},
+						{
+							"optionText": "Triton",
+							"feedback": "No, it's actually Titan!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Ganymede",
+							"feedback": "No, it's actually Titan!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Io",
+							"feedback": "No, it's actually Titan!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		}
+					]
+				},
+				{
+					"questionType": "multiple choice",
+					"questionHtml": "Which planet's atmosphere is composed mostly of Nitrogen?",
+					"hintHtml": false,
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "Pluto",
+							"feedback": "No, Pluto is not a planet. It's our home, Earth!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+						},
+						{
+							"optionText": "Saturn",
+							"feedback": "No, it's Earth!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Uranus",
+							"feedback": "No, it's Earth!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Neptune",
+							"feedback": "No, it's Earth!<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		},
+						{
+							"optionText": "Earth",
+							"feedback": "Yes! Earth atmosphere is mostly nitrogen.<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+        		}
+					]
+				},
+				{
+					"questionType": "tf",
+					"questionHtml": "The speed of light in a vaccuum (c) is 1,080,000,000 km/h.",
+					"hintHtml": "He had one son, and one daughter.",
+					"randomizeOptions": true,
+					"options": [
+						{
+							"optionText": "True",
+							"feedback": "Correct! The speed of light is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+							"score": 1
+						},
+						{
+							"optionText": "False",
+							"feedback": "Actually the speed of light really is a constant 1,080,000,000 km/h (299,792,458 m/s) in a vaccuum.<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>"
+        		}
+					]
+				},
+				{
+					"questionType": "ord",
+					"questionHtml": "Match the terrestrial planets with the number of moons they have.<br>[Randomize options is on.]",
+					"hintHtml": "Some planets don't have moons.",
+					"randomizeOptions": true,
+					"feedbackForPerfect": "Yes! Mars and Earth have moons. Mars with two, and Earth with one. Mercury and Venus don't have any moons! 👍<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"feedbackForImperfect": "Close, but actually Mercury and Venus don't have any moons, while Earth has one and Mars has two. Good try. 👍<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"options": [
+						{
+							"optionText": "Earth",
+							"matchingText": "One moon"
+						},
+						{
+							"optionText": "Mercury",
+							"matchingText": "No moons"
+						},
+						{
+							"optionText": "Mars",
+							"matchingText": "Two moons"
+						},
+						{
+							"optionText": "Venus",
+							"matchingText": "No moons"
+						}
+					]
+				},
+				{
+					"questionType": "multi-select",
+					"questionHtml": "<p>Place a checkmark beside the <strong>Gas Giant</strong> the planets.</p><p>[Please note that Coloured feedback is OFF for this quiz.]</p>",
+					"hintHtml": "There are four terrestrial planets.",
+					"randomizeOptions": false,					
+					"feedbackForPerfect": "Correct! The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"feedbackForImperfect": "The rocky planets are Earth, Mercury, Venus, and Mars. Jupiter, Neptune, Saturn, and Uranus are all gas giants.<br><h2>replace string tests:</h2><ul><li>Downgrade Pool: #{downgradePool}</li><li>Current Pool Name: #{currentPool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Upgrade Pool: #{upgradePool} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until upgrading to next pool: #{numRemainingToUpgrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Remaining questions until downgrading: #{numRemainingToDowngrade} <br>[ ↑ Should work in Feedback and PreUpgrade/Downgrade]</li><li>Highest level achieved: #{highestLevelAchieved} <br>[ ↑ Should work in post-quiz HTML]</li><li>Ending level: #{endingLevel} <br>[ ↑ Should work in Post-quiz HTML]</li></ul>",
+					"options": [
+						{
+							"optionText": "Mercury"
+						},
+						{
+							"optionText": "Venus"
+						},
+						{
+							"optionText": "Earth"
+						},
+						{
+							"optionText": "Mars"
+						},
+						{
+							"optionText": "Jupiter",
+							"score": 1
+						},
+						{
+							"optionText": "Saturn",
+							"score": 1
+						},
+						{
+							"optionText": "Uranus",
+							"score": 1
+						},
+						{
+							"optionText": "Neptune",
+							"score": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

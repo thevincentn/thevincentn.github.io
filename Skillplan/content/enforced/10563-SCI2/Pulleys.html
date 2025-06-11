@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/flickity.css" media="screen">
+    <link rel="stylesheet" href="/content/enforced/6709-BYSRDU/flickity/fullscreen.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/fontawesome-free-5.9.0-web/css/all.min.css">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/styles.min.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/css/custom.css">
+    <link rel="stylesheet" href="/content/enforced/10511-SP2025/custom.css">
+    <style>
+        .lever-container {
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .inclined-visual {
+            position: relative;
+            height: 400px;
+            margin: 0 auto 10px auto;
+            width: 520px;
+            /* lock the visual width */
+            max-width: 700px;
+            min-width: 250px;
+            user-select: none;
+
+        }
+
+        .plane {
+            position: absolute;
+            left: 0px;
+            width: 500px;
+            max-width: 550px;
+            min-width: 170px;
+            height: 12px;
+            top: 300px;
+            background: #b6c3d4;
+            border-radius: 8px;
+            transform-origin: left bottom;
+            box-shadow: 0 4px 10px rgba(36, 52, 74, 0.07);
+            z-index: 3;
+        }
+
+        .ground {
+            position: absolute;
+            left: 0px;
+            width: 66vw;
+            max-width: 550px;
+            min-width: 170px;
+            height: 2px;
+            top: 310px;
+            background: #999;
+            z-index: 1;
+        }
+
+        .load {
+            left: 180px;
+            top: -60px;
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            background: #586fa6;
+            border-radius: 7px 7px 10px 10px;
+            box-shadow: 0 4px 12px rgba(55, 60, 90, 0.10);
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1em;
+            padding-bottom: 4px;
+            transition: left 0.6s, top 0.6s, transform 0.6s;
+        }
+
+        .effort-arrow-wrap {
+            left: 110px;
+            top: -80px;
+            position: absolute;
+            z-index: 10;
+            width: 70px;
+            height: 120px;
+            pointer-events: none;
+            /* Will set left/top dynamically */
+        }
+
+        .effort-arrow-svg {
+            width: 44px;
+            height: 95px;
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            /* Arrow tip is at (22,10) in SVG coordinates */
+        }
+
+        .effort-label {
+            position: absolute;
+            left: -50px;
+            top: 90px;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            font-weight: 600;
+            color: #e55039;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .load-label {
+            font-size: 0.95em;
+            color: #fff;
+            margin-top: 1px;
+            font-weight: 400;
+            z-index: 10 !important;
+            position: relative;
+        }
+
+        .height-arrow {
+            position: absolute;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        .height-arrow-label {
+            font-size: 1.2em;
+            font-weight: bold;
+            fill: #34a853;
+        }
+
+        .effortdistance {
+            left: 180px;
+            top: 0px;
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1em;
+            padding-bottom: 4px;
+            transition: left 0.6s, top 0.6s, transform 0.6s;
+        }
+
+
+        .effortdistance-label {
+            font-size: 1.1em;
+            font-weight: bold;
+            fill: #586fa6;
+
+        }
+
+
+        @media (max-width: 700px) {
+
+
+            .plane,
+            .ground {
+                width: 200px;
+            }
+
+            .load {
+                left: 80px;
+
+            }
+
+            .effortdistance {
+                left: 80px;
+            }
+
+            .effort-arrow-wrap {
+                left: 10px;
+            }
+
+            .effort-label {
+                left: -50px;
+                top: 40px
+            }
+        }
+    </style>
+    <title>Module Introduction Page</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intersect-wrapper bg-img-wrapper">
+            <p><img src="/content/enforced/10563-SCI2/branding/lessonbanners/4.png" alt=""></p>
+            <div class="row">
+                <div class="intersect-content text-center col-12 offset-md-1 col-md-10">
+                    <div class="intersect-header px-sm-2 px-md-5">
+                        <h1>Pulleys</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="offset-sm-1 col-sm-10">
+                <div class="row pt-3 pb-3 card mb-4 mx-auto">
+                    <div class="row col-11 m-auto">
+                        <div class="d-block col-md-8 col-12">
+                            <h3>Key Questions:</h3>
+                            <ul>
+                                <li>How does a pulley help people lift heavy loads?</li>
+                                <li>How do you calculate the mechanical advantage of a pulley system?</li>
+                            </ul>
+                        </div>
+                        <div class="d-none d-md-flex col-md-4 p-4"><img src="/content/enforced/10511-SP2025/questions.png" alt="" data-d2l-editor-default-img-style="true" style="width: 100%; object-fit: scale-down; min-width: 175px; min-height: 175px; max-height: 250px;"></div>
+                    </div>
+                </div>
+
+
+                <h3>What Do You Think?</h3>
+                <p>Consider the questions below. Click on each card to learn the answers.</p>
+                <div class="flip-card-set row">
+
+                    <!-- Card 1 -->
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/content/enforced/10563-SCI2/simplemachines/pulley/tf1.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4 style="text-align: center">True or False</h4>
+                                <p class="text-left">
+                                    All pulleys create mechanical advantage.
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">False</h4>
+                                <p class="text-left">
+                                    Some pulleys only change the direction of your force rather than multiplying it.
+                                </p>
+                                <p class="text-left">
+                                    But when combined with other pulleys in a system, they can create mechanical advantage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flip-card col-sm">
+                        <div class="flip-card-content" role="button" tabindex="0">
+                            <div class="flip-card-front" style="text-align: center">
+                                <img src="/content/enforced/10563-SCI2/simplemachines/pulley/tf2.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%" class="mx-auto px-4" />
+                                <h4 style="text-align: center">True or False</h4>
+                                <p class="text-left">
+                                    Adding moveable pulleys to a system adds mechanical advantage.
+                                </p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 style="text-align: center">True</h4>
+                                <p class="text-left">
+                                    Having several moveable pulleys generates more mechanical advantage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <p class="mt-4">Keep reading to learn more about pulleys and mechanical advantage.</p>
+
+                <hr>
+                <h1>Introduction</h1>
+                <p>A pully is a <a data-toggle="tooltip" data-placement="top" title="A tool or device that uses mechanical advantage to multiply forces.">simple machine</a> that uses the advantages of wheels and axles to make lifting or moving loads easier. A pulley is made up of a wheel with a rope around it. There are four types of pulleys.</p>
+                <p class="directive">Click on each to learn more.</p>
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">Fixed</a><a class="list-group-item list-group-item-action">Moveable</a><a class="list-group-item list-group-item-action">Compound</a><a class="list-group-item list-group-item-action">Box &amp; Tackle</a></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade pb-3 show active">
+                                    <p>
+                                        A <strong>fixed pulley</strong> is attached to a stable structure and stays in place when used. It helps lift a load by changing the direction of your force. For example, pulling down on the rope lifts the object upward so you can incorporate your body weight into the effort. However, a fixed pulley does not reduce the amount of force required to move the load.
+                                    </p>
+                                    <p>Fixed pulleys don't multiply the effort force so they do not create mechanical advantage.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/9.png" alt="placeholder" style="width:100%" />
+                                    </p>
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p>
+                                                A <strong>fixed pulley</strong> is attached to a stable structure and stays in place when used. It helps lift a load by changing the direction of your force. For example, pulling down on the rope lifts the object upward so you can incorporate your body weight into the effort. However, a fixed pulley does not reduce the amount of force required to move the load.
+                                            </p>
+                                            <p>Fixed pulleys don't multiply the effort force so they do not create mechanical advantage.</p>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <figure>
+                                                <p>
+                                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/9.png" alt="placeholder" />
+                                                </p>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>
+                                        A <strong>moveable pulley</strong> is attached to the load, so it moves with it. This setup reduces the effort needed to lift the load by sharing the weight between multiple rope segments.
+                                    </p>
+                                    <p>A single moveable pulley provides a mechanical advantage of 2.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/10.png" alt="placeholder" style="width:100%" />
+                                    </p>
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p>
+                                                A <strong>moveable pulley</strong> is attached to the load, so it moves with it. This setup reduces the effort needed to lift the load by sharing the weight between multiple rope segments.
+                                            </p>
+                                            <p>A single moveable pulley provides a mechanical advantage of 2.</p>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <figure>
+                                                <p>
+                                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/10.png" alt="placeholder" />
+                                                </p>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>
+                                        A <strong>compound pulley</strong>, is a system of multiple pulleys, both fixed and moveable, working together. When you combine or chain several pulleys together you amplify the mechanical advantage.
+                                    </p>
+                                    <p>The more moveable pulleys in the system, the easier it is to lift a heavy load. The trade-off is that you need a fixed pulley for each moveable pulley and you increase distance for the rope to travel.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/11.png" alt="placeholder" style="width:100%" />
+                                    </p>
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+
+                                            <p>
+                                                A <strong>compound pulley</strong>, is a system of multiple pulleys, both fixed and moveable, working together. When you combine or chain several pulleys together you amplify the mechanical advantage. 
+                                            </p>
+                                            <p>The more moveable pulleys in the system, the easier it is to lift a heavy load. The trade-off is that you need a fixed pulley for each moveable pulley and you increase distance for the rope to travel.</p>
+                                            <p>To determine the mechanical advantage of a compound pulley, you can simply count the number of rope segments that are directly lifting the load.</p>
+
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <figure>
+                                                <p>
+                                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/11.png" alt="placeholder" />
+                                                </p>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>
+                                        A <strong>block and tackle</strong> is one form of a compound pulley that is mounted on a single frame. These are the most common types of pulley systems found in the trades. Diagrams of block and tackle pulleys often appear in an expanded view so that people can analyze the fixed and moveable pulleys they are made up of. </p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/5.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                    <!--
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6">
+                                            <p>
+                                                A <strong>block and tackle</strong> is one form of a compound pulley that is mounted on a single frame. 
+                                            </p>
+                                            <p>These are typically the most common types of pulley systems found in the trades.</p>
+                                            <p>To determine the mechanical advantage of a block and tackle, you can count the number of rope segments supporting the load.</p>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <figure>
+                                                <p>
+                                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/12.png" alt="placeholder" />
+                                                </p>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>When working with pulleys, there are a few components and terms that's helpful to be aware of.</p>
+                <!-- Accordion headings should be changed to respect page hierarchy -->
+                <p class="directive">Select each item to learn more.</p>
+                <p class="btn btn-secondary expandall">Open All Panels</p>
+                <div class="accordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Tension</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    Tension is the force transmitted through the rope or cable in a pulley system. In ideal systems with no friction or slack, the tension is the same throughout a continuous rope. Tension is key to understanding how effort is distributed across the system and how mechanical advantage is achieved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Sheave</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    A sheave is the wheel / groove inside a pulley that the rope runs over. It rotates to reduce friction and guide the rope. Larger or smoother sheaves help the system work more efficiently by minimizing resistance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Becket</h2>
+                        </div>
+                        <div class="collapse">
+                            <div class="card-body">
+                                <p>
+                                    A becket is the fixed point where the rope is tied or anchored on a pulley block. It doesn’t move with the rope. In mechanical advantage calculations, the rope attached at the becket typically does not count as a lifting segment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="quick-assess quick-assess-mc quick-border">
+
+                    <fieldset class="radio">
+
+                        <h3>What Do You Think?</h3>
+                        <!--
+                            <div class="col-6 float-right">
+                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/wdyt.png" alt="placeholder" style="width:100%" />
+                </div>
+-->
+                        <p>
+                            What is the mechanical advantage of this compound pulley?
+                        </p>
+                        <p class="mx-auto text-center">
+                            <img src="/content/enforced/10563-SCI2/simplemachines/pulley/wdyt.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                        </p>
+                        <div class="row p-3 pl-md-4 ml-md-4">
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 3</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[Y]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 4</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 5</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 6</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                        <div class="collapse feedback">
+                            <hr class="my-4">
+                            <p><strong>Correct Answer:</strong> 4</p>
+                            <p>
+                                This system has a mechanical advantage of 4 because there are 4 rope segments lifting the load up.
+                            </p>
+                        </div>
+
+
+                    </fieldset>
+                </div>
+
+
+                <!-- Tabs End -->
+
+
+                <hr>
+                <h1>Calculating Mechanical Advantage</h1>
+                <h2>Basic Pulley Systems</h2>
+
+                <p>In most cases, it's straightforward to determine the mechanical advantage of a pulley system. You can often just count the number of rope segments that support the load. Take a look at the following examples.</p>
+                <p class="directive">Click on each to learn more.</p>
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center"><a class="list-group-item list-group-item-action active">1:1</a><a class="list-group-item list-group-item-action">2:1</a><a class="list-group-item list-group-item-action">3:1</a><a class="list-group-item list-group-item-action">4:1</a></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div class="tab-pane fade pb-3 show active">
+                                    <p>A pulley system with a 1:1 mechanical advantage consists of a single fixed pulley with <strong>one rope segment</strong> supporting the load. The fixed pulley does not multiply the effort force so it has a mechanical advantage of 1.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/1.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>A pulley system with a 2:1 mechanical advantage has exactly one moveable pulley in it with <strong>two rope segments</strong> supporting the load through the sheave. It may be supported by one fixed pulley or none at all. </p>
+                                    <p>The effort force comes through one side of the moveable pulley through the tension in the rope. This tension must be the same on either side so each side applies the same effort force to lift the load up. This means the moveable pulley doubles the effort force to lift the load with 1/2 the work. Below you'll see two ways to visualize a 2:1 pulley system. </p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/2.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>A pulley system with a 3:1 mechanical advantage has exactly one moveable pulley in it with <strong>three rope segments</strong> supporting the load. Two of the rope segments travel through the sheave and 1 is connected to the moveable pulley through a becket. It is supported by 2 fixed pulleys. </p>
+                                    <p> Below you'll see two ways to visualize a 3:1 pulley system. </p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/3.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+                                <div class="tab-pane fade pb-3">
+                                    <p>A pulley system with a 4:1 mechanical advantage has two moveable pulleys supporting the load through the tension in <strong>four rope segments</strong>. Two of the rope segments travel through the sheave of one moveable pulley and the other two segments travel through the sheave of the remaining moveable pulley. </p>
+                                    <p> Below you'll see two ways to visualize a 4:1 pulley system. </p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/4.png" alt="placeholder" style="width:100%" />
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-graphic mt-4">
+                    <div class="card-body">
+                        <p>So to determine the mechanical advantage of the most common pulley systems, you can just count the number of rope segments supporting the load.</p>
+                    </div>
+                </div>
+                <h3>Practice</h3>
+                <p class="my-3 mb-4">Try to determine the mechanical advantage of the following questions.</p>
+
+
+                <div class="quick-assess quick-assess-mc quick-border">
+                    <p class="lead my-3"><strong>Problem 1:</strong> What is the mechanical advantage of this compound pulley?</p>
+                    <p class="mx-auto text-center mt-4">
+                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/cyu.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                    </p>
+                    <fieldset class="radio">
+
+                        <div class="row p-3 pl-md-4 ml-md-4">
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 3</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 4</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 5</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[Y]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 6</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                        <div class="collapse feedback">
+                            <hr class="my-4">
+                            <p><strong>Correct Answer:</strong> 6</p>
+                            <p>
+                                There are 6 rope segments supporting the load so this pulley system has a mechanical advantage of 6.
+                            </p>
+                        </div>
+
+
+                    </fieldset>
+                </div>
+
+                <br>
+                <p class="py-3">You can apply this same counting technique to determine the mechanical advantage of a block and tackle pulley system on a job site. Try it yourself!</p>
+                <div class="quick-assess quick-assess-mc quick-border">
+                    <p class="lead my-3"><strong>Problem 2:</strong> What is the mechanical advantage of this block and tackle?</p>
+                    <p class="mx-auto text-center mt-4">
+                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/blockandtackle2.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                    </p>
+                    <fieldset class="radio">
+                        <div class="row p-3 pl-md-4 ml-md-4">
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 3</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 4</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[Y]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 5</label></div>
+                                </div>
+                            </div>
+                            <div class="form-check col-12 col-md px-0 mr-auto">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>[[N]]</p>
+                                    </div>
+                                    <div class="col"><label class="radio-label"> 6</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="btn btn-primary btn-quick-assess">Check Answer</p>
+                        <div class="collapse feedback">
+                            <hr class="my-4">
+                            <p><strong>Correct Answer:</strong> 5</p>
+                            <p>
+                                There are 5 rope segments that would support the load at the bottom so this pulley system has a mechanical advantage of 5.
+                            </p>
+                        </div>
+
+
+                    </fieldset>
+                </div>
+                <hr>
+
+                <h2>Complex Pulley Systems</h2>
+                <p>Calculating mechanical advantage in complex pulley systems isn’t as straightforward as counting the number of rope segments. In the trades, you don’t need to calculate the mechanical advantage but you do need to recognize these systems. The key difference is that pulleys lift other pulleys as if they were loads. Here are some examples.</p>
+                <p class="directive">Click on each to learn more.</p>
+
+                <div class="tabs-wrapper tabs-horizontal">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="list-group flex-md-row text-center">
+                                <a class="list-group-item list-group-item-action active">Stacking Moveable Pulleys</a>
+                                <a class="list-group-item list-group-item-action">Stacking Fixed Pulleys</a>
+                                <a class="list-group-item list-group-item-action">Combining Types</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+
+                                <div class="tab-pane fade pb-3 show active">
+                                    <p>In this 8:1 system, moveable pulleys lift other moveable pulleys. Each pulley doubles the mechanical advantage, so with 3 pulleys, the advantage is 2 &times; 2 &times; 2 = 8. This setup provides a high mechanical advantage with fewer pulleys, but it may cause the load to tilt as it’s lifted.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/8to1.png" alt="8:1 Pulley System" style="width:100%" />
+                                    </p>
+                                </div>
+
+                                <div class="tab-pane fade pb-3">
+                                    <p>In this 3:1 system, fixed pulleys lift other fixed pulleys. The effort applied to the first pulley must balance on the other side. As the effort passes through the becket, it doubles. By the time it reaches the last rope segment, the mechanical advantage is 3:1 because 1 + 2 = 3.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/3to1.png" alt="3:1 Pulley System" style="width:100%" />
+                                    </p>
+                                </div>
+
+                                <div class="tab-pane fade pb-3">
+                                    <p>This 5:1 system combines different pulley types. The first segment forms the same 3:1 system in the previous tab. At the top, the effort force is multiplied by 4. As the force passes through the moveable pulley and the final fixed pulley, it is split and lifted with twice the effort. The mechanical advantage is 5:1 because 3 + 2 = 5.</p>
+                                    <p>
+                                        <img src="/content/enforced/10563-SCI2/simplemachines/pulley/5to1.png" alt="5:1 Pulley System" style="width:100%" />
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-graphic mt-4">
+                    <div class="card-body">
+                        <p>Remember, you will only need to determine the mechanical advantage on pulley systems where you can just count the number of rope segments supporting a load.</p>
+                    </div>
+                </div>
+                <hr>
+                <h3>Apply Your Knowledge</h3>
+                <p class="mt-4">Let's review what you've learned so far!</p>
+                <p class="instruction">Answer the following questions. When you’re ready, select "Check Answer" to reveal the solution steps.</p>
+                <!-- Problem 1 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 1</strong></p>
+                                <p>What is the mechanical advantage of this pulley system?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/ma3cyu.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                </p>
+                                <p style="line-height: 16px;"></p>
+                                <p><label class="sr-only">Your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: </strong>3</p>
+                                            <p>The mechanical advantage is 3 because there are 3 rope segments supporting the load.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- Problem 2 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 2</strong></p>
+                                <p>What is the mechanical advantage of this pulley system?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/ma4cyualt.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                </p>
+                                <p style="line-height: 16px;"></p>
+                                <p><label class="sr-only">Your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: </strong>4</p>
+                                            <p>The mechanical advantage is 4 because there are 4 rope segments supporting the load.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <!-- Problem 3 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 3</strong></p>
+                                <p class="pr-5">How much effort force is required to lift a 180lb load in this pulley system?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/ma4cyu.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: 45</strong></p>
+                                            <hr>
+                                            <h5>Answer Key</h5>
+                                            <p>Click on each step to see how the problem was solved.</p>
+                                            <div class="tabs-wrapper tabs-horizontal">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="list-group flex-md-row text-center">
+                                                            <a class="list-group-item list-group-item-action active">Identify</a>
+                                                            <a class="list-group-item list-group-item-action">Organize</a>
+                                                            <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a>
+                                                            <a class="list-group-item list-group-item-action">Decide</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane fade show active">
+                                                                <p>How much <mark>effort force</mark> is required to lift a <u>180lb load</u> in this pulley system?</p>
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-4">
+                                                                        <img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" style="max-width:150px; display:block; margin:auto;">
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6 col-md-8"><br>
+                                                                        <p><strong>Need:</strong> Effort force (EF)<br><strong>Know:</strong> MA = 4, RF = 180lb</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <p><strong>Locate the formula:</strong> EF = RF ÷ MA</p>
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-7">
+                                                                        <p style="margin-left: 50px;">RF = 180 lb</p>
+                                                                        <p style="margin-left: 50px;">MA = 4</p>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6 col-md-5">
+                                                                        <img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid02.png" alt="" style="max-width:100%;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <p><strong>Step 1:</strong> Write the formula: EF = RF ÷ MA</p>
+                                                                <p><strong>Step 2:</strong> Substitute: EF = 180 ÷ 4</p>
+                                                                <p><strong>Step 3:</strong> EF = 45</p>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-4"><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" style="max-width:150px; display:block; margin:auto;"></div>
+                                                                    <div class="col-12 col-sm-6 col-md-8">
+                                                                        <p><i class="fa fa-check"></i> The effort force is reasonable because it is smaller than the resistance force.</p>
+                                                                        <p><strong>Final Answer:</strong> 45</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+
+
+                <!-- Problem 4 -->
+                <form class="quick-assess quick-assess-sa quick-border mb-5">
+                    <div class="form-group pt-4">
+                        <div class="shortanswer row">
+                            <div class="col-sm-1 pr-0 pr-sm-1"><span class="fas ans-symbol invisible "></span></div>
+                            <div class="col-sm-11">
+                                <p><strong>Problem 4</strong></p>
+                                <p class="pr-5">A crane operator uses the pulley shown to lift a load of 8 400 pounds. How many pounds of effort force are needed to lift the load?</p>
+                                <p class="mt-4">
+                                    <img src="/content/enforced/10563-SCI2/simplemachines/pulley/ma6cyu.png" alt="placeholder" style="width:100%; max-width:400px;" />
+                                </p>
+                                <p style="line-height: 16px;"><strong><span style="color: #01579b; font-size: 16px;">* Do not include units in your answer.</span></strong></p>
+                                <p><label class="sr-only">your answer</label> <input type="text" placeholder="your answer" required="true" aria-required="true"></p>
+                                <button type="button" data-toggle="collapse" disabled="disabled" class="btn btn-primary btn-quick-assess">Check Answer</button>
+                                <div class="collapse panel panel-reveal">
+                                    <div class="panel panel-alt">
+                                        <div class="panel-body">
+                                            <p><strong>Answer: 1400 lbs</strong></p>
+                                            <hr>
+                                            <h5>Answer Key</h5>
+                                            <p>Click on each step to see how the problem was solved.</p>
+                                            <div class="tabs-wrapper tabs-horizontal">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="list-group flex-md-row text-center">
+                                                            <a class="list-group-item list-group-item-action active">Identify</a>
+                                                            <a class="list-group-item list-group-item-action">Organize</a>
+                                                            <a class="list-group-item list-group-item-action">Set Up &amp; Calculate</a>
+                                                            <a class="list-group-item list-group-item-action">Decide</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane fade show active">
+                                                                <p>
+                                                                    
+                                                                    A crane operator uses the pulley shown to lift a load of <u>8 400 pounds</u>. How many pounds of <mark>effort force</mark> are needed to lift the load?
+                                                                
+                                                                </p>
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-4">
+                                                                        <img src="/content/enforced/6793-PrepIW/lotties/identify.png" alt="" style="max-width:150px; display:block; margin:auto;">
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6 col-md-8"><br>
+                                                                        <p><strong>Need:</strong> Effort force (EF)<br><strong>Know:</strong> MA = 6, RF = 8400 lb</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <p><strong>Locate the formula:</strong> EF = RF ÷ MA</p>
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-7">
+                                                                        <p style="margin-left: 50px;">RF = 8400 lb</p>
+                                                                        <p style="margin-left: 50px;">MA = 6</p>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6 col-md-5">
+                                                                        <img src="/content/enforced/10563-SCI2/simplemachines/levers/ma-pyramid02.png" alt="" style="max-width:100%;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <p><strong>Step 1:</strong> Write the formula: EF = RF ÷ MA</p>
+                                                                <p><strong>Step 2:</strong> Substitute: EF = 8 400 ÷ 6</p>
+                                                                <p><strong>Step 3:</strong> EF = 1400</p>
+                                                            </div>
+                                                            <div class="tab-pane fade">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-sm-6 col-md-4"><img src="/content/enforced/6793-PrepIW/lotties/decide.png" alt="" style="max-width:150px; display:block; margin:auto;"></div>
+                                                                    <div class="col-12 col-sm-6 col-md-8">
+                                                                        <p><i class="fa fa-check"></i> The effort force is reasonable because it is smaller than the resistance force.</p>
+                                                                        <p><strong>Final Answer:</strong> 1400</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <h2>How did you do?</h2>
+                <p>If you got 4 out of 4, you're ready to move on. If not, go back and review this section.</p>
+
+
+
+                <hr>
+                <h1>Lesson Complete!</h1>
+                <p><strong>Click an image</strong> to be directed to a lesson.&nbsp;</p>
+                    <div class="sdf-container sdf-5col">
+	<div class="sdf-nav-card dim">
+		<a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10550">
+			<img src="/content/enforced/10563-SCI2/simplemachines/icons/1.png" alt="">&nbsp; </a>
+		<div class="sdf-title">
+			<h3>Introduction to Mechanical Advantage</h3>
+		</div>
+	</div>
+	<div class="sdf-nav-card dim">
+		<a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10619">
+			<img src="/content/enforced/10563-SCI2/simplemachines/icons/2.png" alt="">&nbsp; </a>
+		<div class="sdf-title">
+			<h3>Levers</h3>
+		</div>
+	</div>
+	<div class="sdf-nav-card dim">
+		<a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10640">
+			<img src="/content/enforced/10563-SCI2/simplemachines/icons/3.png" alt="">&nbsp; </a>
+		<div class="sdf-title">
+			<h3>Inclined Planes, Wedges &amp; Screws</h3>
+		</div>
+	</div>
+	<div class="sdf-nav-card dim">
+		<a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10647">
+			<img src="/content/enforced/10563-SCI2/simplemachines/icons/4.png" alt="">&nbsp; </a>
+		<div class="sdf-title">
+			<h3>Wheels &amp; Axles</h3>
+		</div>
+	</div>
+	<div class="sdf-nav-card dim">
+		<a class="sdf-icon" target="_top" href="/d2l/le/lessons/10563/topics/10648">
+			<img src="/content/enforced/10563-SCI2/simplemachines/icons/5.png" alt="">&nbsp; </a>
+		<div class="sdf-title">
+			<h3>Pulleys</h3>
+		</div>
+	</div>
+
+</div>
+                    <br />
+                    <!--<p>Click the blue button for the next lesson.</p>-->
+                    <p>Click the blue button for the Module Quiz.</p>
+                <!--<p>Click here for the <a href="/d2l/le/lessons/10177/topics/9536" target="_top" rel="noopener"><strong>Module Quiz</strong></a> or click the blue button for the next lesson.</p>-->
+                <br>
+                <p><a href="/d2l/le/lessons/10563/topics/10651" type="button" class="btn btn-secondary" target="_top">Module Quiz</a></p>
+            </div>
+            <div class="col-12">
+                <footer>
+                    <!-- <p>© [Client] [Year]</p> -->
+                    <p><img src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/img/logo.png" class="img-fluid" alt="logo"></p>
+                </footer>
+            </div>
+        </div>
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/jquery/jquery-3.4.1.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/popper-js/popper.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/thirdpartylib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/flickity.pkgd.js"></script>
+            <script src="/content/enforced/6709-BYSRDU/flickity/fullscreen.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        </p>
+        <p>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.min.js"></script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/lottie.js"></script>
+            <script>
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangle'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageTriangle.json"
+                });
+
+                var leverArmTriangleanimation = lottie.loadAnimation({
+                    container: document.getElementById('maTriangleLeverArm'),
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: "/content/enforced/10563-SCI2/lotties/mechanicalAdvantageTriangleLeverArm.json"
+                });
+            </script>
+        </p>
+        <!-- Template JavaScript -->
+        <p>
+            <script>
+                $(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
+            <script>
+                const pxPerInch = 10;
+                const loadBoxW = 100,
+                    loadBoxH = 60;
+                const plane = document.getElementById('plane');
+                const loadObj = document.getElementById('loadObj');
+                const effortdistanceObj = document.getElementById('effortdistanceObj');
+                const effortArrowWrap = document.getElementById('effortArrowWrap');
+                const effortArrowSVG = document.getElementById('effortArrowSVG');
+                const effortLabel = document.getElementById('effortLabel');
+                const statsDisplay = document.getElementById('statsDisplay');
+                const loadLabel = document.getElementById('loadLabel');
+                const effortdistanceLabel = document.getElementById('effortdistanceLabel');
+                const angleSlider = document.getElementById('angleSlider');
+                const loadSlider = document.getElementById('loadSlider');
+                const inclinedVisual = document.getElementById('inclinedVisual');
+                const heightArrowDiv = document.getElementById('heightArrow');
+                let rampLength = 200;
+
+                function myFunction(x) {
+                    if (x.matches) { // If media query matches
+                        rampLength = 200;
+                    } else {
+                        rampLength = 500;
+                    }
+                }
+
+                // Create a MediaQueryList object
+                var x = window.matchMedia("(max-width: 700px)")
+
+                // Call listener function at run time
+                myFunction(x);
+
+                // Attach listener function on state changes
+                x.addEventListener("change", function() {
+                    myFunction(x);
+                });
+
+
+                function updateInclinedPlane() {
+                    // Responsive: recalculate every time
+                    const rampRect = plane.getBoundingClientRect();
+                    const visualRect = inclinedVisual.getBoundingClientRect();
+
+
+
+                    const angleDeg = Number(angleSlider.value);
+                    const angleRad = angleDeg * Math.PI / 180;
+                    const loadMass = Number(loadSlider.value);
+
+                    // Ramp triangle
+                    const rampHeight = Math.sin(angleRad) * rampLength;
+                    const rampBase = Math.cos(angleRad) * rampLength;
+
+                    // Mechanical Advantage = ramp length / height
+                    const mechAdv = rampLength / rampHeight;
+                    // Effort (frictionless): W * sin(theta)
+                    const effort = (loadMass * Math.sin(angleRad));
+
+                    // Rotate ramp visually
+                    plane.style.transform = `rotate(-${angleDeg}deg)`;
+
+                    // The ramp starts at:
+                    const rampStartX = 0;
+                    const rampStartY = 300 + 12; // matches .plane top + height in CSS
+                    const groundY = 310;
+
+                    // Center of ramp, where load "sits"
+                    const rampCenterX = rampStartX + (rampLength / 2) * Math.cos(angleRad);
+                    const rampCenterY = rampStartY - (rampLength / 2) * Math.sin(angleRad);
+
+                    // Load box: bottom center "sits" on ramp at center point
+                    const loadX = rampCenterX + loadBoxW;
+                    const loadY = rampCenterY - loadBoxH;
+
+                    //loadObj.style.left = `${loadX}px`;
+                    //loadObj.style.top = `${loadY}px`;
+                    //loadObj.style.transform = `rotate(-${angleDeg}deg)`;
+                    loadLabel.innerHTML = `Load<br><span style="font-weight:400; font-size:0.97em;">${loadMass} lbs</span>`;
+
+                    effortdistanceLabel.innerHTML = `
+                    
+                    <svg width="40" height="40" style="overflow:visible;">
+  <text x="0" y="20" class="effortdistance-label" font-family="serif">ED</text>
+</svg>
+                    
+                    `;
+
+                    // ---- Effort arrow: Place to left of load box, tip at bottom-left corner ----
+                    // Arrow tip (SVG y=10) should point to bottom-left of load
+                    // Compute bottom-left corner of load (after rotation)
+                    const halfW = loadBoxW / 2,
+                        halfH = loadBoxH / 2;
+                    // The load box is rotated -angleDeg
+                    // Vector from center to bottom-left before rotation:
+                    const dx = -halfW,
+                        dy = halfH;
+                    // Rotate dx,dy:
+                    const cosA = Math.cos(-angleRad),
+                        sinA = Math.sin(-angleRad);
+                    const vecX = dx * cosA - dy * sinA;
+                    const vecY = dx * sinA + dy * cosA;
+                    // The load center:
+                    const loadCenterX = loadX + loadBoxW / 2;
+                    const loadCenterY = loadY + loadBoxH / 2;
+                    // Actual bottom-left of box:
+                    const loadBottomLeftX = loadCenterX + vecX;
+                    const loadBottomLeftY = loadCenterY + vecY;
+
+
+                    // -- Angle stuff
+
+                    // -- Right (top) tip of the ramp
+                    const rampEndX = rampStartX + rampLength * Math.cos(angleRad);
+                    const rampEndY = rampStartY - rampLength * Math.sin(angleRad);
+
+                    // HEIGHT ARROW (vertical on right edge of ramp)
+                    const arrowX = rampEndX;
+                    const arrowY1 = groundY; // bottom, ground
+                    const arrowY2 = rampEndY; // top, ramp tip
+                    const arrowHeight = Math.abs(arrowY1 - arrowY2);
+
+                    // -- Position SVG absolutely to cover arrow
+                    heightArrowDiv.style.left = `${(arrowX - 20)}px`;
+                    heightArrowDiv.style.top = `${Math.min(arrowY1, arrowY2)}px`; // topmost y
+
+                    heightArrowDiv.innerHTML = `
+<svg width="34" height="${arrowHeight}" style="overflow:visible;">
+  <line x1="18" y1="0" x2="18" y2="${arrowHeight}" stroke="#34a853" stroke-width="4" />
+  <text x="26" y="${arrowHeight/2 + 5}" class="height-arrow-label" font-family="serif">RD</text>
+</svg>
+`;
+
+
+                    // Place the arrow so its tip (22,10) aligns with loadBottomLeftX/Y
+                    // Arrow is 44 wide, 95 tall, tip at (22,10), base at (22,95)
+                    // So its left = tipX - 22, top = tipY - 10
+                    //effortArrowWrap.style.left = `${loadBottomLeftX - 22}px`;
+                    //effortArrowWrap.style.top = `${loadBottomLeftY - 10}px`;
+                    effortArrowWrap.style.transform = `rotate(-${270}deg)`;
+
+                    // Label below the arrow, not rotated:
+                    effortLabel.innerHTML = `Effort required to push:<br><b>${effort.toFixed(1)} lbs</b>`;
+                    effortLabel.style.transform = `rotate(-${90}deg)`;
+                    // Stats
+                    statsDisplay.innerHTML = `
+        <div>
+            <b>Slant length (ED):</b> ${Math.round(rampLength/pxPerInch)} inches &nbsp; &nbsp;
+            <b>Resistance distance (RD)</b> ${Math.round(rampHeight/pxPerInch)} inches
+        </div>
+        <div>
+            <b>Incline Angle:</b> ${angleDeg}&deg; &nbsp; &nbsp;
+            <b>Mechanical Advantage (MA):</b> ${mechAdv.toFixed(2)}
+        </div>
+        <div style="margin-top:6px;">
+            <span style="font-size:0.96em; color:#788;">
+                Try changing the load and the ramp angle!
+            </span>
+        </div>
+    `;
+                }
+
+                angleSlider.addEventListener('input', updateInclinedPlane);
+                loadSlider.addEventListener('input', updateInclinedPlane);
+                window.addEventListener('resize', updateInclinedPlane);
+                window.addEventListener('DOMContentLoaded', updateInclinedPlane);
+            </script>
+            <script src="/shared/LCS_HTML_Templates/SkillPlan_Template_2020/_assets/js/scripts.min.js"></script>
+            <!-- Start of skillplan Zendesk Widget script -->
+            <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28773c90-16a6-4f5b-9d96-a69bfcf7a0c0"></script>
+            <!-- End of skillplan Zendesk Widget script -->
+        </p>
+    </div>
+</body>
+
+</html>

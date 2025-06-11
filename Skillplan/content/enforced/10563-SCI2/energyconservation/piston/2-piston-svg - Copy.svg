@@ -1,0 +1,25 @@
+<svg viewBox="0 0 700 300">
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+        stroke: #000;
+        stroke-width:1;
+      }
+
+      .st1 {
+        fill: blue;
+      }
+
+      .st2 {
+        fill: #363636;
+      }
+    </style>
+  </defs>
+    <polygon id="piston-system-outline" class="st0" points="163 269.5 163 30.5 212 30.5 212 240.5 428 240.5 428 180.5 537 180.5 537 269.5 163 269.5"/>
+
+    <polygon id="piston-system-fluid" class="st1" points="163 269.5 163 145.2 212 145.2 212 240.5 428 240.5 428 225.7 537 225.7 537 269.5 163 269.5"/>
+    <rect id="left-piston-weight" class="st2" x="163" y="129.7" width="49" height="14.5"/>
+    <rect id="right-piston-weight" class="st2" x="428.4" y="208.8" width="108.6" height="15.8"/>
+
+</svg>
